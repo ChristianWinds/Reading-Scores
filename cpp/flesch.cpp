@@ -3,6 +3,7 @@
 // * submission of both this program and future Organization of Programming
 // * Languages programs.
 
+// * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file
 #include <cstdlib>
 #include <string>
 
