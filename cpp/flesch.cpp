@@ -6,6 +6,7 @@
 // * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file
 #include <cstdlib>
 #include <string>
+using namespace std;
 
 // * PROGRAMMER'S NOTE: This global Boolean was created to test features and
 // * values of the prgram. If safe, this boolean may remain in the final program
