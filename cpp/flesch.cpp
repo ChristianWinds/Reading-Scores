@@ -5,6 +5,9 @@
 
 // * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file
 #include <cstdlib>
+// * PROGRAMMER'S NOTE: iostream may be a testing-only item. Removal in the
+// * final program build depends upon desired testing content to retain.
+#include <iostream>
 #include <string>
 using namespace std;
 
