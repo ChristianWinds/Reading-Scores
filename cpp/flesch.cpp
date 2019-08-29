@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 	// * PROGRAMMER'S NOTE: The filename string variable likely requires
 	// * conversion to a c string for success [CODE PLACED]
 	string line;
-	ifstream analyzedFile ((string) (filename).c_str);
+	ifstream analyzedFile (filename.c_str());
 	// Print content from the input fle if the input file successfully opens
 	if (analyzedFile.is_open())
 	{
