@@ -46,8 +46,23 @@ obtainValues(&syllables,
 	// Precondition:
 	// Postcondition:
 
+	// Initialize a Boolean for presence of a partial word segment at the
+	// end of an input file line
+	// * PROGRAMMER'S NOTE: The name of this Boolean may need improvement,
+	// * and this initialization's placement may require change to a more
+	// * relevant location for usage timing
+	bool wordPart = false;
+
+	// Store the earliest unread file line
+	string currentLine = ;
+
+	
 }
 
 calculateFlesch()
 {
+	// Precondition:
+	// Postcondition:
+
+	;
 }
