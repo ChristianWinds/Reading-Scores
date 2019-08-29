@@ -12,12 +12,14 @@
 // * build unlesss otherwise desired by Dr. Pounds.
 bool testMode = true;
 
+/* DISABLE
 string readLine();
 void obtainValues(&syllables,
              &totalWords,
              &sentences,
              &difficultWords);
 float calculateFlesch();
+*/
 
 // * PROGRAMMER NOTE: The parentheses beside main may require text to allow
 // * the command line to be an input source. [CODE PLACED]
@@ -32,7 +34,7 @@ int main(int argc, argv[])
 	{
 		cout << " ** Filename read: " << filename << endl;
 	}
-
+/* DISABLE
 	// Preapare variables for the four values to be recorded while reading
 	// the input file
 	int syllables = 0;
@@ -55,10 +57,11 @@ int main(int argc, argv[])
 	calculateFlesch(syllables,
 			totalWords,
 			sentences);
-
+*/
 	return 0;
 }
 
+/* DISABLE
 void obtainValues(&syllables,
                   &totalWords,
                   &sentences,
@@ -94,7 +97,8 @@ float calculateFlesch()
 	float alpha = ;
 
 	// Calculate the "beta" value
-	float beta =;
+	float beta = ;
 
 	return fleschIndex;
 }
+*/
