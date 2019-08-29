@@ -1,3 +1,8 @@
+// * A MESSAGE TO THE READER: All "PROGRAMMER'S NOTE" comments are intended to
+// * be removed (or reworked into regular comments if helpful) before the final
+// * submission of both this program and future Organization of Programming
+// * Languages programs.
+
 #include <cstdlib>
 #include <string>
 
@@ -68,7 +73,15 @@ calculateFlesch()
 	// Postcondition: The Flesch Readability Index was calculated and
 	// returned to this function's caller
 
-	;
+	// * PROGRAMMER'S NOTE: The values of alpha and beta likely require
+	// * decimal format; thus, either a flot or a double data type may be
+	// * necessary for each of the two variables.
+
+	// Calculate the "alpha" value
+	float alpha = ;
+
+	// Calculate the "beta" value
+	float beta =;
 
 	return fleschIndex;
 }
