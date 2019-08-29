@@ -33,15 +33,17 @@ int main()
 		     difficultWords);
 
 	// Calculate the Flesch readability index
-	calculateFlesch();
+	calculateFlesch(syllables,
+			totalWords,
+			sentences);
 
 	return 0;
 }
 
-obtainValues(&syllables,
-	     &totalWords,
-	     &sentences,
-	     &difficultWords)
+void obtainValues(&syllables,
+                  &totalWords,
+                  &sentences,
+                  &difficultWords)
 {
 	// Precondition:
 	// Postcondition:
