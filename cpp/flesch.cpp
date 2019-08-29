@@ -69,4 +69,6 @@ calculateFlesch()
 	// returned to this function's caller
 
 	;
+
+	return fleschIndex;
 }
