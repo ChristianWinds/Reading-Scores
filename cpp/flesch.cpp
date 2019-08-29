@@ -12,6 +12,7 @@ calculateFlesch();
 int main()
 {
 	// Read the filename of the file to be analyzed
+	// * PROGRAMMER'S NOTE: C++ code read line required
 	;
 
 	// Preapare variables for the four values to be recorded while reading
