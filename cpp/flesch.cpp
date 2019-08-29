@@ -7,15 +7,16 @@
 #include <cstdlib>
 #include <string>
 
-obtainValues(&syllables,
+string readLine();
+void obtainValues(&syllables,
              &totalWords,
              &sentences,
              &difficultWords);
-calculateFlesch();
+float calculateFlesch();
 
 // * PROGRAMMER NOTE: The parentheses beside main may require text to allow
 // * the command line to be an input source.
-int main()
+int main(arg[])
 {
 	// Read the filename of the file to be analyzed
 	// * PROGRAMMER'S NOTE: C++ code read line required
@@ -68,7 +69,7 @@ void obtainValues(&syllables,
 	
 }
 
-calculateFlesch()
+float calculateFlesch()
 {
 	// Precondition:
 	// Postcondition: The Flesch Readability Index was calculated and
