@@ -1,6 +1,12 @@
 #include <cstdlib>
 #include <string>
 
+obtainValues(&syllables,
+             &totalWords,
+             &sentences,
+             &difficultWords);
+calculateFlesch();
+
 // * PROGRAMMER NOTE: The parentheses beside main may require text to allow
 // * the command line to be an input source.
 int main()
@@ -21,7 +27,27 @@ int main()
 	// * update the multiple calculation variable values, as C++
 	// * functions can otherwise return only one value to the functions'
 	// * callers.
-	obtainValues(, ,);
+	obtainValues(syllables,
+		     totalWords,
+		     sentences,
+		     difficultWords);
+
+	// Calculate the Flesch readability index
+	calculateFlesch();
 
 	return 0;
+}
+
+obtainValues(&syllables,
+	     &totalWords,
+	     &sentences,
+	     &difficultWords)
+{
+	// Precondition:
+	// Postcondition:
+
+}
+
+calculateFlesch()
+{
 }
