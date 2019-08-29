@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
 	string line;
 	char * filenameCstr = new char [filename.length() + 1];
 	strcpy (filenameCstr, filename.c_str());
-	ifstream analyzedFile ((char) filenameCstr);
+	ifstream analyzedFile ((char*) filenameCstr);
 	// Print content from the input fle if the input file successfully opens
 	if (analyzedFile.is_open())
 	{
