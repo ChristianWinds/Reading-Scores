@@ -27,7 +27,7 @@ float calculateFlesch();
 
 // * PROGRAMMER NOTE: The parentheses beside main may require text to allow
 // * the command line to be an input source. [CODE PLACED]
-int main(int argc, argv[])
+int main(int argc, char* argv[])
 {
 	// Read the filename of the file to be analyzed
 	// * PROGRAMMER'S NOTE: C++ code read line required [CODE PLACED]
