@@ -27,6 +27,12 @@ int main(int argc, argv[])
 	// * PROGRAMMER'S NOTE: C++ code read line required [CODE PLACED]
 	string filename = argv[1];
 
+	// ** TEST
+	if (testMode)
+	{
+		cout << " ** Filename read: " << filename << endl;
+	}
+
 	// Preapare variables for the four values to be recorded while reading
 	// the input file
 	int syllables = 0;
