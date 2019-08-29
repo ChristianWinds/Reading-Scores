@@ -7,6 +7,11 @@
 #include <cstdlib>
 #include <string>
 
+// * PROGRAMMER'S NOTE: This global Boolean was created to test features and
+// * values of the prgram. If safe, this boolean may remain in the final program
+// * build unlesss otherwise desired by Dr. Pounds.
+bool testMode = true;
+
 string readLine();
 void obtainValues(&syllables,
              &totalWords,
