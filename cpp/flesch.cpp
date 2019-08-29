@@ -26,11 +26,11 @@ float calculateFlesch();
 */
 
 // * PROGRAMMER NOTE: The parentheses beside main may require text to allow
-// * the command line to be an input source. [CODE PLACED]
+// * the command line to be an input source. [OK]
 int main(int argc, char* argv[])
 {
 	// Read the filename of the file to be analyzed
-	// * PROGRAMMER'S NOTE: C++ code read line required [CODE PLACED]
+	// * PROGRAMMER'S NOTE: C++ code read line required [OK]
 	string filename = argv[1];
 
 	// ** TEST
@@ -38,6 +38,8 @@ int main(int argc, char* argv[])
 	{
 		cout << " ** Filename read: " << filename << endl;
 	}
+
+	// * PROGRAMMER'S NOTE: The below code is intended to test file reading.
 /* DISABLE
 	// Preapare variables for the four values to be recorded while reading
 	// the input file
