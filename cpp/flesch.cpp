@@ -15,12 +15,12 @@ void obtainValues(&syllables,
 float calculateFlesch();
 
 // * PROGRAMMER NOTE: The parentheses beside main may require text to allow
-// * the command line to be an input source.
+// * the command line to be an input source. [CODE PLACED]
 int main(int argc, argv[])
 {
 	// Read the filename of the file to be analyzed
-	// * PROGRAMMER'S NOTE: C++ code read line required
-	;
+	// * PROGRAMMER'S NOTE: C++ code read line required [CODE PLACED]
+	string filename = argv[1];
 
 	// Preapare variables for the four values to be recorded while reading
 	// the input file
