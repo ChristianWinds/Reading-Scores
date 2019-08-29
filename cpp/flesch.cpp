@@ -14,7 +14,7 @@ int main()
 	// * update the multiple calculation variable values, as C++
 	// * functions can otherwise return only one value to the functions'
 	// * callers.
-	;
+	obtainValues(, ,);
 
 	return 0;
 }
