@@ -65,7 +65,8 @@ void obtainValues(&syllables,
 calculateFlesch()
 {
 	// Precondition:
-	// Postcondition:
+	// Postcondition: The Flesch Readability Index was calculated and
+	// returned to this function's caller
 
 	;
 }
