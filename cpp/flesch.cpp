@@ -42,7 +42,22 @@ int main(int argc, char* argv[])
 	// * PROGRAMMER'S NOTE: The below code is intended to test file reading.
 	// * PROGRAMMER'S NOTE: The filename string variable likely requires
 	// * conversion to a c string for success [CODE PLACED]
+	string line;
 	ifstream analyzedFile (filename.c_str);
+	// Print content from the input fle if the input file successfully opens
+	if (analyzedFile.is_open())
+	{
+		while (getline(analyzedFile, line));
+		{
+			// Print the read line
+			cout << line << endl;
+		}
+		analyzedFile.close();
+	}
+	else
+	{
+		cout << "File opening failed." << endl;
+	}
 
 /* DISABLE
 	// Preapare variables for the four values to be recorded while reading
