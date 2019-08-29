@@ -40,6 +40,10 @@ int main(int argc, char* argv[])
 	}
 
 	// * PROGRAMMER'S NOTE: The below code is intended to test file reading.
+	// * PROGRAMMER'S NOTE: The filename string variable likely requires
+	// * conversion to a c string for success [CODE PLACED]
+	ifstream analyzedFile (filename.c_str);
+
 /* DISABLE
 	// Preapare variables for the four values to be recorded while reading
 	// the input file
