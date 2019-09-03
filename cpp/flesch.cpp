@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
 		while (getline(analyzedFile, line));
 		{
 			// Print the read line
-			cout << line << endl;
+			cout << line << '\n';
 		}
 		analyzedFile.close();
 	}
