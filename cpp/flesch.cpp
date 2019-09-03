@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
 				// ** TEST
 				if (testMode)
 				{
-					cout << "analyzedFile.is_open() == true" << endl;
+					cout << "getline branch entered" << endl;
 				}
 				// Print the read line
 				cout << line << '\n';
