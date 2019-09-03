@@ -52,6 +52,11 @@ int main(int argc, char* argv[])
 	// opens
 	if (analyzedFile.is_open())
 	{
+		// ** TEST
+		if (testMode)
+		{
+			cout << "analyzedFile.is_open() == true" << endl;
+		}
 		while (getline(analyzedFile, line));
 		{
 			// Print the read line
