@@ -49,15 +49,17 @@ int main(int argc, char* argv[])
 			cout << " ** Filename read: " << filename << endl;
 		}
 
-		// * PROGRAMMER'S NOTE: The below code is intended to test file reading.
-		// * PROGRAMMER'S NOTE: The filename string variable likely requires
+		// * PROGRAMMER'S NOTE: The below code is intended to test file
+		// reading
+		// * PROGRAMMER'S NOTE: The filename string variable likely
+		// requires
 		// * conversion to a c string for success [CODE PLACED]
 		string line;
 		char * filenameCstr = new char [filename.length() + 1];
 		strcpy (filenameCstr, filename.c_str());
 		ifstream analyzedFile ("sample99TextLines.txt");
-		// Print content from the input file if the input file successfully 
-		// opens
+		// Print content from the input file if the input file
+		// successfully opens
 		if (analyzedFile.is_open())
 		{
 			// ** TEST
@@ -78,8 +80,8 @@ int main(int argc, char* argv[])
 		}
 
 /* DISABLE
-		// Preapare variables for the four values to be recorded while reading
-		// the input file
+		// Preapare variables for the four values to be recorded while
+		// reading the input file
 		int syllables = 0;
 		int totalWords = 0;
 		int sentences = 0;
@@ -89,8 +91,8 @@ int main(int argc, char* argv[])
 		// calculations
 		// * PROGRAMMER NOTE: Pass-by reference may be required here to
 		// * update the multiple calculation variable values, as C++
-		// * functions can otherwise return only one value to the functions'
-		// * callers.
+		// * functions can otherwise return only one value to the
+		// functions' callers.
 		obtainValues(syllables,
 			     totalWords,
 			     sentences,
