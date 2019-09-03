@@ -52,8 +52,8 @@ int main(int argc, char* argv[])
 		// * PROGRAMMER'S NOTE: The below code is intended to test file
 		// reading
 		// * PROGRAMMER'S NOTE: The filename string variable likely
-		// requires
-		// * conversion to a c string for success [CODE PLACED]
+		// * requires conversion to a c string for success [CODE
+		// * PLACED]
 		string line;
 		char * filenameCstr = new char [filename.length() + 1];
 		strcpy (filenameCstr, filename.c_str());
@@ -69,6 +69,11 @@ int main(int argc, char* argv[])
 			}
 			while (getline(analyzedFile, line));
 			{
+				// ** TEST
+				if (testMode)
+				{
+					cout << "analyzedFile.is_open() == true" << endl;
+				}
 				// Print the read line
 				cout << line << '\n';
 			}
