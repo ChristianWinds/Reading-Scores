@@ -78,7 +78,7 @@ int main(int argc, char* argv[])
 					cout << "getline branch entered" << endl;
 				}*/
 				// Print the read line
-				cout << line << '\n';
+				cout << "line: " << line << '\n';
 			}
 			analyzedFile.close();
 		}
