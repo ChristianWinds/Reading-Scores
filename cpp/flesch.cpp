@@ -78,28 +78,28 @@ int main(int argc, char* argv[])
 		}
 
 /* DISABLE
-	// Preapare variables for the four values to be recorded while reading
-	// the input file
-	int syllables = 0;
-	int totalWords = 0;
-	int sentences = 0;
-	int difficultWords = 0;
+		// Preapare variables for the four values to be recorded while reading
+		// the input file
+		int syllables = 0;
+		int totalWords = 0;
+		int sentences = 0;
+		int difficultWords = 0;
 
-	// Obtain the values needed for the readability index and score
-	// calculations
-	// * PROGRAMMER NOTE: Pass-by reference may be required here to
-	// * update the multiple calculation variable values, as C++
-	// * functions can otherwise return only one value to the functions'
-	// * callers.
-	obtainValues(syllables,
-		     totalWords,
-		     sentences,
-		     difficultWords);
+		// Obtain the values needed for the readability index and score
+		// calculations
+		// * PROGRAMMER NOTE: Pass-by reference may be required here to
+		// * update the multiple calculation variable values, as C++
+		// * functions can otherwise return only one value to the functions'
+		// * callers.
+		obtainValues(syllables,
+			     totalWords,
+			     sentences,
+			     difficultWords);
 
-	// Calculate the Flesch readability index
-	calculateFlesch(syllables,
-			totalWords,
-			sentences);
+		// Calculate the Flesch readability index
+		calculateFlesch(syllables,
+				totalWords,
+				sentences);
 */
 	}
 	
