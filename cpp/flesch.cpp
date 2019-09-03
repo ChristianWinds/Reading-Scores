@@ -57,7 +57,7 @@ int main(int argc, char* argv[])
 		string line;
 /*		char * filenameCstr = new char [filename.length() + 1];*/
 /*		strcpy (filenameCstr, filename.c_str());*/
-		ifstream analyzedFile ("sample.txt");
+		ifstream analyzedFile ("minisample.txt");
 		// Open file
 		/*analyzedFile.open();*/ // * Fails
 		// Print content from the input file if the input file
