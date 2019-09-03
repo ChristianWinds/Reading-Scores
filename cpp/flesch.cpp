@@ -9,6 +9,7 @@
 // * final program build depends upon desired testing content to retain.
 #include <iostream>
 #include <fstream>
+#include <ifstream>
 #include <cstring>
 #include <string>
 using namespace std;
