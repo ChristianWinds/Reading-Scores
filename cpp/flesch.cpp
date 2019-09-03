@@ -31,27 +31,35 @@ float calculateFlesch();
 // * the command line to be an input source. [OK]
 int main(int argc, char* argv[])
 {
-	// Read the filename of the file to be analyzed
-	// * PROGRAMMER'S NOTE: C++ code read line required [OK]
-	string filename = argv[1];
-
-	// ** TEST
-	if (testMode)
+	// Run the program only if one filename was entered on the command line
+	if (argc != 2)
 	{
-		cout << " ** Filename read: " << filename << endl;
+		// Ask the user to enter a filename
+		cout << "Please enter one filename." << endl;
 	}
-
-	// * PROGRAMMER'S NOTE: The below code is intended to test file reading.
-	// * PROGRAMMER'S NOTE: The filename string variable likely requires
-	// * conversion to a c string for success [CODE PLACED]
-	string line;
-	char * filenameCstr = new char [filename.length() + 1];
-	strcpy (filenameCstr, filename.c_str());
-	ifstream analyzedFile ("sample99TextLines.txt");
-	// Print content from the input file if the input file successfully 
-	// opens
-	if (analyzedFile.is_open())
+	else
 	{
+		// Read the filename of the file to be analyzed
+		// * PROGRAMMER'S NOTE: C++ code read line required [OK]
+		string filename = argv[1];
+
+		// ** TEST
+		if (testMode)
+		{
+			cout << " ** Filename read: " << filename << endl;
+		}
+
+		// * PROGRAMMER'S NOTE: The below code is intended to test file reading.
+		// * PROGRAMMER'S NOTE: The filename string variable likely requires
+		// * conversion to a c string for success [CODE PLACED]
+		string line;
+		char * filenameCstr = new char [filename.length() + 1];
+		strcpy (filenameCstr, filename.c_str());
+		ifstream analyzedFile ("sample99TextLines.txt");
+		// Print content from the input file if the input file successfully 
+		// opens
+		if (analyzedFile.is_open())
+		{
 		// ** TEST
 		if (testMode)
 		{
@@ -93,6 +101,8 @@ int main(int argc, char* argv[])
 			totalWords,
 			sentences);
 */
+	}
+	
 	return 0;
 }
 
