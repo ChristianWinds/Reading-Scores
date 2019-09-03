@@ -145,7 +145,7 @@ float calculateFlesch()
 	// returned to this function's caller
 
 	// * PROGRAMMER'S NOTE: The values of alpha and beta likely require
-	// * decimal format; thus, either a flot or a double data type may be
+	// * decimal format; thus, either a float or a double data type may be
 	// * necessary for each of the two variables.
 
 	// Calculate the "alpha" value
