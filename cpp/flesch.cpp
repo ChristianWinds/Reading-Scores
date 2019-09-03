@@ -16,7 +16,7 @@ using namespace std;
 // * PROGRAMMER'S NOTE: This global Boolean was created to test features and
 // * values of the prgram. If safe, this boolean may remain in the final program
 // * build unlesss otherwise desired by Dr. Pounds.
-bool testMode = true;
+/*bool testMode = true;*/
 
 /* DISABLE
 string readLine();
@@ -41,13 +41,13 @@ int main(int argc, char* argv[])
 	{
 		// Read the filename of the file to be analyzed
 		// * PROGRAMMER'S NOTE: C++ code read line required [OK]
-		string filename = argv[1];
+		/*string filename = argv[1];*/
 
 		// ** TEST
-		if (testMode)
+/*		if (testMode)
 		{
 			cout << " ** Filename read: " << filename << endl;
-		}
+		} */
 
 		// * PROGRAMMER'S NOTE: The below code is intended to test file
 		// reading
@@ -55,25 +55,28 @@ int main(int argc, char* argv[])
 		// * requires conversion to a c string for success [CODE
 		// * PLACED]
 		string line;
-		char * filenameCstr = new char [filename.length() + 1];
-		strcpy (filenameCstr, filename.c_str());
-		ifstream analyzedFile ("sample99TextLines.txt");
+/*		char * filenameCstr = new char [filename.length() + 1];*/
+/*		strcpy (filenameCstr, filename.c_str());*/
+		ifstream analyzedFile ("sample.txt");
+		// Open file
+		/*analyzedFile.open();*/ // * Fails
 		// Print content from the input file if the input file
 		// successfully opens
 		if (analyzedFile.is_open())
 		{
 			// ** TEST
-			if (testMode)
+			/*if (testMode)
 			{
 				cout << "analyzedFile.is_open() == true" << endl;
-			}
+			}*/
 			while (getline(analyzedFile, line));
 			{
 				// ** TEST
-				if (testMode)
+				cout << "Print read line." << endl;
+/*				if (testMode)
 				{
 					cout << "getline branch entered" << endl;
-				}
+				}*/
 				// Print the read line
 				cout << line << '\n';
 			}
@@ -81,7 +84,7 @@ int main(int argc, char* argv[])
 		}
 		else
 		{
-			cout << "File opening failed." << endl;
+			cout << "File opening failed.";
 		}
 
 /* DISABLE
