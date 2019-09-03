@@ -60,22 +60,22 @@ int main(int argc, char* argv[])
 		// opens
 		if (analyzedFile.is_open())
 		{
-		// ** TEST
-		if (testMode)
-		{
-			cout << "analyzedFile.is_open() == true" << endl;
+			// ** TEST
+			if (testMode)
+			{
+				cout << "analyzedFile.is_open() == true" << endl;
+			}
+			while (getline(analyzedFile, line));
+			{
+				// Print the read line
+				cout << line << '\n';
+			}
+			analyzedFile.close();
 		}
-		while (getline(analyzedFile, line));
+		else
 		{
-			// Print the read line
-			cout << line << '\n';
+			cout << "File opening failed." << endl;
 		}
-		analyzedFile.close();
-	}
-	else
-	{
-		cout << "File opening failed." << endl;
-	}
 
 /* DISABLE
 	// Preapare variables for the four values to be recorded while reading
