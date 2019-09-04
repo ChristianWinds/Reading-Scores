@@ -154,21 +154,21 @@ void obtainValues(&syllables,
 		while (!(analyzedFile.eof()))
 		{
 			// Store the earliest unread file line
-		// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
-		getline(analyzedFile, currentLine);
+			// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
+			getline(analyzedFile, currentLine);
 
-		// Track the current index read in the input file
-		int currentIndex = 0;
+			// Track the current index read in the input file
+			int currentIndex = 0;
 
-		// Retrieve the next unread word from the line
-		string word = getWord(currentIndex, line);
+			// Retrieve the next unread word from the line
+			string word = getWord(currentIndex, line);
 
-		// Increment the number of words
-		totalWords++;
+			// Increment the number of words
+			totalWords++;
 
-		// Determine the number of syllables in the retrieved word
-		int syllables = countSyllables(word);
-	}
+			// Determine the number of syllables in the retrieved word
+			int syllables = countSyllables(word);
+		}
 	}
 	
 }
