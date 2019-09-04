@@ -6,6 +6,7 @@
 // * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file [SUCCESSFUL]
 // * PROGRAMMER'S NOTE: Current Goal (9/4/2019): Count the number of syllables
 // * in a text file
+// *	- Error (9/4/2019) - Line index not updating properly
 #include <cstdlib>
 // * PROGRAMMER'S NOTE: iostream may be a testing-only item. Removal in the
 // * final program build depends upon desired testing content to retain.
