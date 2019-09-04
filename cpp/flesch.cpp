@@ -25,7 +25,9 @@ void obtainValues(int &syllables,
 		  int &sentences,
 		  int &difficultWords
 		  string filename);
-
+string getWord(int currentIndex,
+	       string line,
+	       bool &endOfLine);
 /* DISABLE
 float calculateFlesch();
 */
