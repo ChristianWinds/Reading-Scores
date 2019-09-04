@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
 		cout << line << endl;
 /*		char * filenameCstr = new char [filename.length() + 1];*/
 /*		strcpy (filenameCstr, filename.c_str());*/
-		/*ifstream analyzedFile ("minisample.txt");*/
+		ifstream analyzedFile/*("minisample.txt")*/;
 		// Open file
 		// * PROGRAMER'S NOTE: Derived from OneNote C++ programming
 		// * notes
