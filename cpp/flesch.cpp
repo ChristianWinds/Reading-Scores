@@ -1,3 +1,5 @@
+// * 'git pull' TEST: If 'git pull' functions, this text should no longer be
+// * present after git pull's use.
 // * A MESSAGE TO THE READER: All "PROGRAMMER'S NOTE" comments are intended to
 // * be removed (or reworked into regular comments if helpful) before the final
 // * submission of both this program and future Organization of Programming
