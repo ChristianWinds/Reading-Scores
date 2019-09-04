@@ -130,33 +130,33 @@ void obtainValues(int &totalSyllables,
 				// current index
 				int currentLineIndex = 0;
 
-			// Create a Boolean to detect the end of the current
-			// line
-			bool endOfLine = false;
+				// Create a Boolean to detect the end of the current
+				// line
+				bool endOfLine = false;
 
-			// Read each word of the current line
-			while (!(endOfLine))
-			{
-				// Retrieve the next unread word from the line
-				if (testMode)
+				// Read each word of the current line
+				while (!(endOfLine))
 				{
-					cout << "obtainValues: getWord call upcoming. Parameters:" << endl;
-					cout << "\t currentLineIndex == " << currentLineIndex << endl;
-					cout << "\t currentLine == " << currentLine << endl;
-					cout << "\t endOfLine == " << endOfLine << endl;
-				}
-				if (testMode)
-					cout << "obtainValues: Calling getWord" << endl;
-				string word = getWord(currentLineIndex,
-						      currentLine,
-						      endOfLine);
+					// Retrieve the next unread word from the line
+					if (testMode)
+					{
+						cout << "obtainValues: getWord call upcoming. Parameters:" << endl;
+						cout << "\t currentLineIndex == " << currentLineIndex << endl;
+						cout << "\t currentLine == " << currentLine << endl;
+						cout << "\t endOfLine == " << endOfLine << endl;
+					}
+					if (testMode)
+						cout << "obtainValues: Calling getWord" << endl;
+					string word = getWord(currentLineIndex,
+							      currentLine,
+							      endOfLine);
 
-				// Increment the number of words
-				totalWords++;
+					// Increment the number of words
+					totalWords++;
 
-				// Determine the number of syllables in the
-				// retrieved word
-				int wordSyllables = countSyllables(word);
+					// Determine the number of syllables in the
+					// retrieved word
+					int wordSyllables = countSyllables(word);
 
 					// Add the word's number of syllables to the
 					// syllable total
