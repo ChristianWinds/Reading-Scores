@@ -33,13 +33,13 @@ float calculateFlesch();
 int main(int argc, char* argv[])
 {
 	// Run the program only if one filename was entered on the command line
-/*	if (argc != 2)
+	if (argc != 2)
 	{
 		// Ask the user to enter a filename
 		cout << "Please enter one filename." << endl;
 	}
 	else
-	{*/
+	{
 		// Read the filename of the file to be analyzed
 		// * PROGRAMMER'S NOTE: C++ code read line required [OK]
 		/*string filename = argv[1];*/
@@ -116,7 +116,7 @@ int main(int argc, char* argv[])
 				totalWords,
 				sentences);
 */
-/*	}*/
+	}
 	
 	return 0;
 }
