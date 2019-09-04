@@ -222,7 +222,10 @@ int checkSyllables(string word)
 	// Precondition: The word received holds only non-whitespace characters
 	// Postcondition:
 
-
+	
+	// Add one to the syllable count if no syllables were detected
+	if (syllables == 0)
+		syllables++;
 
 	return syllables;
 }
