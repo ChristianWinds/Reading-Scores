@@ -235,7 +235,10 @@ int countSyllables(string word)
 	{
 		// Continue reading characters until finding a non-vowel
 		// character
-		;
+		currentIndex++;
+		if ()
+		{
+		}
 	}
 	
 	// Add one to the syllable count if no syllables were detected
