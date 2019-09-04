@@ -155,10 +155,12 @@ void obtainValues(&syllables,
 	int currentIndex = 0;
 
 	// Retrieve the next unread word from the line
-	getWord(currentIndex, line);
+	string word = getWord(currentIndex, line);
+
+	// Increment the number of words
+	totalWords++;
 
 	//
-
 	
 }
 
