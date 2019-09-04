@@ -93,6 +93,8 @@ int main(int argc, char* argv[])
 			cout << "File opening failed.";
 		}
 
+		// * PROGRAMMER'S NOTE: place final program algorithm below this
+		// * line.
 		// Retrieve the filename needed for file analysis
 
 		// Preapare variables for the four values to be recorded while
