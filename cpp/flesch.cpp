@@ -264,6 +264,8 @@ int countSyllables(string word)
 			// Increment the number of found syllables
 			syllables++;
 		}
+		else
+			currentIndex++;
 	}
 	
 	// Add one to the syllable count if no syllables were detected
