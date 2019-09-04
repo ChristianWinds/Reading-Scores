@@ -137,6 +137,8 @@ void obtainValues(int &totalSyllables,
 					cout << "\t currentLine == " << currentLine << endl;
 					cout << "\t endOfLine == " << endOfLine << endl;
 				}
+				if (testMode)
+					cout "obtainValues: Calling getWord" << endl;
 				string word = getWord(currentLineIndex,
 						      currentLine,
 						      endOfLine);
