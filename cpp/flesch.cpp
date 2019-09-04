@@ -170,8 +170,8 @@ void obtainValues(&syllables,
 				// Increment the number of words
 				totalWords++;
 
-				// Determine the number of syllables in the retrieved
-				// word
+				// Determine the number of syllables in the
+				// retrieved word
 				int syllables = countSyllables(word);
 			}
 		}
