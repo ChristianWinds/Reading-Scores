@@ -124,7 +124,7 @@ void obtainValues(int &totalSyllables,
 
 			if (testMode)
 				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
-			if (!(analyzedFile.eof())
+			if (!(analyzedFile.eof()))
 			{
 				// Create an integer variable to hold the
 				// current line's current index
