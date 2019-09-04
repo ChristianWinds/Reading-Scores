@@ -235,9 +235,13 @@ int countSyllables(string word)
 	{
 		// Continue reading characters until finding a non-vowel
 		// character
-		currentIndex++;
-		if ()
+		while ()
 		{
+			currentIndex++;
+			if (currentIndex < word.length())
+			{
+				readCharacter.at(currentIndex);
+			}
 		}
 	}
 	
