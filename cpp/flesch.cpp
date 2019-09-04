@@ -50,31 +50,10 @@ int main(int argc, char* argv[])
 		// * PROGRAMMER'S NOTE: The filename string variable likely
 		// * requires conversion to a c string for success [CODE
 		// * PLACED]
-/*		char * filenameCstr = new char [filename.length() + 1];*/
-/*		strcpy (filenameCstr, filename.c_str());*/
-		ifstream analyzedFile/*("minisample.txt")*/;
-		// Open file
 		// * PROGRAMER'S NOTE: Derived from OneNote C++ programming
 		// * notes
-		analyzedFile.open(filename.c_str());
 		// Print content from the input file if the input file
 		// successfully opens
-		if (analyzedFile.is_open())
-		{
-			// ** TEST
-			// * PROGRAMMER'S NOTE: File reading is [SUCCESS] if
-			// * getline command is NOT in "while" statement.
-			/*while (*/getline(analyzedFile, line)/*)*/;
-			// ** TEST
-			cout << "Print read line." << endl;
-			// Print the read line
-			cout << "line: " << line << '\n';
-			analyzedFile.close();
-		}
-		else
-		{
-			cout << "File opening failed.";
-		}
 
 		// * PROGRAMMER'S NOTE: place final program algorithm below this
 		// * line.
