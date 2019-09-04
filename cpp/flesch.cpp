@@ -187,6 +187,10 @@ void obtainValues(int &syllables,
 			}
 		}
 	}
+	else
+	{
+		cout << "File opening failed." << endl;
+	}
 }
 
 string getWord(int currentIndex,
