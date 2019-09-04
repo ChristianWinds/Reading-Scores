@@ -157,13 +157,21 @@ void obtainValues(&syllables,
 	
 }
 
-string getWord(int startingIndex, )
+string getWord(int currentIndex, )
 {
 	// Precondition:
 	// Postcondition:
 
-	// 
-	;
+	char readCharacter = '';
+
+	// From the starting index, locate the first non-whitespace character
+	readCharacter = line.at(currentIndex);
+
+	int currentIndex = startingI
+	while (readCharacter == ' ')
+	{
+		
+	}
 }
 /*
 float calculateFlesch()
