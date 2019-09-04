@@ -7,8 +7,8 @@
 #include <cstdlib>
 // * PROGRAMMER'S NOTE: iostream may be a testing-only item. Removal in the
 // * final program build depends upon desired testing content to retain.
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <cstring>
 #include <string>
 using namespace std;
