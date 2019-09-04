@@ -218,6 +218,10 @@ string getWord(int &currentIndex,
 		wordEndIndex = currentIndex;
 	}
 
+	// Update the end of line flag if the end of the received line was reached
+	if (currentIndex >= line.length())
+		endOfLine = true;
+
 	// Retrieve the found word
 	int wordLength = wordEndIndex - wordStartIndex + 1;
 	string word = line.substr(wordStartIndex, wordLength);
