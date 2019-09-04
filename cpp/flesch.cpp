@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
 			cout << "File opening failed.";
 		}
 
-/* DISABLE
+
 		// Preapare variables for the four values to be recorded while
 		// reading the input file
 		int syllables = 0;
@@ -114,13 +114,13 @@ int main(int argc, char* argv[])
 		calculateFlesch(syllables,
 				totalWords,
 				sentences);
-*/
+
 /*	}*/
 	
 	return 0;
 }
 
-/* DISABLE
+
 void obtainValues(&syllables,
                   &totalWords,
                   &sentences,
@@ -136,10 +136,24 @@ void obtainValues(&syllables,
 	// * relevant location for usage timing
 	bool wordPart = false;
 
+	string currentLine = "";
+
 	// Store the earliest unread file line
-	string currentLine = ;
+	cin << currentLine;
+
+	// Retrieve the next unread word from the line
+	.find;
 
 	
+}
+
+string getWord(int startingIndex, )
+{
+	// Precondition:
+	// Postcondition:
+
+	// 
+	;
 }
 
 float calculateFlesch()
