@@ -3,7 +3,9 @@
 // * submission of both this program and future Organization of Programming
 // * Languages programs.
 
-// * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file
+// * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file [SUCCESSFUL]
+// * PROGRAMMER'S NOTE: Current Goal (9/4/2019): Count the number of syllables
+// * in a text file
 #include <cstdlib>
 // * PROGRAMMER'S NOTE: iostream may be a testing-only item. Removal in the
 // * final program build depends upon desired testing content to retain.
@@ -76,7 +78,6 @@ int main(int argc, char* argv[])
 	
 	return 0;
 }
-
 
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
