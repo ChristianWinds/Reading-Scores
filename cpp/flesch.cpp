@@ -203,12 +203,10 @@ string getWord(int currentIndex, string line)
 
 	// Retrieve the found word
 	int wordLength = wordEndIndex - wordStartIndex + 1;
-	line.substr(wordStartIndex, wordLength);
+	string word = line.substr(wordStartIndex, wordLength);
 
-	//
-	;
-
-	return ;
+	// Return the retrieved word to the function caller
+	return word;
 }
 /*
 float calculateFlesch()
