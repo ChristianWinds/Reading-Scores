@@ -166,7 +166,7 @@ string getWord(int currentIndex, string line)
 
 	// From the starting index, locate the first non-whitespace character
 	readCharacter = line.at(currentIndex);
-	while (readCharacter == ' ')
+	while ((readCharacter == ' ') && (currentIndex < line.length()))
 	{
 		// Check the next character in the line
 		currentIndex++;
