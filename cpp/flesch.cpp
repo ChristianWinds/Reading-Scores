@@ -158,6 +158,8 @@ string getWord(int currentIndex,
 	       string line,
 	       bool &endOfLine)
 {
+	if (testMode)
+		cout << "getWord: Starting" << endl;
 	// Precondition:
 	// Postcondition: The retrieved word is returned to the function caller
 
