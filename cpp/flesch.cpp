@@ -218,6 +218,8 @@ string getWord(int currentIndex,
 
 int countSyllables(string word)
 {
+	if (testMode)
+		cout << "countSyllables: Starting" << endl;
 	// Precondition: The word received holds only non-whitespace characters
 	// Postcondition:
 
