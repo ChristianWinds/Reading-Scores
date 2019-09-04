@@ -159,6 +159,7 @@ string getWord(int currentIndex,
 	// Precondition:
 	// Postcondition: The retrieved word is returned to the function caller
 
+	// Create a char variable to hold the characters read from the word
 	char readCharacter = 'NULL';
 
 	// From the starting index, locate the first non-whitespace character
