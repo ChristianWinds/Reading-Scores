@@ -150,6 +150,9 @@ void obtainValues(&syllables,
 
 	if (analyzedFile.is_open())
 	{
+		// Track the current index read in the input file
+		int currentIndex = 0;
+
 		// Retrieve the values for the file to analyze
 		while ((!(analyzedFile.eof())) &&
 		       (analyzedFile.is_open()))
@@ -158,8 +161,6 @@ void obtainValues(&syllables,
 			// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 			getline(analyzedFile, currentLine);
 
-			// Track the current index read in the input file
-			int currentIndex = 0;
 
 			// Retrieve the next unread word from the line
 			string word = getWord(currentIndex, line);
