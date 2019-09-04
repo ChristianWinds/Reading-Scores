@@ -139,6 +139,7 @@ void obtainValues(&syllables,
 	// * development
 	/*bool wordPart = false;*/
 
+	// Create a string variable to hold the current read line
 	string currentLine = "";
 
 	// Retrieve the values for the file to analyze
