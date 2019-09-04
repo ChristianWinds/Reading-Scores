@@ -158,8 +158,12 @@ void obtainValues(&syllables,
 			// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 			getline(analyzedFile, currentLine);
 
+			// Create an integer variable to hold the current line's
+			// current index
+			int currentLineIndex = 0;
+
 			// Retrieve the next unread word from the line
-			string word = getWord(currentIndex, line);
+			string word = getWord(currentLineIndex, line);
 
 			// Increment the number of words
 			totalWords++;
