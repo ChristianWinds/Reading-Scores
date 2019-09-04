@@ -151,8 +151,13 @@ void obtainValues(&syllables,
 	// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 	getline(analyzedFile, currentLine);
 
+	// Track the current index read in the input file
+	int currentIndex = 0;
+
 	// Retrieve the next unread word from the line
-	getWord();
+	getWord(currentIndex, line);
+
+	//
 
 	
 }
@@ -160,7 +165,7 @@ void obtainValues(&syllables,
 string getWord(int currentIndex, string line)
 {
 	// Precondition:
-	// Postcondition:
+	// Postcondition: The retrieved word is returned to the function caller
 
 	char readCharacter = 'NULL';
 
