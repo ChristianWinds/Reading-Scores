@@ -145,9 +145,6 @@ void obtainValues(&syllables,
 	// Create a string variable to hold the current read line
 	string currentLine = "";
 
-	// Track the current index read in the input file
-	int currentIndex = 0;
-
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
 
