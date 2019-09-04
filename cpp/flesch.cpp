@@ -122,7 +122,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-/*
+
 void obtainValues(&syllables,
                   &totalWords,
                   &sentences,
@@ -141,7 +141,8 @@ void obtainValues(&syllables,
 	string currentLine = "";
 
 	// Store the earliest unread file line
-	cin << currentLine;
+	// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
+	getline(analyzedFile, line);
 
 	// Retrieve the next unread word from the line
 	.find;
