@@ -21,9 +21,9 @@ using namespace std;
 string readLine();
 */
 void obtainValues(&syllables,
-             &totalWords,
-             &sentences,
-             &difficultWords);
+		  &totalWords,
+		  &sentences,
+		  &difficultWords);
 /* DISABLE
 float calculateFlesch();
 */
