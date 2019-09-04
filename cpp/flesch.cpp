@@ -223,7 +223,7 @@ int countSyllables(string word)
 	if (testMode)
 		cout << "countSyllables: Starting" << endl;
 	if (testMode)
-		cout << 
+		cout << "countSyllables: Parameter: word == " << word << endl;
 	// Precondition: The word received holds only non-whitespace characters
 	// Postcondition:
 
