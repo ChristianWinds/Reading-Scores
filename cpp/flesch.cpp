@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
 			{
 				cout << "analyzedFile.is_open() == true" << endl;
 			}*/
-			/*while */(getline(analyzedFile, line));
+			/*while (*/getline(analyzedFile, line)/*)*/;
 			/*{*/
 				// ** TEST
 				cout << "Print read line." << endl;
@@ -120,7 +120,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-
+/*
 void obtainValues(&syllables,
                   &totalWords,
                   &sentences,
@@ -154,8 +154,8 @@ string getWord(int startingIndex, )
 
 	// 
 	;
-}
-
+}*/
+/*
 float calculateFlesch()
 {
 	// Precondition:
