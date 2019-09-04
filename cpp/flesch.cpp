@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 	{*/
 		// Read the filename of the file to be analyzed
 		// * PROGRAMMER'S NOTE: C++ code read line required [OK]
-		/*string filename = argv[1];*/
+		string filename = argv[1];
 
 		// ** TEST
 /*		if (testMode)
@@ -58,9 +58,11 @@ int main(int argc, char* argv[])
 		cout << line << endl;
 /*		char * filenameCstr = new char [filename.length() + 1];*/
 /*		strcpy (filenameCstr, filename.c_str());*/
-		ifstream analyzedFile ("minisample.txt");
+		/*ifstream analyzedFile ("minisample.txt");*/
 		// Open file
-		/*analyzedFile.open();*/ // * Fails
+		// * PROGRAMER'S NOTE: Derived from OneNote C++ programming
+		// * notes
+		analyzedFile.open(filename.c_str());
 		// Print content from the input file if the input file
 		// successfully opens
 		if (analyzedFile.is_open())
