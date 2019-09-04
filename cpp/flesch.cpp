@@ -142,11 +142,12 @@ void obtainValues(&syllables,
 	// Create an input file stream for the file to analyze
 	ifstream analyzedFile;
 
+	// Create a string variable to hold the current read line
+	string currentLine = "";
+
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
 
-	// Create a string variable to hold the current read line
-	string currentLine = "";
 
 	if (analyzedFile.is_open())
 	{
@@ -160,7 +161,6 @@ void obtainValues(&syllables,
 			// Store the earliest unread file line
 			// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 			getline(analyzedFile, currentLine);
-
 
 			// Retrieve the next unread word from the line
 			string word = getWord(currentIndex, line);
