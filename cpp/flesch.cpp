@@ -170,7 +170,9 @@ void obtainValues(&syllables,
 			while (!(endOfLine))
 			{
 				// Retrieve the next unread word from the line
-				string word = getWord(currentLineIndex, line);
+				string word = getWord(currentLineIndex,
+						      line,
+						      endOfLine);
 
 				// Increment the number of words
 				totalWords++;
