@@ -230,6 +230,8 @@ int countSyllables(string word)
 	char readCharacter = 'NULL';
 
 	// Count each syllable in the word
+	while ()
+	{
 	if ((readCharacter == 'a') ||
 	    (readCharacter == 'e') ||
 	    (readCharacter == 'i') ||
@@ -253,6 +255,7 @@ int countSyllables(string word)
 				readCharacter.at(currentIndex);
 			}
 		}
+	}
 	}
 	
 	// Add one to the syllable count if no syllables were detected
