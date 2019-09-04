@@ -62,19 +62,13 @@ int main(int argc, char* argv[])
 		if (analyzedFile.is_open())
 		{
 			// ** TEST
-			/*if (testMode)
-			{
-				cout << "analyzedFile.is_open() == true" << endl;
-			}*/
 			// * PROGRAMMER'S NOTE: File reading is [SUCCESS] if
 			// * getline command is NOT in "while" statement.
 			/*while (*/getline(analyzedFile, line)/*)*/;
-			/*{*/
-				// ** TEST
-				cout << "Print read line." << endl;
-				// Print the read line
-				cout << "line: " << line << '\n';
-			/*}*/
+			// ** TEST
+			cout << "Print read line." << endl;
+			// Print the read line
+			cout << "line: " << line << '\n';
 			analyzedFile.close();
 		}
 		else
