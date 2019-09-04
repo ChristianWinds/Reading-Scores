@@ -139,7 +139,7 @@ void obtainValues(&syllables,
 	// * development
 	/*bool wordPart = false;*/
 
-	// Create a
+	// Create an input file stream for the file to analyze
 	ifstream analyzedFile;
 
 	// Open the file to analyze
