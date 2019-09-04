@@ -72,18 +72,18 @@ int main(int argc, char* argv[])
 			{
 				cout << "analyzedFile.is_open() == true" << endl;
 			}*/
-			while (getline(analyzedFile, line));
-			{
+			/*while */(getline(analyzedFile, line));
+			/*{*/
 				// ** TEST
 				cout << "Print read line." << endl;
-				cin >> line;
+				/*cin >> line;*/
 /*				if (testMode)
 				{
 					cout << "getline branch entered" << endl;
 				}*/
 				// Print the read line
 				cout << "line: " << line << '\n';
-			}
+			/*}*/
 			analyzedFile.close();
 		}
 		else
