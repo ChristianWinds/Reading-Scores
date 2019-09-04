@@ -72,11 +72,6 @@ int main(int argc, char* argv[])
 			/*{*/
 				// ** TEST
 				cout << "Print read line." << endl;
-				/*cin >> line;*/
-/*				if (testMode)
-				{
-					cout << "getline branch entered" << endl;
-				}*/
 				// Print the read line
 				cout << "line: " << line << '\n';
 			/*}*/
