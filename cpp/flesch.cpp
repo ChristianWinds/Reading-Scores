@@ -97,9 +97,6 @@ void obtainValues(int &totalSyllables,
 	// * development
 	/*bool wordPart = false;*/
 
-	// Retrieve the filename from the command line
-	string filename = argv[1];
-
 	// Create an input file stream for the file to analyze
 	ifstream analyzedFile;
 
