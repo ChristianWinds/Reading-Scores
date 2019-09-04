@@ -230,7 +230,7 @@ int countSyllables(string word)
 	char readCharacter = 'NULL';
 
 	// Count each syllable in the word
-	while ()
+	while (currentIndex < word.length())
 	{
 		if ((readCharacter == 'a') ||
 		    (readCharacter == 'e') ||
