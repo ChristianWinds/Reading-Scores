@@ -161,7 +161,7 @@ void obtainValues(&syllables,
 	totalWords++;
 
 	// Determine the number of syllables in the retrieved word
-	int syllables = checkSyllables(word);
+	int syllables = countSyllables(word);
 	
 }
 
@@ -217,7 +217,7 @@ string getWord(int currentIndex, string line)
 	return word;
 }
 
-int checkSyllables(string word)
+int countSyllables(string word)
 {
 	// Precondition: The word received holds only non-whitespace characters
 	// Postcondition:
