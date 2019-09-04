@@ -122,10 +122,11 @@ int main(int argc, char* argv[])
 }
 
 
-void obtainValues(&syllables,
-		  &totalWords,
-		  &sentences,
-		  &difficultWords)
+void obtainValues(int &syllables,
+		  int &totalWords,
+		  int &sentences,
+		  int &difficultWords,
+		  string filename)
 {
 	// Precondition:
 	// Postcondition:
