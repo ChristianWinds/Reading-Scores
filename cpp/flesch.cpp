@@ -235,6 +235,9 @@ int countSyllables(string word)
 	// Count each syllable in the word
 	while (currentIndex < word.length())
 	{
+		// Rrad the current word character
+		readCharacter = word.at(currentIndex);
+
 		// Find the successive syllables in the word
 		if ((readCharacter == 'a') ||
 		    (readCharacter == 'e') ||
