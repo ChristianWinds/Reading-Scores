@@ -172,15 +172,15 @@ string getWord(int currentIndex, string line)
 		currentIndex++;
 		readCharacter = line.at(currentIndex);
 	}
-
+	int wordStartIndex = currentIndex;
 
 	// Locate the end of the current word
 	int wordEndIndex = -1;
 	if (currentIndex + 1 < line.length())
 	{
 		// Check the remaining line characters to find the word's end
-		wordEndIndex = currentIndex + 1;
-		readCharacter = line.at(wordEndIndex);
+		currentIndex++;
+		readCharacter = line.at(currentIndex);
 		while ((readCharacter != ' ') && (currentIndex < line.length()))
 		{
 			// Check the next character in the line
@@ -188,13 +188,16 @@ string getWord(int currentIndex, string line)
 			if (currentIndex < line.length())
 				readCharacter = line.at(currentIndex);
 		}
+		wordEndIndex = currentIndex;
 	}
 	else if (currentIndex + 1 == line.length())
 	{
 		// Regard the line's final character as the end of the word
 		wordEndIndex = currentIndex;
 	}
-		
+
+	// Retrieve the found word
+	int wordLength = wordEndIndex - wordStartIndex + 1
 
 	
 }
