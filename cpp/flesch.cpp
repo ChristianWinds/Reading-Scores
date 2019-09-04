@@ -151,7 +151,8 @@ void obtainValues(&syllables,
 	if (analyzedFile.is_open())
 	{
 		// Retrieve the values for the file to analyze
-		while (!(analyzedFile.eof()))
+		while ((!(analyzedFile.eof())) &&
+		       (analyzedFile.is_open()))
 		{
 			// Store the earliest unread file line
 			// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
