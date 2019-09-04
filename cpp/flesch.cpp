@@ -25,7 +25,7 @@ string readLine();
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &sentences,
-		  int &difficultWords
+		  int &difficultWords,
 		  string filename);
 string getWord(int currentIndex,
 	       string line,
