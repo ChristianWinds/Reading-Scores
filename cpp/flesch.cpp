@@ -188,7 +188,12 @@ string getWord(int currentIndex, string line)
 			if (currentIndex < line.length())
 				readCharacter = line.at(currentIndex);
 		}
-		wordEndIndex = currentIndex;
+
+		// Store the index of the word end
+		// * PROGRAMMER'S NOTE: The word index storage code below should
+		// * function regardless of whether a space was detected or the
+		// * line's end was reached
+		wordEndIndex = currentIndex - 1;
 	}
 	else if (currentIndex + 1 == line.length())
 	{
