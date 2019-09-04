@@ -232,30 +232,30 @@ int countSyllables(string word)
 	// Count each syllable in the word
 	while ()
 	{
-	if ((readCharacter == 'a') ||
-	    (readCharacter == 'e') ||
-	    (readCharacter == 'i') ||
-	    (readCharacter == 'o') ||
-	    (readCharacter == 'u') ||
-	    (readCharacter == 'y'))
-	{
-		// Continue reading characters until finding a non-vowel
-		// character
-		while (((readCharacter == 'a') ||
-		       (readCharacter == 'e') ||
-	               (readCharacter == 'i') ||
-		       (readCharacter == 'o') ||
-		       (readCharacter == 'u') ||
-		       (readCharacter == 'y')) &&
-		       (currentIndex < word.length())
+		if ((readCharacter == 'a') ||
+		    (readCharacter == 'e') ||
+		    (readCharacter == 'i') ||
+		    (readCharacter == 'o') ||
+		    (readCharacter == 'u') ||
+		    (readCharacter == 'y'))
 		{
-			currentIndex++;
-			if (currentIndex < word.length())
+			// Continue reading characters until finding a non-vowel
+			// character
+			while (((readCharacter == 'a') ||
+			       (readCharacter == 'e') ||
+		               (readCharacter == 'i') ||
+			       (readCharacter == 'o') ||
+			       (readCharacter == 'u') ||
+			       (readCharacter == 'y')) &&
+			       (currentIndex < word.length())
 			{
-				readCharacter.at(currentIndex);
+				currentIndex++;
+				if (currentIndex < word.length())
+				{
+					readCharacter.at(currentIndex);
+				}
 			}
 		}
-	}
 	}
 	
 	// Add one to the syllable count if no syllables were detected
