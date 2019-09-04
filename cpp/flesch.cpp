@@ -160,7 +160,7 @@ string getWord(int currentIndex,
 	// Postcondition: The retrieved word is returned to the function caller
 
 	// Create a char variable to hold the characters read from the word
-	char readCharacter = 'NULL';
+	char readCharacter = 'a';
 
 	// From the starting index, locate the first non-whitespace character
 	readCharacter = line.at(currentIndex);
@@ -222,7 +222,7 @@ int countSyllables(string word)
 	int currentIndex = 0;
 
 	// Create a char variable to hold each read character of the word
-	char readCharacter = 'NULL';
+	char readCharacter = 'a';
 
 	// Create a variable to hold the number of syllables in the word
 	int syllables = 0;
