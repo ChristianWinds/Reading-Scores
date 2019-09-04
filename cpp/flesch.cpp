@@ -69,7 +69,7 @@ int main(int argc, char* argv[])
 			{
 				cout << "analyzedFile.is_open() == true" << endl;
 			}*/
-			while (getline(analyzedFile, line));
+			while (getline(cin, line));
 			{
 				// ** TEST
 				cout << "Print read line." << endl;
