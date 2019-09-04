@@ -28,6 +28,7 @@ void obtainValues(int &syllables,
 string getWord(int currentIndex,
 	       string line,
 	       bool &endOfLine);
+int countSyllables(string word);
 /* DISABLE
 float calculateFlesch();
 */
