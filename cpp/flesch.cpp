@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 	{*/
 		// Read the filename of the file to be analyzed
 		// * PROGRAMMER'S NOTE: C++ code read line required [OK]
-		string filename = argv[1];
+		/*string filename = argv[1];*/
 
 		// ** TEST
 /*		if (testMode)
@@ -96,6 +96,7 @@ int main(int argc, char* argv[])
 		// * PROGRAMMER'S NOTE: place final program algorithm below this
 		// * line.
 		// Retrieve the filename needed for file analysis
+		string filename = argv[1];
 
 		// Preapare variables for the four values to be recorded while
 		// reading the input file
