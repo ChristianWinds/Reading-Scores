@@ -52,10 +52,6 @@ int main(int argc, char* argv[])
 		// * PROGRAMMER'S NOTE: The filename string variable likely
 		// * requires conversion to a c string for success [CODE
 		// * PLACED]
-		/* DISABLE
-		string line = "TEST";
-		cout << line << endl;
-		*/
 /*		char * filenameCstr = new char [filename.length() + 1];*/
 /*		strcpy (filenameCstr, filename.c_str());*/
 		ifstream analyzedFile/*("minisample.txt")*/;
