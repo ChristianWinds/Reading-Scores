@@ -164,7 +164,8 @@ string getWord(int currentIndex,
 
 	// From the starting index, locate the first non-whitespace character
 	readCharacter = line.at(currentIndex);
-	while ((readCharacter == ' ') && (currentIndex < line.length()))
+	while ((readCharacter == ' ') &&
+	       (currentIndex < line.length()))
 	{
 		// Check the next character in the line
 		currentIndex++;
@@ -179,7 +180,8 @@ string getWord(int currentIndex,
 		// Check the remaining line characters to find the word's end
 		currentIndex++;
 		readCharacter = line.at(currentIndex);
-		while ((readCharacter != ' ') && (currentIndex < line.length()))
+		while ((readCharacter != ' ') &&
+		       (currentIndex < line.length()))
 		{
 			// Check the next character in the line
 			currentIndex++;
