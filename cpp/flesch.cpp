@@ -28,7 +28,7 @@ void obtainValues(int &totalSyllables,
 		  int &sentences,
 		  int &difficultWords,
 		  string filename);
-string getWord(int currentIndex,
+string getWord(int &currentIndex,
 	       string line,
 	       bool &endOfLine);
 int countSyllables(string word);
@@ -164,7 +164,7 @@ void obtainValues(int &totalSyllables,
 	}
 }
 
-string getWord(int currentIndex,
+string getWord(int &currentIndex,
 	       string line,
 	       bool &endOfLine)
 {
