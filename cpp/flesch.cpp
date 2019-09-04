@@ -148,6 +148,7 @@ void obtainValues(&syllables,
 	// Create a string variable to hold the current read line
 	string currentLine = "";
 
+	if (analyzedFile.is_open())
 	// Retrieve the values for the file to analyze
 	while (!(analyzedFile.eof()))
 	{
