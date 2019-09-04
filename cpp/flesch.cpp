@@ -45,8 +45,6 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		// Read the filename of the file to be analyzed
-
 		// * PROGRAMMER'S NOTE: The below code is intended to test file
 		// reading
 		// * PROGRAMMER'S NOTE: The filename string variable likely
