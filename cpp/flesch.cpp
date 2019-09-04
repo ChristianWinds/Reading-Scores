@@ -20,10 +20,11 @@ using namespace std;
 /* DISABLE
 string readLine();
 */
-void obtainValues(&syllables,
-		  &totalWords,
-		  &sentences,
-		  &difficultWords);
+void obtainValues(int &syllables,
+		  int &totalWords,
+		  int &sentences,
+		  int &difficultWords
+		  string filename);
 
 /* DISABLE
 float calculateFlesch();
