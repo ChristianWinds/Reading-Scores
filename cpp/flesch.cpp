@@ -203,7 +203,9 @@ string getWord(int currentIndex, string line)
 
 	// Retrieve the found word
 	int wordLength = wordEndIndex - wordStartIndex + 1;
-	substr;
+	line.substr(wordStartIndex, wordLength);
+
+	//
 
 	
 }
