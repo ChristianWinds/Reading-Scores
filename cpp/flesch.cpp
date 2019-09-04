@@ -149,10 +149,11 @@ void obtainValues(&syllables,
 	string currentLine = "";
 
 	if (analyzedFile.is_open())
-	// Retrieve the values for the file to analyze
-	while (!(analyzedFile.eof()))
 	{
-		// Store the earliest unread file line
+		// Retrieve the values for the file to analyze
+		while (!(analyzedFile.eof()))
+		{
+			// Store the earliest unread file line
 		// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 		getline(analyzedFile, currentLine);
 
@@ -167,6 +168,7 @@ void obtainValues(&syllables,
 
 		// Determine the number of syllables in the retrieved word
 		int syllables = countSyllables(word);
+	}
 	}
 	
 }
