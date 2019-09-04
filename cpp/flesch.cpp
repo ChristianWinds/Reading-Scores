@@ -141,6 +141,7 @@ void obtainValues(&syllables,
 
 	string currentLine = "";
 
+	// Retrieve the values for the file to analyze
 	while (!(analyzedFile.eof()))
 	{
 		// Store the earliest unread file line
