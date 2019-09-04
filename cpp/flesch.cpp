@@ -162,6 +162,10 @@ void obtainValues(&syllables,
 			// current index
 			int currentLineIndex = 0;
 
+			// Create a Boolean to detect the end of the current
+			// line
+			bool endOfLine = false;
+
 			while (!(endOfLine))
 			{
 				// Retrieve the next unread word from the line
