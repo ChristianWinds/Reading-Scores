@@ -129,7 +129,7 @@ void obtainValues(int &totalSyllables,
 			{
 				// Retrieve the next unread word from the line
 				string word = getWord(currentLineIndex,
-						      line,
+						      currentLine,
 						      endOfLine);
 
 				// Increment the number of words
