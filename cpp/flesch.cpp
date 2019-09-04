@@ -139,7 +139,7 @@ void obtainValues(int &syllables,
 
 				// Determine the number of syllables in the
 				// retrieved word
-				int syllables = countSyllables(word);
+				int wordSyllables = countSyllables(word);
 			}
 		}
 	}
@@ -191,6 +191,9 @@ string getWord(int currentIndex,
 	}
 	else if (currentIndex + 1 == line.length())
 	{
+		// Flag the end of line Boolean
+		endOfLine = true;
+
 		// Regard the line's final character as the end of the word
 		wordEndIndex = currentIndex;
 	}
