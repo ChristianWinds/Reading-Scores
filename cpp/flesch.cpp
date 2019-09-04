@@ -140,7 +140,7 @@ void obtainValues(&syllables,
 	/*bool wordPart = false;*/
 
 	// Open the file to analyze
-	;
+	analyzedFile.open(filename.c_str());
 
 	// Create a string variable to hold the current read line
 	string currentLine = "";
