@@ -141,7 +141,9 @@ void obtainValues(&syllables,
 	// * PROGRAMMER'S NOTE: The name of this Boolean may need improvement,
 	// * and this initialization's placement may require change to a more
 	// * relevant location for usage timing
-	bool wordPart = false;
+	// * PROGRAMMER'S NOTE (8/3/2019): Disabled to continue main program
+	// * development
+	/*bool wordPart = false;*/
 
 	string currentLine = "";
 
