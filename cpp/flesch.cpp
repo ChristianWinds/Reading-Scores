@@ -141,6 +141,8 @@ void obtainValues(&syllables,
 
 	string currentLine = "";
 
+	while ()
+	{
 	// Store the earliest unread file line
 	// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 	getline(analyzedFile, currentLine);
@@ -156,6 +158,7 @@ void obtainValues(&syllables,
 
 	// Determine the number of syllables in the retrieved word
 	int syllables = countSyllables(word);
+	}
 	
 }
 
