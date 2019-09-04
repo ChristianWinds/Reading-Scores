@@ -117,10 +117,13 @@ void obtainValues(int &totalSyllables,
 		       (analyzedFile.is_open()))
 		{
 			if (testMode)
-				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof()
+				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
 			// Store the earliest unread file line
 			// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 			getline(analyzedFile, currentLine);
+
+			if (testMode)
+				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
 
 			// Create an integer variable to hold the current line's
 			// current index
