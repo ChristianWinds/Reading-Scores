@@ -162,7 +162,7 @@ string getWord(int currentIndex, string line)
 	// Precondition:
 	// Postcondition:
 
-	char readCharacter = '';
+	char readCharacter = 'NULL';
 
 	// From the starting index, locate the first non-whitespace character
 	readCharacter = line.at(currentIndex);
@@ -206,8 +206,9 @@ string getWord(int currentIndex, string line)
 	line.substr(wordStartIndex, wordLength);
 
 	//
+	;
 
-	
+	return ;
 }
 /*
 float calculateFlesch()
