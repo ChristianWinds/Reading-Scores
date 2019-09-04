@@ -105,7 +105,7 @@ int main(int argc, char* argv[])
 		// * update the multiple calculation variable values, as C++
 		// * functions can otherwise return only one value to the
 		// functions' callers.
-		obtainValues(syllables,
+/*		obtainValues(syllables,
 			     totalWords,
 			     sentences,
 			     difficultWords);
@@ -114,7 +114,7 @@ int main(int argc, char* argv[])
 		calculateFlesch(syllables,
 				totalWords,
 				sentences);
-
+*/
 /*	}*/
 	
 	return 0;
