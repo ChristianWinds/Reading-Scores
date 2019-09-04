@@ -20,7 +20,7 @@ using namespace std;
 /* DISABLE
 string readLine();
 */
-void obtainValues(int &syllables,
+void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &sentences,
 		  int &difficultWords
