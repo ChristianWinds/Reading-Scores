@@ -173,8 +173,10 @@ string getWord(int currentIndex, string line)
 		readCharacter = line.at(currentIndex);
 	}
 
-	wordEndIndex = ;
+	int wordEndIndex = currentIndex + 1;
+
 	// Locate the end of the current word
+	
 }
 /*
 float calculateFlesch()
