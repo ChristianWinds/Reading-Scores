@@ -125,8 +125,7 @@ int main(int argc, char* argv[])
 void obtainValues(&syllables,
 		  &totalWords,
 		  &sentences,
-		  &difficultWords,
-		)
+		  &difficultWords)
 {
 	// Precondition:
 	// Postcondition:
@@ -139,6 +138,9 @@ void obtainValues(&syllables,
 	// * PROGRAMMER'S NOTE (8/3/2019): Disabled to continue main program
 	// * development
 	/*bool wordPart = false;*/
+
+	// Open the file to analyze
+	;
 
 	// Create a string variable to hold the current read line
 	string currentLine = "";
