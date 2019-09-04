@@ -130,6 +130,12 @@ void obtainValues(int &totalSyllables,
 			while (!(endOfLine))
 			{
 				// Retrieve the next unread word from the line
+				if (testMode)
+				{
+					cout << "obtainValues: getWord call upcoming. Parameters:" << endl;
+					cout << "\t currentLineIndex == " << currentLineIndex << endl;
+					cout 
+				}
 				string word = getWord(currentLineIndex,
 						      currentLine,
 						      endOfLine);
