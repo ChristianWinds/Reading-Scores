@@ -229,6 +229,8 @@ int countSyllables(string word)
 	// Create a char variable to hold each read character of the word
 	char readCharacter = 'NULL';
 
+	// Create a variable to hold the number of syllables in the word
+	int syllables = 0;
 	// Count each syllable in the word
 	while (currentIndex < word.length())
 	{
