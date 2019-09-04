@@ -160,7 +160,8 @@ void obtainValues(&syllables,
 	// Increment the number of words
 	totalWords++;
 
-	//
+	// Determine the number of syllables in the retrieved word
+	int syllables = checkSyllables(word);
 	
 }
 
@@ -214,6 +215,16 @@ string getWord(int currentIndex, string line)
 
 	// Return the retrieved word to the function caller
 	return word;
+}
+
+int checkSyllables(string word)
+{
+	// Precondition: The word received holds only non-whitespace characters
+	// Postcondition:
+
+
+
+	return syllables;
 }
 /*
 float calculateFlesch()
