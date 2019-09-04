@@ -253,9 +253,7 @@ int countSyllables(string word)
 				// if unread characters remain
 				currentIndex++;
 				if (currentIndex < word.length())
-				{
-					readCharacter.at(currentIndex);
-				}
+					readCharacter = word.at(currentIndex);
 			}
 
 			// Increment the number of found syllables
