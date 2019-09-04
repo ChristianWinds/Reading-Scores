@@ -222,6 +222,8 @@ int countSyllables(string word)
 	// Precondition: The word received holds only non-whitespace characters
 	// Postcondition:
 
+	char readCharacter = 'NULL';
+
 	// Count each syllable in the word
 	if ((readCharacter == 'a') ||
 	    (readCharacter == 'e') ||
