@@ -24,6 +24,7 @@ void obtainValues(&syllables,
 		  &totalWords,
 		  &sentences,
 		  &difficultWords);
+
 /* DISABLE
 float calculateFlesch();
 */
@@ -41,8 +42,6 @@ int main(int argc, char* argv[])
 	else
 	{
 		// Read the filename of the file to be analyzed
-		// * PROGRAMMER'S NOTE: C++ code read line required [OK]
-		/*string filename = argv[1];*/
 
 		// * PROGRAMMER'S NOTE: The below code is intended to test file
 		// reading
