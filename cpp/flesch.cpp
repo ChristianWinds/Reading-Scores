@@ -126,18 +126,19 @@ void obtainValues(int &totalSyllables,
 				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
 			if (!(analyzedFile.eof())
 			{
-				// Create an integer variable to hold the current line's
-				// current index
+				// Create an integer variable to hold the
+				// current line's current index
 				int currentLineIndex = 0;
 
-				// Create a Boolean to detect the end of the current
-				// line
+				// Create a Boolean to detect the end of the
+				// current line
 				bool endOfLine = false;
 
 				// Read each word of the current line
 				while (!(endOfLine))
 				{
-					// Retrieve the next unread word from the line
+					// Retrieve the next unread word from
+					// the line
 					if (testMode)
 					{
 						cout << "obtainValues: getWord call upcoming. Parameters:" << endl;
@@ -154,12 +155,12 @@ void obtainValues(int &totalSyllables,
 					// Increment the number of words
 					totalWords++;
 
-					// Determine the number of syllables in the
-					// retrieved word
+					// Determine the number of syllables in
+					// the retrieved word
 					int wordSyllables = countSyllables(word);
 
-					// Add the word's number of syllables to the
-					// syllable total
+					// Add the word's number of syllables to
+					// the syllable total
 					totalSyllables += wordSyllables;
 				}
 			}
