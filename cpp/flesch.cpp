@@ -255,6 +255,9 @@ int countSyllables(string word)
 					readCharacter.at(currentIndex);
 				}
 			}
+
+			// Increment the number of found syllables
+			syllables++;
 		}
 	}
 	
