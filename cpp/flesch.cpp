@@ -247,7 +247,7 @@ int countSyllables(string word)
 			       (readCharacter == 'o') ||
 			       (readCharacter == 'u') ||
 			       (readCharacter == 'y')) &&
-			       (currentIndex < word.length())
+			       (currentIndex < word.length()))
 			{
 				// Read the next unread character of the word
 				// if unread characters remain
