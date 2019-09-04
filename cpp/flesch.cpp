@@ -176,6 +176,13 @@ string getWord(int currentIndex, string line)
 	int wordEndIndex = currentIndex + 1;
 
 	// Locate the end of the current word
+	readCharacter = line.at(currentIndex);
+	while (readCharacter != ' ')
+	{
+		// Check the next character in the line
+		currentIndex++;
+		readCharacter = line.at(currentIndex);
+	}
 	
 }
 /*
