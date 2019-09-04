@@ -55,6 +55,7 @@ int main(int argc, char* argv[])
 		// * requires conversion to a c string for success [CODE
 		// * PLACED]
 		string line = "TEST";
+		cout << line << endl;
 /*		char * filenameCstr = new char [filename.length() + 1];*/
 /*		strcpy (filenameCstr, filename.c_str());*/
 		ifstream analyzedFile ("minisample.txt");
@@ -69,7 +70,7 @@ int main(int argc, char* argv[])
 			{
 				cout << "analyzedFile.is_open() == true" << endl;
 			}*/
-			while (getline(cin, line));
+			while (getline(analyzedFile, line));
 			{
 				// ** TEST
 				cout << "Print read line." << endl;
