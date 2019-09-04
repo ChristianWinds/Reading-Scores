@@ -227,6 +227,7 @@ int checkSyllables(string word)
 	if (syllables == 0)
 		syllables++;
 
+	// Return the number of detected syllables to the function's caller
 	return syllables;
 }
 /*
