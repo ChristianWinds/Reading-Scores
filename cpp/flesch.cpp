@@ -45,18 +45,6 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		// * PROGRAMMER'S NOTE: The below code is intended to test file
-		// reading
-		// * PROGRAMMER'S NOTE: The filename string variable likely
-		// * requires conversion to a c string for success [CODE
-		// * PLACED]
-		// * PROGRAMER'S NOTE: Derived from OneNote C++ programming
-		// * notes
-		// Print content from the input file if the input file
-		// successfully opens
-
-		// * PROGRAMMER'S NOTE: place final program algorithm below this
-		// * line.
 		// Retrieve the filename needed for file analysis
 		string filename = argv[1];
 
