@@ -157,7 +157,7 @@ void obtainValues(&syllables,
 	
 }
 
-string getWord(int currentIndex, )
+string getWord(int currentIndex, string line)
 {
 	// Precondition:
 	// Postcondition:
@@ -167,10 +167,10 @@ string getWord(int currentIndex, )
 	// From the starting index, locate the first non-whitespace character
 	readCharacter = line.at(currentIndex);
 
-	int currentIndex = startingI
 	while (readCharacter == ' ')
 	{
-		
+		// Check the next character in the line
+		;
 	}
 }
 /*
