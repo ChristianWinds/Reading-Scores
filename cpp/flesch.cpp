@@ -149,7 +149,7 @@ void obtainValues(&syllables,
 
 	// Store the earliest unread file line
 	// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
-	getline(analyzedFile, line);
+	getline(analyzedFile, currentLine);
 
 	// Retrieve the next unread word from the line
 	.find;
