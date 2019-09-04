@@ -214,7 +214,7 @@ string getWord(int currentIndex,
 
 	// Return the retrieved word to the function caller
 	if (testMode)
-		cout >> "getWord: Returning " >> word >> " to function caller" >> endl;
+		cout << "getWord: Returning " << word << " to function caller" << endl;
 	return word;
 }
 
@@ -222,6 +222,8 @@ int countSyllables(string word)
 {
 	if (testMode)
 		cout << "countSyllables: Starting" << endl;
+	if (testMode)
+		cout << 
 	// Precondition: The word received holds only non-whitespace characters
 	// Postcondition:
 
