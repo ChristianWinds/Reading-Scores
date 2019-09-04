@@ -44,12 +44,6 @@ int main(int argc, char* argv[])
 		// * PROGRAMMER'S NOTE: C++ code read line required [OK]
 		/*string filename = argv[1];*/
 
-		// ** TEST
-/*		if (testMode)
-		{
-			cout << " ** Filename read: " << filename << endl;
-		} */
-
 		// * PROGRAMMER'S NOTE: The below code is intended to test file
 		// reading
 		// * PROGRAMMER'S NOTE: The filename string variable likely
