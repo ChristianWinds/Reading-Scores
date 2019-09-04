@@ -17,13 +17,14 @@ using namespace std;
 // * values of the prgram. If safe, this boolean may remain in the final program
 // * build unlesss otherwise desired by Dr. Pounds.
 /*bool testMode = true;*/
-
 /* DISABLE
 string readLine();
+*/
 void obtainValues(&syllables,
              &totalWords,
              &sentences,
              &difficultWords);
+/* DISABLE
 float calculateFlesch();
 */
 
@@ -111,11 +112,11 @@ int main(int argc, char* argv[])
 		// * update the multiple calculation variable values, as C++
 		// * functions can otherwise return only one value to the
 		// functions' callers.
-/*		obtainValues(syllables,
+		obtainValues(syllables,
 			     totalWords,
 			     sentences,
 			     difficultWords);
-
+/*
 		// Calculate the Flesch readability index
 		calculateFlesch(syllables,
 				totalWords,
