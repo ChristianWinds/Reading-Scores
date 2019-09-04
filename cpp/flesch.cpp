@@ -139,6 +139,9 @@ void obtainValues(&syllables,
 	// * development
 	/*bool wordPart = false;*/
 
+	// Create a
+	ifstream analyzedFile;
+
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
 
