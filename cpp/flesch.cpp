@@ -246,8 +246,7 @@ int countSyllables(string word)
 		    (readCharacter == 'u') ||
 		    (readCharacter == 'y'))
 		{
-			// Continue reading characters until finding a non-vowel
-			// character
+			// Find the successive syllables in the word
 			while (((readCharacter == 'a') ||
 			       (readCharacter == 'e') ||
 		               (readCharacter == 'i') ||
