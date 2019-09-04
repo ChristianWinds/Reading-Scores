@@ -147,6 +147,7 @@ void obtainValues(int &totalSyllables,
 	}
 	else
 	{
+		// Report that the file opening attempt failed
 		cout << "File opening failed." << endl;
 	}
 }
