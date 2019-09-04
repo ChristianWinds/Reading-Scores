@@ -152,7 +152,7 @@ void obtainValues(&syllables,
 	getline(analyzedFile, currentLine);
 
 	// Retrieve the next unread word from the line
-	.find;
+	getWord();
 
 	
 }
@@ -164,7 +164,7 @@ string getWord(int startingIndex, )
 
 	// 
 	;
-}*/
+}
 /*
 float calculateFlesch()
 {
