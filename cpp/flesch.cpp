@@ -166,6 +166,7 @@ void obtainValues(&syllables,
 			// line
 			bool endOfLine = false;
 
+			// Read each word of the current line
 			while (!(endOfLine))
 			{
 				// Retrieve the next unread word from the line
