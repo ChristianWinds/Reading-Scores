@@ -78,7 +78,7 @@ int main(int argc, char* argv[])
 }
 
 
-void obtainValues(int &syllables,
+void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &sentences,
 		  int &difficultWords,
@@ -140,6 +140,10 @@ void obtainValues(int &syllables,
 				// Determine the number of syllables in the
 				// retrieved word
 				int wordSyllables = countSyllables(word);
+
+				// Add the word's number of syllables to the
+				// syllable total
+				totalSyllables += wordSyllables;
 			}
 		}
 	}
