@@ -123,9 +123,10 @@ int main(int argc, char* argv[])
 
 
 void obtainValues(&syllables,
-                  &totalWords,
-                  &sentences,
-                  &difficultWords)
+		  &totalWords,
+		  &sentences,
+		  &difficultWords,
+		)
 {
 	// Precondition:
 	// Postcondition:
