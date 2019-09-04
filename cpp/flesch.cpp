@@ -262,7 +262,10 @@ int countSyllables(string word)
 			syllables++;
 		}
 		else
+		{
+			// Prepare to read the word's next character
 			currentIndex++;
+		}
 	}
 	
 	// Add one to the syllable count if no syllables were detected
