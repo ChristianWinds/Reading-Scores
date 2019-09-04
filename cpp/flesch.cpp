@@ -162,15 +162,18 @@ void obtainValues(&syllables,
 			// current index
 			int currentLineIndex = 0;
 
-			// Retrieve the next unread word from the line
-			string word = getWord(currentLineIndex, line);
+			while (!(endOfLine))
+			{
+				// Retrieve the next unread word from the line
+				string word = getWord(currentLineIndex, line);
 
-			// Increment the number of words
-			totalWords++;
+				// Increment the number of words
+				totalWords++;
 
-			// Determine the number of syllables in the retrieved
-			// word
-			int syllables = countSyllables(word);
+				// Determine the number of syllables in the retrieved
+				// word
+				int syllables = countSyllables(word);
+			}
 		}
 	}
 }
