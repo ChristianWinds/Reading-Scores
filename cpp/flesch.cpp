@@ -213,6 +213,8 @@ string getWord(int currentIndex,
 	string word = line.substr(wordStartIndex, wordLength);
 
 	// Return the retrieved word to the function caller
+	if (testMode)
+		cout >> "getWord: Returning " >> word >> " to function caller" >> endl;
 	return word;
 }
 
