@@ -185,7 +185,9 @@ void obtainValues(&syllables,
 	}
 }
 
-string getWord(int currentIndex, string line)
+string getWord(int currentIndex,
+	       string line,
+	       bool &endOfLine)
 {
 	// Precondition:
 	// Postcondition: The retrieved word is returned to the function caller
