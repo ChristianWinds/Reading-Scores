@@ -320,6 +320,12 @@ int countSyllables(string word)
 	if (syllables == 0)
 		syllables++;
 
+	if (testMode)
+	{
+		cout << "countSyllables: Syllables counted in word \""
+		     << word << "\" == " << syllables << endl;
+	}
+
 	// Return the number of detected syllables to the function's caller
 	return syllables;
 }
