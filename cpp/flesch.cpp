@@ -24,7 +24,7 @@ using namespace std;
 // * PROGRAMMER'S NOTE: This global Boolean was created to test features and
 // * values of the prgram. If safe, this boolean may remain in the final program
 // * build unlesss otherwise desired by Dr. Pounds.
-bool testMode = false;
+bool testMode = true;
 /* DISABLE
 string readLine();
 */
