@@ -7,7 +7,7 @@
 // * PROGRAMMER'S NOTE: Current Goal (9/4/2019): Count the number of syllables
 // * 	- PROGRAMMER'S NOTE: Subgoal (9/4/2019): Add special word end "e"
 // *	  counting rule to algorithm [RUNNING; UNEVALUATED]
-// * in a text file
+// * PROGRAMMER'S NOTE: Current Goal (9/5/2019): Refine word and syllable detection
 // *	- Error (9/4/2019) - Line index not updating properly [CORRECTED]
 // *	- Error (9/4/2019) - Text read becomes out of range at line end
 // *	  [CORRECTED]
