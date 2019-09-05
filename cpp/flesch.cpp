@@ -275,6 +275,8 @@ int countSyllables(string word)
 		    (readCharacter == 'u') ||
 		    (readCharacter == 'y'))
 		{
+			// If the current read character is not an "e" at the
+			// word's end, taly the current word syllable
 			// Find the successive syllables in the word
 			while (((readCharacter == 'a') ||
 			       (readCharacter == 'e') ||
