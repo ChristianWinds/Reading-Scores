@@ -341,7 +341,7 @@ int countSentences()
 	// Precondition:
 	// Postcondition:
 
-	// 
+	//  
 
 	// Return the counted number of sentences
 	return sentences;
