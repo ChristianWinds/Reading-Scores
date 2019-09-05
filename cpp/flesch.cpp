@@ -285,7 +285,7 @@ int countSyllables(string word)
 			    (currentIndex == word.length() - 1))
 			{
 				// Update the current read index
-				currentIndex;
+				currentIndex++;
 			}
 			else
 			{
