@@ -333,6 +333,15 @@ int countSyllables(string word)
 	// Return the number of detected syllables to the function's caller
 	return syllables;
 }
+
+int countSentences()
+{
+	// Precondition:
+	// Postcondition:
+
+	// Return the counted number of sentences
+	return sentences;
+}
 /*
 float calculateFlesch()
 {
