@@ -32,7 +32,7 @@ string readLine();
 */
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
-		  int &sentences,
+		  int &totalSentences,
 		  int &difficultWords,
 		  string filename);
 string getWord(int &currentIndex,
@@ -89,7 +89,7 @@ int main(int argc, char* argv[])
 
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
-		  int &sentences,
+		  int &totalSentences,
 		  int &difficultWords,
 		  string filename)
 {
@@ -164,6 +164,10 @@ void obtainValues(int &totalSyllables,
 					// Determine the number of syllables in
 					// the retrieved word
 					int wordSyllables = countSyllables(word);
+
+					// Determine if the end of a sentence
+					// has been reached
+					totalSentences += 
 
 					// Add the word's number of syllables to
 					// the syllable total
