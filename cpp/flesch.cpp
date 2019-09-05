@@ -167,7 +167,7 @@ void obtainValues(int &totalSyllables,
 
 					// Determine if the end of a sentence
 					// has been reached
-					totalSentences += 
+					totalSentences += countSentences(word);
 
 					// Add the word's number of syllables to
 					// the syllable total
