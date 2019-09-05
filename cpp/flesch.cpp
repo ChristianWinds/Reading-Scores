@@ -294,8 +294,8 @@ int countSyllables(string word)
 				       (readCharacter == 'y')) &&
 				       (currentIndex < word.length()))
 				{
-					// Read the next unread character of the word
-					// if unread characters remain
+					// Read the next unread character of the
+					// word if unread characters remain
 					currentIndex++;
 					if (currentIndex < word.length())
 						readCharacter = word.at(currentIndex);
