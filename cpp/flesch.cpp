@@ -285,24 +285,25 @@ int countSyllables(string word)
 			}
 			else
 			{
-			// Find the successive syllables in the word
-			while (((readCharacter == 'a') ||
-			       (readCharacter == 'e') ||
-		               (readCharacter == 'i') ||
-			       (readCharacter == 'o') ||
-			       (readCharacter == 'u') ||
-			       (readCharacter == 'y')) &&
-			       (currentIndex < word.length()))
-			{
-				// Read the next unread character of the word
-				// if unread characters remain
-				currentIndex++;
-				if (currentIndex < word.length())
-					readCharacter = word.at(currentIndex);
-			}
+				// Find the successive syllables in the word
+				while (((readCharacter == 'a') ||
+				       (readCharacter == 'e') ||
+			               (readCharacter == 'i') ||
+				       (readCharacter == 'o') ||
+				       (readCharacter == 'u') ||
+				       (readCharacter == 'y')) &&
+				       (currentIndex < word.length()))
+				{
+					// Read the next unread character of the word
+					// if unread characters remain
+					currentIndex++;
+					if (currentIndex < word.length())
+						readCharacter = word.at(currentIndex);
+				}
 
-			// Increment the number of found syllables
-			syllables++;
+				// Increment the number of found syllables
+				syllables++;
+			}
 		}
 		else
 		{
