@@ -8,6 +8,8 @@
 // * 	- PROGRAMMER'S NOTE: Subgoal (9/4/2019): Add special word end "e"
 // *	  counting rule to algorithm [RUNNING; UNEVALUATED]
 // * PROGRAMMER'S NOTE: Current Goal (9/5/2019): Refine word and syllable detection
+// *	- Potential issue (9/5/2019): Detection of period and comma-separated numbers
+// *	  (e.g., 1,299; 1.7)
 // *	- Error (9/4/2019) - Line index not updating properly [CORRECTED]
 // *	- Error (9/4/2019) - Text read becomes out of range at line end
 // *	  [CORRECTED]
@@ -338,6 +340,8 @@ int countSentences()
 {
 	// Precondition:
 	// Postcondition:
+
+	// 
 
 	// Return the counted number of sentences
 	return sentences;
