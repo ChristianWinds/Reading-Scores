@@ -6,14 +6,14 @@
 // * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file [SUCCESSFUL]
 // * PROGRAMMER'S NOTE: Current Goal (9/4/2019): Count the number of syllables
 // * 	- PROGRAMMER'S NOTE: Subgoal (9/4/2019): Add special word end "e"
-// *	  counting rule to algorithm
+// *	  counting rule to algorithm [RUNNING; UNEVALUATED]
 // * in a text file
 // *	- Error (9/4/2019) - Line index not updating properly [CORRECTED]
 // *	- Error (9/4/2019) - Text read becomes out of range at line end
 // *	  [CORRECTED]
-// *	- Error (9/4/2019) - Program hangs with multi-line file
+// *	- Error (9/4/2019) - Program hangs with multi-line file [CORRECTED]
 // *		- (9/4/2019) Likely related to ending "e" syllable count
-// *		  behavior;  program hangs on word "line"
+// *		  behavior;  program hangs on word "line" [CORRECTED]
 #include <cstdlib>
 // * PROGRAMMER'S NOTE: iostream may be a testing-only item. Removal in the
 // * final program build depends upon desired testing content to retain.
