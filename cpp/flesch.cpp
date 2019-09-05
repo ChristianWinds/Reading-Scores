@@ -280,10 +280,11 @@ int countSyllables(string word)
 			if ((readCharacter == 'e') &&
 			    (currentIndex == word.length() - 1))
 			{
-				;
+				// Update the current read index
+				currentIndex;
 			}
 			else
-
+			{
 			// Find the successive syllables in the word
 			while (((readCharacter == 'a') ||
 			       (readCharacter == 'e') ||
