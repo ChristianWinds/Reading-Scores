@@ -9,7 +9,9 @@
 // *	  counting rule to algorithm
 // * in a text file
 // *	- Error (9/4/2019) - Line index not updating properly [CORRECTED]
-// *	- Error (9/4/2019) - Text read becomes out of range at line end [CORRECTED]
+// *	- Error (9/4/2019) - Text read becomes out of range at line end
+// *	  [CORRECTED]
+// *	- Eorror (9/4/2019) - Program hangs with multi-line file
 #include <cstdlib>
 // * PROGRAMMER'S NOTE: iostream may be a testing-only item. Removal in the
 // * final program build depends upon desired testing content to retain.
