@@ -277,10 +277,13 @@ int countSyllables(string word)
 		{
 			// If the current read character is not an "e" at the
 			// word's end, tally the current word syllable
-			if ((readCharacter == 'e') && (currentIndex == word.length() - 1))
+			if ((readCharacter == 'e') &&
+			    (currentIndex == word.length() - 1))
 			{
 				;
 			}
+			else
+
 			// Find the successive syllables in the word
 			while (((readCharacter == 'a') ||
 			       (readCharacter == 'e') ||
