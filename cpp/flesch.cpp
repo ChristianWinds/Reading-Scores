@@ -382,7 +382,18 @@ bool detectSentenceEnd (char character)
 	// Precondition:
 	// Postcondition:
 
-	;
+	bool endOfSe
+	// 
+	if ((readCharacter == '.') ||
+	    (readCharacter == ':') ||
+	    (readCharacter == ';') ||
+	    (readCharacter == '?') ||
+	    (readCharacter == '!'))
+		endOfSentence = true;
+	else
+		endOfSentence = false;
+
+	return endOfSentence;
 }
 /*
 float calculateFlesch()
