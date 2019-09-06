@@ -396,6 +396,7 @@ bool detectSentenceEnd (char character)
 	else
 		endOfSentence = false;
 
+	// Return the endOfSentence Boolean to this function's caller
 	return endOfSentence;
 }
 /*
