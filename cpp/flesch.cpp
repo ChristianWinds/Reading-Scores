@@ -172,13 +172,16 @@ void obtainValues(int &totalSyllables,
 					{
 						totalWords++;
 
-					// Add the number of syllables in the
-					// retrieved word to the syllable total
-					totalSyllables += countSyllables(word);
+						// Add the number of syllables
+						// in the retrieved word to the
+						// syllable total
+						totalSyllables += countSyllables(word);
+					}
 
-					// Add the word's number of syllables to
-					// the syllable total
-					totalSyllables += wordSyllables;
+					// Update the number of counted sentences
+					if (endOfSentence)
+						totalSentences++;
+
 				}
 			}
 		}
