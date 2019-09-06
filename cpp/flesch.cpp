@@ -39,7 +39,8 @@ void obtainValues(int &totalSyllables,
 		  string filename);
 string getWord(int &currentIndex,
 	       string line,
-	       bool &endOfLine);
+	       bool &endOfLine,
+	       bool &endOfSentence);
 int countSyllables(string word);
 /* DISABLE
 float calculateFlesch();
@@ -145,6 +146,10 @@ void obtainValues(int &totalSyllables,
 				// Read each word of the current line
 				while (!(endOfLine))
 				{
+					// Create a Boolean to detect if a
+					// sentence end was reached
+					bool endOfSentence = false;
+
 					// Retrieve the next unread word from
 					// the line
 					if (testMode)
@@ -158,7 +163,8 @@ void obtainValues(int &totalSyllables,
 						cout << "obtainValues: Calling getWord" << endl;
 					string word = getWord(currentLineIndex,
 							      currentLine,
-							      endOfLine);
+							      endOfLine,
+							      endOfSentence);
 
 					// Increment the number of words
 					totalWords++;
@@ -187,7 +193,8 @@ void obtainValues(int &totalSyllables,
 
 string getWord(int &currentIndex,
 	       string line,
-	       bool &endOfLine)
+	       bool &endOfLine,
+	       bool &endOfSentence)
 {
 	if (testMode)
 		cout << "getWord: Starting" << endl;
