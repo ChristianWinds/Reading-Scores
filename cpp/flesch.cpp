@@ -245,7 +245,8 @@ string getWord(int &currentIndex,
 			currentIndex++;
 			readCharacter = line.at(currentIndex);
 			while ((readCharacter != ' ') &&
-			       (currentIndex < line.length()))
+			       (currentIndex < line.length()) &&
+			       (!endOfSentence))
 			{
 				// Check the next character in the line
 				currentIndex++;
