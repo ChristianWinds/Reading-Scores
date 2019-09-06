@@ -236,8 +236,14 @@ string getWord(int &currentIndex,
 		// Record the index location of the word beginning
 		int wordStartIndex = currentIndex;
 
-		// Locate the end of the current word
+		// Create a word end index variable to store the ending index of
+		// the word
 		int wordEndIndex = -1;
+
+		// Locate the end of the current word
+		while ((readCharacter != ' ') &&
+		       currentIndex < line.length() &&
+		)
 		/* DISABLE FOR SIMPLIFICATION
 		if (currentIndex + 1 < line.length())
 		{
