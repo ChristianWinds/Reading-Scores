@@ -228,6 +228,7 @@ string getWord(int &currentIndex,
 	// Create a word variable to hold the word to return to this function's
 	// caller
 	string word = "";
+
 	if (!endOfSentence)
 	{
 		int wordStartIndex = currentIndex;
