@@ -226,6 +226,7 @@ string getWord(int &currentIndex,
 	}
 
 	if (!endOfSentence)
+	{
 	int wordStartIndex = currentIndex;
 
 	// Locate the end of the current word
