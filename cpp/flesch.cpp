@@ -222,6 +222,12 @@ string getWord(int &currentIndex,
 			currentIndex++;
 			if (currentIndex < line.length())
 				readCharacter = line.at(currentIndex);
+			else
+			{
+				// Flag that the end of the text line was
+				// reached
+				endOfLine = true;
+			}
 		}
 
 		// Store the index of the word end
