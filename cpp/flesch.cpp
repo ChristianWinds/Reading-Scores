@@ -403,7 +403,10 @@ bool detectSentenceEnd (char character)
 bool detectVowel()
 {
 	// Precondition:
-	// Postcondition
+	// Postcondition:
+
+	// Create a Boolean to flag whether the recceived character is a vowel
+	
 }
 
 /*
