@@ -399,6 +399,11 @@ bool detectSentenceEnd (char character)
 	// Return the endOfSentence Boolean to this function's caller
 	return endOfSentence;
 }
+
+bool detectVowel()
+{
+}
+
 /*
 float calculateFlesch()
 {
