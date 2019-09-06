@@ -408,7 +408,7 @@ bool detectVowel()
 	// Create a Boolean to flag whether the recceived character is a vowel
 	bool vowel = false;
 
-
+	// Flag the vowel Bool
 }
 
 /*
