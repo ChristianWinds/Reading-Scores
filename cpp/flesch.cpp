@@ -242,8 +242,8 @@ string getWord(int &currentIndex,
 
 		// Locate the end of the current word
 		while ((readCharacter != ' ') &&
-		       currentIndex < line.length() &&
-		)
+		       (currentIndex < line.length()) &&
+		       )
 		/* DISABLE FOR SIMPLIFICATION
 		if (currentIndex + 1 < line.length())
 		{
