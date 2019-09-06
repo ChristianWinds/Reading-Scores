@@ -200,7 +200,8 @@ string getWord(int &currentIndex,
 	if (testMode)
 		cout << "getWord: Starting" << endl;
 	// Precondition:
-	// Postcondition: The retrieved word is returned to the function caller
+	// Postcondition: The retrieved word is returned to the function caller,
+	// and the currentIndex value is set one beyond the last read index
 
 	// Create a char variable to hold the characters read from the word
 	char readCharacter = 'a';
