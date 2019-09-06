@@ -225,46 +225,50 @@ string getWord(int &currentIndex,
 			endOfSentence = true;
 	}
 
+	// Create a word variable to hold the word to return to this function's
+	// caller
+	string word = "";
 	if (!endOfSentence)
 	{
-	int wordStartIndex = currentIndex;
+		int wordStartIndex = currentIndex;
 
-	// Locate the end of the current word
-	int wordEndIndex = -1;
-	if (currentIndex + 1 < line.length())
-	{
-		// Check the remaining line characters to find the word's end
-		currentIndex++;
-		readCharacter = line.at(currentIndex);
-		while ((readCharacter != ' ') &&
-		       (currentIndex < line.length()))
+		// Locate the end of the current word
+		int wordEndIndex = -1;
+		if (currentIndex + 1 < line.length())
 		{
-			// Check the next character in the line
+			// Check the remaining line characters to find the
+			// word's end
 			currentIndex++;
-			if (currentIndex < line.length())
-				readCharacter = line.at(currentIndex);
-			else
+			readCharacter = line.at(currentIndex);
+			while ((readCharacter != ' ') &&
+			       (currentIndex < line.length()))
 			{
-				// Flag that the end of the text line was
-				// reached
-				endOfLine = true;
+				// Check the next character in the line
+				currentIndex++;
+				if (currentIndex < line.length())
+					readCharacter = line.at(currentIndex);
+				else
+				{
+					// Flag that the end of the text line was
+					// reached
+					endOfLine = true;
+				}
 			}
+
+			// Store the index of the word end
+			// * PROGRAMMER'S NOTE: The word index storage code
+			// * below should function regardless of whether a space
+			// * was detected or the line's end was reached
+			wordEndIndex = currentIndex - 1;
 		}
+		else if (currentIndex + 1 == line.length())
+		{
+			// Flag the end of line Boolean
+			endOfLine = true;
 
-		// Store the index of the word end
-		// * PROGRAMMER'S NOTE: The word index storage code below should
-		// * function regardless of whether a space was detected or the
-		// * line's end was reached
-		wordEndIndex = currentIndex - 1;
-	}
-	else if (currentIndex + 1 == line.length())
-	{
-		// Flag the end of line Boolean
-		endOfLine = true;
-
-		// Regard the line's final character as the end of the word
-		wordEndIndex = currentIndex;
-	}
+			// Regard the line's final character as the end of the word
+			wordEndIndex = currentIndex;
+		}
 
 	// Update the end of line flag if the end of the received line was reached
 	if (currentIndex >= line.length())
