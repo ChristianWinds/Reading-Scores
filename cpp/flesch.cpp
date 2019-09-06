@@ -218,12 +218,7 @@ string getWord(int &currentIndex,
 
 		// If the read character is a sentence-ending punctuation, flag
 		// the end of sentence Boolean
-		if ((readCharacter == '.') ||
-		    (readCharacter == ':') ||
-		    (readCharacter == ';') ||
-		    (readCharacter == '?') ||
-		    (readCharacter == '!'))
-			endOfSentence = true;
+		endOfSentence = detectSentenceEnd(readCharacter);
 	}
 
 	// Create a word variable to hold the word to return to this function's
