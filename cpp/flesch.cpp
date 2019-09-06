@@ -379,7 +379,10 @@ int countSyllables(string word)
 
 bool detectSentenceEnd (char character)
 {
-	// 
+	// Precondition:
+	// Postcondition:
+
+	;
 }
 /*
 float calculateFlesch()
