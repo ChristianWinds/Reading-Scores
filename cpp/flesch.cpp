@@ -248,6 +248,9 @@ string getWord(int &currentIndex,
 			       (currentIndex < line.length()) &&
 			       (!endOfSentence))
 			{
+				// Determine if a sentence end was reached
+
+
 				// Check the next character in the line
 				currentIndex++;
 				if (currentIndex < line.length())
