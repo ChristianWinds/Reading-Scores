@@ -238,6 +238,7 @@ string getWord(int &currentIndex,
 
 		// Locate the end of the current word
 		int wordEndIndex = -1;
+		/* DISABLE FOR SIMPLIFICATION
 		if (currentIndex + 1 < line.length())
 		{
 			// Check the remaining line characters to find the
@@ -277,6 +278,7 @@ string getWord(int &currentIndex,
 			// Regard the line's final character as the end of the word
 			wordEndIndex = currentIndex;
 		}
+		*/
 
 		// Update the end of line flag if the end of the received line was reached
 		if (currentIndex >= line.length())
