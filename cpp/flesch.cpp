@@ -166,16 +166,15 @@ void obtainValues(int &totalSyllables,
 							      endOfLine,
 							      endOfSentence);
 
-					// Increment the number of words
-					totalWords++;
+					// If a word was retrieved, update the
+					// total numbers of words and syllables
+					if (word != "")
+					{
+						totalWords++;
 
-					// Determine the number of syllables in
-					// the retrieved word
-					int wordSyllables = countSyllables(word);
-
-					// Determine if the end of a sentence
-					// has been reached
-					totalSentences += countSentences(word);
+					// Add the number of syllables in the
+					// retrieved word to the syllable total
+					totalSyllables += countSyllables(word);
 
 					// Add the word's number of syllables to
 					// the syllable total
