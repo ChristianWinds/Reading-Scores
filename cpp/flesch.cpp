@@ -247,10 +247,17 @@ string getWord(int &currentIndex,
 		       (!endOfLine))
 		{
 			currentIndex++;
+
+			// Record the current line's final character as the last
+			// character of the word if the current index is not
+			// less than the line length
 			if (!(currentIndex < line.length())
 			{
 				endOfLine = true;
 				wordEndIndex = currentIndex - 1;
+			}
+			else
+			{
 			}
 
 		}
