@@ -246,6 +246,14 @@ string getWord(int &currentIndex,
 		       (!endOfSentence) &&
 		       (!endOfLine))
 		{
+			currentIndex++;
+			if (!(currentIndex < line.length())
+			{
+				endOfLine = true;
+				wordEndIndex = currentIndex - 1;
+			}
+
+		}
 		/* DISABLE FOR SIMPLIFICATION
 		if (currentIndex + 1 < line.length())
 		{
