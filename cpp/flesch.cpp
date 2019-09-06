@@ -181,7 +181,6 @@ void obtainValues(int &totalSyllables,
 					// Update the number of counted sentences
 					if (endOfSentence)
 						totalSentences++;
-
 				}
 			}
 		}
@@ -360,16 +359,6 @@ int countSyllables(string word)
 	return syllables;
 }
 
-int countSentences()
-{
-	// Precondition:
-	// Postcondition:
-
-	//  
-
-	// Return the counted number of sentences
-	return sentences;
-}
 /*
 float calculateFlesch()
 {
