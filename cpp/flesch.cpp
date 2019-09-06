@@ -212,6 +212,11 @@ string getWord(int &currentIndex,
 		// Check the next character in the line
 		currentIndex++;
 		readCharacter = line.at(currentIndex);
+
+		// If the read character is a sentence-ending punctuation, flag
+		// the end of sentence Boolean
+		if (()
+			endOfSentence = true;
 	}
 	int wordStartIndex = currentIndex;
 
