@@ -229,8 +229,15 @@ string getWord(int &currentIndex,
 	// caller
 	string word = "";
 
-	if (!endOfSentence)
+	if (endOfSentence)
 	{
+		// Set the word string variable to a blank string to indicate
+		// no string was retrieved
+		word = "";
+	}
+	else
+	{
+		// Record the index location of the word beginning
 		int wordStartIndex = currentIndex;
 
 		// Locate the end of the current word
