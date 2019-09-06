@@ -382,8 +382,11 @@ bool detectSentenceEnd (char character)
 	// Precondition:
 	// Postcondition:
 
-	bool endOfSe
-	// 
+	// Prepare a Boolean variable to flag a sentence end
+	bool endOfSentence = false;
+
+	// Flag the endOfSentence Boolean if the received character marks the
+	// end of a sentence
 	if ((readCharacter == '.') ||
 	    (readCharacter == ':') ||
 	    (readCharacter == ';') ||
