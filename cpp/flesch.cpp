@@ -235,6 +235,10 @@ string getWord(int &currentIndex,
 	{
 		// Flag that the line's end was reached
 		endOfLine = true;
+
+		// Set the word string variable to a blank string to indicate
+		// no string was retrieved
+		word = "";
 	}
 	else
 	{
