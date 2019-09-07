@@ -239,6 +239,8 @@ string getWord(int &currentIndex,
 
 	if (endOfSentence)
 	{
+		if (testMode)
+			cout << "endOfSentence == " << endOfSentence << "; setting word to \"\"." << endl;
 		// Set the word string variable to a blank string to indicate
 		// no string was retrieved
 		word = "";
@@ -344,8 +346,14 @@ string getWord(int &currentIndex,
 			endOfLine = true;
 
 		// Retrieve the found word
+		if (testMode)
+		{
+			cout << "getWord: Retrieving word" << endl;
+			cout << "\twordLength = " << wordEndIndex << " - " << wordStartIndex << " + 1" << endl;
+		}
 		int wordLength = wordEndIndex - wordStartIndex + 1;
 		word = line.substr(wordStartIndex, wordLength);
+		if (testMode)
 	}
 
 	// Return the retrieved word to the function caller
