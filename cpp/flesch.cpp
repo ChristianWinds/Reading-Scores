@@ -231,6 +231,9 @@ string getWord(int &currentIndex,
 		// no string was retrieved
 		word = "";
 	}
+	else if (!(currentIndex < line.length())
+	{
+	}
 	else
 	{
 		// Record the index location of the word beginning
