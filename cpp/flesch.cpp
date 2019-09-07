@@ -252,6 +252,9 @@ string getWord(int &currentIndex,
 		// Set the word string variable to a blank string to indicate
 		// no string was retrieved
 		word = "";
+
+		// Advance the currentIndex value to the index after the sentence end
+		currentIndex++;
 	}
 	else if (!(currentIndex < line.length()))
 	{
