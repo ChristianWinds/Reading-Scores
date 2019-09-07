@@ -87,7 +87,8 @@ int main(int argc, char* argv[])
 						    totalWords,
 						    sentences);
 
-		// Print
+		// Print the readability scores
+		cout << fleschIndex << endl;
 
 	}
 	
