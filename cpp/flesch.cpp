@@ -263,7 +263,7 @@ string getWord(int &currentIndex,
 			currentIndex++;
 
 			// Stop the word end search if the line end is exceeded
-			if (!(currentIndex < line.length())
+			if (!(currentIndex < line.length()))
 				endOfLine = true;
 			else
 			{
