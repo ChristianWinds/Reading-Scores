@@ -37,7 +37,8 @@ void obtainValues(int &totalSyllables,
 string getWord(int &currentIndex,
 	       string line,
 	       bool &endOfLine,
-	       bool &endOfSentence);
+	       bool &endOfSentence,
+	       bool &wordRead);
 int countSyllables(string word);
 bool detectSentenceEnd(char character);
 bool detectVowel(char character);
@@ -179,7 +180,8 @@ void obtainValues(int &totalSyllables,
 					string word = getWord(currentLineIndex,
 							      currentLine,
 							      endOfLine,
-							      endOfSentence);
+							      endOfSentence,
+							      wordRetrieved);
 
 					// If a word was retrieved, update the
 					// total numbers of words and syllables
@@ -210,7 +212,8 @@ void obtainValues(int &totalSyllables,
 string getWord(int &currentIndex,
 	       string line,
 	       bool &endOfLine,
-	       bool &endOfSentence)
+	       bool &endOfSentence,
+	       bool &wordRead)
 {
 	if (testMode)
 		cout << "getWord: Starting" << endl;
