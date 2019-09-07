@@ -258,6 +258,7 @@ string getWord(int &currentIndex,
 		       (!endOfSentence) &&
 		       (!endOfLine))
 		{
+			// Move the current index to the next unread character
 			currentIndex++;
 
 			// Stop the word end search if the line end is exceeded
