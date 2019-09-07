@@ -210,9 +210,14 @@ string getWord(int &currentIndex,
 
 	// From the starting index, locate the first non-whitespace character
 	readCharacter = line.at(currentIndex);
-	while ((readCharacter == ' ') &&
+	do while ((readCharacter == ' ') &&
 	       (currentIndex < line.length()))
 	{
+		// Read the current character if the current index is within the line
+		if (currentIndex < line.length() &&
+		    (!endOfSentence))
+			readCharacter = line.at(currentIndex);
+
 		// If the read character is a sentence-ending punctuation, flag
 		// the end of sentence Boolean
 		if (testMode)
@@ -223,11 +228,8 @@ string getWord(int &currentIndex,
 
 		// * ERROR: detectSentenceEnd not called for first read character; called late [BUGFIX ADDED]
 		// *	ERROR: detectSentenceEnd check not performed if first read character is not a space; conversion of while loop to do while loop possible
-		// Check the next character in the line
+		// Advance the current index to the next character in the line
 		currentIndex++;
-
-		if (!endOfSentence)
-			readCharacter = line.at(currentIndex);
 	}
 
 	// Create a word variable to hold the word to return to this function's
