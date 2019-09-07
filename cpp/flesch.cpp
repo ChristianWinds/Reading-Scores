@@ -233,6 +233,8 @@ string getWord(int &currentIndex,
 	}
 	else if (!(currentIndex < line.length())
 	{
+		// Flag that the line's end was reached
+		endOfLine = true;
 	}
 	else
 	{
