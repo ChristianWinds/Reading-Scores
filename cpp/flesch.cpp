@@ -336,10 +336,10 @@ string getWord(int &currentIndex,
 		word = line.substr(wordStartIndex, wordLength);
 	}
 
-		// Return the retrieved word to the function caller
-		if (testMode)
-			cout << "getWord: Returning " << word << " to function caller" << endl;
-		return word;
+	// Return the retrieved word to the function caller
+	if (testMode)
+		cout << "getWord: Returning " << word << " to function caller" << endl;
+	return word;
 }
 
 int countSyllables(string word)
