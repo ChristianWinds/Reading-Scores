@@ -232,7 +232,7 @@ string getWord(int &currentIndex,
 		// no string was retrieved
 		word = "";
 	}
-	else if (!(currentIndex < line.length())
+	else if (!(currentIndex < line.length()))
 	{
 		// Flag that the line's end was reached
 		endOfLine = true;
