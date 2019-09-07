@@ -240,7 +240,7 @@ string getWord(int &currentIndex,
 	if (endOfSentence)
 	{
 		if (testMode)
-			cout << "endOfSentence == " << endOfSentence << "; setting word to \"\"." << endl;
+			cout << "getWord: endOfSentence == " << endOfSentence << "; setting word to \"\"." << endl;
 		// Set the word string variable to a blank string to indicate
 		// no string was retrieved
 		word = "";
@@ -260,6 +260,8 @@ string getWord(int &currentIndex,
 	else
 	{
 		// Record the index location of the word beginning
+		if (testMode)
+			cout << "getWord: Assigning currentIndex " << currentIndex << "to wordStartIndex" << endl;
 		int wordStartIndex = currentIndex;
 
 		// Create a word end index variable to store the ending index of
