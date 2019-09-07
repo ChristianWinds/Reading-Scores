@@ -375,7 +375,8 @@ int countSyllables(string word)
 			if ((readCharacter == 'e') &&
 			    (currentIndex == word.length() - 1))
 			{
-				// Update the current read index
+				// Update the current read index and do not
+				// count the vowel as a syllable
 				currentIndex++;
 			}
 			else
