@@ -208,6 +208,9 @@ string getWord(int &currentIndex,
 	// Create a char variable to hold the characters read from the word
 	char readCharacter = 'a';
 
+	// Create an integer variable to hold the word's starting index
+	int wordStartIndex = 0;
+
 	// From the starting index, locate the first non-whitespace character
 	do
 	{
@@ -235,6 +238,10 @@ string getWord(int &currentIndex,
 		 (currentIndex < line.length()) &&
 		 (!endOfSentence));
 
+	// Set the word start index to the current index, then advance the current index
+	wordStartIndex = currentIndex;
+
+	currentIndex++;
 
 	// Create a word variable to hold the word to return to this function's
 	// caller
