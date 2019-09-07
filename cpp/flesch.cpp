@@ -230,7 +230,7 @@ string getWord(int &currentIndex,
 		currentIndex++;
 	} while ((readCharacter == ' ') &&
 		 (currentIndex < line.length()) &&
-		 (!endOfSentence))
+		 (!endOfSentence));
 
 
 	// Create a word variable to hold the word to return to this function's
