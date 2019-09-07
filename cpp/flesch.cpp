@@ -448,7 +448,7 @@ bool detectSentenceEnd (char character)
 	return endOfSentence;
 }
 
-bool detectVowel()
+bool detectVowel(char character)
 {
 	// Precondition:
 	// Postcondition:
@@ -457,7 +457,16 @@ bool detectVowel()
 	bool vowel = false;
 
 	// Flag the vowel Boolean if the received character is a vowel
-	
+	if ((readCharacter == 'a') ||
+	    (readCharacter == 'e') ||
+	    (readCharacter == 'i') ||
+	    (readCharacter == 'o') ||
+	    (readCharacter == 'u') ||
+	    (readCharacter == 'y'))
+		bool vowel = true;
+
+	// Return the vowel Boolean to this function's caller
+	return vowel;
 }
 
 /*
