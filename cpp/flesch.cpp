@@ -423,6 +423,15 @@ bool detectSentenceEnd (char character)
 	// Precondition:
 	// Postcondition:
 
+	if (testMode)
+		cout << "detectSentenceEnd: Starting" << endl;
+
+	if (testMode)
+	{
+		cout << "detectSentenceEnd: Parameter:" << endl;
+		cout << "\tcharacter == '" << character << "'" << endl;
+	}
+
 	// Prepare a Boolean variable to flag a sentence end
 	bool endOfSentence = false;
 
