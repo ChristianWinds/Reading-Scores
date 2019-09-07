@@ -44,11 +44,9 @@ string getWord(int &currentIndex,
 int countSyllables(string word);
 bool detectSentenceEnd(char character);
 bool detectVowel(char character);
-/* DISABLE
 float calculateFlesch(int totalSyllables,
 		      int totalWords,
 		      int totalSentences);
-*/
 
 // * PROGRAMMER NOTE: The parentheses beside main may require text to allow
 // * the command line to be an input source. [OK]
