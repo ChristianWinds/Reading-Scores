@@ -29,9 +29,6 @@ using namespace std;
 // * values of the prgram. If safe, this boolean may remain in the final program
 // * build unlesss otherwise desired by Dr. Pounds.
 bool testMode = true;
-/* DISABLE
-string readLine();
-*/
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
