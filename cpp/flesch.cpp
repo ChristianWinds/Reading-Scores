@@ -43,6 +43,7 @@ string getWord(int &currentIndex,
 	       bool &endOfSentence);
 int countSyllables(string word);
 bool detectSentenceEnd(char character);
+bool detectVowel(char character);
 /* DISABLE
 float calculateFlesch();
 */
