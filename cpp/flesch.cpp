@@ -213,14 +213,16 @@ string getWord(int &currentIndex,
 	while ((readCharacter == ' ') &&
 	       (currentIndex < line.length()))
 	{
-		// * ERROR: detectSentenceEnd not called for first read character; called late
-		// Check the next character in the line
-		currentIndex++;
-		readCharacter = line.at(currentIndex);
-
 		// If the read character is a sentence-ending punctuation, flag
 		// the end of sentence Boolean
 		endOfSentence = detectSentenceEnd(readCharacter);
+
+		// * ERROR: detectSentenceEnd not called for first read character; called late [BUGFIX ADDED]
+		// Check the next character in the line
+		currentIndex++;
+
+		if (!endOfSentence)
+			readCharacter = line.at(currentIndex);
 	}
 
 	// Create a word variable to hold the word to return to this function's
