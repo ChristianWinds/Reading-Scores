@@ -532,6 +532,10 @@ bool detectAlphabetChar(char character)
 	// Precondition:
 	// Postcondition:
 
+	// Create a Boolean to hold whether the received character is an
+	// alphabetic character
+	bool isAlphabetic;
+
 	// Determine if the received character is an alphabetic character
 	;
 
