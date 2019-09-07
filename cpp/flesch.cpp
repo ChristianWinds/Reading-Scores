@@ -82,7 +82,12 @@ int main(int argc, char* argv[])
 			     difficultWords,
 			     filename);
 
-		// Calculate the Flesch readability index
+		// Calculate the Flesch Readability Index
+		float fleschIndex = calculateFlesch(syllables,
+						    totalWords,
+						    sentences);
+
+		// Calculate the Flesch-Kincaid Grade Level Index
 		float fleschIndex = calculateFlesch(syllables,
 						    totalWords,
 						    sentences);
