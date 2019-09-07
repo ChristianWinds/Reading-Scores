@@ -537,7 +537,7 @@ bool detectAlphabetChar(char character)
 	bool isAlphabetic;
 
 	// Determine if the received character is an alphabetic character
-	;
+	if (character < ;
 
 	return isAlphabetic;
 }
