@@ -428,11 +428,11 @@ bool detectSentenceEnd (char character)
 
 	// Flag the endOfSentence Boolean if the received character marks the
 	// end of a sentence
-	if ((readCharacter == '.') ||
-	    (readCharacter == ':') ||
-	    (readCharacter == ';') ||
-	    (readCharacter == '?') ||
-	    (readCharacter == '!'))
+	if ((character == '.') ||
+	    (character == ':') ||
+	    (character == ';') ||
+	    (character == '?') ||
+	    (character == '!'))
 		endOfSentence = true;
 	else
 		endOfSentence = false;
