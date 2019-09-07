@@ -368,12 +368,7 @@ int countSyllables(string word)
 		// Read the current word character
 		readCharacter = word.at(currentIndex);
 
-		if ((readCharacter == 'a') ||
-		    (readCharacter == 'e') ||
-		    (readCharacter == 'i') ||
-		    (readCharacter == 'o') ||
-		    (readCharacter == 'u') ||
-		    (readCharacter == 'y'))
+		if (detectVowel(readCharacter))
 		{
 			// If the current read character is not an "e" at the
 			// word's end, tally the current word syllable
