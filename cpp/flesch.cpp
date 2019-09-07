@@ -86,7 +86,7 @@ int main(int argc, char* argv[])
 
 		// Print the readability scores
 		cout << "Flesch Readability Index: " << fleschIndex << endl;
-		cout << "Flesch-Kin
+		cout << "Flesch-Kincaid Grade Level Index: " << /*fleschKincaidIndex << */endl;
 
 	}
 	
