@@ -525,10 +525,10 @@ float calculateFlesch(int totalSyllables,
 	// * necessary for each of the two variables.
 
 	// Calculate the "alpha" value
-	float alpha = ;
+	float alpha = totalSyllables / totalWords;
 
 	// Calculate the "beta" value
-	float beta = ;
+	float beta = totalWords / totalSentences;
 
 	return fleschIndex;
 }
