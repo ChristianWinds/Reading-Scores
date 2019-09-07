@@ -455,7 +455,9 @@ bool detectVowel(char character)
 	    (character == 'o') ||
 	    (character == 'u') ||
 	    (character == 'y'))
-		bool vowel = true;
+		vowel = true;
+	else
+		vowel = false;
 
 	// Return the vowel Boolean to this function's caller
 	return vowel;
