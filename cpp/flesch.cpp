@@ -215,7 +215,11 @@ string getWord(int &currentIndex,
 	{
 		// If the read character is a sentence-ending punctuation, flag
 		// the end of sentence Boolean
+		if (testMode)
+			cout << "getWord: endOfSentence = detectSentenceEnd(" << readCharacter << ");" << endl;
 		endOfSentence = detectSentenceEnd(readCharacter);
+		if (testMode)
+			cout << "getWord: endOfSentence == " << endOfSentence << endl;
 
 		// * ERROR: detectSentenceEnd not called for first read character; called late [BUGFIX ADDED]
 		// Check the next character in the line
