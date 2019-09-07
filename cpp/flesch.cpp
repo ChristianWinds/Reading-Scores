@@ -253,13 +253,13 @@ string getWord(int &currentIndex,
 				endOfLine = true;
 			else
 			{
-				// Read the current character
+				// Read the current character at the line end
 				readCharacter = line.at(currentIndex);
 
 				// Flag the end of sentence flag if
 				// sentence-ending punctuation was read
 				if (detectSentenceEnd(readCharacter))
-					endOfSentence;
+					endOfSentence = true;
 			}
 
 		}
