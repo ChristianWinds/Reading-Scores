@@ -264,9 +264,14 @@ string getWord(int &currentIndex,
 
 		}
 
-		
+		// Record the index of the word end
+		wordEndIndex = currentIndex - 1;
 
-		if (endOfSenten
+		// If the current index exceeded the line length, place the
+		// index at the final line index
+		if (endOfLine)
+			currentIndex = line.length() - 1;
+
 		/* DISABLE FOR SIMPLIFICATION
 		if (currentIndex + 1 < line.length())
 		{
