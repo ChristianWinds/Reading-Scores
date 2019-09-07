@@ -512,7 +512,9 @@ bool detectVowel(char character)
 }
 
 
-float calculateFlesch()
+float calculateFlesch(int totalSyllables,
+		      int totalWords,
+		      int totalSentences)
 {
 	// Precondition:
 	// Postcondition: The Flesch Readability Index was calculated and
