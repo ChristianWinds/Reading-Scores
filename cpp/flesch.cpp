@@ -162,6 +162,9 @@ void obtainValues(int &totalSyllables,
 					// sentence end was reached
 					bool endOfSentence = false;
 
+					// Create a Boolean to detect whether a word was retrieved
+					bool wordRetrieved = false;
+
 					// Retrieve the next unread word from
 					// the line
 					if (testMode)
