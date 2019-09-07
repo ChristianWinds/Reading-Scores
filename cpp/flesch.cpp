@@ -254,7 +254,14 @@ string getWord(int &currentIndex,
 			if (!(currentIndex < line.length())
 			{
 				endOfLine = true;
-				wordEndIndex = currentIndex - 1;
+
+				// Revert the current index to the line's final
+				// character
+				currentIndex = line.length() - 1;
+
+				// Set the word's end index to the line's final
+				// character's index
+				wordEndIndex = currentIndex;
 			}
 			else
 			{
