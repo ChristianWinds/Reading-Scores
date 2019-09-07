@@ -88,9 +88,9 @@ int main(int argc, char* argv[])
 						    sentences);
 
 		// Calculate the Flesch-Kincaid Grade Level Index
-		float fleschIndex = calculateFlesch(syllables,
-						    totalWords,
-						    sentences);
+		float fleschIndex = calculateFleschKincaid(syllables,
+							   totalWords,
+							   sentences);
 
 		// Print the readability scores
 		cout << "Flesch Readability Index: " << fleschIndex << endl;
