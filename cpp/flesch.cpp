@@ -354,6 +354,7 @@ string getWord(int &currentIndex,
 		int wordLength = wordEndIndex - wordStartIndex + 1;
 		word = line.substr(wordStartIndex, wordLength);
 		if (testMode)
+			cout << "getWord: Retrieved word: \"" << word << "\"" << endl;
 	}
 
 	// Return the retrieved word to the function caller
