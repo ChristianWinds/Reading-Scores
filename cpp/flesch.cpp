@@ -357,7 +357,7 @@ int countSyllables(string word)
 	int currentIndex = 0;
 
 	// Create a char variable to hold each read character of the word
-	char readCharacter = 'a';
+	char readCharacter = '0';
 
 	// Create a variable to hold the number of syllables in the word
 	int syllables = 0;
