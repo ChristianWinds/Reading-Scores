@@ -185,7 +185,8 @@ void obtainValues(int &totalSyllables,
 
 					// If a word was retrieved, update the
 					// total numbers of words and syllables
-					if (word != "")
+					if ((wordRetrieved) ||
+					    (word != "")) 
 					{
 						totalWords++;
 
