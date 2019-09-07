@@ -42,6 +42,7 @@ string getWord(int &currentIndex,
 int countSyllables(string word);
 bool detectSentenceEnd(char character);
 bool detectVowel(char character);
+bool detectAlphabetChar(char character);
 float calculateFlesch(int totalSyllables,
 		      int totalWords,
 		      int totalSentences);
@@ -242,7 +243,7 @@ string getWord(int &currentIndex,
 			cout << "getWord: endOfSentence = detectSentenceEnd(" << readCharacter << ");" << endl;
 		if detectSentenceEnd(readCharacter)
 			endOfSentence = true;
-		else if (verifyAlphabetChar(readCharacter))
+		else if (detectAlphabetChar(readCharacter))
 			wordRead = true;
 		if (testMode)
 			cout << "getWord: endOfSentence == " << endOfSentence << endl;
