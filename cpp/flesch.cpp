@@ -85,7 +85,8 @@ int main(int argc, char* argv[])
 						    sentences);
 
 		// Print the readability scores
-		cout << fleschIndex << endl;
+		cout << "Flesch Readability Index: " << fleschIndex << endl;
+		cout << "Flesch-Kin
 
 	}
 	
