@@ -525,6 +525,16 @@ bool detectVowel(char character)
 	return vowel;
 }
 
+bool detectAlphabetChar(char character)
+{
+	// Precondition:
+	// Postcondition:
+
+	// Determine if the received character is an alphabetic character
+	;
+
+	return isAlphabetic;
+}
 
 float calculateFlesch(int totalSyllables,
 		      int totalWords,
