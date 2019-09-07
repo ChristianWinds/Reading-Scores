@@ -83,9 +83,11 @@ int main(int argc, char* argv[])
 			     filename);
 
 		// Calculate the Flesch readability index
-		calculateFlesch(syllables,
-				totalWords,
-				sentences);
+		float fleschIndex = calculateFlesch(syllables,
+						    totalWords,
+						    sentences);
+
+		// Print
 
 	}
 	
