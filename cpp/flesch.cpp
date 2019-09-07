@@ -382,12 +382,7 @@ int countSyllables(string word)
 			else
 			{
 				// Find the successive syllables in the word
-				while (((readCharacter == 'a') ||
-				       (readCharacter == 'e') ||
-			               (readCharacter == 'i') ||
-				       (readCharacter == 'o') ||
-				       (readCharacter == 'u') ||
-				       (readCharacter == 'y')) &&
+				while ((detectVowel(readCharacter)) &&
 				       (currentIndex < word.length()))
 				{
 					// Read the next unread character of the
