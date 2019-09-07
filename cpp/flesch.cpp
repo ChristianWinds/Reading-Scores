@@ -81,12 +81,12 @@ int main(int argc, char* argv[])
 			     sentences,
 			     difficultWords,
 			     filename);
-/*
+
 		// Calculate the Flesch readability index
 		calculateFlesch(syllables,
 				totalWords,
 				sentences);
-*/
+
 	}
 	
 	return 0;
