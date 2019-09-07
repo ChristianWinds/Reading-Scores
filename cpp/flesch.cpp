@@ -240,7 +240,7 @@ string getWord(int &currentIndex,
 		// the word
 		int wordEndIndex = -1;
 
-		// Locate the end of the current word
+		// Locate the character index after the end of the current word
 		while ((readCharacter != ' ') &&
 		       (currentIndex < line.length()) &&
 		       (!endOfSentence) &&
@@ -248,26 +248,25 @@ string getWord(int &currentIndex,
 		{
 			currentIndex++;
 
-			// Record the current line's final character as the last
-			// character of the word if the current index is not
-			// less than the line length
+			// Stop the word end search if the line end is exceeded
 			if (!(currentIndex < line.length())
-			{
 				endOfLine = true;
-
-				// Revert the current index to the line's final
-				// character
-				currentIndex = line.length() - 1;
-
-				// Set the word's end index to the line's final
-				// character's index
-				wordEndIndex = currentIndex;
-			}
 			else
 			{
+				// Read the current character
+				readCharacter = line.at(currentIndex);
+
+				// Flag the end of sentence flag if
+				// sentence-ending punctuation was read
+				if (detectSentenceEnd(readCharacter))
+					endOfSentence;
 			}
 
 		}
+
+		
+
+		if (endOfSenten
 		/* DISABLE FOR SIMPLIFICATION
 		if (currentIndex + 1 < line.length())
 		{
