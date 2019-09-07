@@ -533,8 +533,8 @@ float calculateFlesch(int totalSyllables,
 }
 
 float calculateFleschKincaid(int totalSyllables,
-		      int totalWords,
-		      int totalSentences)
+			     int totalWords,
+			     int totalSentences)
 {
 	// Precondition:
 	// Postcondition: The Flesch Readability Index was calculated and
