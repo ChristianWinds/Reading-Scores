@@ -226,8 +226,11 @@ string getWord(int &currentIndex,
 
 		// * ERROR: detectSentenceEnd not called for first read character; called late [BUGFIX ADDED]
 		// *	ERROR: detectSentenceEnd check not performed if first read character is not a space; conversion of while loop to do while loop possible
-		// Advance the current index to the next character in the line
-		currentIndex++;
+		// If a word start was not yet found, advance the current index
+		// to the next character in the line
+		if ((readCharacter == ' ') &&
+		    (currentIndex < line.length()))
+			currentIndex++;
 	} while ((readCharacter == ' ') &&
 		 (currentIndex < line.length()) &&
 		 (!endOfSentence));
