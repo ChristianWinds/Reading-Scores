@@ -222,6 +222,7 @@ string getWord(int &currentIndex,
 			cout << "getWord: endOfSentence == " << endOfSentence << endl;
 
 		// * ERROR: detectSentenceEnd not called for first read character; called late [BUGFIX ADDED]
+		// *	ERROR: detectSentenceEnd check not performed if first read character is not a space; conversion of while loop to do while loop possible
 		// Check the next character in the line
 		currentIndex++;
 
