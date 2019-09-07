@@ -213,6 +213,7 @@ string getWord(int &currentIndex,
 	while ((readCharacter == ' ') &&
 	       (currentIndex < line.length()))
 	{
+		// * ERROR: detectSentenceEnd not called for first read character; called late
 		// Check the next character in the line
 		currentIndex++;
 		readCharacter = line.at(currentIndex);
