@@ -85,16 +85,22 @@ int main(int argc, char* argv[])
 			     filename);
 
 		// Calculate the Flesch Readability Index
+		if (testMode)
+			cout << "main: Calling calculateFlesch" << endl;
 		float fleschIndex = calculateFlesch(syllables,
 						    totalWords,
 						    sentences);
 
 		// Calculate the Flesch-Kincaid Grade Level Index
+		if (testMode)
+			cout << "main: Calling calculateFleschKincaid" << endl;
 		float fleschKincaidIndex = calculateFleschKincaid(syllables,
 								  totalWords,
 								  sentences);
 
 		// Print the readability scores
+		if (testMode)
+			cout << "main: Printing Readability Scores" << endl;
 		cout << "Flesch Readability Index: " << fleschIndex << endl;
 		cout << "Flesch-Kincaid Grade Level Index: " <<
 			fleschKincaidIndex << endl;
