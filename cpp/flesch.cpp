@@ -560,7 +560,7 @@ bool detectAlphabetChar(char character)
 	if (((character >= 65) &&
 	    (character <= 90)) ||
 	    ((character >= 97) &&
-	    (character < 122)));
+	    (character < 122)))
 		isAlphabetic = true;
 	else
 		isAlphabetic = false;
