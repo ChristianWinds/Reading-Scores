@@ -117,6 +117,11 @@ int main(int argc, char* argv[])
 				cout << "No words found in file." << endl;
 			if (!(sentences > 0))
 				cout << "No sentences found in file." << endl;
+
+			// State that the readability calculations could not be
+			// performed
+			cout << "As a result, the readability calculations " <<
+				"could not be performed." << endl;
 		}
 	}
 	
