@@ -559,7 +559,7 @@ float calculateFlesch(int totalSyllables,
 		cout << "calculateFlesch: Starting. Parameters: " << endl;
 		cout << "\ttotalSyllables == " << totalSyllables << endl;
 		cout << "\ttotalWords == " << totalWords << endl;
-		cout << "\totalSentences == " << totalSentences < endl;
+		cout << "\ttotalSentences == " << totalSentences << endl;
 	}
 
 	// * PROGRAMMER'S NOTE: The values of alpha and beta likely require
