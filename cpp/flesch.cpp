@@ -273,6 +273,10 @@ string getWord(int &currentIndex,
 	{
 		if (testMode)
 			cout << "getWord: endOfSentence == " << endOfSentence << "; setting word to \"\"." << endl;
+
+		// Set the word read flag to false
+		wordRead = false;
+
 		// Set the word string variable to a blank string to indicate
 		// no string was retrieved
 		word = "";
@@ -285,6 +289,9 @@ string getWord(int &currentIndex,
 	{
 		// Flag that the line's end was reached
 		endOfLine = true;
+
+		// Set the word read flag to false
+		wordRead = false;
 
 		// Place the current index at the end of the line
 		currentIndex = line.length() - 1;
