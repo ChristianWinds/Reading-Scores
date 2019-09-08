@@ -110,6 +110,8 @@ int main(int argc, char* argv[])
 		}
 		else
 		{
+			// If no words or no syllables were found in the file,
+			// report the absences of words and syllables
 			if (!(totalWords > 0))
 				cout << "No words found in file." << endl;
 			if (!(sentences > 0))
