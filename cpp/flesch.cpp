@@ -332,6 +332,15 @@ string getWord(int &currentIndex,
 				// sentence-ending punctuation was read
 				if (detectSentenceEnd(readCharacter))
 					endOfSentence = true;
+
+				// Ensure that the current set of characters is
+				// a word
+				if ((!wordRead) &&
+				    (!endOfSentence))
+				{
+					if (detectAlphabetChar(readCharacter))
+						wordRead = true;
+				}
 			}
 
 		}
