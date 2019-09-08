@@ -84,7 +84,8 @@ int main(int argc, char* argv[])
 			     difficultWords,
 			     filename);
 
-		if
+		if ((totalWords > 0) &&
+		    (syllables > 0))
 		{
 		// Calculate the Flesch Readability Index
 		if (testMode)
