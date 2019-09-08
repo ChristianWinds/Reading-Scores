@@ -353,49 +353,8 @@ string getWord(int &currentIndex,
 		if (endOfLine)
 			currentIndex = line.length() - 1;
 
-		/* DISABLE FOR SIMPLIFICATION
-		if (currentIndex + 1 < line.length())
-		{
-			// Check the remaining line characters to find the
-			// word's end
-			currentIndex++;
-			readCharacter = line.at(currentIndex);
-			while ((readCharacter != ' ') &&
-			       (currentIndex < line.length()) &&
-			       (!endOfSentence))
-			{
-				// Determine if a sentence end was reached
-
-
-				// Check the next character in the line
-				currentIndex++;
-				if (currentIndex < line.length())
-					readCharacter = line.at(currentIndex);
-				else
-				{
-					// Flag that the end of the text line was
-					// reached
-					endOfLine = true;
-				}
-			}
-
-			// Store the index of the word end
-			// * PROGRAMMER'S NOTE: The word index storage code
-			// * below should function regardless of whether a space
-			// * was detected or the line's end was reached
-			wordEndIndex = currentIndex - 1;
-		}
-		else if (currentIndex + 1 == line.length())
-		{
-			// Flag the end of line Boolean
-			endOfLine = true;
-
-			// Regard the line's final character as the end of the word
-			wordEndIndex = currentIndex;
-		}
-		*/
-
-		// Update the end of line flag if the end of the received line was reached
+		// Update the end of line flag if the end of the received line
+		// was reached
 		if (currentIndex >= line.length())
 			endOfLine = true;
 
