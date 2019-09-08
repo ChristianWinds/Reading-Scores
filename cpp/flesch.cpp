@@ -534,10 +534,16 @@ bool detectAlphabetChar(char character)
 
 	// Create a Boolean to hold whether the received character is an
 	// alphabetic character
-	bool isAlphabetic;
+	bool isAlphabetic = false;
 
 	// Determine if the received character is an alphabetic character
-	if ((character >= 65) && (character <= 90)) || ((character >= ;
+	if (((character >= 65) &&
+	    (character <= 90)) ||
+	    ((character >= 97) &&
+	    (character < 122)));
+		isAlphabetic = true;
+	else
+		isAlphabetic = false;
 
 	return isAlphabetic;
 }
