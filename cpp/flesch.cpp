@@ -84,6 +84,8 @@ int main(int argc, char* argv[])
 			     difficultWords,
 			     filename);
 
+		if
+		{
 		// Calculate the Flesch Readability Index
 		if (testMode)
 			cout << "main: Calling calculateFlesch" << endl;
@@ -105,6 +107,14 @@ int main(int argc, char* argv[])
 		cout << "Flesch-Kincaid Grade Level Index: " <<
 			fleschKincaidIndex << endl;
 		cout << "Dale-Chall Readability Score: " << /*daleChallScore << */endl;
+		}
+		else
+		{
+			if (!(totalWords > 0))
+				cout << "No words found in file." << endl;
+			if (!(sentences > 0))
+				cout << "No sentences found in file." << endl;
+		}
 	}
 	
 	return 0;
