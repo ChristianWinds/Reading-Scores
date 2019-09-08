@@ -544,8 +544,11 @@ float calculateFlesch(int totalSyllables,
 	if (testMode)
 	{
 		cout << "calculateFlesch: Starting. Parameters: " << endl;
-		cout << "\t`
+		cout << "\ttotalSyllables == " << totalSyllables << endl;
+		cout << "\ttotalWords == " << totalWords << endl;
+		cout << "\totalSentences == " << totalSentences < endl;
 	}
+
 	// * PROGRAMMER'S NOTE: The values of alpha and beta likely require
 	// * decimal format; thus, either a float or a double data type may be
 	// * necessary for each of the two variables.
