@@ -244,7 +244,10 @@ string getWord(int &currentIndex,
 		if detectSentenceEnd(readCharacter)
 			endOfSentence = true;
 		else if (detectAlphabetChar(readCharacter))
+		{
+			// Flag the current read characters as a word
 			wordRead = true;
+		}
 		if (testMode)
 			cout << "getWord: endOfSentence == " << endOfSentence << endl;
 
