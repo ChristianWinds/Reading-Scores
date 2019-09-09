@@ -361,11 +361,13 @@ string getWord(int &currentIndex,
 			endOfLine = true;
 
 		// Retrieve the found word
-		if (testMode)
-		{
-			cout << "getWord: Retrieving word" << endl;
-			cout << "\twordLength = " << wordEndIndex << " - " << wordStartIndex << " + 1" << endl;
-		}
+		#ifdef 0
+			if (testMode)
+			{
+				cout << "getWord: Retrieving word" << endl;
+				cout << "\twordLength = " << wordEndIndex << " - " << wordStartIndex << " + 1" << endl;
+			}
+		#endif
 		int wordLength = wordEndIndex - wordStartIndex + 1;
 		word = line.substr(wordStartIndex, wordLength);
 		if (testMode)
