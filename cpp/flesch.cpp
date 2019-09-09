@@ -3,19 +3,6 @@
 // * submission of both this program and future Organization of Programming
 // * Languages programs.
 
-// * PROGRAMMER'S NOTE: Current Goal (8/29/2019): Read a text file [SUCCESSFUL]
-// * PROGRAMMER'S NOTE: Current Goal (9/4/2019): Count the number of syllables
-// * 	- PROGRAMMER'S NOTE: Subgoal (9/4/2019): Add special word end "e"
-// *	  counting rule to algorithm [RUNNING; UNEVALUATED]
-// * PROGRAMMER'S NOTE: Current Goal (9/5/2019): Refine word and syllable detection
-// *	- Potential issue (9/5/2019): Detection of period and comma-separated numbers
-// *	  (e.g., 1,299; 1.7)
-// *	- Error (9/4/2019) - Line index not updating properly [CORRECTED]
-// *	- Error (9/4/2019) - Text read becomes out of range at line end
-// *	  [CORRECTED]
-// *	- Error (9/4/2019) - Program hangs with multi-line file [CORRECTED]
-// *		- (9/4/2019) Likely related to ending "e" syllable count
-// *		  behavior;  program hangs on word "line" [CORRECTED]
 #include <cstdlib>
 // * PROGRAMMER'S NOTE: iostream may be a testing-only item. Removal in the
 // * final program build depends upon desired testing content to retain.
@@ -25,9 +12,6 @@
 #include <string>
 using namespace std;
 
-// * PROGRAMMER'S NOTE: This global Boolean was created to test features and
-// * values of the prgram. If safe, this boolean may remain in the final program
-// * build unlesss otherwise desired by Dr. Pounds.
 bool testMode = false;
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
