@@ -551,8 +551,10 @@ float calculateFlesch(int totalSyllables,
 	// * necessary for each of the two variables.
 
 	// Calculate the "alpha" value
-	if (testMode)
-		cout << "calculateFlesch: Calculating alpha" << endl;
+	#ifdef 0
+		if (testMode)
+			cout << "calculateFlesch: Calculating alpha" << endl;
+	#endif
 	float alpha = (float) totalSyllables / (float) totalWords;
 
 	// Calculate the "beta" value
