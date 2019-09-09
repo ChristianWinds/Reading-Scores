@@ -516,10 +516,10 @@ bool detectAlphabetChar(char character)
 	bool isAlphabetic = false;
 
 	// Determine if the received character is an alphabetic character
-	if (((character >= 65) &&
-	    (character <= 90)) ||
-	    ((character >= 97) &&
-	    (character < 122)))
+	if (((character >= 'A') &&
+	    (character <= 'Z')) ||
+	    ((character >= 'a') &&
+	    (character <= 'z')))
 		isAlphabetic = true;
 	else
 		isAlphabetic = false;
