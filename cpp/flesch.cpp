@@ -315,6 +315,7 @@ string getWord(int &currentIndex,
 
 		// Locate the character index after the end of the current word
 		while ((readCharacter != ' ') &&
+		       (detectWordCharacter(character)) &&
 		       (currentIndex < line.length()) &&
 		       (!endOfSentence) &&
 		       (!endOfLine))
