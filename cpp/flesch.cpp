@@ -536,10 +536,8 @@ bool detectNumericChar(char character)
 
 	// Check the character to determine if the received character is a
 	// numeric character
-	if (((character >= 65) &&
-	    (character <= 90)) ||
-	    ((character >= 97) &&
-	    (character < 122)))
+	if ((character >= '0') &&
+	    (character <= '9'))
 		isNumeric = true;
 	else
 		isNumeric = false;
