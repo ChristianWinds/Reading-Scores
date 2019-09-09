@@ -359,13 +359,12 @@ string getWord(int &currentIndex,
 			endOfLine = true;
 
 		// Retrieve the found word
-		#ifdef 0
-			if (testMode)
-			{
-				cout << "getWord: Retrieving word" << endl;
-				cout << "\twordLength = " << wordEndIndex << " - " << wordStartIndex << " + 1" << endl;
-			}
-		#endif
+		if ((testMode) &&
+		    (false))
+		{
+			cout << "getWord: Retrieving word" << endl;
+			cout << "\twordLength = " << wordEndIndex << " - " << wordStartIndex << " + 1" << endl;
+		}
 		int wordLength = wordEndIndex - wordStartIndex + 1;
 		word = line.substr(wordStartIndex, wordLength);
 		if (testMode)
@@ -549,10 +548,11 @@ float calculateFlesch(int totalSyllables,
 	// * necessary for each of the two variables.
 
 	// Calculate the "alpha" value
-	#ifdef 0
-		if (testMode)
-			cout << "calculateFlesch: Calculating alpha" << endl;
-	#endif
+	if ((testMode) &&
+	    (false))
+	{
+		cout << "calculateFlesch: Calculating alpha" << endl;
+	}
 	float alpha = (float) totalSyllables / (float) totalWords;
 	if (testMode)
 		cout << "calculateFlesch: alpha == " << alpha << endl;
