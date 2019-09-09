@@ -25,6 +25,8 @@ int countSyllables(string word);
 bool detectSentenceEnd(char character);
 bool detectVowel(char character);
 bool detectAlphabetChar(char character);
+bool detectNumericChar(char character);
+bool detectWordCharacter(char character);
 float calculateFlesch(int totalSyllables,
 		      int totalWords,
 		      int totalSentences);
