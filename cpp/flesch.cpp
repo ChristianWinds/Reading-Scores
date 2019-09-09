@@ -34,8 +34,6 @@ float calculateFleschKincaid(int totalSyllables,
 			     int totalWords,
 			     int totalSentences);
 
-// * PROGRAMMER NOTE: The parentheses beside main may require text to allow
-// * the command line to be an input source. [OK]
 int main(int argc, char* argv[])
 {
 	// Run the program only if one filename was entered on the command line
@@ -58,10 +56,6 @@ int main(int argc, char* argv[])
 
 		// Obtain the values needed for the readability index and score
 		// calculations
-		// * PROGRAMMER NOTE: Pass-by reference may be required here to
-		// * update the multiple calculation variable values, as C++
-		// * functions can otherwise return only one value to the
-		// functions' callers.
 		obtainValues(syllables,
 			     totalWords,
 			     sentences,
