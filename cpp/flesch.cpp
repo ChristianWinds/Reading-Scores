@@ -532,20 +532,19 @@ bool detectNumericChar(char character)
 	// Precondition:
 	// Postcondition:
 
-	// Create a Boolean to hold whether the received character is an
-	// alphabetic character
-	bool isAlphabetic = false;
+	bool isNumeric = false;
 
-	// Determine if the received character is an alphabetic character
+	// Check the character to determine if the received character is a
+	// numeric character
 	if (((character >= 65) &&
 	    (character <= 90)) ||
 	    ((character >= 97) &&
 	    (character < 122)))
-		isAlphabetic = true;
+		isNumeric = true;
 	else
-		isAlphabetic = false;
+		isNumeric = false;
 
-	return isAlphabetic;
+	return isNumeric;
 }
 
 bool detectWordCharacter(char character)
