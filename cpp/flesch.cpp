@@ -541,9 +541,9 @@ bool detectWordCharacter(char character)
 	    (character == '-'))
 		isWordCharacter = true;
 	else
-		isAlphabetic = false;
+		isWordCharacter = false;
 
-	return isAlphabetic;
+	return isWordCharacter;
 }
 
 float calculateFlesch(int totalSyllables,
