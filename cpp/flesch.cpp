@@ -574,10 +574,10 @@ float calculateFlesch(int totalSyllables,
 	// Calculate the "alpha" value
 	if (testMode)
 		cout << "calculateFlesch: Calculating alpha" << endl;
-	float alpha = totalSyllables / totalWords;
+	float alpha = (float) totalSyllables / (float) totalWords;
 
 	// Calculate the "beta" value
-	float beta = totalWords / totalSentences;
+	float beta = (float) totalWords / (float) totalSentences;
 
 	// Calculate the Flesch index
 	float fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
@@ -598,10 +598,10 @@ float calculateFleschKincaid(int totalSyllables,
 	// * necessary for each of the two variables.
 
 	// Calculate the "alpha" value
-	float alpha = totalSyllables / totalWords;
+	float alpha = (float) totalSyllables / (float) totalWords;
 
 	// Calculate the "beta" value
-	float beta = totalWords / totalSentences;
+	float beta = (float) totalWords / (float) totalSentences;
 
 	// Calculate the Flesch-Kincaid Grade Level Index
 	float fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
