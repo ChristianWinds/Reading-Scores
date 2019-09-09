@@ -532,16 +532,14 @@ bool detectWordCharacter(char character)
 	// Precondition:
 	// Postcondition:
 
-	// Create a Boolean to hold whether the received character is part of a
-	// word
 	bool isWordCharacter = false;
 
-	// Determine if the received character is an alphanumeric character
-	if (((character >= 65) &&
-	    (character <= 90)) ||
-	    ((character >= 97) &&
-	    (character < 122)))
-		isAlphabetic = true;
+	// Check if the character is alphanumeric or a hyphen to determine if
+	// the character is or is not part of a word
+	if ((detectAlphabetChar(character)) ||
+	    (detectNumericChar(character)) ||
+	    (character == '-'))
+		isWordCharacter = true;
 	else
 		isAlphabetic = false;
 
