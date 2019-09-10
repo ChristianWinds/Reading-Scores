@@ -294,8 +294,11 @@ string getWord(int &currentIndex,
 	else
 	{
 		// Record the index location of the word beginning
-		if (testMode)
+		if ((testMode) &
+		    (false))
+		{
 			cout << "getWord: Assigning currentIndex " << currentIndex << "to wordStartIndex" << endl;
+		}
 		int wordStartIndex = currentIndex;
 
 		// Create a word end index variable to store the ending index of
