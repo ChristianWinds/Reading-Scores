@@ -400,6 +400,10 @@ string getWord(int &currentIndex,
 			cout << "getWord: Retrieved word: \"" << word << "\"" << endl;
 	}
 
+	if (((testMode) ||
+	    (true)) &&
+	    (endOfSentence))
+		cout << "getWord: After this iteration's endOfSentence flag, the line index's character is '" << line.at(currentIndex) << "'" << endl;
 	// Return the retrieved word to the function caller
 	if (testMode)
 		cout << "getWord: Returning " << word << " to function caller" << endl;
