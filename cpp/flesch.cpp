@@ -256,9 +256,6 @@ string getWord(int &currentIndex,
 		 (currentIndex < line.length()) &&
 		 (!endOfSentence));
 
-	// Set a word start index to the current index
-	int wordStartIndex = currentIndex;
-
 	// Create a word variable to hold the word to return to this function's
 	// caller
 	string word = "";
@@ -303,7 +300,7 @@ string getWord(int &currentIndex,
 
 		// Create a word end index variable to store the ending index of
 		// the word
-		int wordEndIndex = -1;
+		int wordEndIndex = 0;
 
 		// Locate the character index after the end of the current word
 		while ((readCharacter != ' ') &&
