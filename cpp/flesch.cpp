@@ -493,11 +493,17 @@ bool detectVowel(char character)
 
 	// Flag the vowel Boolean if the received character is a vowel
 	if ((character == 'a') ||
+	    (character == 'A') ||
 	    (character == 'e') ||
+	    (character == 'E') ||
 	    (character == 'i') ||
+	    (character == 'I') ||
 	    (character == 'o') ||
+	    (character == 'O') ||
 	    (character == 'u') ||
-	    (character == 'y'))
+	    (character == 'U') ||
+	    (character == 'y') ||
+	    (character == 'Y'))
 		vowel = true;
 	else
 		vowel = false;
