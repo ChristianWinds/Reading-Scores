@@ -1,8 +1,3 @@
-// * A MESSAGE TO THE READER: All "PROGRAMMER'S NOTE" comments are intended to
-// * be removed (or reworked into regular comments if helpful) before the final
-// * submission of both this program and future Organization of Programming
-// * Languages programs.
-
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
@@ -10,7 +5,7 @@
 #include <string>
 using namespace std;
 
-bool testMode = true;
+bool testMode = false;
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
