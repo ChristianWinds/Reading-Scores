@@ -251,10 +251,16 @@ string getWord(int &currentIndex,
 
 		// If the read character is a sentence-ending punctuation, flag
 		// the end of sentence Boolean
-		if (testMode)
+		if ((testMode) ||
+		    (true))
 			cout << "getWord: endOfSentence = detectSentenceEnd(" << readCharacter << ");" << endl;
 		if (detectSentenceEnd(readCharacter))
+		{
 			endOfSentence = true;
+			if ((testMode) ||
+			    (true))
+				cout << "getWord: endOfSentence set to true (first word character)" << endl;
+		}
 		else if (detectAlphabetChar(readCharacter))
 		{
 			// Flag the current read characters as a word
@@ -343,7 +349,12 @@ string getWord(int &currentIndex,
 				// Flag the end of sentence flag if
 				// sentence-ending punctuation was read
 				if (detectSentenceEnd(readCharacter))
+				{
 					endOfSentence = true;
+					if ((testMode) ||
+					    (true))
+						cout << "getWord: endOfSentence set to true (final word character)" << endl;
+				}
 
 				// Ensure that the current set of characters is
 				// a word
