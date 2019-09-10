@@ -405,7 +405,8 @@ int countSyllables(string word)
 		{
 			// If the current read character is an "e" at the
 			// word's end, do not tally the vowel as a syllable
-			if ((readCharacter == 'e') &&
+			if (((readCharacter == 'e') ||
+			    (readCharacter == 'E')) &&
 			    (currentIndex == word.length() - 1))
 			{
 				// Update the current read index and do not
