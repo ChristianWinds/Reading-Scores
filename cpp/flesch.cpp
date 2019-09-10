@@ -207,7 +207,14 @@ void obtainValues(int &totalSyllables,
 
 					// Update the number of counted sentences
 					if (endOfSentence)
+					{
 						totalSentences++;
+						if ((testMode) ||
+						    (true))
+						{
+							cout << "obtainValues: Incremented totalSentences; totalSentences == " << totalSentences << endl;
+						}
+					}
 				}
 			}
 		}
@@ -377,7 +384,8 @@ string getWord(int &currentIndex,
 		}
 		int wordLength = wordEndIndex - wordStartIndex + 1;
 		word = line.substr(wordStartIndex, wordLength);
-		if (testMode)
+		if ((testMode) ||
+		    (true))
 			cout << "getWord: Retrieved word: \"" << word << "\"" << endl;
 	}
 
