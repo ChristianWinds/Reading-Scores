@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-bool testMode = true;
+bool testMode = false;
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
