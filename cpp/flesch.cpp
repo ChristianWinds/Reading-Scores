@@ -6,6 +6,7 @@
 using namespace std;
 
 bool testMode = false;
+bool printFinalObtainedValues = true;
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
@@ -56,6 +57,15 @@ int main(int argc, char* argv[])
 			     sentences,
 			     difficultWords,
 			     filename);
+
+		if ((testMode) ||
+		    (printFinalObtainedValues))
+		{
+			cout << "main:" << endl;
+			cout << "\tTotal counted syllables: " << syllables << endl;
+			cout << "\tTotal counted words: " << totalWords << endl;
+			cout << "\tTotal countedSentences: " << sentences << endl;
+		}
 
 		if ((totalWords > 0) &&
 		    (syllables > 0))
