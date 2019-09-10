@@ -256,11 +256,8 @@ string getWord(int &currentIndex,
 		 (currentIndex < line.length()) &&
 		 (!endOfSentence));
 
-	// Create an integer variable to hold the word's starting index
-	int wordStartIndex = 0;
-
-	// Set the word start index to the current index, then advance the current index
-	wordStartIndex = currentIndex;
+	// Set a word start index to the current index
+	int wordStartIndex = currentIndex;
 
 	// Create a word variable to hold the word to return to this function's
 	// caller
