@@ -7,6 +7,7 @@ using namespace std;
 
 bool testMode = false;
 bool printFinalObtainedValues = true;
+bool showCalculationValues = true;
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
@@ -633,12 +634,14 @@ float calculateFleschKincaid(int totalSyllables,
 
 	// Calculate the "alpha" value
 	float alpha = (float) totalSyllables / (float) totalWords;
-	if (testMode)
+	if ((testMode) ||
+	    (showCalculationValues))
 		cout << "calculateFleschKincaid: alpha == " << alpha << endl;
 
 	// Calculate the "beta" value
 	float beta = (float) totalWords / (float) totalSentences;
-	if (testMode)
+	if ((testMode) ||
+	    (showCalculationValues))
 		cout << "calculateFleschKincaid: beta == " << beta << endl;
 
 	// Calculate the Flesch-Kincaid Grade Level Index
