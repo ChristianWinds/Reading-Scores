@@ -21,7 +21,11 @@ public class flesch
 
 			// To prepare for the readability index and score
 			// calculations, obtain the analyzed file values
-			obtainFileValues();
+			obtainFileValues(syllables,
+					 totalWords,
+					 sentences,
+					 difficultWords,
+					 filename);
 		}
 	}
 }
