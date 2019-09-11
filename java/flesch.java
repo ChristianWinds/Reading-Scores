@@ -8,5 +8,9 @@ public class flesch
 		{
 			System.out.println("Please enter one filename.");
 		}
+		else
+		{
+			String filename = ;
+		}
 	}
 }
