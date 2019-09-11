@@ -2,6 +2,14 @@ import java.util.Scanner;
 
 public class flesch
 {
+	public void obtainValues()
+	{
+		// Precondition:
+		// Postcondition:
+
+		;
+	}
+
 	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
