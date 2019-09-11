@@ -376,6 +376,10 @@ string getWord(int &currentIndex,
 		// Record the index of the word end
 		wordEndIndex = currentIndex - 1;
 
+		// Increment the currentIndex to avoid counting the same
+		// sentence twice
+		currentIndex++;
+
 		// If the current index exceeded the line length, place the
 		// index at the final line index
 		if (endOfLine)
