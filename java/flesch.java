@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class flesch
 {
-	public static void main (String[] args) throws IOException
+	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
