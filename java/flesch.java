@@ -18,6 +18,10 @@ public class flesch
 			int totalWords = 0;
 			int sentences = 0;
 			int difficultWords = 0;
+
+			// To prepare for the readability index and score
+			// calculations, obtain the analyzed file values
+			obtainFileValues();
 		}
 	}
 }
