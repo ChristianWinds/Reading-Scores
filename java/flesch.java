@@ -40,6 +40,9 @@ public class flesch
 				float fleschKincaidIndex = calculateFleschKincaid(syllables,
 										  totalWords,
 										  sentences);
+
+				System.out.println("Flesch Readability Index: " + fleschIndex);
+				System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndes);
 			}
 			else
 			{
