@@ -26,6 +26,30 @@ public class flesch
 					 sentences,
 					 difficultWords,
 					 filename);
+
+			// Calculate the reading indexes and score only if words
+			// and syllables were found in the analyzed file to
+			// avoid a division by zero error
+			if ((totalWords > 0) &&
+			    (syllables > 0))
+			{
+				float fleschIndex = calculateFlesch(syllables,
+								    totalWords,
+								    sentences);
+
+				float fleschKincaidIndex = calculateFleschKincaid(syllables,
+										  totalWords,
+										  sentences);
+			}
+			else
+			{
+				if (!(totalWords > 0))
+					cout << System.out.println("No words found in file.");
+				if (!(sentences > 0))
+					cout << System.out.println("No sentences found in file.");
+
+				System.out.println("As a result, the readability calculations could not be performed.");
+			}
 		}
 	}
 }
