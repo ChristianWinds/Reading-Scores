@@ -42,7 +42,7 @@ public class flesch
 										  sentences);
 
 				System.out.println("Flesch Readability Index: " + fleschIndex);
-				System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndes);
+				System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
 			}
 			else
 			{
