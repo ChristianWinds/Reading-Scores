@@ -22,10 +22,7 @@ public class Flesch
 
 		// Prepare integer variables to store the analyzed file
 		// values and calculate the reading scores and indexes
-		int syllables = 0;
-		int totalWords = 0;
-		int sentences = 0;
-		int difficultWords = 0;
+		ReadingValueCalculationVariables calculationVariables = new ReadingValueCalculationVariables();
 
 		// To prepare for the readability index and score
 		// calculations, obtain the analyzed file values
