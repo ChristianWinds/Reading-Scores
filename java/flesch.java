@@ -1,6 +1,9 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 public class flesch
 {
-	public static void main (String[] args)
+	public static void main (String[] args) throws IOException
 	{
 		// To avoid an error, analyze an input file only if one filename
 		// was entered on the command line
