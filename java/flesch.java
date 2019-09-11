@@ -47,9 +47,9 @@ public class flesch
 		else
 		{
 			if (!(totalWords > 0))
-				cout << System.out.println("No words found in file.");
+				System.out.println("No words found in file.");
 			if (!(sentences > 0))
-				cout << System.out.println("No sentences found in file.");
+				System.out.println("No sentences found in file.");
 
 			System.out.println("As a result, the readability calculations could not be performed.");
 		}
