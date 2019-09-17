@@ -107,7 +107,33 @@ public class Flesch
 		return syllables;
 	}
 
-	public boolean detectVowel(char
+	public boolean detectVowel(char character)
+	{
+		// Precondition:
+		// Postcondition:
+
+		Boolean isVowel = false;
+
+		// Compare the received character to each vowel to deermine
+		// whether the received character is a vowel
+		if ((character == 'a')||
+		    (character == 'A') ||
+		    (character == 'e') ||
+		    (character == 'E') ||
+		    (character == 'i') ||
+		    (character == 'I') ||
+		    (character == 'o') ||
+		    (character == 'O') ||
+		    (character == 'u') ||
+		    (character == 'U') ||
+		    (character == 'y') ||
+		    (character == 'Y'))
+			isVowel = true;
+		else
+			isVowel = false;
+
+		return isVowel;
+	}
 
 	public static void main (String[] args)
 	{
