@@ -26,12 +26,12 @@ public class Flesch
 				{
 					int currentLineIndex = 0;
 
-					bool endOfLine = false;
+					boolean endOfLine = false;
 
 					while (!(endOfLine))
 					{
-						bool endOfSentence = false;
-						bool wordRetrieved = false;	
+						boolean endOfSentence = false;
+						boolean wordRetrieved = false;	
 
 						// Retrieve the next unread word
 						// from the analyzed file to
@@ -106,6 +106,8 @@ public class Flesch
 
 		return syllables;
 	}
+
+	public boolean detectVowel(char
 
 	public static void main (String[] args)
 	{
