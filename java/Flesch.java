@@ -22,7 +22,7 @@ public class Flesch
 			{
 				/*Store the earliest unread file line;*/
 
-				if (/*Analyzed file i not at end of file*/)
+				if (/*Analyzed file is not at end of file*/)
 				{
 					int currentLineIndex = 0;
 
