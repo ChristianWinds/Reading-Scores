@@ -35,6 +35,14 @@ public class Flesch
 					}
 
 					String word = getWord()
+
+					// Prevent word and syllable count
+					// updates if no word ws retrieved to
+					// avoid word and syllable miscount
+					if ((wordRetrieved) &&
+					    (word != ""))
+					{
+						totalWords++
 				}
 			}
 		}
