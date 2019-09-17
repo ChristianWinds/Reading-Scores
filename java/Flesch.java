@@ -7,7 +7,37 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		;
+		// Create an input file stream for the file to analyze;
+
+		String currentLine = "";
+
+		// Open the file to analyze;
+
+		if (/*Analyzed file is open*/)
+		{
+			// Retrieve the text file's values to prepare for the
+			// reading score and index calculations
+			while ((/*Analyzed file is not at end of file)) &&
+			       (/*Analyzedfile is open*/)
+			{
+				/*Store the earliest unread file line;*/
+
+				if (/*Analyzed file i not at end of file*/)
+				{
+					int currentLineIndex = 0;
+
+					bool endOfLine = false;
+
+					while (!(endOfLine))
+					{
+						bool endOfSentence = false;
+						bool wordRetrieved = false;
+					}
+
+					String word = getWord()
+				}
+			}
+		}
 	}
 
 	public static void main (String[] args)
