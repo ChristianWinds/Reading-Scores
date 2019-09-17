@@ -162,8 +162,14 @@ public class Flesch
 		// Postcondition:
 
 		bool isNumeric = false;
-		// Check the character to determine if the received character is
-		// a numeric character
+
+		if ((character >= '0') &&
+		    (character <= '9'))
+			isNumeric = true;
+		else
+			isNumeric = false;
+
+		return isNumeric;
 	}
 
 	public static void main (String[] args)
