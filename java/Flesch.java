@@ -68,7 +68,10 @@ public class Flesch
 		     currentIndex < /* Retrieved word length*/,
 		     currentIndex++)
 		{
-			readCharacter = word.at
+			readCharacter = /*Character at current word character index*/;
+			if (detectVowel(readCharacter))
+			{
+			
 		}
 	}
 
