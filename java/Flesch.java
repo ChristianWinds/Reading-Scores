@@ -172,6 +172,17 @@ public class Flesch
 		return isNumeric;
 	}
 
+	public float calculateFlesch(int totalSyllables,
+				     int totalWords,
+				     int totalSentences)
+	{
+		float alpha = (float ) totalSyllables / (float) totalWords;
+
+		float beta = (float) totalWords / (float) totalSentences;
+
+		
+	}
+	
 	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
