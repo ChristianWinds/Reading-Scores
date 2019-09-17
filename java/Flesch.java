@@ -31,18 +31,22 @@ public class Flesch
 					while (!(endOfLine))
 					{
 						bool endOfSentence = false;
-						bool wordRetrieved = false;
+						bool wordRetrieved = false;	
+
+						String word = getWord()
+
+						// Prevent word and syllable
+						// count updates if no word was
+						// retrieved to avoid word and
+						// syllable miscount
+						if ((wordRetrieved) &&
+						    (word != ""))
+						{
+							totalWords++
+
+							totalSyllables += countSyllables(/*Retrieved word*/);
+						}
 					}
-
-					String word = getWord()
-
-					// Prevent word and syllable count
-					// updates if no word ws retrieved to
-					// avoid word and syllable miscount
-					if ((wordRetrieved) &&
-					    (word != ""))
-					{
-						totalWords++
 				}
 			}
 		}
