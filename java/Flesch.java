@@ -60,18 +60,29 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
+		int currentIndex = 0;
+
 		char readCharacter = '0';
 
 		int syllablesCounted = 0;
 
-		for (int currentIndex = 0,
-		     currentIndex < /* Retrieved word length*/,
-		     currentIndex++)
+		while (currentIndex < /* Retrieved word length*/)
 		{
 			readCharacter = /*Character at current word character index*/;
 			if (detectVowel(readCharacter))
 			{
-			
+				if (((readCharacter == 'e') ||
+				    (readCharacter == 'E')) &&
+				    (currentIndex == word.length() - 1))
+				{
+					// Update the current index to not count
+					// the word-ending "e" as a syllable
+					currentIndex++;
+				}
+				else
+				{
+				}
+			}
 		}
 	}
 
