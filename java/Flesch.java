@@ -185,6 +185,16 @@ public class Flesch
 		return fleschIndex;
 	}
 	
+
+	public float calculateFleschKincaid(int totalSyllables,
+					    int totalWords,
+					    int totalSentences)
+	{
+		// Precondition:
+		// Postcondition:
+
+		;
+	}
 	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
