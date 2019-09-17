@@ -55,6 +55,23 @@ public class Flesch
 		}
 	}
 
+	public int countSyllables(/*Retrieved word*/)
+	{
+		// Precondition:
+		// Postcondition:
+
+		char readCharacter = '0';
+
+		int syllablesCounted = 0;
+
+		for (int currentIndex = 0,
+		     currentIndex < /* Retrieved word length*/,
+		     currentIndex++)
+		{
+			readCharacter = word.at
+		}
+	}
+
 	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
