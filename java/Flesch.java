@@ -1,4 +1,5 @@
-// Code from GeeksForGeeks
+// Code from GeeksForGeeks,
+// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 // Accessed September 11, 2019
 import java.util.Scanner;
 
@@ -207,13 +208,15 @@ public class Flesch
 	{
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
-		// Code from GeeksForGeeks
+		// Code from GeeksForGeeks,
+		// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 		// Accessed September 11, 2019
 		Scanner keyboardInput = new Scanner (System.in);
 
 		// Receive keyboard input to receive the filename of the file
 		// to analyze
-		// Code from GeeksForGeeks
+		// Code from GeeksForGeeks,
+		// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 		// Accessed September 11, 2019
 		String filename = keyboardInput.nextLine();
 
