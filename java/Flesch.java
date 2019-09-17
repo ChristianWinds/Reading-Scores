@@ -135,6 +135,24 @@ public class Flesch
 		return isVowel;
 	}
 
+	public boolean detectAlphabetChar(char character)
+	{
+		// Precondition:
+		// Postcondition:
+
+		boolean isAlphabetic = false;
+
+		if (((character >= 'A') &&
+		    (character <= 'Z')) ||
+		    ((character >= 'a') &&
+		    (character <= 'z')))
+			isAlphabetic = true;
+		else
+			isAlphabetic = false;
+
+		return isAlphabetic;
+	}
+
 	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
