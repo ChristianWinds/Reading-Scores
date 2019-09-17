@@ -33,7 +33,10 @@ public class Flesch
 						bool endOfSentence = false;
 						bool wordRetrieved = false;	
 
-						String word = getWord()
+						// Retrieve the next unread word
+						// from the analyzed file to
+						// analyze the new word
+						String word = getWord();
 
 						// Prevent word and syllable
 						// count updates if no word was
@@ -42,7 +45,7 @@ public class Flesch
 						if ((wordRetrieved) &&
 						    (word != ""))
 						{
-							totalWords++
+							totalWords++;
 
 							totalSyllables += countSyllables(/*Retrieved word*/);
 						}
