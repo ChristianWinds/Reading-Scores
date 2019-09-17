@@ -180,7 +180,9 @@ public class Flesch
 
 		float beta = (float) totalWords / (float) totalSentences;
 
-		
+		float fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
+
+		return fleschIndex;
 	}
 	
 	public static void main (String[] args)
