@@ -193,7 +193,13 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		;
+		float alpha = (float) totalSyllables / (float) totalWords;
+
+		float beta = (float) totalWords / (float) totalSentences;
+
+		float fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
+
+		return fleschKincaidIndex;
 	}
 	public static void main (String[] args)
 	{
