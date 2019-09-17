@@ -156,6 +156,16 @@ public class Flesch
 		return isAlphabetic;
 	}
 
+	public boolean detectNumericChar(char character)
+	{
+		// Precondition:
+		// Postcondition:
+
+		bool isNumeric = false;
+		// Check the character to determine if the received character is
+		// a numeric character
+	}
+
 	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
