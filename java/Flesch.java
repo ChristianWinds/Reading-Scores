@@ -142,6 +142,9 @@ public class Flesch
 
 		boolean isAlphabetic = false;
 
+		// Compare the received character to the uppercase and
+		// lowercase alphabet characters to determine if the current
+		// character is alphabetic
 		if (((character >= 'A') &&
 		    (character <= 'Z')) ||
 		    ((character >= 'a') &&
