@@ -81,9 +81,30 @@ public class Flesch
 				}
 				else
 				{
+					// Read the successive vowels in the
+					// word to find the end of the current
+					// syllable
+					while (detectVowel(readCharacter)) &&
+					       (currrentIndex < /*DetectedWordLength*/)
+					{
+						currentIndex++;
+						if (currentIndex < /*Retrieved word length*/)
+							readCharacter = /*Word character at currentIndex in word*/;
+					}
 				}
 			}
+			else
+			{
+				currentIndex++;
+			}
 		}
+
+		// Add one to a syllable count of zero to follow the minimum
+		// syllale requirements for words
+		if (syllables == 0)
+			syllables++;
+
+		return syllables;
 	}
 
 	public static void main (String[] args)
