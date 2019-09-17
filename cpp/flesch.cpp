@@ -125,11 +125,6 @@ void obtainValues(int &totalSyllables,
 
 	// Initialize a Boolean for presence of a partial word segment at the
 	// end of an input file line
-	// * PROGRAMMER'S NOTE: The name of this Boolean may need improvement,
-	// * and this initialization's placement may require change to a more
-	// * relevant location for usage timing
-	// * PROGRAMMER'S NOTE (8/3/2019): Disabled to continue main program
-	// * development
 	/*bool wordPart = false;*/
 
 	// Create an input file stream for the file to analyze
