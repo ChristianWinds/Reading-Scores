@@ -207,10 +207,14 @@ public class Flesch
 	{
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
+		// Code from GeeksForGeeks
+		// Accessed September 11, 2019
 		Scanner keyboardInput = new Scanner (System.in);
 
 		// Receive keyboard input to receive the filename of the file
 		// to analyze
+		// Code from GeeksForGeeks
+		// Accessed September 11, 2019
 		String filename = keyboardInput.nextLine();
 
 		// Prepare integer variables to store the analyzed file
