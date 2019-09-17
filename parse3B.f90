@@ -7,7 +7,7 @@ program parse
         interface
          subroutine get_next_token( inline, outline, word)
           character (*) :: inline
-          character, dimension(:), allocatable :: outline, word
+          character (:), allocatable :: outline, word
          end subroutine get_next_token
          ! subroutine read_file( string, counter )
          ! character(:), allocatable :: string
