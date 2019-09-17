@@ -1,3 +1,5 @@
+// Code from GeeksForGeeks
+// Accessed September 11, 2019
 import java.util.Scanner;
 
 public class Flesch
