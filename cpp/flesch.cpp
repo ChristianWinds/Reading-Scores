@@ -137,8 +137,8 @@ void storeDaleChallList()
 		while ((!(analyzedFile.eof())) &&
 		       (analyzedFile.is_open()))
 		{
-			// Retrieve the current Dale-Chall list line to retrieve
-			// the line's word
+			// Retrieve thenext unread Dale-Chall file line to
+			// retrieve the line's word
 			string currentLine = "";
 			getline(daleChallFile, currentLine);
 
@@ -157,7 +157,7 @@ void storeDaleChallList()
 					     wordRetrieved);
 
 			/* Store the current word in the Dale-Chall List data item*/
-			
+			insertAlphabetically(daleChallVector, currentWord);
 		}
 	}
 	else
