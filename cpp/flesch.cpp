@@ -118,6 +118,18 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
+void storeDaleChallList()
+{
+	// Precondition:
+	// Postcondition:
+
+	ifstream daleChallFile;
+
+	string currentWord = "";
+
+	daleChallFile.open(daleChallFilename.c_str());
+}
+
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
