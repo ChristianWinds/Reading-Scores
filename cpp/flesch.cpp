@@ -1,6 +1,10 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+// Code from Cplusplus.com,
+// http://www.cplusplus.com/reference/vector/vector/insert/
+// Accessed Wednesday, September 19, 2019
+#include <vector>
 #include <cstring>
 #include <string>
 using namespace std;
