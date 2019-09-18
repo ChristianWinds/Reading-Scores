@@ -32,7 +32,7 @@ float calculateFleschKincaid(int totalSyllables,
 			     int totalSentences);
 float calculateDaleChall(int difficultWords,
 			 int totalWords,
-			 int totalSentences)
+			 int totalSentences);
 
 int main(int argc, char* argv[])
 {
