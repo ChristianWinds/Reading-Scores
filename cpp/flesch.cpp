@@ -44,6 +44,9 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
+		string daleChallListFilename = "/pub/pounds/CSC330/daleChall/wordList1995.txt"
+
+		
 		// Retrieve the filename needed for file analysis
 		string filename = argv[1];
 
