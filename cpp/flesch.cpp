@@ -129,6 +129,11 @@ void storeDaleChallList()
 	string currentWord = "";
 
 	daleChallFile.open(daleChallFilename.c_str());
+
+	if (daleChallFile.is_open())
+	{
+		
+	}
 }
 
 void obtainValues(int &totalSyllables,
