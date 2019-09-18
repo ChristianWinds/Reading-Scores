@@ -130,8 +130,6 @@ void storeDaleChallList()
 	// Postcondition:
 
 	ifstream daleChallFile;
-
-
 	daleChallFile.open(daleChallFilename.c_str());
 
 	if (daleChallFile.is_open())
@@ -139,6 +137,8 @@ void storeDaleChallList()
 		while ((!(analyzedFile.eof())) &&
 		       (analyzedFile.is_open()))
 		{
+			// Retrieve the current Dale-Chall list line to retrieve
+			// the line's word
 			string currentLine = "";
 			getline(daleChallFile, currentLine);
 
