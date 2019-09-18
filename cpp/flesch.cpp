@@ -626,7 +626,7 @@ float calculateFlesch(int totalSyllables,
 	// * decimal format; thus, either a float or a double data type may be
 	// * necessary for each of the two variables.
 
-	// Calculate the "alpha" value
+	// Calculate the alpha value to prepare to calculate the Flesch Index
 	if ((testMode) &&
 	    (false))
 	{
@@ -635,7 +635,7 @@ float calculateFlesch(int totalSyllables,
 	float alpha = (float) totalSyllables / (float) totalWords;
 	if (testMode)
 		cout << "calculateFlesch: alpha == " << alpha << endl;
-	// Calculate the "beta" value
+	// Calculate the beta value to prepare to calculate the Flesch Index
 	float beta = (float) totalWords / (float) totalSentences;
 	if (testMode)
 		cout << "calculateFlesch: beta == " << beta << endl;
@@ -656,14 +656,14 @@ float calculateFleschKincaid(int totalSyllables,
 	// and returned to this function's caller
 
 	// Calculate the alpha value to prepare to calculate the Flesch-Kincaid
-	// value
+	// Index
 	float alpha = (float) totalSyllables / (float) totalWords;
 	if ((testMode) ||
 	    (showCalculationValues))
 		cout << "calculateFleschKincaid: alpha == " << alpha << endl;
 
 	// Calculate the beta value to prepare to calculate the Flesch-Kincaid
-	// value
+	// Index
 	float beta = (float) totalWords / (float) totalSentences;
 	if ((testMode) ||
 	    (showCalculationValues))
