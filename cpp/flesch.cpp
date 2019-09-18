@@ -126,7 +126,6 @@ void storeDaleChallList()
 
 	ifstream daleChallFile;
 
-	string currentWord = "";
 
 	daleChallFile.open(daleChallFilename.c_str());
 
@@ -135,7 +134,22 @@ void storeDaleChallList()
 		while ((!(analyzedFile.eof())) &&
 		       (analyzedFile.is_open()))
 		{
-			getline
+			string currentLine = "";
+			getline(daleChallFile, currentLine);
+
+			int startingIndex = 0;
+
+			// Create Boolean variables to fulfill the getWord
+			// function parameters
+			bool endOfLine = false;
+			bool endOfSentence = false;
+			bool wordRetrieved = false;
+
+			string currentWord = getWord(startingIndex,
+					     currentLine,
+					     endOfLine,
+					     endOfSentence,
+					     wordRetrieved);
 		}
 	}
 	else
