@@ -132,7 +132,11 @@ void storeDaleChallList()
 
 	if (daleChallFile.is_open())
 	{
-		
+		while ((!(analyzedFile.eof())) &&
+		       (analyzedFile.is_open()))
+		{
+			getline
+		}
 	}
 	else
 	{
