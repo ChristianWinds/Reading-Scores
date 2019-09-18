@@ -696,8 +696,12 @@ float calculateDaleChall(int difficultWords,
 	// the Dale-Chall Score
 	float difficultWordPercent = alpha * 100;
 
-	float daleChallScore = (alpha * 100) * 0.1579 + beta * 0.0496;
+	float daleChallScore = difficultWordPercent * 0.1579 + beta * 0.0496;
 
-	if ()
+	// Add 3.6365 to the Dale-Chall Score if the difficult word percentage
+	// exceeds 5 to complete the required Dale-Chall Score adjustment
+	if (difficultWordPercent > 5)
+		daleChallScore += 3.6365;
+
 	return daleChallScore;
 }
