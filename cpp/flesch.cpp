@@ -134,6 +134,11 @@ void storeDaleChallList()
 	{
 		
 	}
+	else
+	{
+		cout << "The Dale-Chall wordlist file could not be opened." <<
+			endl;
+	}
 }
 
 void obtainValues(int &totalSyllables,
