@@ -190,8 +190,6 @@ void obtainValues(int &totalSyllables,
 							      endOfSentence,
 							      wordRetrieved);
 
-					// If a word was retrieved, update the
-					// total numbers of words and syllables
 					if ((wordRetrieved) &&
 					    (word != "")) 
 					{
