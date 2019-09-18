@@ -151,7 +151,6 @@ void obtainValues(int &totalSyllables,
 			if (testMode)
 				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
 			// Store the earliest unread file line
-			// * PROGRAMMER'S NOTE: Code line [SUCCESSFUL]	
 			getline(analyzedFile, currentLine);
 
 			if (testMode)
