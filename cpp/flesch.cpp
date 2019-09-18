@@ -8,6 +8,7 @@ using namespace std;
 bool testMode = false;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
+void storeDaleChallList();
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
