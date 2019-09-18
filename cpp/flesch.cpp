@@ -124,7 +124,10 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-void storeDaleChallList()
+// Code from Cplusplus.com,
+// http://www.cplusplus.com/reference/vector/vector/insert/
+// Accessed Wednesday, September 18th, 2019
+void storeDaleChallList(vector daleChallVector)
 {
 	// Precondition:
 	// Postcondition:
