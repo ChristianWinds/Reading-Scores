@@ -150,6 +150,8 @@ void storeDaleChallList()
 					     endOfLine,
 					     endOfSentence,
 					     wordRetrieved);
+
+			/* Store the current word in the Dale-Chall List data item*/
 		}
 	}
 	else
