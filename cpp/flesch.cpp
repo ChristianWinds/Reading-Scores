@@ -199,6 +199,8 @@ void obtainValues(int &totalSyllables,
 						// in the retrieved word to the
 						// syllable total
 						totalSyllables += countSyllables(word);
+
+						/* Check the word to determine if the word is a difficult word.*/
 					}
 
 					// Update the number of counted sentences
