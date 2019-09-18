@@ -655,11 +655,15 @@ float calculateFleschKincaid(int totalSyllables,
 	// Postcondition: The Flesch-Kincaid Readability Index was calculated
 	// and returned to this function's caller
 
+	// Calculate the alpha value to prepare to calculate the Flesch-Kincaid
+	// value
 	float alpha = (float) totalSyllables / (float) totalWords;
 	if ((testMode) ||
 	    (showCalculationValues))
 		cout << "calculateFleschKincaid: alpha == " << alpha << endl;
 
+	// Calculate the beta value to prepare to calculate the Flesch-Kincaid
+	// value
 	float beta = (float) totalWords / (float) totalSentences;
 	if ((testMode) ||
 	    (showCalculationValues))
