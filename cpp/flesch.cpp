@@ -674,7 +674,9 @@ float calculateFleschKincaid(int totalSyllables,
 	return fleschKincaidIndex;
 }
 
-float calculateDaleChall()
+float calculateDaleChall(int difficultWords,
+			 int totalWords,
+			 int totalSentences)
 {
 	// Precondition: The numbers of difficult words, total words, and
 	// sentences were recorded, and the total numbers of words and sentences
@@ -682,8 +684,20 @@ float calculateDaleChall()
 	// Postcondition: The Dale-Chall Readability Score was calculated and
 	// returned to this function's caller
 
+	// Calculate the alpha value to prepare to calculate the Dale-Chall
+	// score
 	float alpha = (float) totalSyllables / (float) totalWords;
 
-	float daleChallScore = ;
+	// Calculate the beta value to prepare to calculate the Dale-Chall
+	// score
+	float beta = (float) totalWords / (float) totalSentences;
+
+	// Calculate the percentage of difficult words to prepare to calculate
+	// the Dale-Chall Score
+	float difficultWordPercent = alpha * 100;
+
+	float daleChallScore = (alpha * 100) * 0.1579 + beta * 0.0496;
+
+	if ()
 	return daleChallScore;
 }
