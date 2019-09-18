@@ -649,13 +649,11 @@ float calculateFleschKincaid(int totalSyllables,
 			     int totalWords,
 			     int totalSentences)
 {
-	// Precondition:
+	// Precondition: The total numbers of syllables, words, and sentences
+	// were obtained, and the total numbers of words and sentences are not
+	// zero
 	// Postcondition: The Flesch-Kincaid Readability Index was calculated
 	// and returned to this function's caller
-
-	// * PROGRAMMER'S NOTE: The values of alpha and beta likely require
-	// * decimal format; thus, either a float or a double data type may be
-	// * necessary for each of the two variables.
 
 	// Calculate the "alpha" value
 	float alpha = (float) totalSyllables / (float) totalWords;
@@ -673,4 +671,8 @@ float calculateFleschKincaid(int totalSyllables,
 	float fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
 
 	return fleschKincaidIndex;
+}
+
+float calculateDaleChall()
+{
 }
