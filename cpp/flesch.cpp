@@ -169,6 +169,11 @@ void insertAlphabetically();
 	// Precondition:
 	// Postcondition:
 
+	if (daleChallVector.size() == 0)
+	{
+		// Insert the received word into the Dale-Chall vector
+		daleChallVector.insert();
+	}
 	/* Locate the midpoint of the vector */
 	int currentMinIndex = 0;
 	int currentMaxIndex = daleChallVector.size() - 1;
