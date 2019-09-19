@@ -1,9 +1,6 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
-// Code from Cplusplus.com,
-// http://www.cplusplus.com/reference/vector/vector/insert/
-// Accessed Wednesday, September 19, 2019
 #include <vector>
 #include <cstring>
 #include <string>
@@ -124,9 +121,6 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-// Code from Cplusplus.com,
-// http://www.cplusplus.com/reference/vector/vector/insert/
-// Accessed Wednesday, September 18th, 2019
 void storeDaleChallList(vector daleChallVector)
 {
 	// Precondition:
@@ -140,7 +134,7 @@ void storeDaleChallList(vector daleChallVector)
 		while ((!(analyzedFile.eof())) &&
 		       (analyzedFile.is_open()))
 		{
-			// Retrieve thenext unread Dale-Chall file line to
+			// Retrieve the next unread Dale-Chall file line to
 			// retrieve the line's word
 			string currentLine = "";
 			getline(daleChallFile, currentLine);
