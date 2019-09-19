@@ -180,6 +180,10 @@ void insertAlphabetically();
 	{
 		/* Locate the vector midpoint after the current vector word */
 	}
+	else
+	{
+		/* As the words match, skip adding the current word" */
+	}
 
 	return 0;
 }
