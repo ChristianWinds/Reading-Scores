@@ -166,6 +166,10 @@ void storeDaleChallList(vector daleChallVector)
 
 void insertAlphabetically();
 {
+	// Precondition:
+	// Postcondition:
+
+
 	return 0;
 }
 
