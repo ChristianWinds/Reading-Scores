@@ -172,8 +172,15 @@ void insertAlphabetically();
 	/* Locate the midpoint of the vector */
 
 	/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
+	if ()
+	{
+		/* Locate the vector midpoint before the current vector word */
+	}
+	else if ()
+	{
+		/* Locate the vector midpoint after the current vector word */
+	}
 
-	
 	return 0;
 }
 
