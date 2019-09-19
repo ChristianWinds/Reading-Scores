@@ -183,6 +183,7 @@ void insertAlphabetically();
 	else if (currentWord > daleChallVector.at(currentMidIndex))
 	{
 		/* Locate the new search midpoint after the current vector word */
+		currentMinIndex = currentMidIndex + 1;
 		
 	}
 	else if (currentWord == daleChallVector.at(currentMidIndex))
