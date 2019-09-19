@@ -169,7 +169,7 @@ void insertAlphabetically();
 	// Precondition:
 	// Postcondition:
 
-
+	/* Locate the midpoint of the vector */
 	return 0;
 }
 
