@@ -172,7 +172,7 @@ void insertAlphabetically();
 	if (daleChallVector.size() == 0)
 	{
 		// Insert the received word into the Dale-Chall vector
-		daleChallVector.insert();
+		daleChallVector.push_back(word);
 	}
 	/* Locate the midpoint of the vector */
 	int currentMinIndex = 0;
