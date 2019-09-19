@@ -172,17 +172,18 @@ void insertAlphabetically();
 	/* Locate the midpoint of the vector */
 	int currentMinIndex = 0;
 	int currentMaxIndex = daleChallVector.size() - 1;
+	int currentMidIndex = currentMaxIndex / 2;
 
 	/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-	if (currentWord )
+	if (currentWord > /*Current Vector Word */)
 	{
 		/* Locate the vector midpoint before the current vector word */
 	}
-	else if ()
+	else if (currentWord < /* Current vector word */)
 	{
 		/* Locate the vector midpoint after the current vector word */
 	}
-	else
+	else if (currentWord == /* Current Vector Word */)
 	{
 		/* As the words match, skip adding the current word" */
 	}
