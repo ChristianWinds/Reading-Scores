@@ -174,7 +174,7 @@ void insertAlphabetically();
 	int currentMaxIndex = daleChallVector.size() - 1;
 
 	/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-	if ()
+	if (currentWord )
 	{
 		/* Locate the vector midpoint before the current vector word */
 	}
@@ -668,11 +668,12 @@ bool detectWordCharacter(char character)
 
 	bool isWordCharacter = false;
 
-	// Check if the character is alphanumeric or a hyphen to determine if
-	// the character is or is not part of a word
+	// Check if the character is alphanumeric, a hyphen, or an apostrophe to
+	// determine if the character is or is not part of a word
 	if ((detectAlphabetChar(character)) ||
 	    (detectNumericChar(character)) ||
-	    (character == '-'))
+	    (character == '-') ||
+	    (character == '''))
 		isWordCharacter = true;
 	else
 		isWordCharacter = false;
