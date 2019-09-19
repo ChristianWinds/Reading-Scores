@@ -10,6 +10,7 @@ bool testMode = false;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
 void storeDaleChallList();
+void insertAlphabetically();
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
@@ -153,7 +154,6 @@ void storeDaleChallList(vector daleChallVector)
 					     endOfSentence,
 					     wordRetrieved);
 
-			/* Store the current word in the Dale-Chall List data item*/
 			insertAlphabetically(daleChallVector, currentWord);
 		}
 	}
@@ -162,6 +162,11 @@ void storeDaleChallList(vector daleChallVector)
 		cout << "The Dale-Chall wordlist file could not be opened." <<
 			endl;
 	}
+}
+
+void insertAlphabetically();
+{
+	return 0;
 }
 
 void obtainValues(int &totalSyllables,
