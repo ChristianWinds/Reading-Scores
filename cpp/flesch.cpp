@@ -254,6 +254,10 @@ void insertAlphabetically(vector<string> &wordVector,
 
 		while (currentMaxIndex - currentMinIndex > 1)
 		{
+			if (testMode)
+			{
+				cout << "insertAlphabetically: while loop: currentMaxIndex(" << currentMaxIndex << ") - currentMinIndex(" << currentMinIndex << ") == " << currentMaxIndex - currentMinIndex << endl;
+			}
 			/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
 			if (insertionWord < wordVector.at(currentMidIndex))
 			{
