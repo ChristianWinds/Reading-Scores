@@ -9,8 +9,7 @@ using namespace std;
 bool testMode = false;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
-void storeDaleChallList(vector<string> daleChallVector,
-			string daleChallListFilename);
+void storeDaleChallList(vector<string> daleChallVector);
 void insertAlphabetically(vector<string> wordVector,
                           string insertionWord);
 void obtainValues(int &totalSyllables,
@@ -50,11 +49,8 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		string daleChallListFilename = "/pub/pounds/CSC330/daleChall/wordlist1995.txt";
-
 		vector<string> daleChallVector;
-		storeDaleChallList(daleChallVector,
-				   daleChallListFilename);
+		storeDaleChallList(daleChallVector);
 		
 		// Retrieve the filename needed for file analysis
 		string filename = argv[1];
@@ -132,8 +128,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-void storeDaleChallList(vector<string> daleChallVector,
-			string daleChallListFilename)
+void storeDaleChallList(vector<string> daleChallVector)
 {
 	// Precondition:
 	// Postcondition:
@@ -143,7 +138,7 @@ void storeDaleChallList(vector<string> daleChallVector,
 	// Code from Cplusplus.com,
 	// http://www.cplusplus.com/doc/tutorial/files/
 	// Accessed Monday, September 2, 2019
-	ifstream daleChallFile;
+	ifstream daleChallFile("/pub/pounds/CSC330/daleChall/wordlist1995.txt");
 	daleChallFile.open(daleChallListFilename.c_str());
 
 	if (daleChallFile.is_open())
