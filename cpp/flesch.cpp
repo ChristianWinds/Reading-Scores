@@ -233,6 +233,11 @@ void insertAlphabetically(vector<string> wordVector,
 	// alphabetically sorted
 	// Postcondition:
 
+	if (testMode)
+	{
+		cout << "storeDaleChallList: Dale-Chall vector size at function start == " << wordVector.size() << endl;
+	}
+
 	if (wordVector.size() == 0)
 	{
 		// Insert the received word into the string vector
@@ -278,6 +283,11 @@ void insertAlphabetically(vector<string> wordVector,
 			wordVector.insert(wordVectorIterator + currentMidIndex,
 					  insertionWord);
 		}
+	}
+
+	if (testMode)
+	{
+		cout << "insertAlphabetically: Dale-Chall vector size at function end == " << wordVector.size() << endl;
 	}
 }
 
