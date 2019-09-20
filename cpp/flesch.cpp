@@ -342,7 +342,7 @@ bool findInVector(vector<string> wordVector,
 		{
 			if ((testMode) ||
 			    (printFunctionSteps))
-			{'
+			{
 				cout << "findInVector: Word found; setting foundWord to true" << endl;
 			}
 			foundWord = true;
