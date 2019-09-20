@@ -210,8 +210,6 @@ void insertAlphabetically(vector<string> wordVector,
 			}
 		}
 	}
-
-	return 0;
 }
 
 bool findInVector(vector<string> wordVector,
