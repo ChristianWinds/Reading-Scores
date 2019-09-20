@@ -135,6 +135,8 @@ void storeDaleChallList(vector<string> daleChallVector,
 	// Precondition:
 	// Postcondition:
 
+	// Open the Dale-Chall List file to begin storing the list's words in a
+	// vector
 	ifstream daleChallFile;
 	daleChallFile.open(daleChallListFilename.c_str());
 
