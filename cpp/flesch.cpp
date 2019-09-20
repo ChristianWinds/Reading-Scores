@@ -220,7 +220,7 @@ bool findInVector(vector wordVector,
 	int currentMidIndex = currentMaxIndex / 2;
 
 	while ((foundWord == false) ||
-		)
+		(currentMaxIndex - currentMinIndex > 1)
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
 		if (currentWord < daleChallVector.at(currentMidIndex))
