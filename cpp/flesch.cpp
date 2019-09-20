@@ -192,17 +192,17 @@ void insertAlphabetically(vector<string> wordVector,
 		while (currentMaxIndex - currentMinIndex > 1)
 		{
 			/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-			if (currentWord < wordVector.at(currentMidIndex))
+			if (insertionWord < wordVector.at(currentMidIndex))
 			{
 				/* Locate the new search midpoint before the current vector word */
 				currentMaxIndex = currentMidIndex - 1;
 			}
-			else if (currentWord > wordVector.at(currentMidIndex))
+			else if (insertionWord > wordVector.at(currentMidIndex))
 			{
 				/* Locate the new search midpoint after the current vector word */
 				currentMinIndex = currentMidIndex + 1;	
 			}
-			else if (currentWord == wordVector.at(currentMidIndex))
+			else if (insertionWord == wordVector.at(currentMidIndex))
 			{
 				/* As the words match, skip adding the current word" */
 			}
