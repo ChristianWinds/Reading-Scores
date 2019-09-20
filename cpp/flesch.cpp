@@ -229,7 +229,8 @@ void insertAlphabetically(vector<string> wordVector,
 			// Code from Cplusplus.com,
 			// http://www.cplusplus.com/reference/vector/vector/insert/
 			// Accesed Friday, September 20th, 2019
-			iterator wordVectorIterator = wordVectorIterator.begin();
+			vector<string>::iterator wordVectorIterator;
+			wordVectorIterator = wordVector.begin();
 			wordVector.insert(wordVectorIterator + currentMidIndex,
 					  insertionWord);
 		{
