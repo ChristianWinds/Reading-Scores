@@ -229,13 +229,13 @@ bool findInVector(vector<string> wordVector,
 	       (currentMaxIndex - currentMinIndex > 1))
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-		if (currentWord < wordVector.at(currentMidIndex))
+		if (searchTerm < wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint before the current vector word */
 			currentMaxIndex = currentMidIndex - 1;
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 		}
-		else if (currentWord > wordVector.at(currentMidIndex))
+		else if (searchTerm > wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint after the current vector word */
 			currentMinIndex = currentMidIndex + 1;	
