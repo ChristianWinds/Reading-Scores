@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-bool testMode = false;
+bool testMode = true;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
 void storeDaleChallList(vector<string> daleChallVector);
