@@ -10,6 +10,7 @@ bool testMode = true;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
 bool printActivatingFunctions = true;
+bool printFunctionSteps = true;
 void storeDaleChallList(vector<string> daleChallVector);
 void insertAlphabetically(vector<string> wordVector,
                           string insertionWord);
