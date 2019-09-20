@@ -26,6 +26,7 @@ string getWord(int &currentIndex,
 	       bool &endOfLine,
 	       bool &endOfSentence,
 	       bool &wordRead);
+string capitalizeWord(string word);
 int countSyllables(string word);
 bool detectSentenceEnd(char character);
 bool detectVowel(char character);
