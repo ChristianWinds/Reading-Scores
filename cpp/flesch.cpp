@@ -144,6 +144,12 @@ void storeDaleChallList(vector<string> daleChallVector)
 	// Precondition:
 	// Postcondition:
 
+	if ((testMode) ||
+	    (printActivatingFunctions))
+	{
+		cout << "storeDaleChallList: Starting" << endl;
+	}
+
 	// Open the Dale-Chall List file to begin storing the list's words in a
 	// vector
 	// Code from Cplusplus.com,
@@ -171,14 +177,30 @@ void storeDaleChallList(vector<string> daleChallVector)
 			bool endOfSentence = false;
 			bool wordRetrieved = false;
 
+			if ((testMode) ||
+			    (printActivatingFunctions))
+			{
+				cout << "storeDaleChallList: Calling getWord(startingIndex, currentLine, endOfLine, endOfSentence, wordRetrieved)" << endl;
+			}
 			string currentWord = getWord(startingIndex,
 						     currentLine,
 						     endOfLine,
 						     endOfSentence,
 						     wordRetrieved);
 
-			insertAlphabetically(daleChallVector,
-					     currentWord);
+			// Check if the current word is a blank string to avoid
+			// placing a blank string into the Dale-Chall vector
+			if (currentWord != "")
+			{
+				if ((testMode) ||
+				    (printActivatingFunctions))
+				{
+					cout << "storeDaleChallList: Calling insertAlphabetically(daleChallVector, currentWord)" << endl;
+				}
+
+				insertAlphabetically(daleChallVector,
+						     currentWord);
+			}
 		}
 
 		daleChallFile.close();
