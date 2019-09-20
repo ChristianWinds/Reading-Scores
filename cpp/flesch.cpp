@@ -11,6 +11,7 @@ bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
 bool printActivatingFunctions = true;
 bool printFunctionSteps = true;
+bool printVariables = true;
 void storeDaleChallList(vector<string> daleChallVector);
 void insertAlphabetically(vector<string> wordVector,
                           string insertionWord);
@@ -288,6 +289,11 @@ bool findInVector(vector<string> wordVector,
 	/* Locate the midpoint of the vector */
 	int currentMinIndex = 0;
 	int currentMaxIndex = wordVector.size() - 1;
+	if ((testMode) ||
+	    (printVariables))
+	{
+		cout << "findInVector: currentMaxIndex == " << currentMaxIndex << endl;
+	}
 	int currentMidIndex = currentMaxIndex / 2;
 
 	if ((testMode) ||
@@ -304,16 +310,41 @@ bool findInVector(vector<string> wordVector,
 		{
 			/* Locate the new search midpoint before the current vector word */
 			currentMaxIndex = currentMidIndex - 1;
+			if ((testMode) ||
+			    (printVariables))
+			{
+				cout << "findInVector: currentMaxIndex == " << currentMaxIndex << endl;
+			}
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
+			if ((testMode) ||
+			    (printVariables))
+			{
+				cout << "findInVector: currentMidIndex == " << currentMidIndex << endl;
+			}
 		}
 		else if (searchTerm > wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint after the current vector word */
 			currentMinIndex = currentMidIndex + 1;	
+			if ((testMode) ||
+			    (printVariables))
+			{
+				cout << "findInVector: currentMinIndex == " << currentMinIndex << endl;
+			}
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
+			if ((testMode) ||
+			    (printVariables))
+			{
+				cout << "findInVector: currentMidIndex == " << currentMidIndex << endl;
+			}
 		}
 		else if (searchTerm == wordVector.at(currentMidIndex))
 		{
+			if ((testMode) ||
+			    (printFunctionSteps))
+			{'
+				cout << "findInVector: Word found; setting foundWord to true" << endl;
+			}
 			foundWord = true;
 		}
 	}
