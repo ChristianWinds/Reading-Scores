@@ -206,6 +206,42 @@ void insertAlphabetically(vector &daleChallVector,
 	return 0;
 }
 
+bool findInVector(vector wordVector,
+		  string searchTerm)
+{
+	// Precondition:
+	// Postcondition:
+
+	bool foundWord = false;
+
+	/* Locate the midpoint of the vector */
+	int currentMinIndex = 0;
+	int currentMaxIndex = daleChallVector.size() - 1;
+	int currentMidIndex = currentMaxIndex / 2;
+
+	while ((foundWord == false) ||
+		)
+	{
+		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
+		if (currentWord < daleChallVector.at(currentMidIndex))
+		{
+			/* Locate the new search midpoint before the current vector word */
+			currentMaxIndex = currentMidIndex - 1;
+		}
+		else if (currentWord > daleChallVector.at(currentMidIndex))
+		{
+			/* Locate the new search midpoint after the current vector word */
+			currentMinIndex = currentMidIndex + 1;	
+		}
+		else if (currentWord == daleChallVector.at(currentMidIndex))
+		{
+			/* As the words match, skip adding the current word" */
+		}
+	}
+
+	return foundWord;
+}
+
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
