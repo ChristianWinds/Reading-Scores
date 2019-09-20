@@ -137,8 +137,8 @@ void storeDaleChallList(vector<string> daleChallVector,
 
 	if (daleChallFile.is_open())
 	{
-		while ((!(analyzedFile.eof())) &&
-		       (analyzedFile.is_open()))
+		while ((!(daleChallFile.eof())) &&
+		       (daleChallFile.is_open()))
 		{
 			// Retrieve the next unread Dale-Chall file line to
 			// retrieve the line's word
