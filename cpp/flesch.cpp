@@ -252,7 +252,8 @@ void insertAlphabetically(vector<string> &wordVector,
 		int currentMaxIndex = wordVector.size() - 1;
 		int currentMidIndex = currentMaxIndex / 2;
 
-		while (currentMaxIndex - currentMinIndex > 1)
+		while ((currentMaxIndex - currentMinIndex > 1) &&
+		       (!(duplicateWord)))
 		{
 			if (testMode)
 			{
