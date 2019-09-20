@@ -50,8 +50,8 @@ int main(int argc, char* argv[])
 	{
 		string daleChallListFilename = "/pub/pounds/CSC330/daleChall/wordList1995.txt";
 
-		vector 
-		storeDaleChallList();
+		vector<string> daleChallVector;
+		storeDaleChallList(daleChallVector);
 		
 		// Retrieve the filename needed for file analysis
 		string filename = argv[1];
