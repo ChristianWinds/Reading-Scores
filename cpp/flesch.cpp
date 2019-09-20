@@ -256,8 +256,14 @@ void insertAlphabetically(vector<string> &wordVector,
 		{
 			if (testMode)
 			{
-				cout << "insertAlphabetically: while loop: currentMaxIndex(" << currentMaxIndex << ") - currentMinIndex(" << currentMinIndex << ") == " << currentMaxIndex - currentMinIndex << endl;
+				cout << "insertAlphabetically: while loop: currentMaxIndex{" << currentMaxIndex << "} - currentMinIndex{" << currentMinIndex << "} == " << currentMaxIndex - currentMinIndex << endl;
 			}
+
+			if (testMode)
+			{
+				cout << "insertAlphabetically: while loop: insertionWord == \"" << insertionWord << "\"; wordVector.at(currentMidIndex{" << currentMidIndex << "}) == \"" << wordVector.at(currentMidIndex) << "\"" << endl;
+			}
+
 			/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
 			if (insertionWord < wordVector.at(currentMidIndex))
 			{
