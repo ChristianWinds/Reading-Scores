@@ -17,6 +17,7 @@ void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
 		  int &difficultWords,
+		  vector<string> daleChallVector,
 		  string filename);
 string getWord(int &currentIndex,
 	       string line,
@@ -71,6 +72,7 @@ int main(int argc, char* argv[])
 			     totalWords,
 			     sentences,
 			     difficultWords,
+			     daleChallVector,
 			     filename);
 
 		if ((testMode) ||
@@ -254,11 +256,13 @@ void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
 		  int &difficultWords,
+		  vector<string> daleChallVector,
 		  string filename)
 {
 	if (testMode)
 		cout << "obtainValues: Starting" << endl;
-	// Precondition:
+	// Precondition: The Dale-Chall vector holds all words of a Dale-Chall
+	// Word List
 	// Postcondition:
 
 	// Initialize a Boolean for presence of a partial word segment at the
