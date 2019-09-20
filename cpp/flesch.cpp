@@ -50,7 +50,7 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		string daleChallListFilename = "/pub/pounds/CSC330/daleChall/wordList1995.txt";
+		string daleChallListFilename = "/pub/pounds/CSC330/daleChall/wordlist1995.txt";
 
 		vector<string> daleChallVector;
 		storeDaleChallList(daleChallVector,
