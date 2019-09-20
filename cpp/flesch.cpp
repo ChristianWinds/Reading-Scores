@@ -143,7 +143,8 @@ void storeDaleChallList(vector<string> daleChallVector,
 			// Retrieve the next unread Dale-Chall file line to
 			// retrieve the line's word
 			string currentLine = "";
-			getline(daleChallFile, currentLine);
+			getline(daleChallFile,
+				currentLine);
 
 			int startingIndex = 0;
 
@@ -154,12 +155,13 @@ void storeDaleChallList(vector<string> daleChallVector,
 			bool wordRetrieved = false;
 
 			string currentWord = getWord(startingIndex,
-					     currentLine,
-					     endOfLine,
-					     endOfSentence,
-					     wordRetrieved);
+						     currentLine,
+						     endOfLine,
+						     endOfSentence,
+						     wordRetrieved);
 
-			insertAlphabetically(daleChallVector, currentWord);
+			insertAlphabetically(daleChallVector,
+					     currentWord);
 		}
 	}
 	else
