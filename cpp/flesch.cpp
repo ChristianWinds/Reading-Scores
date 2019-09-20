@@ -302,6 +302,10 @@ void obtainValues(int &totalSyllables,
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
 
+	if ((testMode) ||
+	    (true))
+		cout << "obtainValues: Opened file: " << filename.c_str() << endl;
+
 	if (analyzedFile.is_open())
 	{
 		// Retrieve the values for the file to analyze
