@@ -227,6 +227,7 @@ bool findInVector(vector wordVector,
 		{
 			/* Locate the new search midpoint before the current vector word */
 			currentMaxIndex = currentMidIndex - 1;
+			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 		}
 		else if (currentWord > daleChallVector.at(currentMidIndex))
 		{
