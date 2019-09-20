@@ -701,6 +701,15 @@ string getWord(int &currentIndex,
 			cout << "getWord: Retrieved word: \"" << word << "\"" << endl;
 	}
 
+	// If the current index is beyond the line end, flag the end-of-line
+	// flag and set the current index to the line's final character to
+	// prevent errors beyond this function
+	if (currentIndex >= lineLength)
+	{
+		endOfLine = true;
+		currentIndex = lineLength - 1;
+	}
+
 	if (((testMode) ||
 	    (true)) &&
 	    (endOfSentence))
