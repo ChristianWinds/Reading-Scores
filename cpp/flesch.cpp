@@ -12,14 +12,14 @@ bool showCalculationValues = true;
 bool printActivatingFunctions = true;
 bool printFunctionSteps = true;
 bool printVariables = true;
-void storeDaleChallList(vector<string> daleChallVector);
+void storeDaleChallList(vector<string> &daleChallVector);
 void insertAlphabetically(vector<string> &wordVector,
                           string insertionWord);
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
 		  int &difficultWords,
-		  vector<string> &daleChallVector,
+		  vector<string> daleChallVector,
 		  string filename);
 string getWord(int &currentIndex,
 	       string line,
@@ -145,7 +145,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-void storeDaleChallList(vector<string> daleChallVector)
+void storeDaleChallList(vector<string> &daleChallVector)
 {
 	// Precondition:
 	// Postcondition:
@@ -397,7 +397,7 @@ void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
 		  int &difficultWords,
-		  vector<string> &daleChallVector,
+		  vector<string> daleChallVector,
 		  string filename)
 {
 	if (testMode)
