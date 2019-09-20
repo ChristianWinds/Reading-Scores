@@ -13,7 +13,7 @@ bool printActivatingFunctions = true;
 bool printFunctionSteps = true;
 bool printVariables = true;
 void storeDaleChallList(vector<string> daleChallVector);
-void insertAlphabetically(vector<string> wordVector,
+void insertAlphabetically(vector<string> &wordVector,
                           string insertionWord);
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
@@ -225,7 +225,7 @@ void storeDaleChallList(vector<string> daleChallVector)
 	}
 }
 
-void insertAlphabetically(vector<string> wordVector,
+void insertAlphabetically(vector<string> &wordVector,
 			  string insertionWord)
 {
 	// Precondition: The word to attempt to insert into the vector is not a
