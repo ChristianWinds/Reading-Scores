@@ -281,10 +281,19 @@ void insertAlphabetically(vector<string> &wordVector,
 			else if (insertionWord == wordVector.at(currentMidIndex))
 			{
 				/* As the words match, skip adding the current word" */
+				if (testMode)
+				{
+					cout << "insertAlphabetically: while loop: else if branch: Duplicate word detected" << endl;
+				}
+
 				duplicateWord = true;
 			}
 		}
 
+		if (testMode)
+		{
+			cout << "insertAlphabetically: Progressed beyond while loop" << endl;
+		}
 
 		if (!(duplicateWord))
 		{
