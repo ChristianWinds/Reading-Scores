@@ -233,10 +233,11 @@ bool findInVector(vector wordVector,
 		{
 			/* Locate the new search midpoint after the current vector word */
 			currentMinIndex = currentMidIndex + 1;	
+			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 		}
 		else if (currentWord == daleChallVector.at(currentMidIndex))
 		{
-			/* As the words match, skip adding the current word" */
+			foundWord = true;
 		}
 	}
 
