@@ -343,7 +343,7 @@ bool findInVector(vector<string> wordVector,
 		cout << "findInVector: Attempting to begin while loop" << endl;
 	}
 
-	while ((foundWord == false) ||
+	while ((!(foundWord)) &&
 	       (currentMaxIndex - currentMinIndex > 1))
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
