@@ -9,8 +9,8 @@ using namespace std;
 bool testMode = false;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
-void storeDaleChallList(vector &daleChallVector);
-void insertAlphabetically(vector &daleChallVector,
+void storeDaleChallList(vector<string> daleChallVector);
+void insertAlphabetically(vector<string> daleChallVector,
                           string insertionWord);
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
@@ -50,6 +50,7 @@ int main(int argc, char* argv[])
 	{
 		string daleChallListFilename = "/pub/pounds/CSC330/daleChall/wordList1995.txt";
 
+		vector 
 		storeDaleChallList();
 		
 		// Retrieve the filename needed for file analysis
@@ -165,7 +166,7 @@ void storeDaleChallList(vector daleChallVector)
 	}
 }
 
-void insertAlphabetically(vector &daleChallVector,
+void insertAlphabetically(vector<string> daleChallVector,
 			  string insertionWord);
 {
 	// Precondition: The word to attempt to insert into the vector is not a
