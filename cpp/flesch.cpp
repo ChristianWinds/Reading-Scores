@@ -9,6 +9,7 @@ using namespace std;
 bool testMode = true;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
+bool printActivatingFunctions = true;
 void storeDaleChallList(vector<string> daleChallVector);
 void insertAlphabetically(vector<string> wordVector,
                           string insertionWord);
@@ -50,6 +51,11 @@ int main(int argc, char* argv[])
 	else
 	{
 		vector<string> daleChallVector;
+		if ((testMode) ||
+		    (printActivatingFunctions))
+		{
+			cout << "main: Calling storeDaleChallList(daleChallVector)" << endl;
+		}
 		storeDaleChallList(daleChallVector);
 		
 		// Retrieve the filename needed for file analysis
@@ -64,6 +70,11 @@ int main(int argc, char* argv[])
 
 		// Obtain the values needed for the readability index and score
 		// calculations
+		if ((testMode) ||
+		    (printActivatingFunctions))
+		{
+			cout << "main: Calling obtainValues(syllables, totalWords, sentences, difficultWords, daleChallVector, filename)" << endl;
+		}
 		obtainValues(syllables,
 			     totalWords,
 			     sentences,
