@@ -241,7 +241,7 @@ bool findInVector(vector<string> wordVector,
 			currentMinIndex = currentMidIndex + 1;	
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 		}
-		else if (currentWord == wordVector.at(currentMidIndex))
+		else if (searchTerm == wordVector.at(currentMidIndex))
 		{
 			foundWord = true;
 		}
