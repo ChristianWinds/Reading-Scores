@@ -588,6 +588,8 @@ int countSyllables(string word)
 	// and holds at least one alphabetic character
 	// Postcondition:
 
+	int wordLength = word.length();
+
 	// Create an integer variable to track the current read character index
 	// in the word
 	int currentIndex = 0;
@@ -598,7 +600,7 @@ int countSyllables(string word)
 	int syllables = 0;
 
 	// Count each syllable in the word
-	while (currentIndex < word.length())
+	while (currentIndex < wordLength)
 	{
 		// Read the current word character
 		readCharacter = word.at(currentIndex);
@@ -609,7 +611,7 @@ int countSyllables(string word)
 			// word's end, do not tally the vowel as a syllable
 			if (((readCharacter == 'e') ||
 			    (readCharacter == 'E')) &&
-			    (currentIndex == word.length() - 1))
+			    (currentIndex == wordLength - 1))
 			{
 				// Update the current read index and do not
 				// count the vowel as a syllable
@@ -619,12 +621,12 @@ int countSyllables(string word)
 			{
 				// Find the successive syllables in the word
 				while ((detectVowel(readCharacter)) &&
-				       (currentIndex < word.length()))
+				       (currentIndex < wordLength))
 				{
 					// Read the next unread character of the
 					// word if unread characters remain
 					currentIndex++;
-					if (currentIndex < word.length())
+					if (currentIndex < wordLength)
 						readCharacter = word.at(currentIndex);
 				}
 
