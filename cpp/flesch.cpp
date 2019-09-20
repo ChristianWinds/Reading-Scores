@@ -822,7 +822,7 @@ float calculateFleschKincaid(int totalSyllables,
 float calculateDaleChall(int difficultWords,
 			 int totalWords,
 			 int totalSyllables,
-			 int totalSentences,)
+			 int totalSentences)
 {
 	// Precondition: The numbers of difficult words, total words, and
 	// sentences were recorded, and the total numbers of words and sentences
