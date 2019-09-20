@@ -38,6 +38,7 @@ float calculateFleschKincaid(int totalSyllables,
 			     int totalSentences);
 float calculateDaleChall(int difficultWords,
 			 int totalWords,
+			 int totalSyllables,
 			 int totalSentences);
 
 int main(int argc, char* argv[])
@@ -820,7 +821,8 @@ float calculateFleschKincaid(int totalSyllables,
 
 float calculateDaleChall(int difficultWords,
 			 int totalWords,
-			 int totalSentences)
+			 int totalSyllables,
+			 int totalSentences,)
 {
 	// Precondition: The numbers of difficult words, total words, and
 	// sentences were recorded, and the total numbers of words and sentences
