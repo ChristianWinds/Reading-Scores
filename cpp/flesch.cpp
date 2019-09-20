@@ -175,31 +175,14 @@ void storeDaleChallList(vector<string> &daleChallVector)
 			getline(daleChallFile,
 				currentWord);
 
-/* DISABLE
-			int startingIndex = 0;
-
-			// Create Boolean variables to fulfill the getWord
-			// function parameters
-			bool endOfLine = false;
-			bool endOfSentence = false;
-			bool wordRetrieved = false;
-
-			if ((testMode) ||
-			    (printActivatingFunctions))
-			{
-				cout << "storeDaleChallList: Calling getWord(startingIndex, currentLine, endOfLine, endOfSentence, wordRetrieved)" << endl;
-			}
-			string currentWord = getWord(startingIndex,
-						     currentLine,
-						     endOfLine,
-						     endOfSentence,
-						     wordRetrieved);
-*/
-
 			// Check if the current word is a blank string to avoid
 			// placing a blank string into the Dale-Chall vector
 			if (currentWord != "")
 			{
+				// Capitalize the current word to prepare later
+				// non-case sensitive vector searches
+				currentWord = capitalizeWord(currentWord);
+
 				if ((testMode) ||
 				    (printActivatingFunctions))
 				{
