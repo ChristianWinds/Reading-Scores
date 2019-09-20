@@ -19,7 +19,7 @@ void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
 		  int &difficultWords,
-		  vector<string> daleChallVector,
+		  vector<string> &daleChallVector,
 		  string filename);
 string getWord(int &currentIndex,
 	       string line,
@@ -397,7 +397,7 @@ void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
 		  int &difficultWords,
-		  vector<string> daleChallVector,
+		  vector<string> &daleChallVector,
 		  string filename)
 {
 	if (testMode)
