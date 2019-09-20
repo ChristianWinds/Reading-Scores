@@ -165,10 +165,11 @@ void storeDaleChallList(vector<string> daleChallVector)
 		{
 			// Retrieve the next unread Dale-Chall file line to
 			// retrieve the line's word
-			string currentLine = "";
+			string currentWord = "";
 			getline(daleChallFile,
-				currentLine);
+				currentWord);
 
+/* DISABLE
 			int startingIndex = 0;
 
 			// Create Boolean variables to fulfill the getWord
@@ -187,6 +188,7 @@ void storeDaleChallList(vector<string> daleChallVector)
 						     endOfLine,
 						     endOfSentence,
 						     wordRetrieved);
+*/
 
 			// Check if the current word is a blank string to avoid
 			// placing a blank string into the Dale-Chall vector
