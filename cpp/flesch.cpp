@@ -180,7 +180,7 @@ void insertAlphabetically(vector<string> wordVector,
 	if (wordVector.size() == 0)
 	{
 		// Insert the received word into the Dale-Chall vector
-		wordVector.push_back(word);
+		wordVector.push_back(insertionWord);
 	}
 	else
 	{
