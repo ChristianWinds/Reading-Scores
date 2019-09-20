@@ -139,7 +139,7 @@ void storeDaleChallList(vector<string> daleChallVector)
 	// http://www.cplusplus.com/doc/tutorial/files/
 	// Accessed Monday, September 2, 2019
 	ifstream daleChallFile;
-	daleChallFile.open("/pub/pounds/CSC330/daleChall/wordlist1995.txt");
+	daleChallFile.open("/pub/pounds/CSC330/dalechall/wordlist1995.txt");
 
 	if (daleChallFile.is_open())
 	{
