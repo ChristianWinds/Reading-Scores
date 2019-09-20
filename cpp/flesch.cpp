@@ -276,6 +276,12 @@ bool findInVector(vector<string> wordVector,
 	// Precondition:
 	// Postcondition:
 
+	if ((testMode) ||
+	    (printActivatingFunctions))
+	{
+		cout << "findInVector: Starting" << endl;
+	}
+
 	bool foundWord = false;
 
 	/* Locate the midpoint of the vector */
@@ -324,7 +330,6 @@ void obtainValues(int &totalSyllables,
 	// Initialize a Boolean for presence of a partial word segment at the
 	// end of an input file line
 	/*bool wordPart = false;*/
-
 
 	string currentInputFileLine = "";
 
@@ -403,6 +408,12 @@ void obtainValues(int &totalSyllables,
 						totalSyllables += countSyllables(word);
 
 						/* Check the word to determine if the word is a difficult word.*/
+						if ((testMode) ||
+						    (printActivatingFunctions))
+						{
+							cout << "obtainValues: Calling findInVector(daleChallVector, word)" << endl;
+						}
+
 						if (findInVector(daleChallVector,
 								 word))
 						{
