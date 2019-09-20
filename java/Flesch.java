@@ -5,6 +5,14 @@ import java.util.Scanner;
 
 public class Flesch
 {
+	public void storeDaleChallList()
+	{
+	}
+
+	public void insertAlphabetically()
+	{
+	}
+
 	public void obtainValues()
 	{
 		// Precondition:
@@ -58,6 +66,10 @@ public class Flesch
 		}
 	}
 
+	public string getWord()
+	{
+	}
+
 	public int countSyllables(/*Retrieved word*/)
 	{
 		// Precondition:
@@ -108,6 +120,10 @@ public class Flesch
 			syllables++;
 
 		return syllables;
+	}
+
+	public boolean detectSentenceEnd()
+	{
 	}
 
 	public boolean detectVowel(char character)
@@ -204,6 +220,11 @@ public class Flesch
 
 		return fleschKincaidIndex;
 	}
+
+	public float calculateDaleChall()
+	{
+	}
+
 	public static void main (String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
