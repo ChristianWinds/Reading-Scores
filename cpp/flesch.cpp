@@ -227,10 +227,11 @@ void insertAlphabetically(vector<string> wordVector,
 		if (!(duplicateWord))
 		{
 			// Code from Cplusplus.com,
-			// http://www.cplusplus.com/reference/vector/vector/vector/
-			// Accesed Thursday, September 19th, 2019
-			iterator wordVectorIterator;
-			wordVector.insert(wordVectorIterator + currentMidIndex);
+			// http://www.cplusplus.com/reference/vector/vector/insert/
+			// Accesed Friday, September 20th, 2019
+			iterator wordVectorIterator = wordVectorIterator.begin();
+			wordVector.insert(wordVectorIterator + currentMidIndex,
+					  insertionWord);
 		{
 	}
 }
