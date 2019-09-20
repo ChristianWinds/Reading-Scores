@@ -59,6 +59,10 @@ int main(int argc, char* argv[])
 			cout << "main: Calling storeDaleChallList(daleChallVector)" << endl;
 		}
 		storeDaleChallList(daleChallVector);
+		if (testMode)
+		{
+			cout << "main: Dale-Chall vector size after storeDaleChallList call == " << daleChallVector.size() << endl;
+		}
 		
 		// Retrieve the filename needed for file analysis
 		string filename = argv[1];
@@ -213,6 +217,11 @@ void storeDaleChallList(vector<string> daleChallVector)
 	{
 		cout << "The Dale-Chall wordlist file could not be opened." <<
 			endl;
+	}
+
+	if (testMode)
+	{
+		cout << "storeDaleChallList: Dale-Chall List size at function end == " << daleChallVector.size() << endl;
 	}
 }
 
