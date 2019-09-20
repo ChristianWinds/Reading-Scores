@@ -183,21 +183,23 @@ void insertAlphabetically(vector &daleChallVector,
 		int currentMaxIndex = daleChallVector.size() - 1;
 		int currentMidIndex = currentMaxIndex / 2;
 
-		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-		if (currentWord < daleChallVector.at(currentMidIndex))
+		while ()
 		{
-			/* Locate the new search midpoint before the current vector word */
-			currentMaxIndex = currentMidIndex - 1;
-		}
-		else if (currentWord > daleChallVector.at(currentMidIndex))
-		{
-			/* Locate the new search midpoint after the current vector word */
-			currentMinIndex = currentMidIndex + 1;
-		
-		}
-		else if (currentWord == daleChallVector.at(currentMidIndex))
-		{
-			/* As the words match, skip adding the current word" */
+			/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
+			if (currentWord < daleChallVector.at(currentMidIndex))
+			{
+				/* Locate the new search midpoint before the current vector word */
+				currentMaxIndex = currentMidIndex - 1;
+			}
+			else if (currentWord > daleChallVector.at(currentMidIndex))
+			{
+				/* Locate the new search midpoint after the current vector word */
+				currentMinIndex = currentMidIndex + 1;	
+			}
+			else if (currentWord == daleChallVector.at(currentMidIndex))
+			{
+				/* As the words match, skip adding the current word" */
+			}
 		}
 	}
 
