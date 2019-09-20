@@ -88,19 +88,22 @@ int main(int argc, char* argv[])
 		if ((totalWords > 0) &&
 		    (syllables > 0))
 		{
-		// Calculate the Flesch Readability Index
 		if (testMode)
 			cout << "main: Calling calculateFlesch" << endl;
 		float fleschIndex = calculateFlesch(syllables,
 						    totalWords,
 						    sentences);
 
-		// Calculate the Flesch-Kincaid Grade Level Index
 		if (testMode)
 			cout << "main: Calling calculateFleschKincaid" << endl;
 		float fleschKincaidIndex = calculateFleschKincaid(syllables,
 								  totalWords,
 								  sentences);
+
+		float daleChallScore = calculateDaleChall(difficultWords,
+							  totalWords,
+							  totalSyllables,
+							  totalSentences);
 
 		// Print the readability scores
 		if (testMode)
@@ -108,7 +111,9 @@ int main(int argc, char* argv[])
 		cout << "Flesch Readability Index: " << fleschIndex << endl;
 		cout << "Flesch-Kincaid Grade Level Index: " <<
 			fleschKincaidIndex << endl;
-		cout << "Dale-Chall Readability Score: " << /*daleChallScore << */endl;
+		cout << "Dale-Chall Readability Score: " <<
+			daleChallScore <<
+			endl;
 		}
 		else
 		{
