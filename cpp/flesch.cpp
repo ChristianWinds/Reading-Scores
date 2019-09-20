@@ -103,7 +103,7 @@ int main(int argc, char* argv[])
 		float daleChallScore = calculateDaleChall(difficultWords,
 							  totalWords,
 							  syllables,
-							  totalSentences);
+							  sentences);
 
 		// Print the readability scores
 		if (testMode)
