@@ -400,6 +400,8 @@ string getWord(int &currentIndex,
 	// Postcondition: The retrieved word is returned to the function caller,
 	// and the currentIndex value is set one beyond the last read index
 
+	int lineLength = line.length();
+
 	// Create a char variable to hold the characters read from the word
 	char readCharacter = 'a';
 
@@ -407,7 +409,7 @@ string getWord(int &currentIndex,
 	do
 	{
 		// Read the current character if the current index is within the line
-		if ((currentIndex < line.length()) &&
+		if ((currentIndex < lineLength) &&
 		    (!endOfSentence))
 			readCharacter = line.at(currentIndex);
 
@@ -436,10 +438,10 @@ string getWord(int &currentIndex,
 		// If a word start was not yet found, advance the current index
 		// to the next character in the line
 		if ((readCharacter == ' ') &&
-		    (currentIndex < line.length()))
+		    (currentIndex < lineLength))
 			currentIndex++;
 	} while ((readCharacter == ' ') &&
-		 (currentIndex < line.length()) &&
+		 (currentIndex < lineLength) &&
 		 (!endOfSentence));
 
 	// Create a word variable to hold the word to return to this function's
@@ -462,7 +464,7 @@ string getWord(int &currentIndex,
 		// sentence end
 		currentIndex++;
 	}
-	else if (!(currentIndex < line.length()))
+	else if (!(currentIndex < lineLength))
 	{
 		// Flag that the line's end was reached
 		endOfLine = true;
@@ -471,7 +473,7 @@ string getWord(int &currentIndex,
 		wordRead = false;
 
 		// Place the current index at the end of the line
-		currentIndex = line.length() - 1;
+		currentIndex = lineLength - 1;
 
 		// Set the word string variable to a blank string to indicate
 		// no string was retrieved
@@ -493,7 +495,7 @@ string getWord(int &currentIndex,
 
 		// Locate the character index after the end of the current word
 		while ((readCharacter != ' ') &&
-		       (currentIndex < line.length()) &&
+		       (currentIndex < lineLength) &&
 		       (!endOfSentence) &&
 		       (!endOfLine))
 		{
@@ -501,7 +503,7 @@ string getWord(int &currentIndex,
 			currentIndex++;
 
 			// Stop the word end search if the line end is exceeded
-			if (!(currentIndex < line.length()))
+			if (!(currentIndex < lineLength))
 				endOfLine = true;
 			else
 			{
@@ -545,11 +547,11 @@ string getWord(int &currentIndex,
 		// If the current index exceeded the line length, place the
 		// index at the final line index
 		if (endOfLine)
-			currentIndex = line.length() - 1;
+			currentIndex = lineLength - 1;
 
 		// Update the end of line flag if the end of the received line
 		// was reached
-		if (currentIndex >= line.length())
+		if (currentIndex >= lineLength)
 			endOfLine = true;
 
 		// Retrieve the found word
