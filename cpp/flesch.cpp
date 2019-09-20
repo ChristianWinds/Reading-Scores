@@ -223,8 +223,15 @@ void insertAlphabetically(vector<string> wordVector,
 			}
 		}
 
+
 		if (!(duplicateWord))
-			wordVector.insert();
+		{
+			// Code from Cplusplus.com,
+			// http://www.cplusplus.com/reference/vector/vector/vector/
+			// Accesed Thursday, September 19th, 2019
+			iterator wordVectorIterator;
+			wordVector.insert(wordVectorIterator + currentMidIndex);
+		{
 	}
 }
 
