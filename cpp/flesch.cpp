@@ -9,8 +9,9 @@ using namespace std;
 bool testMode = false;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
-void storeDaleChallList();
-void insertAlphabetically();
+void storeDaleChallList(vector &daleChallVector);
+void insertAlphabetically(vector &daleChallVector,
+                          string insertionWord);
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
 		  int &totalSentences,
@@ -164,7 +165,8 @@ void storeDaleChallList(vector daleChallVector)
 	}
 }
 
-void insertAlphabetically();
+void insertAlphabetically(vector &daleChallVector,
+			  string insertionWord);
 {
 	// Precondition:
 	// Postcondition:
