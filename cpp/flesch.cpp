@@ -734,7 +734,7 @@ bool detectWordCharacter(char character)
 	if ((detectAlphabetChar(character)) ||
 	    (detectNumericChar(character)) ||
 	    (character == '-') ||
-	    (character == '''))
+	    (character == '\''))
 		isWordCharacter = true;
 	else
 		isWordCharacter = false;
