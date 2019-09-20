@@ -235,7 +235,7 @@ void insertAlphabetically(vector<string> &wordVector,
 
 	if (testMode)
 	{
-		cout << "storeDaleChallList: Dale-Chall vector size at function start == " << wordVector.size() << endl;
+		cout << "insertAlphabetically: Dale-Chall vector size at function start == " << wordVector.size() << endl;
 	}
 
 	if (wordVector.size() == 0)
