@@ -10,7 +10,7 @@ bool testMode = false;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
 void storeDaleChallList(vector<string> daleChallVector);
-void insertAlphabetically(vector<string> daleChallVector,
+void insertAlphabetically(vector<string> wordVector,
                           string insertionWord);
 void obtainValues(int &totalSyllables,
 		  int &totalWords,
@@ -124,7 +124,7 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-void storeDaleChallList(vector daleChallVector)
+void storeDaleChallList(vector<string> daleChallVector)
 {
 	// Precondition:
 	// Postcondition:
@@ -166,7 +166,7 @@ void storeDaleChallList(vector daleChallVector)
 	}
 }
 
-void insertAlphabetically(vector<string> daleChallVector,
+void insertAlphabetically(vector<string> wordVector,
 			  string insertionWord);
 {
 	// Precondition: The word to attempt to insert into the vector is not a
@@ -174,32 +174,32 @@ void insertAlphabetically(vector<string> daleChallVector,
 	// alphabetically sorted
 	// Postcondition:
 
-	if (daleChallVector.size() == 0)
+	if (wordVector.size() == 0)
 	{
 		// Insert the received word into the Dale-Chall vector
-		daleChallVector.push_back(word);
+		wordVector.push_back(word);
 	}
 	else
 	{
 		/* Locate the midpoint of the vector */
 		int currentMinIndex = 0;
-		int currentMaxIndex = daleChallVector.size() - 1;
+		int currentMaxIndex = wordVector.size() - 1;
 		int currentMidIndex = currentMaxIndex / 2;
 
 		while (currentMaxIndex - currentMinIndex > 1)
 		{
 			/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-			if (currentWord < daleChallVector.at(currentMidIndex))
+			if (currentWord < wordVector.at(currentMidIndex))
 			{
 				/* Locate the new search midpoint before the current vector word */
 				currentMaxIndex = currentMidIndex - 1;
 			}
-			else if (currentWord > daleChallVector.at(currentMidIndex))
+			else if (currentWord > wordVector.at(currentMidIndex))
 			{
 				/* Locate the new search midpoint after the current vector word */
 				currentMinIndex = currentMidIndex + 1;	
 			}
-			else if (currentWord == daleChallVector.at(currentMidIndex))
+			else if (currentWord == wordVector.at(currentMidIndex))
 			{
 				/* As the words match, skip adding the current word" */
 			}
@@ -209,7 +209,7 @@ void insertAlphabetically(vector<string> daleChallVector,
 	return 0;
 }
 
-bool findInVector(vector wordVector,
+bool findInVector(vector<string> wordVector,
 		  string searchTerm)
 {
 	// Precondition:
@@ -219,26 +219,26 @@ bool findInVector(vector wordVector,
 
 	/* Locate the midpoint of the vector */
 	int currentMinIndex = 0;
-	int currentMaxIndex = daleChallVector.size() - 1;
+	int currentMaxIndex = wordVector.size() - 1;
 	int currentMidIndex = currentMaxIndex / 2;
 
 	while ((foundWord == false) ||
 		(currentMaxIndex - currentMinIndex > 1)
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-		if (currentWord < daleChallVector.at(currentMidIndex))
+		if (currentWord < wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint before the current vector word */
 			currentMaxIndex = currentMidIndex - 1;
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 		}
-		else if (currentWord > daleChallVector.at(currentMidIndex))
+		else if (currentWord > wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint after the current vector word */
 			currentMinIndex = currentMidIndex + 1;	
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 		}
-		else if (currentWord == daleChallVector.at(currentMidIndex))
+		else if (currentWord == wordVector.at(currentMidIndex))
 		{
 			foundWord = true;
 		}
