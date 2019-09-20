@@ -169,6 +169,8 @@ void storeDaleChallList(vector<string> daleChallVector)
 			insertAlphabetically(daleChallVector,
 					     currentWord);
 		}
+
+		daleChallFile.close();
 	}
 	else
 	{
