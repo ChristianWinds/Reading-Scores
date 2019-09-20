@@ -259,11 +259,13 @@ void insertAlphabetically(vector<string> &wordVector,
 			{
 				/* Locate the new search midpoint before the current vector word */
 				currentMaxIndex = currentMidIndex - 1;
+				currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 			}
 			else if (insertionWord > wordVector.at(currentMidIndex))
 			{
 				/* Locate the new search midpoint after the current vector word */
 				currentMinIndex = currentMidIndex + 1;	
+				currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 			}
 			else if (insertionWord == wordVector.at(currentMidIndex))
 			{
