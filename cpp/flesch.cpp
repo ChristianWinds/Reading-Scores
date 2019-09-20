@@ -196,6 +196,8 @@ void insertAlphabetically(vector<string> wordVector,
 	}
 	else
 	{
+		bool duplicateWord = false;
+
 		/* Locate the midpoint of the vector */
 		int currentMinIndex = 0;
 		int currentMaxIndex = wordVector.size() - 1;
@@ -217,8 +219,12 @@ void insertAlphabetically(vector<string> wordVector,
 			else if (insertionWord == wordVector.at(currentMidIndex))
 			{
 				/* As the words match, skip adding the current word" */
+				duplicateWord = true;
 			}
 		}
+
+		if (!(duplicateWord))
+			wordVector.insert();
 	}
 }
 
