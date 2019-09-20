@@ -139,7 +139,7 @@ void storeDaleChallList(vector<string> daleChallVector)
 	// http://www.cplusplus.com/doc/tutorial/files/
 	// Accessed Monday, September 2, 2019
 	ifstream daleChallFile("/pub/pounds/CSC330/daleChall/wordlist1995.txt");
-	daleChallFile.open(daleChallListFilename.c_str());
+	daleChallFile.open();
 
 	if (daleChallFile.is_open())
 	{
@@ -296,7 +296,6 @@ void obtainValues(int &totalSyllables,
 	// Accessed Monday, September 2, 2019
 	// Create an input file stream for the file to analyze
 	ifstream analyzedFile;
-
 
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
