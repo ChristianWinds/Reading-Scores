@@ -38,7 +38,6 @@ float calculateFleschKincaid(int totalSyllables,
 			     int totalSentences);
 float calculateDaleChall(int difficultWords,
 			 int totalWords,
-			 int totalSyllables,
 			 int totalSentences);
 
 int main(int argc, char* argv[])
@@ -102,7 +101,6 @@ int main(int argc, char* argv[])
 
 		float daleChallScore = calculateDaleChall(difficultWords,
 							  totalWords,
-							  syllables,
 							  sentences);
 
 		// Print the readability scores
@@ -233,7 +231,7 @@ void insertAlphabetically(vector<string> wordVector,
 			wordVectorIterator = wordVector.begin();
 			wordVector.insert(wordVectorIterator + currentMidIndex,
 					  insertionWord);
-		{
+		}
 	}
 }
 
@@ -843,7 +841,6 @@ float calculateFleschKincaid(int totalSyllables,
 
 float calculateDaleChall(int difficultWords,
 			 int totalWords,
-			 int totalSyllables,
 			 int totalSentences)
 {
 	// Precondition: The numbers of difficult words, total words, and
@@ -854,7 +851,7 @@ float calculateDaleChall(int difficultWords,
 
 	// Calculate the alpha value to prepare to calculate the Dale-Chall
 	// score
-	float alpha = (float) totalSyllables / (float) totalWords;
+	float alpha = (float) difficultWords / (float) totalWords;
 
 	// Calculate the beta value to prepare to calculate the Dale-Chall
 	// score
