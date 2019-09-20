@@ -170,7 +170,7 @@ void storeDaleChallList(vector<string> daleChallVector,
 }
 
 void insertAlphabetically(vector<string> wordVector,
-			  string insertionWord);
+			  string insertionWord)
 {
 	// Precondition: The word to attempt to insert into the vector is not a
 	// blank word, and the vector to receive the word is already
