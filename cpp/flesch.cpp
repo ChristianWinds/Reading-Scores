@@ -168,7 +168,9 @@ void storeDaleChallList(vector daleChallVector)
 void insertAlphabetically(vector &daleChallVector,
 			  string insertionWord);
 {
-	// Precondition:
+	// Precondition: The word to attempt to insert into the vector is not a
+	// blank word, and the vector to receive the word is already
+	// alphabetically sorted
 	// Postcondition:
 
 	if (daleChallVector.size() == 0)
