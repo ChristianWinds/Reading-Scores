@@ -289,6 +289,12 @@ bool findInVector(vector<string> wordVector,
 	int currentMaxIndex = wordVector.size() - 1;
 	int currentMidIndex = currentMaxIndex / 2;
 
+	if ((testMode) ||
+	    (printFunctionSteps))
+	{
+		cout << "findInVector: Attempting to begin while loop" << endl;
+	}
+
 	while ((foundWord == false) ||
 	       (currentMaxIndex - currentMinIndex > 1))
 	{
