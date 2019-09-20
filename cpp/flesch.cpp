@@ -185,7 +185,7 @@ void insertAlphabetically(vector &daleChallVector,
 		int currentMaxIndex = daleChallVector.size() - 1;
 		int currentMidIndex = currentMaxIndex / 2;
 
-		while ()
+		while (currentMaxIndex - currentMinIndex > 1)
 		{
 			/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
 			if (currentWord < daleChallVector.at(currentMidIndex))
