@@ -329,6 +329,11 @@ void obtainValues(int &totalSyllables,
 						totalSyllables += countSyllables(word);
 
 						/* Check the word to determine if the word is a difficult word.*/
+						if (findInVector(daleChallVector,
+								 word))
+						{
+							difficultWords++;
+						}
 					}
 
 					// Update the number of counted sentences
