@@ -140,6 +140,9 @@ void storeDaleChallList(vector<string> daleChallVector,
 
 	// Open the Dale-Chall List file to begin storing the list's words in a
 	// vector
+	// Code from Cplusplus.com,
+	// http://www.cplusplus.com/doc/tutorial/files/
+	// Accessed Monday, September 2, 2019
 	ifstream daleChallFile;
 	daleChallFile.open(daleChallListFilename.c_str());
 
@@ -290,11 +293,15 @@ void obtainValues(int &totalSyllables,
 	// end of an input file line
 	/*bool wordPart = false;*/
 
+
+	string currentInputFileLine = "";
+
+	// Code from Cplusplus.com,
+	// http://www.cplusplus.com/doc/tutorial/files/
+	// Accessed Monday, September 2, 2019
 	// Create an input file stream for the file to analyze
 	ifstream analyzedFile;
 
-	// Create a string variable to hold the current read line
-	string currentLine = "";
 
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
@@ -308,7 +315,8 @@ void obtainValues(int &totalSyllables,
 			if (testMode)
 				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
 			// Store the earliest unread file line
-			getline(analyzedFile, currentLine);
+			getline(analyzedFile,
+				currentInputFileLine);
 
 			if (testMode)
 				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
@@ -338,13 +346,13 @@ void obtainValues(int &totalSyllables,
 					{
 						cout << "obtainValues: getWord call upcoming. Parameters:" << endl;
 						cout << "\t currentLineIndex == " << currentLineIndex << endl;
-						cout << "\t currentLine == " << currentLine << endl;
+						cout << "\t currentInputFileLine == " << currentInputFileLine << endl;
 						cout << "\t endOfLine == " << endOfLine << endl;
 					}
 					if (testMode)
 						cout << "obtainValues: Calling getWord" << endl;
 					string word = getWord(currentLineIndex,
-							      currentLine,
+							      currentInputFileLine,
 							      endOfLine,
 							      endOfSentence,
 							      wordRetrieved);
