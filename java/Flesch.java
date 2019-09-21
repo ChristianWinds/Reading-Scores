@@ -106,7 +106,7 @@ public class Flesch
 			while ((analyzedFileScanner.hasNextLine()) &&
 			       (/*Analyzedfile is open*/))
 			{
-				/*Store the earliest unread file line;*/
+				currentLine = analyzedFileScanner.nextLine();
 
 				if (/*Analyzed file is not at end of file*/)
 				{
@@ -133,7 +133,7 @@ public class Flesch
 						{
 							totalWords++;
 
-							totalSyllables += countSyllables(/*Retrieved word*/);
+							totalSyllables += countSyllables(word);
 						}
 					}
 				}
