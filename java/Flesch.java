@@ -88,11 +88,11 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		// Create an input file stream for the file to analyze;
+		/* Create an input file stream for the file to analyze */
 
 		String currentLine = "";
 
-		// Open the file to analyze;
+		/* Open the file to analyze */
 
 		if (/*Analyzed file is open*/)
 		{
