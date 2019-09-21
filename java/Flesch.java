@@ -14,10 +14,12 @@ public class Flesch
 	{
 	}
 
-	public boolean findInVector()
+	public boolean findInVector(String searchTerm)
 	{
 		// Precondition:
 		// Postcondition:
+
+		
 	}
 
 	public void obtainValues()
