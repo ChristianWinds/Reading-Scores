@@ -178,12 +178,12 @@ public class Flesch
 					// Read the successive vowels in the
 					// word to find the end of the current
 					// syllable
-					while (detectVowel(readCharacter)) &&
+					while ((detectVowel(readCharacter)) &&
 					       (currrentIndex < wordLength))
 					{
 						currentIndex++;
 						if (currentIndex < wordLength)
-							readCharacter = /*Word character at currentIndex in word*/;
+							readCharacter = word.charAt(currentIndex);
 					}
 				}
 			}
