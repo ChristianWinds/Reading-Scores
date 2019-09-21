@@ -312,7 +312,7 @@ bool findInVector(vector<string> wordVector,
 
 	bool foundWord = false;
 
-	// Convert the search term to a capitalized word to allow\
+	// Convert the search term to a capitalized word to allow
 	// non-case-sensitive search
 	searchTerm = capitalizeWord(searchTerm);
 
