@@ -14,7 +14,8 @@ public class Flesch
 	{
 	}
 
-	public boolean findInVector(String searchTerm)
+	public boolean findInVector(String searchTerm,
+				    Vector<String> wordVector)
 	{
 		// Precondition:
 		// Postcondition:
