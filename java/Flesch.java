@@ -29,7 +29,11 @@ public class Flesch
 			int currentMaxIndex = /*Size of word vector*/ - 1;
 			int currentMidIndex = currentMaxIndex / 2;
 
-			while
+			while ((currentMaxIndex - currentMinIndex >= 0) &&
+			       (!(duplicateWord)))
+			{
+				;
+			}
 		}
 	}
 
