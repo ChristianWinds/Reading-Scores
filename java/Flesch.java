@@ -34,7 +34,7 @@ public class Flesch
 			while ((currentMaxIndex - currentMinIndex >= 0) &&
 			       (!(duplicateWord)))
 			{
-				if (/* insertionWord is before current wordVector word */)
+				if (insertionWord.compareToIgnoreCase(wordVector.daleChallVector.())
 				{
 					// Update the maximum and middle index
 					// values to locate the new search
