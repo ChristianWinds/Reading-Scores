@@ -92,6 +92,9 @@ public class Flesch
 
 		String currentLine = "";
 
+		// Code from GeeksforGeeks,
+		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
+		// Accessed Saturday, September 21, 2019
 		/* Open the file to analyze */
 
 		if (/*Analyzed file is open*/)
