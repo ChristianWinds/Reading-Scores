@@ -2,6 +2,7 @@
 // https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 // Accessed September 11, 2019
 import java.util.Scanner;
+import java.util.*;
 
 public class Flesch
 {
