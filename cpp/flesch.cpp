@@ -231,7 +231,8 @@ void insertAlphabetically(vector<string> &wordVector,
 	{
 		bool duplicateWord = false;
 
-		/* Locate the midpoint of the vector */
+		// Create index variables to use in finding the midpoint of the
+		// word vector
 		int currentMinIndex = 0;
 		int currentMaxIndex = wordVector.size() - 1;
 		int currentMidIndex = currentMaxIndex / 2;
