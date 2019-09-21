@@ -12,10 +12,21 @@ public class Flesch
 
 	public void insertAlphabetically(DaleChallVector wordVector)
 	{
-		//Precondition:
-		//Postcondition:
+		// Precondition:
+		// Postcondition:
 
-		
+		if (/*Vector size is 0*/)
+		{
+			/* Insert word into vector */
+		}
+		else
+		{
+			boolean duplicateWord = false;
+
+			// Create index variables to use in finding the midpoint
+			// of the word vector
+			int currentMin
+		}
 	}
 
 	public boolean findInVector(String searchTerm,
