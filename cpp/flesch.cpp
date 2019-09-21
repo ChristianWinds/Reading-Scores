@@ -312,6 +312,10 @@ bool findInVector(vector<string> wordVector,
 
 	bool foundWord = false;
 
+	// Convert the search term to a capitalized word to allow\
+	// non-case-sensitive search
+	searchTerm = capitalizeWord(searchTerm);
+
 	/* Locate the midpoint of the vector */
 	int currentMinIndex = 0;
 	int currentMaxIndex = wordVector.size() - 1;
