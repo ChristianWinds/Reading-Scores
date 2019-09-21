@@ -19,7 +19,7 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		// Search the vevtor to return whether the vector holds the
+		// Search the vector to return whether the vector holds the
 		// search term
 		return wordVector.contains(searchTerm);
 	}
