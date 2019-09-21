@@ -1,4 +1,4 @@
-// Code from GeeksForGeeks,
+// Code from GeeksforGeeks,
 // https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 // Accessed September 11, 2019
 import java.util.Scanner;
