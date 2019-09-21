@@ -34,8 +34,8 @@ public class Flesch
 			while ((currentMaxIndex - currentMinIndex >= 0) &&
 			       (!(duplicateWord)))
 			{
-				String currentMiddleVectorWord = wordVector.daleChallVector.get(currentMidIndex);
-				if (insertionWord.compareToIgnoreCase(currentMiddleVectorWord) < 0)
+				String currentMiddleIndexWord = wordVector.daleChallVector.get(currentMidIndex);
+				if (insertionWord.compareToIgnoreCase(currentMiddleIndexWord) < 0)
 				{
 					// Update the maximum and middle index
 					// values to locate the new search
@@ -44,7 +44,7 @@ public class Flesch
 					currentMaxIndex = currentMidIndex - 1;
 					currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 				}
-				else if (insertionWord.compareToIgnoreCase(currentMiddleVectorWord) > 0)
+				else if (insertionWord.compareToIgnoreCase(currentMiddleIndexWord) > 0)
 				{
 					// Update the minimum and middle index
 					// values to locate the new search
@@ -53,7 +53,7 @@ public class Flesch
 					currentMinIndex = currentMidIndex + 1;
 					currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 				}
-				else if (insertionWord.equalsIgnoreCase(currentMiddleVectorWord))
+				else if (insertionWord.equalsIgnoreCase(currentMiddleIndexWord))
 				{
 					// Flag the word duplicate to avoid
 					// adding a duplicate word to the vector
