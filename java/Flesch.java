@@ -162,7 +162,7 @@ public class Flesch
 
 		while (currentIndex < wordLength)
 		{
-			readCharacter = /*Character at current word character index*/;
+			readCharacter = word.charAt(currentIndex);
 			if (detectVowel(readCharacter))
 			{
 				if (((readCharacter == 'e') ||
