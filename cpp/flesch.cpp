@@ -829,7 +829,6 @@ bool detectSentenceEnd(char character)
 		cout << "\tcharacter == '" << character << "'" << endl;
 	}
 
-	// Prepare a Boolean variable to flag a sentence end
 	bool endOfSentence = false;
 
 	// Flag the endOfSentence Boolean if the received character marks the
@@ -843,7 +842,6 @@ bool detectSentenceEnd(char character)
 	else
 		endOfSentence = false;
 
-	// Return the endOfSentence Boolean to this function's caller
 	return endOfSentence;
 }
 
