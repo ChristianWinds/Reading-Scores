@@ -64,6 +64,8 @@ public class Flesch
 			if (!(duplicateWord))
 			{
 				/* Add the insertionWord to the vector in alphabetic order */
+				.add(currentMidIndex,
+				     insertionWord);
 			}
 		}
 	}
