@@ -32,7 +32,14 @@ public class Flesch
 			while ((currentMaxIndex - currentMinIndex >= 0) &&
 			       (!(duplicateWord)))
 			{
-				;
+				if (/* insertionWord is before current wordVector word */)
+				{
+					currentMaxIndex = currentMidIndex - 1;
+					current MidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
+				}
+				else if
+				{
+				}
 			}
 		}
 	}
