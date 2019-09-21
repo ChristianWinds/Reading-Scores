@@ -4,6 +4,7 @@
 #include <vector>
 #include <cstring>
 #include <string>
+#include <locale>
 using namespace std;
 
 bool testMode = true;
