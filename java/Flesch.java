@@ -88,14 +88,18 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		/* Create an input file stream for the file to analyze */
+		
 
 		String currentLine = "";
 
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 		// Accessed Saturday, September 21, 2019
+		/* Create an input file stream for the file to analyze */
+		File analyzedFile = new File(analyzedFileName);
+
 		/* Open the file to analyze */
+		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
 		if (/*Analyzed file is open*/)
 		{
@@ -143,7 +147,7 @@ public class Flesch
 	{
 	}
 
-	public int countSyllables(/*Retrieved word*/)
+	public int countSyllables(String word)
 	{
 		// Precondition:
 		// Postcondition:
