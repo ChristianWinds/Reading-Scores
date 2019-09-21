@@ -58,6 +58,11 @@ public class Flesch
 					duplicateWord = true;
 				}
 			}
+
+			if (!(duplicateWord))
+			{
+				/* Add the insertionWord to the vector in alphabetic order */
+			}
 		}
 	}
 
