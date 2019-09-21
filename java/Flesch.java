@@ -12,7 +12,10 @@ public class Flesch
 
 	public void insertAlphabetically(DaleChallVector wordVector)
 	{
-		;
+		//Precondition:
+		//Postcondition:
+
+		
 	}
 
 	public boolean findInVector(String searchTerm,
