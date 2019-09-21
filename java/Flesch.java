@@ -158,14 +158,16 @@ public class Flesch
 
 		int syllablesCounted = 0;
 
-		while (currentIndex < /* Retrieved word length*/)
+		int wordLength = word.length();
+
+		while (currentIndex < wordLength)
 		{
 			readCharacter = /*Character at current word character index*/;
 			if (detectVowel(readCharacter))
 			{
 				if (((readCharacter == 'e') ||
 				    (readCharacter == 'E')) &&
-				    (currentIndex == word.length() - 1))
+				    (currentIndex == wordLength - 1))
 				{
 					// Update the current index to not count
 					// the word-ending "e" as a syllable
@@ -177,10 +179,10 @@ public class Flesch
 					// word to find the end of the current
 					// syllable
 					while (detectVowel(readCharacter)) &&
-					       (currrentIndex < /*DetectedWordLength*/)
+					       (currrentIndex < wordLength))
 					{
 						currentIndex++;
-						if (currentIndex < /*Retrieved word length*/)
+						if (currentIndex < wordLength)
 							readCharacter = /*Word character at currentIndex in word*/;
 					}
 				}
