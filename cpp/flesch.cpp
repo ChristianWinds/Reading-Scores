@@ -26,7 +26,7 @@ string getWord(int &currentIndex,
 	       bool &endOfLine,
 	       bool &endOfSentence,
 	       bool &wordRead);
-string capitalizeWord(string word);
+string capitalizeWord(string originalWord);
 int countSyllables(string word);
 bool detectSentenceEnd(char character);
 bool detectVowel(char character);
@@ -702,6 +702,28 @@ string getWord(int &currentIndex,
 	if (testMode)
 		cout << "getWord: Returning " << word << " to function caller" << endl;
 	return word;
+}
+
+string capitalizeWord(string originalWord)
+{
+	// Precondition:
+	// Postcondition:
+
+	// Code from Cplusplus.com,
+	// http://www.cplusplus.com/reference/locale/toupper/
+	// Accessed Friday, September 20th, 2019
+	locale loc;
+
+	// Create a string variable with an empty string to hold the upcoming
+	// capitalized word
+	string capitalizedWord = "";
+
+	for (string::size_type i = 0; i < word.length; ++i)
+	{
+		capitalizedWord += toUpper(originalWord[i], loc); 
+	}
+
+	return capitalizedWord;
 }
 
 int countSyllables(string word)
