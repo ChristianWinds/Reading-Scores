@@ -287,6 +287,8 @@ void insertAlphabetically(vector<string> &wordVector,
 
 		if (!(duplicateWord))
 		{
+			// Create and use an iterator to place the word to
+			// insert into the vector in alphabetical order
 			// Code from Cplusplus.com,
 			// http://www.cplusplus.com/reference/vector/vector/insert/
 			// Accesed Friday, September 20th, 2019
