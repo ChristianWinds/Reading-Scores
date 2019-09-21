@@ -221,8 +221,38 @@ public class Flesch
 		return fleschKincaidIndex;
 	}
 
-	public float calculateDaleChall()
+	public float calculateDaleChall(int difficultWords,
+					int totalWords,
+					int totalSentences)
 	{
+		// Precondition: The numbers of difficult words, total words,
+		// and sentences were recorded, and the total numbers of words
+		// and sentences are not zero
+		// Postcondition: The Dale-Chall Readability Score was
+		// calculated and returned to this function's caller
+
+		// Calculate the alpha value to prepare to calculate the
+		// Dale-Chall score
+		float alpha = (float) difficultWords / (float) totalWords;
+
+		// Calculate the beta value to prepare to calculate the
+		// Dale-Chall score
+		float beta = (float) totalWords / (float) totalSentences;
+
+		// Calculate the percentage of difficult words to prepare to
+		// calculate the Dale-Chall Score
+		float difficultWordPercent = alpha * 100;
+
+		float daleChallScore = difficultWordPercent * 0.1579 + beta *
+				       0.0496;
+
+		// Add 3.6365 to the Dale-Chall Score if the difficult word
+		// percentage exceeds 5 to complete the required Dale-Chall
+		// Score adjustment
+		if (difficultWordPercent > 5)
+			daleChallScore += 3.6365;
+
+		return daleChallScore;
 	}
 
 	public static void main (String[] args)
