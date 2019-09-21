@@ -25,7 +25,11 @@ public class Flesch
 
 			// Create index variables to use in finding the midpoint
 			// of the word vector
-			int currentMin
+			int currentMinIndex = 0;
+			int currentMaxIndex = /*Size of word vector*/ - 1;
+			int currentMidIndex = currentMaxIndex / 2;
+
+			while
 		}
 	}
 
