@@ -124,6 +124,10 @@ public class Flesch
 
 	public boolean detectSentenceEnd()
 	{
+		// Precondition:
+		// Postcondition: The state of whether the received character
+		// was a sentence-ending character was returned to this
+		// function's caller
 	}
 
 	public boolean detectVowel(char character)
