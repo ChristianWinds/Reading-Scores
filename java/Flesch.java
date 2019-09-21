@@ -275,7 +275,7 @@ public class Flesch
 		return daleChallScore;
 	}
 
-	public static void main (String[] args)
+	public static void main(String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
