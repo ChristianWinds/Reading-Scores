@@ -7,12 +7,12 @@
 #include <locale>
 using namespace std;
 
-bool testMode = true;
+bool testMode = false;
 bool printFinalObtainedValues = true;
 bool showCalculationValues = true;
-bool printActivatingFunctions = true;
-bool printFunctionSteps = true;
-bool printVariables = true;
+bool printActivatingFunctions = false;
+bool printFunctionSteps = false;
+bool printVariables = false;
 void storeDaleChallList(vector<string> &daleChallVector);
 void insertAlphabetically(vector<string> &wordVector,
                           string insertionWord);
@@ -96,7 +96,7 @@ int main(int argc, char* argv[])
 			cout << "main:" << endl;
 			cout << "\tTotal counted syllables: " << syllables << endl;
 			cout << "\tTotal counted words: " << totalWords << endl;
-			cout << "\tTotal countedSentences: " << sentences << endl;
+			cout << "\tTotal counted sentences: " << sentences << endl;
 		}
 
 		if ((totalWords > 0) &&
