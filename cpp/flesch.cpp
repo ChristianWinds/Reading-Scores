@@ -237,7 +237,7 @@ void insertAlphabetically(vector<string> &wordVector,
 		int currentMaxIndex = wordVector.size() - 1;
 		int currentMidIndex = currentMaxIndex / 2;
 
-		while ((currentMaxIndex - currentMinIndex > 0) &&
+		while ((currentMaxIndex - currentMinIndex >= 0) &&
 		       (!(duplicateWord)))
 		{
 			if (testMode)
@@ -333,7 +333,7 @@ bool findInVector(vector<string> wordVector,
 	}
 
 	while ((!(foundWord)) &&
-	       (currentMaxIndex - currentMinIndex > 0))
+	       (currentMaxIndex - currentMinIndex >= 0))
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
 		if ((testMode) ||
