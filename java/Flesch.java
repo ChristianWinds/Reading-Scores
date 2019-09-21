@@ -141,8 +141,20 @@ public class Flesch
 		}
 	}
 
-	public string getWord()
+	public string getWord(string line)
 	{
+		// Precondition:
+		// Postcondition: The retrieved word is returned to the function
+		// caller, and the currentIndex value is set one beyond the last
+		// read index
+
+		int lineLength = line.length();
+
+		// Create a char variable to hold the characters read from the
+		// word
+		char readCharacter = 'a';
+
+		
 	}
 
 	public int countSyllables(String word)
