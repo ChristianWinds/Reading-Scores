@@ -14,6 +14,12 @@ public class Flesch
 	{
 	}
 
+	public boolean findInVector()
+	{
+		// Precondition:
+		// Postcondition:
+	}
+
 	public void obtainValues()
 	{
 		// Precondition:
