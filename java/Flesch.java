@@ -16,9 +16,9 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		if (wordVector.isEmpty())
+		if (wordVector.daleChallVector.isEmpty())
 		{
-			/* Insert word into vector */
+			wordVector.daleChallVector.add(insertionWord);
 		}
 		else
 		{
