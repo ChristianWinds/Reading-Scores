@@ -8,8 +8,8 @@
 using namespace std;
 
 bool testMode = false;
-bool printFinalObtainedValues = true;
-bool showCalculationValues = true;
+bool printFinalObtainedValues = false;
+bool showCalculationValues = false;
 bool printActivatingFunctions = false;
 bool printFunctionSteps = false;
 bool printVariables = false;
@@ -336,8 +336,7 @@ bool findInVector(vector<string> wordVector,
 	       (currentMaxIndex - currentMinIndex >= 0))
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-		if ((testMode) ||
-		    (true))
+		if (testMode)
 		{
 			cout << "findInVector: Current vector middle == \"" << wordVector.at(currentMidIndex) << "\"" << endl;
 			cout << "              searchTerm == \"" << searchTerm << "\"" << endl;
@@ -416,8 +415,7 @@ void obtainValues(int &totalSyllables,
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
 
-	if ((testMode) ||
-	    (true))
+	if (testMode)
 		cout << "obtainValues: Opened file: " << filename.c_str() << endl;
 
 	if (analyzedFile.is_open())
@@ -499,8 +497,7 @@ void obtainValues(int &totalSyllables,
 					if (endOfSentence)
 					{
 						totalSentences++;
-						if ((testMode) ||
-						    (true))
+						if (testMode)
 						{
 							cout << "obtainValues: Incremented totalSentences; totalSentences == " << totalSentences << endl;
 						}
@@ -543,14 +540,12 @@ string getWord(int &currentIndex,
 
 		// If the read character is a sentence-ending punctuation, flag
 		// the end of sentence Boolean
-		if ((testMode) ||
-		    (true))
+		if (testMode)
 			cout << "getWord: endOfSentence = detectSentenceEnd(" << readCharacter << ");" << endl;
 		if (detectSentenceEnd(readCharacter))
 		{
 			endOfSentence = true;
-			if ((testMode) ||
-			    (true))
+			if (testMode)
 				cout << "getWord: endOfSentence set to true (first word character)" << endl;
 		}
 		else if (detectAlphabetChar(readCharacter))
@@ -643,8 +638,7 @@ string getWord(int &currentIndex,
 				if (detectSentenceEnd(readCharacter))
 				{
 					endOfSentence = true;
-					if ((testMode) ||
-					    (true))
+					if (testMode)
 						cout << "getWord: endOfSentence set to true (final word character)" << endl;
 				}
 
@@ -691,8 +685,7 @@ string getWord(int &currentIndex,
 		}
 		int wordLength = wordEndIndex - wordStartIndex + 1;
 		word = line.substr(wordStartIndex, wordLength);
-		if ((testMode) ||
-		    (true))
+		if (testMode)
 			cout << "getWord: Retrieved word: \"" << word << "\"" << endl;
 	}
 
