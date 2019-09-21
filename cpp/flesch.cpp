@@ -336,6 +336,12 @@ bool findInVector(vector<string> wordVector,
 	       (currentMaxIndex - currentMinIndex > 1))
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
+		if ((testMode) ||
+		    (true))
+		{
+			cout << "findInVector: Current vector middle == \"" << wordVector.at(currentMidIndex) << "\"" << endl;
+			cout << "              searchTerm == \"" << searchTerm << "\"" << endl;
+		}
 		if (searchTerm < wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint before the current vector word */
