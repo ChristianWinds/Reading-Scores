@@ -807,7 +807,7 @@ int countSyllables(string word)
 	return syllables;
 }
 
-bool detectSentenceEnd (char character)
+bool detectSentenceEnd(char character)
 {
 	// Precondition:
 	// Postcondition:
