@@ -63,7 +63,9 @@ public class Flesch
 
 			if (!(duplicateWord))
 			{
-				/* Add the insertionWord to the vector in alphabetic order */
+				// Use the currentMidIndex value as an offset to
+				// add the insertionWord to the vector in
+				// alphabetic order
 				wordVector.daleChallVector.add(currentMidIndex,
 							       insertionWord);
 			}
