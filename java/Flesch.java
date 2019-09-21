@@ -16,7 +16,7 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		if (/*Vector size is 0*/)
+		if (wordVector.isEmpty())
 		{
 			/* Insert word into vector */
 		}
