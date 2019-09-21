@@ -101,7 +101,7 @@ public class Flesch
 		{
 			// Retrieve the text file's values to prepare for the
 			// reading score and index calculations
-			while ((/*Analyzed file is not at end of file)) &&
+			while ((/*Analyzed file is not at end of file */)) &&
 			       (/*Analyzedfile is open*/)
 			{
 				/*Store the earliest unread file line;*/
