@@ -10,7 +10,8 @@ public class Flesch
 	{
 	}
 
-	public void insertAlphabetically(DaleChallVector wordVector)
+	public void insertAlphabetically(DaleChallVector wordVector,
+					 String insertionWord)
 	{
 		// Precondition:
 		// Postcondition:
@@ -34,11 +35,27 @@ public class Flesch
 			{
 				if (/* insertionWord is before current wordVector word */)
 				{
+					// Update the maximum and middle index
+					// values to locate the new search
+					// midpoint after the current vector
+					// word
 					currentMaxIndex = currentMidIndex - 1;
-					current MidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
+					currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
 				}
-				else if
+				else if (/* insertionWord is after current wordVector word */)
 				{
+					// Update the minimum and middle index
+					// values to locate the new search
+					// midpoint after the current vector
+					// word
+					currentMinIndex = currentMidIndex + 1;
+					currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
+				}
+				else if (/* insertionWord matches current wordVector word */)
+				{
+					// Flag the word duplicate to avoid
+					// adding a duplicate word to the vector
+					duplicateWord = true;
 				}
 			}
 		}
