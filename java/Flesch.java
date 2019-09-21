@@ -211,7 +211,18 @@ public class Flesch
 		// Prepare a Boolean variable to flag a sentence end
 		boolean endOfSentence = false;
 
+		// Flag the endOfSentence Boolean if the received character
+		// marks the end of a sentence
+		if ((character == '.') ||
+		    (character == ':') ||
+		    (character == ';') ||
+		    (character == '?') ||
+		    (character == '!'))
+			endOfSentence = true;
+		else
+			endOfSentence = false;
 
+		return endOfSentence;
 	}
 
 	public boolean detectVowel(char character)
