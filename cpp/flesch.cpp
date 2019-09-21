@@ -719,9 +719,9 @@ string capitalizeWord(string originalWord)
 	// capitalized word
 	string capitalizedWord = "";
 
-	for (string::size_type i = 0; i < word.length; ++i)
+	for (string::size_type i = 0; i < originalWord.length(); ++i)
 	{
-		capitalizedWord += toUpper(originalWord[i], loc); 
+		capitalizedWord += toupper(originalWord[i], loc); 
 	}
 
 	return capitalizedWord;
