@@ -283,7 +283,7 @@ public class Flesch
 			currentIndex = lineLength - 1;
 		}
 
-		
+		return word;
 	}
 
 	public int countSyllables(String word)
