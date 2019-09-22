@@ -452,7 +452,7 @@ public class Flesch
 		}
 	}
 
-	public float calculateFlesch(int totalSyllables,
+	public double calculateFlesch(int totalSyllables,
 				     int totalWords,
 				     int totalSentences)
 	{
@@ -461,19 +461,19 @@ public class Flesch
 
 		// Calculate the alpha value to prepare to calculate the Flesch
 		// Index
-		float alpha = (float) totalSyllables / (float) totalWords;
+		double alpha = (double) totalSyllables / (double) totalWords;
 
 		// Calculate the beta value to prepare to calculate the Flesch
 		// Index
-		float beta = (float) totalWords / (float) totalSentences;
+		double beta = (double) totalWords / (double) totalSentences;
 
-		float fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
+		double fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
 
 		return fleschIndex;
 	}
 	
 
-	public float calculateFleschKincaid(int totalSyllables,
+	public double calculateFleschKincaid(int totalSyllables,
 					    int totalWords,
 					    int totalSentences)
 	{
@@ -485,18 +485,18 @@ public class Flesch
 
 		// Calculate the alpha value to prepare to calculate the
 		// Flesch-Kincaid Index
-		float alpha = (float) totalSyllables / (float) totalWords;
+		double alpha = (double) totalSyllables / (double) totalWords;
 
 		// Calculate the beta value to prepare to calculate the
 		// Flesch-Kincaid Index
-		float beta = (float) totalWords / (float) totalSentences;
+		double beta = (double) totalWords / (double) totalSentences;
 
-		float fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
+		double fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
 
 		return fleschKincaidIndex;
 	}
 
-	public float calculateDaleChall(int difficultWords,
+	public double calculateDaleChall(int difficultWords,
 					int totalWords,
 					int totalSentences)
 	{
@@ -508,17 +508,17 @@ public class Flesch
 
 		// Calculate the alpha value to prepare to calculate the
 		// Dale-Chall score
-		float alpha = (float) difficultWords / (float) totalWords;
+		double alpha = (double) difficultWords / (double) totalWords;
 
 		// Calculate the beta value to prepare to calculate the
 		// Dale-Chall score
-		float beta = (float) totalWords / (float) totalSentences;
+		double beta = (double) totalWords / (double) totalSentences;
 
 		// Calculate the percentage of difficult words to prepare to
 		// calculate the Dale-Chall Score
-		float difficultWordPercent = alpha * 100;
+		double difficultWordPercent = alpha * 100;
 
-		float daleChallScore = difficultWordPercent * 0.1579 + beta *
+		double daleChallScore = difficultWordPercent * 0.1579 + beta *
 				       0.0496;
 
 		// Add 3.6365 to the Dale-Chall Score if the difficult word
@@ -568,17 +568,17 @@ public class Flesch
 		if ((totalWords > 0) &&
 		    (syllables > 0))
 		{
-			float fleschIndex = calculateFlesch(syllables,
-							    totalWords,
-							    sentences);
+			double fleschIndex = calculateFlesch(syllables,
+							     totalWords,
+							     sentences);
 
-			float fleschKincaidIndex = calculateFleschKincaid(syllables,
-									  totalWords,
-									  sentences);
+			double fleschKincaidIndex = calculateFleschKincaid(syllables,
+									   totalWords,
+									   sentences);
 
-			float daleChallScore = calculateDaleChallScore(difficultWords,
-								       totalWords,
-								       sentences);
+			double daleChallScore = calculateDaleChallScore(difficultWords,
+									totalWords,
+									sentences);
 
 			System.out.println("Flesch Readability Index: " + fleschIndex);
 			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
