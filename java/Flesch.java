@@ -576,6 +576,10 @@ public class Flesch
 									  totalWords,
 									  sentences);
 
+			float daleChallScore = calculateDaleChallScore(difficultWords,
+								       totalWords,
+								       sentences);
+
 			System.out.println("Flesch Readability Index: " + fleschIndex);
 			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
 		}
