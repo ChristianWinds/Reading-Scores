@@ -162,9 +162,11 @@ public class Flesch
 
 			if (detectSentenceEnd(readCharacter))
 			{
+				endOfSentence = true;
 			}
 			else if (detectAlphabetChar(readCharacter))
 			{
+				wordRead = true;
 			}
 		} while()
 	}
