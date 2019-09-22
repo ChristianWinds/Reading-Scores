@@ -540,7 +540,6 @@ string getWord(int &currentIndex,
 	// From the starting index, locate the first non-whitespace character
 	do
 	{
-		// Read the current character if the current index is within the line
 		if ((currentIndex < lineLength) &&
 		    (!endOfSentence))
 			readCharacter = line.at(currentIndex);
