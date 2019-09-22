@@ -206,7 +206,15 @@ public class Flesch
 			// Place the current index value at the line's final
 			// character to prevent a line reading error
 			currentIndex = lineLength - 1;
+		}
+		else
+		{
+			int wordStartIndex = currentIndex;
+			int wordEndIndex = 0;
 
+			// Read the remaining line characters to locate the
+			// character index after the end of the current word
+			while ((readCharacter
 		}
 		
 	}
