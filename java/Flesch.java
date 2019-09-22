@@ -168,7 +168,15 @@ public class Flesch
 			{
 				wordRead = true;
 			}
-		} while()
+
+			if ((readCharacter == ' ') &&
+			    (currentIndex < lineLength))
+			{
+				currentIndex++;
+			}
+		} while((readCharacter == ' ') &&
+			currentIndex < lineLength) &&
+			(!endOfSentence))
 	}
 
 	public int countSyllables(String word)
