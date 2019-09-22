@@ -259,7 +259,8 @@ public class Flesch
 			currentIndex++;
 
 			// If the current index exceeded the line length, place
-			// the
+			// the index at the line's final character to avoid a
+			// line read error
 			if (endOfLine)
 			{
 				currentIndex = lineLength - 1;
