@@ -177,6 +177,14 @@ public class Flesch
 		} while((readCharacter == ' ') &&
 			currentIndex < lineLength) &&
 			(!endOfSentence))
+
+		// Create a String variable for the word to return to this
+		// function's caller
+		String word = "";
+
+		if (endOfSentence)
+		{
+		}
 	}
 
 	public int countSyllables(String word)
