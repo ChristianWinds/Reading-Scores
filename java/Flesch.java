@@ -108,7 +108,7 @@ public class Flesch
 			{
 				currentLine = analyzedFileScanner.nextLine();
 
-				if (/*Analyzed file is not at end of file*/)
+				if (/*Analyzed file is not at end of file*/analyzedFileScanner.hasNextLine())
 				{
 					int currentLineIndex = 0;
 
