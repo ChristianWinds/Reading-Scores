@@ -154,7 +154,19 @@ public class Flesch
 		// word
 		char readCharacter = 'a';
 
-		
+		do
+		{
+			if ((curentIndex < lineLength) &&
+			    (!endOfSentence))
+				readCharacter = line.at(currentIndex);
+
+			if (detectSentenceEnd(readCharacter))
+			{
+			}
+			else if (detectAlphabetChar(readCharacter))
+			{
+			}
+		} while()
 	}
 
 	public int countSyllables(String word)
