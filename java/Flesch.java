@@ -546,6 +546,8 @@ public class Flesch
 		// Accessed September 11, 2019
 		String filename = keyboardInput.nextLine();
 
+		/* Create the empty Dale-Chall vector */
+
 		// Prepare integer variables to store the analyzed file
 		// values and calculate the reading scores and indexes
 		ReadingValueCalculationVariables calculationVariables = new ReadingValueCalculationVariables();
