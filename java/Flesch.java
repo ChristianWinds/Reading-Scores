@@ -436,7 +436,9 @@ public class Flesch
 
 		boolean isWordCharacter = false;
 
-		// 
+		// Check if the character is alphanumeric, a hyphen, or an
+		// apostrophe to determine if the character is or is not part of
+		// a word
 		if ((detectAlphabetChar(character)) ||
 		    (detectNumericChar(character)) ||
 		    (character == '-') ||
