@@ -418,7 +418,7 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		bool isNumeric = false;
+		boolean isNumeric = false;
 
 		if ((character >= '0') &&
 		    (character <= '9'))
