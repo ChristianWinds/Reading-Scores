@@ -459,8 +459,12 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		float alpha = (float ) totalSyllables / (float) totalWords;
+		// Calculate the alpha value to prepare to calculate the Flesch
+		// Index
+		float alpha = (float) totalSyllables / (float) totalWords;
 
+		// Calculate the beta value to prepare to calculate the Flesch
+		// Index
 		float beta = (float) totalWords / (float) totalSentences;
 
 		float fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
