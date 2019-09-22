@@ -703,8 +703,7 @@ string getWord(int &currentIndex,
 		currentIndex = lineLength - 1;
 	}
 
-	if ((testMode) ||
-	    (endOfSentence))
+	if (testMode)
 		cout << "getWord: After this iteration's endOfSentence flag, the line index's character is '" << line.at(currentIndex) << "'" << endl;
 	// Return the retrieved word to the function caller
 	if (testMode)
