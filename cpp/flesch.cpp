@@ -582,7 +582,6 @@ string getWord(int &currentIndex,
 		if (testMode)
 			cout << "getWord: endOfSentence == " << endOfSentence << "; setting word to \"\"." << endl;
 
-		// Set the word read flag to false
 		wordRead = false;
 
 		// Set the word string variable to a blank string to indicate
