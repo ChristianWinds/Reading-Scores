@@ -273,6 +273,17 @@ public class Flesch
 
 			word = line.substring(wordStartIndex, wordEndIndex + 1);
 		}
+
+		//  If the current index is beyond the line end, flag the
+		//  end-of-line flag and set the current index to the line's
+		//  final character to avoid a line read error
+		if (currentIndex >= lineLength)
+		{
+			endOfLine = true;
+			currentIndex = lineLength - 1;
+		}
+
+		
 	}
 
 	public int countSyllables(String word)
