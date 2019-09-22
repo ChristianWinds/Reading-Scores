@@ -175,8 +175,8 @@ public class Flesch
 				currentIndex++;
 			}
 		} while((readCharacter == ' ') &&
-			currentIndex < lineLength) &&
-			(!endOfSentence))
+			(currentIndex < lineLength) &&
+			(!endOfSentence));
 
 		// Create a String variable for the word to return to this
 		// function's caller
