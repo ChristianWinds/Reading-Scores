@@ -193,6 +193,21 @@ public class Flesch
 			// to continue reading after the sentence end
 			currentIndex++;
 		}
+		else if (!(currentIndex < lineLength))
+		{
+
+			// Set the wordRead Boolean and word string to indicate
+			// no valid word was read
+			wordRead = false;
+			word = "";
+
+			endOfLine = true;
+
+			// Place the current index value at the line's final
+			// character to prevent a line reading error
+			currentIndex = lineLength - 1;
+
+		}
 		
 	}
 
