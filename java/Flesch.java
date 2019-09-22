@@ -141,7 +141,7 @@ public class Flesch
 		}
 	}
 
-	public string getWord(string line)
+	public String getWord(String line)
 	{
 		// Precondition:
 		// Postcondition: The retrieved word is returned to the function
