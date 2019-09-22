@@ -265,6 +265,14 @@ public class Flesch
 			{
 				currentIndex = lineLength - 1;
 			}
+
+			if (currentIndex >= lineLength)
+			{
+				endOfLine = true;
+			}
+
+			/* Retrieve the found word */
+			;
 		}
 	}
 
