@@ -271,8 +271,7 @@ public class Flesch
 				endOfLine = true;
 			}
 
-			/* Retrieve the found word */
-			;
+			word = line.substring(wordStartIndex, wordEndIndex + 1);
 		}
 	}
 
