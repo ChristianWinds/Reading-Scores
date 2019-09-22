@@ -594,10 +594,8 @@ string getWord(int &currentIndex,
 	}
 	else if (!(currentIndex < lineLength))
 	{
-		// Flag that the line's end was reached
 		endOfLine = true;
 
-		// Set the word read flag to false
 		wordRead = false;
 
 		// Place the current index at the end of the line
