@@ -582,6 +582,7 @@ public class Flesch
 
 			System.out.println("Flesch Readability Index: " + fleschIndex);
 			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
+			System.out.println("Dale-Chall Readability Score: " + daleChallScore);
 		}
 		else
 		{
