@@ -99,12 +99,12 @@ public class Flesch
 		/* Open the file to analyze */
 		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
-		if (/*Analyzed file is open*/)
+		if (/*Analyzed file is open*/analyzedFileScanner.hasNextLine())
 		{
 			// Retrieve the text file's values to prepare for the
 			// reading score and index calculations
-			while ((analyzedFileScanner.hasNextLine()) &&
-			       (/*Analyzedfile is open*/))
+			while /*(*/(analyzedFileScanner.hasNextLine())/* &&
+			       (*//*Analyzedfile is open*//*))*/
 			{
 				currentLine = analyzedFileScanner.nextLine();
 
