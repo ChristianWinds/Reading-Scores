@@ -258,7 +258,12 @@ public class Flesch
 			// same sentence twice
 			currentIndex++;
 
-			
+			// If the current index exceeded the line length, place
+			// the
+			if (endOfLine)
+			{
+				currentIndex = lineLength - 1;
+			}
 		}
 	}
 
