@@ -433,6 +433,21 @@ public class Flesch
 	{
 		// Precondition:
 		// Postcondition:
+
+		boolean isWordCharacter = false;
+
+		// 
+		if ((detectAlphabetChar(character)) ||
+		    (detectNumericChar(character)) ||
+		    (character == '-') ||
+		    (character == '\''))
+		{
+			isWordCharacter = true;
+		}
+		else
+		{
+			isWordCharacter = false;
+		}
 	}
 
 	public float calculateFlesch(int totalSyllables,
