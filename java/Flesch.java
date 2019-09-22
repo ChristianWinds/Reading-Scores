@@ -548,6 +548,8 @@ public class Flesch
 
 		/* Create the empty Dale-Chall vector */
 
+		storeDaleChallList(/* Dale-Chall Vector */);
+
 		// Prepare integer variables to store the analyzed file
 		// values and calculate the reading scores and indexes
 		ReadingValueCalculationVariables calculationVariables = new ReadingValueCalculationVariables();
