@@ -184,7 +184,16 @@ public class Flesch
 
 		if (endOfSentence)
 		{
+			// Set the wordRead Boolean and word string to indicate
+			// no valid word was read
+			wordRead = false;
+			word = "";
+
+			// Increment the currentIndex value to allow the program
+			// to continue reading after the sentence end
+			currentIndex++;
 		}
+		
 	}
 
 	public int countSyllables(String word)
