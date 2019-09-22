@@ -429,6 +429,12 @@ public class Flesch
 		return isNumeric;
 	}
 
+	public boolean detectWordCharacter(char character)
+	{
+		// Precondition:
+		// Postcondition:
+	}
+
 	public float calculateFlesch(int totalSyllables,
 				     int totalWords,
 				     int totalSentences)
