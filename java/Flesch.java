@@ -214,7 +214,15 @@ public class Flesch
 
 			// Read the remaining line characters to locate the
 			// character index after the end of the current word
-			while ((readCharacter
+			while ((readCharacter != ' ') &&
+			       (currentIndex < llineLength) &&
+			       (!endOfSentence) &&
+			       (!endOfLine))
+			{
+				// Increment the current index to read the next
+				// unread character
+				currentIndex++;
+			}
 		}
 		
 	}
