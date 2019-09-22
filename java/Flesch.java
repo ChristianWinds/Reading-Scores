@@ -251,6 +251,14 @@ public class Flesch
 					}
 				}
 			}
+
+			wordEndIndex = currentIndex - 1;
+
+			// Increment the current index to avoid counting the
+			// same sentence twice
+			currentIndex++;
+
+			
 		}
 	}
 
