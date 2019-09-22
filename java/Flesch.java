@@ -222,9 +222,36 @@ public class Flesch
 				// Increment the current index to read the next
 				// unread character
 				currentIndex++;
+
+				if (!(currentIndex < lineLength))
+				{
+					endOfLine = true;
+				}
+				else
+				{
+					readCharacter = line.at(currentIndex);
+
+					if (detectSentenceEnd(readCharacter))
+					{
+						endOfSentence = true;
+					}
+
+					if ((!wordRead) &&
+					    (!endOfSentence))
+					{
+						if (detectAlphabetChar(readCharacter))
+						{
+							wordRead = true;
+						}
+					}
+
+					if (!(detectWordCharacter(readCharacter)))
+					{
+						break;
+					}
+				}
 			}
 		}
-		
 	}
 
 	public int countSyllables(String word)
