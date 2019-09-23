@@ -647,7 +647,6 @@ string getWord(int &currentIndex,
 	}
 	else
 	{
-		// Record the index location of the word beginning
 		if ((testMode) &
 		    (false))
 		{
