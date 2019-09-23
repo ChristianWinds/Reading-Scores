@@ -493,8 +493,8 @@ void obtainValues(int &totalSyllables,
 							cout << "obtainValues: Calling findInVector(daleChallVector, word)" << endl;
 						}
 
-						if (findInVector(daleChallVector,
-								 word))
+						if (!(findInVector(daleChallVector,
+								   word)))
 						{
 							if ((testMode) ||
 							    (true))
