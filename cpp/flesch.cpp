@@ -539,6 +539,10 @@ string getWord(int &currentIndex,
 
 	int lineLength = line.length();
 
+	// Create an alphanumeric character detection Boolean to prevent
+	// non-alphanumeric characters from beginning a word
+	bool alphanumericCharRead = false;
+
 	// Create a char variable to hold the characters read from the word
 	char readCharacter = 'a';
 
