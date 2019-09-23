@@ -570,9 +570,21 @@ string getWord(int &currentIndex,
 			wordRead = true;
 		}
 
+		if ((testMode) ||
+		    (true))
+		{
+			cout << "getWord: Checking for alphanumeric word start" << endl;
+		}
+
 		if ((detectAlphabetChar(readCharacter)) ||
 		    (detectNumericChar(readCharacter)))
 		{
+			if ((testMode) ||
+			    (true))
+			{
+				cout << "getWord: Alphanumeric word start found" << endl;
+			}
+
 			alphanumericCharRead = true;
 		}
 
