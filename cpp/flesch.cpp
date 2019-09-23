@@ -546,7 +546,8 @@ string getWord(int &currentIndex,
 	// Create a char variable to hold the characters read from the word
 	char readCharacter = 'a';
 
-	// From the starting index, locate the first non-whitespace character
+	// From the starting index, locate the first alphanumeric character to
+	// identify the first character of the word to retrieve
 	do
 	{
 		if ((currentIndex < lineLength) &&
@@ -557,6 +558,7 @@ string getWord(int &currentIndex,
 		// the end of sentence Boolean
 		if (testMode)
 			cout << "getWord: endOfSentence = detectSentenceEnd(" << readCharacter << ");" << endl;
+
 		if (detectSentenceEnd(readCharacter))
 		{
 			endOfSentence = true;
@@ -565,9 +567,15 @@ string getWord(int &currentIndex,
 		}
 		else if (detectAlphabetChar(readCharacter))
 		{
-			// Flag the current read characters as a word
 			wordRead = true;
 		}
+
+		if ((detectAlphabetChar(readCharacter)) ||
+		    (detectNumericChar(readCharacter)))
+		{
+			alphanumericCharRead = true;
+		}
+
 		if (testMode)
 			cout << "getWord: endOfSentence == " << endOfSentence << endl;
 
@@ -578,7 +586,8 @@ string getWord(int &currentIndex,
 		if ((readCharacter == ' ') &&
 		    (currentIndex < lineLength))
 			currentIndex++;
-	} while ((readCharacter == ' ') &&
+	} while (((readCharacter == ' ') ||
+		 (!(alphanumericCharRead))) &&
 		 (currentIndex < lineLength) &&
 		 (!endOfSentence));
 
