@@ -576,6 +576,8 @@ string getWord(int &currentIndex,
 			cout << "getWord: Checking for alphanumeric word start" << endl;
 		}
 
+		// Flag whether the current character is alphanumeric to ensure
+		// the retrieved word begins with an alphanumeric character
 		if ((detectAlphabetChar(readCharacter)) ||
 		    (detectNumericChar(readCharacter)))
 		{
@@ -587,15 +589,21 @@ string getWord(int &currentIndex,
 
 			alphanumericCharRead = true;
 		}
+		else
+		{
+			alphanumericCharRead = false;
+		}
 
 		if (testMode)
 			cout << "getWord: endOfSentence == " << endOfSentence << endl;
 
 		// * ERROR: detectSentenceEnd not called for first read character; called late [BUGFIX ADDED]
 		// *	ERROR: detectSentenceEnd check not performed if first read character is not a space; conversion of while loop to do while loop possible
-		// If a word start was not yet found, advance the current index
-		// to the next character in the line
-		if ((readCharacter == ' ') &&
+		// If an alphanumeric word start was not yet found, advance the
+		// current index to the next character in the line to locate an
+		// alphnumeric word start
+		if (((readCharacter == ' ') ||
+		    (!(alphanumericCharRead))) &&
 		    (currentIndex < lineLength))
 			currentIndex++;
 	} while (((readCharacter == ' ') ||
