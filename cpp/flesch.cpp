@@ -496,6 +496,11 @@ void obtainValues(int &totalSyllables,
 						if (findInVector(daleChallVector,
 								 word))
 						{
+							if ((testMode) ||
+							    (true))
+							{
+								cout << "obtainValues: Difficult word found: \"" << word << "\"" << endl;
+							}
 							difficultWords++;
 						}
 					}
