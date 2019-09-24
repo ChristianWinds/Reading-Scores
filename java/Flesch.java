@@ -580,7 +580,7 @@ public class Flesch
 						// access error
 						System.out.println("TEST: getWords: To run <wordEndIndex = lineLength - 1;>");
 
-						wordEndIndex = lineLength - 1;
+						wordEndIndex = lineLength;
 						retrievingWord = false;
 					}
 				}
