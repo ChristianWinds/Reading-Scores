@@ -537,14 +537,14 @@ public class Flesch
 	}
 */
 
-	public void getWords(String line)
+	public static void getWords(String line)
 	{
 		int currentIndex = 0;
 		int wordStartIndex = 0;
 		int wordEndIndex = 0;
 		int lineLength = line.length();
 		boolean retrievingWord = false;
-		string word = "";
+		String word = "";
 
 		while (currentIndex < lineLength)
 		{
