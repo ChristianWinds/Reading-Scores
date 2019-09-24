@@ -336,9 +336,11 @@ public class Flesch
 		}
 
 		// Add one to a syllable count of zero to follow the minimum
-		// syllale requirements for words
+		// syllable requirements for words
 		if (syllables == 0)
 			syllables++;
+
+		System.out.println("TEST: countSyllables: word \"" + word + "\" has " + syllables + "syllables");
 
 		return syllables;
 	}
