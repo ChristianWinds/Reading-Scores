@@ -6,10 +6,10 @@ import java.lang.*;
 
 public class Flesch
 {
-	public void storeDaleChallList()
+/*	public void storeDaleChallList()
 	{
-	}
-
+	}*/
+/*
 	public void insertAlphabetically(DaleChallVector wordVector,
 					 String insertionWord)
 	{
@@ -71,7 +71,7 @@ public class Flesch
 			}
 		}
 	}
-
+*/
 /*	public boolean findInVector(String searchTerm,
 				    DaleChallVector wordVector)
 	{
@@ -83,7 +83,8 @@ public class Flesch
 		return wordVector.contains(searchTerm);
 	}
 */
-	public void obtainValues()
+/* DISABLE
+ * 	public void obtainValues()
 	{
 		// Precondition:
 		// Postcondition:
@@ -93,23 +94,23 @@ public class Flesch
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 		// Accessed Saturday, September 21, 2019
-		/* Create an input file stream for the file to analyze */
+		*//* Create an input file stream for the file to analyze *//* DISABLE
 		File analyzedFile = new File(analyzedFileName);
 
-		/* Open the file to analyze */
+		*//* Open the file to analyze *//* DISABLE
 		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
-		if (/*Analyzed file is open*/analyzedFileScanner.hasNextLine())
-		{
+		if (*//*Analyzed file is open*//*analyzedFileScanner.hasNextLine())*/
+//		{
 			// Retrieve the text file's values to prepare for the
 			// reading score and index calculations
-			while /*(*/(analyzedFileScanner.hasNextLine())/* &&
-			       (*//*Analyzedfile is open*//*))*/
-			{
+//			while /*(*/(analyzedFileScanner.hasNextLine())/* &&
+//			       (*//*Analyzedfile is open*//*))*/
+/*			{
 				currentLine = analyzedFileScanner.nextLine();
 
-				if (/*Analyzed file is not at end of file*/analyzedFileScanner.hasNextLine())
-				{
+*///				if (/*Analyzed file is not at end of file*/analyzedFileScanner.hasNextLine())
+/*				{
 					int currentLineIndex = 0;
 
 					boolean endOfLine = false;
@@ -140,8 +141,8 @@ public class Flesch
 			}
 		}
 	}
-
-	public String getWord(String line)
+*/
+/*	public String getWord(String line)
 	{
 		// Precondition:
 		// Postcondition: The retrieved word is returned to the function
@@ -284,9 +285,9 @@ public class Flesch
 		}
 
 		return word;
-	}
+	}*/
 
-	public int countSyllables(String word)
+/*	public int countSyllables(String word)
 	{
 		// Precondition:
 		// Postcondition:
@@ -339,8 +340,8 @@ public class Flesch
 
 		return syllables;
 	}
-
-	public boolean detectSentenceEnd()
+*/
+/*	public boolean detectSentenceEnd()
 	{
 		// Precondition:
 		// Postcondition: The state of whether the received character
@@ -363,8 +364,8 @@ public class Flesch
 
 		return endOfSentence;
 	}
-
-	public boolean detectVowel(char character)
+*/
+/*	public boolean detectVowel(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -391,8 +392,8 @@ public class Flesch
 
 		return isVowel;
 	}
-
-	public boolean detectAlphabetChar(char character)
+*/
+/*	public boolean detectAlphabetChar(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -412,8 +413,8 @@ public class Flesch
 
 		return isAlphabetic;
 	}
-
-	public boolean detectNumericChar(char character)
+*/
+/*	public boolean detectNumericChar(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -428,8 +429,8 @@ public class Flesch
 
 		return isNumeric;
 	}
-
-	public boolean detectWordCharacter(char character)
+*/
+/*	public boolean detectWordCharacter(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -451,8 +452,8 @@ public class Flesch
 			isWordCharacter = false;
 		}
 	}
-
-	public double calculateFlesch(int totalSyllables,
+*/
+/*	public double calculateFlesch(int totalSyllables,
 				     int totalWords,
 				     int totalSentences)
 	{
@@ -471,8 +472,8 @@ public class Flesch
 
 		return fleschIndex;
 	}
-	
-
+*/	
+/*
 	public double calculateFleschKincaid(int totalSyllables,
 					    int totalWords,
 					    int totalSentences)
@@ -495,8 +496,8 @@ public class Flesch
 
 		return fleschKincaidIndex;
 	}
-
-	public double calculateDaleChall(int difficultWords,
+*/
+/*	public double calculateDaleChall(int difficultWords,
 					int totalWords,
 					int totalSentences)
 	{
@@ -529,7 +530,7 @@ public class Flesch
 
 		return daleChallScore;
 	}
-
+*/
 	public static void main(String[] args)
 	{
 		// Create a Scanner to read the keyboard entered filename of
