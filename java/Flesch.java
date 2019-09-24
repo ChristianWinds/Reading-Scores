@@ -2,6 +2,11 @@
 // https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 // Accessed September 11, 2019
 import java.util.Scanner;
+
+// Code from GeeksforGeeks,
+// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
+// Accessed September 24, 2019
+import java.io.File;
 import java.lang.*;
 
 public class Flesch
@@ -531,7 +536,12 @@ public class Flesch
 		return daleChallScore;
 	}
 */
-	public static void main(String[] args)
+
+	
+	// Code from GeeksforGeeks,
+	// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
+	// Accessed September 24, 2019
+	public static void main(String[] args) throws Exception
 	{
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
@@ -546,6 +556,17 @@ public class Flesch
 		// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 		// Accessed September 11, 2019
 		String filename = keyboardInput.nextLine();
+
+		// Code from GeeksforGeeks,
+		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
+		// Accessed September 24, 2019
+		File analyzedFile = new File(filename);
+		Scanner analyzedFileScanner = new Scanner(analyzedFile);
+
+		while (analyzedFileScanner.hasNextLine())
+		{
+			System.out.println(analyzedFileScanner.nextLine());
+		}
 
 		/* Create the empty Dale-Chall vector */
 
