@@ -792,7 +792,8 @@ string trimWord(string word)
 
 		// Check if the word's last character is not alphanumeric to
 		// decide whether to trim the word
-		while ((!(detectAlphanumericCharacter(lastWordCharacter))) &&
+		while (((!(detectAlphabetChar(lastWordCharacter))) &&
+		       (!(detectNumericChar(lastWordCharacter)))) &&
 		       (wordLength > 0))
 		{
 			// Trim the word to remove the non-alphanumeric
