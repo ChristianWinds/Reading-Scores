@@ -297,6 +297,8 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
+		System.out.println("TEST: countSyllables: Starting");
+
 		int currentIndex = 0;
 
 		char readCharacter = '0';
