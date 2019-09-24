@@ -321,7 +321,7 @@ public class Flesch
 					// word to find the end of the current
 					// syllable
 					while ((detectVowel(readCharacter)) &&
-					       (currrentIndex < wordLength))
+					       (currentIndex < wordLength))
 					{
 						currentIndex++;
 						if (currentIndex < wordLength)
