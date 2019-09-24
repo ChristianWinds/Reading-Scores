@@ -336,6 +336,13 @@ public class Flesch
 							readCharacter = word.charAt(currentIndex);
 					}
 				}
+				else
+				{
+					// Increment the current index to skip
+					// the word-ending 'e' in syllable
+					// counting
+					currentIndex++;
+				}
 			}
 			else
 			{
