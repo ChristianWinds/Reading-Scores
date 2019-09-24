@@ -292,7 +292,7 @@ public class Flesch
 		return word;
 	}*/
 
-/*	public int countSyllables(String word)
+	public static int countSyllables(String word)
 	{
 		// Precondition:
 		// Postcondition:
@@ -310,15 +310,12 @@ public class Flesch
 			readCharacter = word.charAt(currentIndex);
 			if (detectVowel(readCharacter))
 			{
-				if (((readCharacter == 'e') ||
+				// Determine if the current vowel is a
+				// word-ending 'e' to avoid counting a
+				// word-ending 'e' as a syllable
+				if (!(((readCharacter == 'e') ||
 				    (readCharacter == 'E')) &&
-				    (currentIndex == wordLength - 1))
-				{
-					// Update the current index to not count
-					// the word-ending "e" as a syllable
-					currentIndex++;
-				}
-				else
+				    (currentIndex == wordLength - 1)))
 				{
 					// Read the successive vowels in the
 					// word to find the end of the current
@@ -345,7 +342,7 @@ public class Flesch
 
 		return syllables;
 	}
-*/
+
 /*	public boolean detectSentenceEnd()
 	{
 		// Precondition:
@@ -370,7 +367,7 @@ public class Flesch
 		return endOfSentence;
 	}
 */
-/*	public boolean detectVowel(char character)
+	public boolean detectVowel(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -397,7 +394,7 @@ public class Flesch
 
 		return isVowel;
 	}
-*/
+
 /*	public boolean detectAlphabetChar(char character)
 	{
 		// Precondition:
@@ -564,8 +561,6 @@ public class Flesch
 					currentIndex++;
 					if (currentIndex < lineLength)
 					{
-						// System.out.println("TEST: getWords: To run <if (line.charAt(currentIndex) == ' ')>");
-
 						if (line.charAt(currentIndex) == ' ')
 						{
 							wordEndIndex = currentIndex;
@@ -578,17 +573,14 @@ public class Flesch
 						// character as the word's last
 						// character to avoid a string
 						// access error
-						// System.out.println("TEST: getWords: To run <wordEndIndex = lineLength - 1;>");
-
 						wordEndIndex = lineLength;
 						retrievingWord = false;
 					}
 				}
 
-				// System.out.println("TEST: getWords: To run <word = line.substring(wordStartIndex, wordEndIndex);>");
-
 				word = line.substring(wordStartIndex, wordEndIndex);
 				System.out.println("getWords: word == \"" + word + "\"");
+				countSyllables(word);
 			}
 
 			// Increment the current index to look for another word
