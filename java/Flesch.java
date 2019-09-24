@@ -568,6 +568,8 @@ public class Flesch
 			System.out.println(analyzedFileScanner.nextLine());
 		}
 
+		
+
 		/* Create the empty Dale-Chall vector */
 
 //		storeDaleChallList(/* Dale-Chall Vector */);
