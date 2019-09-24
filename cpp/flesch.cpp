@@ -28,6 +28,7 @@ string getWord(int &currentIndex,
 	       bool &endOfSentence,
 	       bool &wordRead);
 string capitalizeWord(string originalWord);
+string trimWord(string word);
 int countSyllables(string word);
 bool detectSentenceEnd(char character);
 bool detectVowel(char character);
@@ -672,7 +673,6 @@ string getWord(int &currentIndex,
 				endOfLine = true;
 			else
 			{
-				// Read the current character at the line end
 				readCharacter = line.at(currentIndex);
 
 				// Flag the end of sentence flag if
@@ -727,6 +727,11 @@ string getWord(int &currentIndex,
 		}
 		int wordLength = wordEndIndex - wordStartIndex + 1;
 		word = line.substr(wordStartIndex, wordLength);
+
+		// Send the word to the trimWord function to remove
+		// non-alphanumeric characters from the end of the word
+		word = trimWord(word);
+
 		if (testMode)
 			cout << "getWord: Retrieved word: \"" << word << "\"" << endl;
 	}
@@ -768,6 +773,43 @@ string capitalizeWord(string originalWord)
 	}
 
 	return capitalizedWord;
+}
+
+string trimWord(string word)
+{
+	// Precondition: The received word holds at least one alphanumeric
+	// character
+	// Postcondition: The received word was shortened up to the word's last
+	// alphanumeric character, and the word was returned to this function's
+	// caller
+
+	// Store the word's length for use in locating the word's last character
+	int wordLength = word.length();
+
+	if (wordLength > 0)
+	{
+		char lastWordCharacter = word.at(wordLength - 1);
+
+		// Check if the word's last character is not alphanumeric to
+		// decide whether to trim the word
+		while ((!(detectAlphanumericCharacter(lastWordCharacter))) &&
+		       (wordLength > 0))
+		{
+			// Trim the word to remove the non-alphanumeric
+			// character from the word end
+			word = word.substr(0, wordLength - 1);
+
+			// Update the word length and stored last word character
+			// to check the new last word character
+			wordLength = word.length();
+			if (wordLength > 0)
+			{
+				lastWordCharacter = word.at(wordLength - 1);
+			}
+		}
+	}
+
+	return word;
 }
 
 int countSyllables(string word)
