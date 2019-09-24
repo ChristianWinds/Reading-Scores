@@ -72,7 +72,7 @@ public class Flesch
 		}
 	}
 
-	public boolean findInVector(String searchTerm,
+/*	public boolean findInVector(String searchTerm,
 				    DaleChallVector wordVector)
 	{
 		// Precondition:
@@ -82,7 +82,7 @@ public class Flesch
 		// search term
 		return wordVector.contains(searchTerm);
 	}
-
+*/
 	public void obtainValues()
 	{
 		// Precondition:
