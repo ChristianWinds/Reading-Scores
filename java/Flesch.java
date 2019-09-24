@@ -555,16 +555,28 @@ public class Flesch
 				wordStartIndex = currentIndex;
 				retrievingWord = true;
 
-				while (retrievingWord)
+				while ((retrievingWord) &&
+				       (currentIndex < lineLength))
 				{
 					// Scan the line for a whitespace
 					// character or the line end to stop
 					// retrieving the word
 					currentIndex++;
-					if ((line.charAt(currentIndex) == ' ') ||
-					    (!(currentIndex < lineLength)))
+					if (currentIndex < lineLength)
 					{
-						wordEndIndex = currentIndex;
+						if (line.charAt(currentIndex) == ' ')
+						{
+							wordEndIndex = currentIndex;
+							retrievingWord = false;
+						}
+					}
+					else
+					{
+						// Regard the line's final
+						// character as the word's last
+						// character to avoid a string
+						// access error
+						wordEndIndex = lineLength - 1;
 						retrievingWord = false;
 					}
 				}
