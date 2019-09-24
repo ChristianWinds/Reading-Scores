@@ -537,6 +537,46 @@ public class Flesch
 	}
 */
 
+	public void getWords(String line)
+	{
+		int currentIndex = 0;
+		int wordStartIndex = 0;
+		int wordEndIndex = 0;
+		int lineLength = line.length();
+		boolean retrievingWord = false;
+		string word = "";
+
+		while (currentIndex < lineLength)
+		{
+			// Scan the line for a non-whitespace character to begin
+			// retrieving a word
+			if (line.charAt(currentIndex) != ' ')
+			{
+				wordStartIndex = currentIndex;
+				retrievingWord = true;
+
+				while (retrievingWord)
+				{
+					// Scan the line for a whitespace
+					// character or the line end to stop
+					// retrieving the word
+					currentIndex++;
+					if ((line.charAt(currentIndex) == ' ') ||
+					    (!(currentIndex < lineLength)))
+					{
+						wordEndIndex = currentIndex - 1;
+						retrievingWord = false;
+					}
+				}
+
+				word = line.substring(wordStartIndex, wordEndIndex);
+				System.out.println("getWords: word == \"" + word + "\"");
+			}
+
+			// Increment the current index to look for another word
+			currentIndex++;
+		}
+	}
 	
 	// Code from GeeksforGeeks,
 	// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
@@ -563,12 +603,14 @@ public class Flesch
 		File analyzedFile = new File(filename);
 		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
+		String line = "";
+
 		while (analyzedFileScanner.hasNextLine())
 		{
-			System.out.println(analyzedFileScanner.nextLine());
-		}
+			line = analyzedFileScanner.nextLine();
 
-		
+			getWords(line);
+		}
 
 		/* Create the empty Dale-Chall vector */
 
