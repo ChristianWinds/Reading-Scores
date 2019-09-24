@@ -301,7 +301,7 @@ public class Flesch
 
 		char readCharacter = '0';
 
-		int syllablesCounted = 0;
+		int syllables = 0;
 
 		int wordLength = word.length();
 
@@ -367,7 +367,7 @@ public class Flesch
 		return endOfSentence;
 	}
 */
-	public boolean detectVowel(char character)
+	public static boolean detectVowel(char character)
 	{
 		// Precondition:
 		// Postcondition:
