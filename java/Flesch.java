@@ -564,7 +564,7 @@ public class Flesch
 					if ((line.charAt(currentIndex) == ' ') ||
 					    (!(currentIndex < lineLength)))
 					{
-						wordEndIndex = currentIndex - 1;
+						wordEndIndex = currentIndex;
 						retrievingWord = false;
 					}
 				}
