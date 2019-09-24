@@ -564,7 +564,7 @@ public class Flesch
 					currentIndex++;
 					if (currentIndex < lineLength)
 					{
-						System.out.println("TEST: getWords: To run <if (line.charAt(currentIndex) == ' ')>");
+						// System.out.println("TEST: getWords: To run <if (line.charAt(currentIndex) == ' ')>");
 
 						if (line.charAt(currentIndex) == ' ')
 						{
@@ -578,14 +578,14 @@ public class Flesch
 						// character as the word's last
 						// character to avoid a string
 						// access error
-						System.out.println("TEST: getWords: To run <wordEndIndex = lineLength - 1;>");
+						// System.out.println("TEST: getWords: To run <wordEndIndex = lineLength - 1;>");
 
 						wordEndIndex = lineLength;
 						retrievingWord = false;
 					}
 				}
 
-				System.out.println("TEST: getWords: To run <word = line.substring(wordStartIndex, wordEndIndex);>");
+				// System.out.println("TEST: getWords: To run <word = line.substring(wordStartIndex, wordEndIndex);>");
 
 				word = line.substring(wordStartIndex, wordEndIndex);
 				System.out.println("getWords: word == \"" + word + "\"");
