@@ -549,21 +549,21 @@ public class Flesch
 
 		/* Create the empty Dale-Chall vector */
 
-		storeDaleChallList(/* Dale-Chall Vector */);
+//		storeDaleChallList(/* Dale-Chall Vector */);
 
 		// Prepare integer variables to store the analyzed file
 		// values and calculate the reading scores and indexes
-		ReadingValueCalculationVariables calculationVariables = new ReadingValueCalculationVariables();
+//		ReadingValueCalculationVariables calculationVariables = new ReadingValueCalculationVariables();
 
 		// To prepare for the readability index and score
 		// calculations, obtain the analyzed file values
-		obtainFileValues(syllables,
+/*		obtainFileValues(syllables,
 				 totalWords,
 				 sentences,
 				 difficultWords,
 				 filename);
-
-		// Calculate the reading indexes and score only if words
+*/
+/*		// Calculate the reading indexes and score only if words
 		// and syllables were found in the analyzed file to
 		// avoid a division by zero error
 		if ((totalWords > 0) &&
@@ -594,5 +594,5 @@ public class Flesch
 
 			System.out.println("As a result, the readability calculations could not be performed.");
 		}
-	}
+*/	}
 }
