@@ -11,9 +11,23 @@ import java.lang.*;
 
 public class Flesch
 {
-/*	public void storeDaleChallList()
+	public static void storeDaleChallList()
 	{
-	}*/
+		// Code from GeeksforGeeks,
+		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
+		// Accessed September 24, 2019
+		File analyzedFile = new File("/pub/pounds/);
+		Scanner analyzedFileScanner = new Scanner("/pub/pounds/CSC330/dalechall/wordlist1995.txt");
+
+		String word = "";
+
+		while (analyzedFileScanner.hasNextLine())
+		{
+			word = analyzedFileScanner.nextLine();
+
+			System.out.println(word);
+		}
+	}
 /*
 	public void insertAlphabetically(DaleChallVector wordVector,
 					 String insertionWord)
