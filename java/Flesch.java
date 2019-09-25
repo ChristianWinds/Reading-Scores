@@ -4,7 +4,10 @@ import java.lang.*;
 
 public class Flesch
 {
-	public static void storeDaleChallList()
+	// Code from GeeksforGeeks,
+	// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
+	// Accessed September 24, 2019
+	public static void storeDaleChallList() throws Exception
 	{
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
