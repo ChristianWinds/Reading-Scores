@@ -631,7 +631,7 @@ public class Flesch
 		WordVector daleChallVector = new WordVector();
 
 		/* Store the Dale-Chall wordlist */
-		storeDaleChallList(WordVector daleChallVector);
+		storeDaleChallList(daleChallVector);
 
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
