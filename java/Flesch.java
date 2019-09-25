@@ -25,6 +25,10 @@ public class Flesch
 		{
 			word = analyzedFileScanner.nextLine();
 
+			// Convert the word to an uppercase word to allow
+			// non-case sensitive vector search
+			word = word.toUpperCase();
+
 			daleChallVector.add(word);
 		}
 
