@@ -618,7 +618,7 @@ public class Flesch
 				countSyllables(word);
 
 				/* Locate the word in the Dale-Chall Vector */
-				bool wordInVector = daleChallVector.wordVector.contains(word.toUpperCase());
+				boolean wordInVector = daleChallVector.wordVector.contains(word.toUpperCase());
 
 				System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
 			}
