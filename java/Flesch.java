@@ -17,12 +17,17 @@ public class Flesch
 
 		String word = "";
 
+		/* Create a vector */
+		Vector daleChallVector = new Vector();
+
 		while (analyzedFileScanner.hasNextLine())
 		{
 			word = analyzedFileScanner.nextLine();
 
-			System.out.println(word);
+			daleChallVector.add(word);
 		}
+
+		System.out.println(daleChallVector);
 	}
 /*
 	public void insertAlphabetically(DaleChallVector wordVector,
