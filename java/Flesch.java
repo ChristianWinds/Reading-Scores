@@ -16,8 +16,8 @@ public class Flesch
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 		// Accessed September 24, 2019
-		File analyzedFile = new File("/pub/pounds/);
-		Scanner analyzedFileScanner = new Scanner("/pub/pounds/CSC330/dalechall/wordlist1995.txt");
+		File analyzedFile = new File("/pub/pounds/CSC330/dalechall/wordlist1995.txt");
+		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
 		String word = "";
 
