@@ -568,7 +568,8 @@ public class Flesch
 	}
 */
 
-	public static void getWords(String line)
+	public static void getWords(String line,
+				    WordVector daleChallVector)
 	{
 		int currentIndex = 0;
 		int wordStartIndex = 0;
@@ -615,6 +616,11 @@ public class Flesch
 				word = line.substring(wordStartIndex, wordEndIndex);
 				System.out.println("getWords: word == \"" + word + "\"");
 				countSyllables(word);
+
+				/* Locate the word in the Dale-Chall Vector */
+				bool wordInVector = daleChallVector.wordVector.contains(word.toUpperCase());
+
+				System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
 			}
 
 			// Increment the current index to look for another word
@@ -659,7 +665,7 @@ public class Flesch
 		{
 			line = analyzedFileScanner.nextLine();
 
-			getWords(line);
+			getWords(line, daleChallVector);
 		}
 
 		/* Create the empty Dale-Chall vector */
