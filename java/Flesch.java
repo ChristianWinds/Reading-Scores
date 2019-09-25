@@ -610,6 +610,10 @@ public class Flesch
 	// Accessed September 24, 2019
 	public static void main(String[] args) throws Exception
 	{
+
+		/* Store the Dale-Chall wordlist */
+		storeDaleChallList();
+
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
 		// Code from GeeksforGeeks,
