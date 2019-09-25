@@ -8,7 +8,7 @@ public class Flesch
 	// Code from GeeksforGeeks,
 	// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 	// Accessed September 24, 2019
-	public static void storeDaleChallList() throws Exception
+	public static void storeDaleChallList(WordVector daleChallVector) throws Exception
 	{
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
@@ -18,9 +18,6 @@ public class Flesch
 
 		String word = "";
 
-		/* Create a vector */
-		Vector daleChallVector = new Vector();
-
 		while (analyzedFileScanner.hasNextLine())
 		{
 			word = analyzedFileScanner.nextLine();
@@ -29,10 +26,10 @@ public class Flesch
 			// non-case sensitive vector search
 			word = word.toUpperCase();
 
-			daleChallVector.add(word);
+			daleChallVector.wordVector.add(word);
 		}
 
-		System.out.println(daleChallVector);
+		System.out.println(daleChallVector.wordVector);
 	}
 /*
 	public void insertAlphabetically(DaleChallVector wordVector,
@@ -630,9 +627,11 @@ public class Flesch
 	// Accessed September 24, 2019
 	public static void main(String[] args) throws Exception
 	{
+		/* Create a Dale-Chall vector object */
+		WordVector daleChallVector = new WordVector();
 
 		/* Store the Dale-Chall wordlist */
-		storeDaleChallList();
+		storeDaleChallList(WordVector daleChallVector);
 
 		// Create a Scanner to read the keyboard entered filename of
 		// the file to analyze
