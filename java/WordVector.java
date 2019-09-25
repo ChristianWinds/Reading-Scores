@@ -1,5 +1,5 @@
 import java.util.*;
-public class DaleChallVector
+public class WordVector
 {
-	Vector<String> daleChallVector = new Vector();
+	Vector<String> wordVector = new Vector();
 }
