@@ -716,9 +716,9 @@ public class Flesch
 		}
 		else
 		{
-			if (!(totalWords > 0))
+			if (!(readValueCalcVariables.totalWords > 0))
 				System.out.println("No words found in file.");
-			if (!(sentences > 0))
+			if (!(readValueCalcVariables.sentences > 0))
 				System.out.println("No sentences found in file.");
 
 			System.out.println("As a result, the readability calculations could not be performed.");
