@@ -568,7 +568,7 @@ public class Flesch
 
 	public static void getWords(String line,
 				    WordVector daleChallVector,
-				    readValueCalcVariables readValueCalcVariables)
+				    ReadValueCalcVariables readValueCalcVariables)
 	{
 		int currentIndex = 0;
 		int wordStartIndex = 0;
@@ -683,7 +683,7 @@ public class Flesch
 		{
 			line = analyzedFileScanner.nextLine();
 
-			getWords(line, daleChallVector, ReadValueCalcVariables);
+			getWords(line, daleChallVector, readValueCalcVariables);
 		}
 
 		/* Create the empty Dale-Chall vector */
