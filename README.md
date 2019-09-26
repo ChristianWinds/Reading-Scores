@@ -1,1 +1,1 @@
-Java program: Compile Flesch.java with WordVector.java present in the same directory, and run Flesch.class with WordVector.java within the same directory.
+Java program: Compile Flesch.java with WordVector.java and ReadValueCalcVariables.java present in the same directory, and run Flesch.class with WordVector.class and ReadValueCalcVariables.class within the same directory.
