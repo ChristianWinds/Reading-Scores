@@ -507,10 +507,8 @@ public class Flesch
 		return fleschIndex;
 	}
 
-/*
-	public double calculateFleschKincaid(int totalSyllables,
-					    int totalWords,
-					    int totalSentences)
+
+	public double calculateFleschKincaid(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The total numbers of syllables, words, and
 		// sentences were obtained, and the total numbers of words and
@@ -520,20 +518,18 @@ public class Flesch
 
 		// Calculate the alpha value to prepare to calculate the
 		// Flesch-Kincaid Index
-		double alpha = (double) totalSyllables / (double) totalWords;
+		double alpha = (double) readValueCalcVariables.syllables / (double) readValueCalcVariables.totalWords;
 
 		// Calculate the beta value to prepare to calculate the
 		// Flesch-Kincaid Index
-		double beta = (double) totalWords / (double) totalSentences;
+		double beta = (double) readValueCalcVariables.totalWords / (double) readValueCalcVariables.sentences;
 
 		double fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
 
 		return fleschKincaidIndex;
 	}
-*/
-/*	public double calculateDaleChall(int difficultWords,
-					int totalWords,
-					int totalSentences)
+
+	public double calculateDaleChall(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The numbers of difficult words, total words,
 		// and sentences were recorded, and the total numbers of words
@@ -543,11 +539,11 @@ public class Flesch
 
 		// Calculate the alpha value to prepare to calculate the
 		// Dale-Chall score
-		double alpha = (double) difficultWords / (double) totalWords;
+		double alpha = (double) readValueCalcVariables.difficultWords / (double) readValueCalcVariables.totalWords;
 
 		// Calculate the beta value to prepare to calculate the
 		// Dale-Chall score
-		double beta = (double) totalWords / (double) totalSentences;
+		double beta = (double) readValueCalcVariables.totalWords / (double) readValueCalcVariables.sentences;
 
 		// Calculate the percentage of difficult words to prepare to
 		// calculate the Dale-Chall Score
@@ -564,7 +560,6 @@ public class Flesch
 
 		return daleChallScore;
 	}
-*/
 
 	public static void getWords(String line,
 				    WordVector daleChallVector,
@@ -706,13 +701,13 @@ public class Flesch
 		{
 			double fleschIndex = calculateFlesch(readValueCalcVariables);
 
-/* DISABLE			double fleschKincaidIndex = calculateFleschKincaid(readValueCalcVariables);
+			double fleschKincaidIndex = calculateFleschKincaid(readValueCalcVariables);
 
 			double daleChallScore = calculateDaleChallScore(readValueCalcVariables);
-*/
+
 			System.out.println("Flesch Readability Index: " + fleschIndex);
-/* DISABLE			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
-			System.out.println("Dale-Chall Readability Score: " + daleChallScore);*/
+			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
+			System.out.println("Dale-Chall Readability Score: " + daleChallScore);
 		}
 		else
 		{
