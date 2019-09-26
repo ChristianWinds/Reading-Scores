@@ -489,26 +489,24 @@ public class Flesch
 		}
 	}
 */
-/*	public double calculateFlesch(int totalSyllables,
-				     int totalWords,
-				     int totalSentences)
+	public double calculateFlesch(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition:
 		// Postcondition:
 
 		// Calculate the alpha value to prepare to calculate the Flesch
 		// Index
-		double alpha = (double) totalSyllables / (double) totalWords;
+		double alpha = (double) readValueCalcVariables.syllables / (double) readValueCalcVariables.totalWords;
 
 		// Calculate the beta value to prepare to calculate the Flesch
 		// Index
-		double beta = (double) totalWords / (double) totalSentences;
+		double beta = (double) readValueCalcVariables.totalWords / (double) readValueCalcVariables.sentences;
 
 		double fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
 
 		return fleschIndex;
 	}
-*/	
+
 /*
 	public double calculateFleschKincaid(int totalSyllables,
 					    int totalWords,
@@ -569,7 +567,8 @@ public class Flesch
 */
 
 	public static void getWords(String line,
-				    WordVector daleChallVector)
+				    WordVector daleChallVector,
+				    readValueCalcVariables readValueCalcVariables)
 	{
 		int currentIndex = 0;
 		int wordStartIndex = 0;
@@ -601,6 +600,16 @@ public class Flesch
 							wordEndIndex = currentIndex;
 							retrievingWord = false;
 						}
+						else if ((line.charAt(currentIndex) == '.') ||
+							 (line.charAt(currentIndex) == ':') ||
+							 (line.charAt(currentIndex) == ';') ||
+							 (line.charAt(currentIndex) == '?') ||
+							 (line.charAt(currentIndex) == '!'))
+						{
+							wordEndIndex = currentIndex;
+							retrievingWord = false;
+							readValueCalcVariables.sentences++;
+						}
 					}
 					else
 					{
@@ -614,11 +623,17 @@ public class Flesch
 				}
 
 				word = line.substring(wordStartIndex, wordEndIndex);
+				readValueCalcVariables.totalWords++;
 				System.out.println("getWords: word == \"" + word + "\"");
-				countSyllables(word);
+				readValueCalcVariables.syllables += countSyllables(word);
 
 				/* Locate the word in the Dale-Chall Vector */
 				boolean wordInVector = daleChallVector.wordVector.contains(word.toUpperCase());
+
+				if (!(wordInVector))
+				{
+					readValueCalcVariables.difficultWords++;
+				}
 
 				System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
 			}
@@ -659,22 +674,21 @@ public class Flesch
 		File analyzedFile = new File(filename);
 		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
+		/* Create an object to store reading score variables */
+		ReadValueCalcVariables readValueCalcVariables = new ReadValueCalcVariables();
+
 		String line = "";
 
 		while (analyzedFileScanner.hasNextLine())
 		{
 			line = analyzedFileScanner.nextLine();
 
-			getWords(line, daleChallVector);
+			getWords(line, daleChallVector, ReadValueCalcVariables);
 		}
 
 		/* Create the empty Dale-Chall vector */
 
 //		storeDaleChallList(/* Dale-Chall Vector */);
-
-		// Prepare integer variables to store the analyzed file
-		// values and calculate the reading scores and indexes
-//		ReadingValueCalculationVariables calculationVariables = new ReadingValueCalculationVariables();
 
 		// To prepare for the readability index and score
 		// calculations, obtain the analyzed file values
@@ -684,27 +698,21 @@ public class Flesch
 				 difficultWords,
 				 filename);
 */
-/*		// Calculate the reading indexes and score only if words
+		// Calculate the reading indexes and score only if words
 		// and syllables were found in the analyzed file to
 		// avoid a division by zero error
-		if ((totalWords > 0) &&
-		    (syllables > 0))
+		if ((readValueCalcVariables.totalWords > 0) &&
+		    (readValueCalcVariables.syllables > 0))
 		{
-			double fleschIndex = calculateFlesch(syllables,
-							     totalWords,
-							     sentences);
+			double fleschIndex = calculateFlesch(readValueCalcVariables);
 
-			double fleschKincaidIndex = calculateFleschKincaid(syllables,
-									   totalWords,
-									   sentences);
+/* DISABLE			double fleschKincaidIndex = calculateFleschKincaid(readValueCalcVariables);
 
-			double daleChallScore = calculateDaleChallScore(difficultWords,
-									totalWords,
-									sentences);
-
+			double daleChallScore = calculateDaleChallScore(readValueCalcVariables);
+*/
 			System.out.println("Flesch Readability Index: " + fleschIndex);
-			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
-			System.out.println("Dale-Chall Readability Score: " + daleChallScore);
+/* DISABLE			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
+			System.out.println("Dale-Chall Readability Score: " + daleChallScore);*/
 		}
 		else
 		{
@@ -715,5 +723,5 @@ public class Flesch
 
 			System.out.println("As a result, the readability calculations could not be performed.");
 		}
-*/	}
+	}
 }
