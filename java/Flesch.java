@@ -489,7 +489,7 @@ public class Flesch
 		}
 	}
 */
-	public double calculateFlesch(ReadValueCalcVariables readValueCalcVariables)
+	public static double calculateFlesch(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition:
 		// Postcondition:
