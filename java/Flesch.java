@@ -529,7 +529,7 @@ public class Flesch
 		return fleschKincaidIndex;
 	}
 
-	public static double calculateDaleChall(ReadValueCalcVariables readValueCalcVariables)
+	public static double calculateDaleChallScore(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The numbers of difficult words, total words,
 		// and sentences were recorded, and the total numbers of words
