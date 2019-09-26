@@ -508,7 +508,7 @@ public class Flesch
 	}
 
 
-	public double calculateFleschKincaid(ReadValueCalcVariables readValueCalcVariables)
+	public static double calculateFleschKincaid(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The total numbers of syllables, words, and
 		// sentences were obtained, and the total numbers of words and
@@ -529,7 +529,7 @@ public class Flesch
 		return fleschKincaidIndex;
 	}
 
-	public double calculateDaleChall(ReadValueCalcVariables readValueCalcVariables)
+	public static double calculateDaleChall(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The numbers of difficult words, total words,
 		// and sentences were recorded, and the total numbers of words
