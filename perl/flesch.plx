@@ -1,6 +1,12 @@
 #!/usr/bin/perl -w
 use warnings;
 use strict;
+=begin comment
+Code from Perl Maven,
+https://perlmaven.com/how-to-get-index-of-element-in-array
+Accessed Monday, September 30, 2019
+=cut
+use List::MoreUtils qw(first_index);
 
 =begin comment
 Code from Perl.com,
@@ -11,6 +17,8 @@ open my $dalechallfile, "/pub/pounds/CSC330/dalechall/wordlist1995.txt" or die "
 my $dale_chall_file_content = do {local $/; <$dalechallfile> };
 
 print($dale_chall_file_content ,"\n");
+
+my @dalechallwordsarray = split(' ', $dale_chall_file_content);
 
 =begin comment
 Code from Perl.com,
@@ -37,6 +45,7 @@ foreach my $i (@analyzedfilewords)
 
 my $totalwords = 0;
 my $syllables = 0;
+my $difficultwords = 0;
 
 # Analyze each word to obtain the values for the reading value calculations
 foreach my $potentialword (@analyzedfilewords)
@@ -68,6 +77,16 @@ Accessed Monday, September 30, 2019
 		{
 			$readingsyllable = 0;
 		}
+	}
+
+=begin comment
+Code from Perl Maven,
+https://perlmaven.com/how-to-get-index-of-element-in-array
+Accessed Monday, September 30, 2019
+=cut
+	if (first_index { $_ eq $potentialword } @dalechallwordsarray )
+	{
+		$difficultwords++;
 	}
 
 	$totalwords++;
