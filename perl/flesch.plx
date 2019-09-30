@@ -34,7 +34,8 @@ Accessed Monday, September 30, 2019
 =cut
 
 my @spl = split(' ', $file_content)
-foreach my $i (@spl)
+my $i = 0;
+foreach $i (@spl)
 {
 	print "$i\n"
 }
