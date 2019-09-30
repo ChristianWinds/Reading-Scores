@@ -45,3 +45,5 @@ foreach my $j (@spl)
 {
 	$totalwords++;
 }
+
+print "Total words: $totalwords\n";
