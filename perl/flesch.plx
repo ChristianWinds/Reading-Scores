@@ -18,9 +18,17 @@ my @dalechallwordsarray = split(' ', $dale_chall_file_content);
 Code from Perl.com,
 https://www.perl.com/article/21/2013/4/21/Read-an-entire-file-into-a-string/
 Accessed Monday, September 30, 2019
+and from Perl Tutorial,
+https://www.perltutorial.org/perl-read-file/
+Accessed Monday, September 30, 2019
+and from Perl Maven,
+https://perlmaven.com/read-from-stdin
+Accessed Monday, September 30, 2019
 =cut
-
-open my $fh, '<', 'twoSentences.txt' or die "Can't open file $!";
+print "Enter filename: ";
+my $analyzedfilename = <STDIN>;
+chomp $analyzedfilename;
+open my $fh, '<', $analyzedfilename or die "Can't open file $!";
 my $analyzed_file_content = do {local $/; <$fh> };
 
 print($analyzed_file_content ,"\n");
