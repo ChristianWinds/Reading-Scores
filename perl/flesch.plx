@@ -39,6 +39,7 @@ foreach my $i (@analyzedfilewords)
 
 my $totalwords = 0;
 my $syllables = 0;
+my $sentences = 0;
 my $difficultwords = 0;
 
 # Analyze each word to obtain the values for the reading value calculations
@@ -71,6 +72,15 @@ Accessed Monday, September 30, 2019
 		{
 			$readingsyllable = 0;
 		}
+
+		if (($charinword eq '.') or
+		    ($charinword eq ':') or
+		    ($charinword eq ';') or
+		    ($charinword eq '?') or
+		    ($charinword eq '!'))
+		{
+			$sentences++;
+		}
 	}
 =begin comment
 Code from alvin alexander,
@@ -87,4 +97,5 @@ Accessed Monday, September 30, 2019
 
 print "Total words: $totalwords\n";
 print "Syllables: $syllables\n";
+print "Sentences: $sentences\n";
 print "Difficult Words: $difficultwords\n";
