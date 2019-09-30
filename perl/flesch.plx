@@ -1,12 +1,6 @@
 #!/usr/bin/perl -w
 use warnings;
 use strict;
-=begin comment
-Code from Perl Maven,
-https://perlmaven.com/how-to-get-index-of-element-in-array
-Accessed Monday, September 30, 2019
-=cut
-use List::MoreUtils qw(first_index);
 
 =begin comment
 Code from Perl.com,
@@ -78,13 +72,12 @@ Accessed Monday, September 30, 2019
 			$readingsyllable = 0;
 		}
 	}
-
 =begin comment
-Code from Perl Maven,
-https://perlmaven.com/how-to-get-index-of-element-in-array
+Code from alvin alexander,
+https://alvinalexander.com/perl/perl-array-contains-grep-search-how-test
 Accessed Monday, September 30, 2019
 =cut
-	if (first_index { $_ eq $potentialword } @dalechallwordsarray )
+	if (not (grep { $_ eq $potentialword } @dalechallwordsarray ))
 	{
 		$difficultwords++;
 	}
@@ -94,3 +87,4 @@ Accessed Monday, September 30, 2019
 
 print "Total words: $totalwords\n";
 print "Syllables: $syllables\n";
+print "Difficult Words: $difficultwords\n";
