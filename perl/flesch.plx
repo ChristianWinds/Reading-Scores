@@ -26,3 +26,15 @@ open my $fh, '<', 'twoSentences.txt' or die "Can't open file $!";
 my $file_content = do {local $/; <$fh> };
 
 print($file_content ,"\n");
+
+=begin comment
+Code from GeeksforGeeks,
+https://www.geeksforgeeks.org/perl-split-function/
+Accessed Monday, September 30, 2019
+=cut
+
+my @spl = split(' ', $file_content)
+foreach my $i (@spl)
+{
+	print "$i\n"
+}
