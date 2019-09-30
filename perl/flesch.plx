@@ -38,3 +38,10 @@ foreach my $i (@spl)
 {
 	print "$i\n";
 }
+
+my $totalwords = 0;
+
+foreach my $j (@spl)
+{
+	$totalwords++;
+}
