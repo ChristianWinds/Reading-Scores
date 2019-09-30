@@ -33,9 +33,8 @@ https://www.geeksforgeeks.org/perl-split-function/
 Accessed Monday, September 30, 2019
 =cut
 
-my @spl = split(' ', $file_content)
-my $i = 0;
-foreach $i (@spl)
+my @spl = split(' ', $file_content);
+foreach my $i (@spl)
 {
-	print "$i\n"
+	print "$i\n";
 }
