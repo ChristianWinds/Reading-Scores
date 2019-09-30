@@ -3,7 +3,7 @@
 -- Accessed Monday, September 30th, 2019
 with Ada.Command_Line, Ada.Text_IO; use Ada.Command_Line, Ada.Text_IO;
 procedure flesch is
-   Read_From : constant String := "input.txt";
+   Read_From : constant String := "/pub/pounds/CSC330/dalechall/wordlist1995.txt";
    Write_To  : constant String := "output.txt";
  
    Input, Output : File_Type;
