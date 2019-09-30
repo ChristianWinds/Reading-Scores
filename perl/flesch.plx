@@ -17,16 +17,12 @@ while (<FILE>)
 }
 
 =begin comment
-Code from Beginning Perl,
-https://docs.google.com/viewer?url=https%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap06.pdf
-Accessed Thursday, September 26, 2019
+Code from Perl.com,
+https://www.perl.com/article/21/2013/4/21/Read-an-entire-file-into-a-string/
+Accessed Monday, September 30, 2019
 =cut
 
-open FILE, "twoSentences.txt" or die $!;
-my $linenob = 1;
+open my $fh, '<', 'twoSentences.txt' or die "Can't open file $!";
+my $file_content = do {local $/; <$fh> };
 
-while (<FILE>)
-{
-	print $linenob++;
-	print ": $_";
-}
+print($file_content ,"\n");
