@@ -39,6 +39,7 @@ begin
       begin
          -- You can process the contents of Line here.
          Put_Line (Output, Line);
+	 Ada.Text_IO.Put_Line ("Line ended.");
       end;
    end loop;
    Close (Input);
