@@ -36,6 +36,13 @@ begin
               Mode => Out_File,
               Name => Write_To);
    exception
+      when others =>
+         Put_Line (Standard_Error,
+                   "Can not create a file named '" & Write_To & "'.");
+         Set_Exit_Status (Failure);
+         return;
+   end;
+
 -- Code from The Craft of Coding,
 -- https://craftofcoding.wordpress.com/2018/04/04/coding-ada-reading-lines-from-files/
 -- Accessed Tuesday, October 1st, 2019
@@ -55,12 +62,6 @@ loop
    -- do something with the line of text
    end loop;
    
-      when others =>
-         Put_Line (Standard_Error,
-                   "Can not create a file named '" & Write_To & "'.");
-         Set_Exit_Status (Failure);
-         return;
-   end;
  
    loop
       declare
