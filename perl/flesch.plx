@@ -248,6 +248,7 @@ Accessed Monday, September 30, 2019
 
 	# Trim the potential word to evaluate a valid word that may be in the potential word
 	my $trimmedword = TrimWord($potentialword);
+	print "Trimmed word: $trimmedword\n";
 
 	my @wordcharacters = split(//, $trimmedword);
 	my $readingsyllable = 0;
