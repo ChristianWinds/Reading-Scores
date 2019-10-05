@@ -169,7 +169,7 @@ Postcondition:
 	my $isalphanumeric = 0;
 
 	# Check the character to determine if the character is alphanumeric
-	if ((DetectAlphabetChar($character) or
+	if ((DetectAlphabetChar($character)) or
 	    (DetectNumericChar($character)))
 	{
 		$isalphanumeric = 1;
