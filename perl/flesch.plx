@@ -412,7 +412,7 @@ my $fleschindex = CalculateFlesch($syllables,
 				  $sentences);
 my $fleschkincaidindex = CalculateFleschKincaid($syllables,
 						$totalwords,
-						$sentences;
+						$sentences);
 my $dalechallscore = CalculateDaleChallScore($difficultwords,
 					     $totalwords,
 					     $sentences);
