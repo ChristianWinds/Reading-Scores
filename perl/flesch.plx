@@ -2,6 +2,19 @@
 use warnings;
 use strict;
 
+sub TrimWord
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+	my $word = $_[0];
+
+# Check the word's left to remove non-word characters
+if ()
+
+}
+
 sub DetectSentenceEnd
 {
 =begin comment
@@ -118,10 +131,14 @@ Code from Perl.com,
 https://www.perl.com/article/42/2013/10/3/How-to-read-a-string-into-an-array-of-characters-using-split/
 Accessed Monday, September 30, 2019
 =cut
-	my @wordcharacters = split(//, $potentialword);
+
+	# Trim the potential word to evaluate a valid word that may be in the potential word
+	my $trimmedword = TrimWord($potentialword);
+
+	my @wordcharacters = split(//, $trimmedword);
 	my $readingsyllable = 0;
 
-	# Search the current word to find syllables and seentence end punctuation
+	# Search the current word to find syllables and sentence end punctuation
 	for my $charinword (@wordcharacters)
 	{
 		# Detect individual and successive vowels to count syllables in the word
