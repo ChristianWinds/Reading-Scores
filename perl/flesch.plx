@@ -63,6 +63,7 @@ Postcondition:
 		}
 
 		print "TrimWord: Right character updated\n";
+		print "TrimWord: word == $word\n";
 		print "TrimWord: wordlength == $wordlength\n";
 		print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
 	}
