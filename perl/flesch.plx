@@ -18,11 +18,11 @@ Postcondition:
 	    ($character eq '?') or
 	    ($character eq '!'))
 	{
-		issentenceend = 1;
+		$issentenceend = 1;
 	}
 	else
 	{
-		issentenceend = 0;
+		$issentenceend = 0;
 	}
 
 	return $issentenceend;
