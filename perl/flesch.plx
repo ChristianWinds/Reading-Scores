@@ -228,6 +228,26 @@ Postcondition:
 	return $isalphanumeric;
 }
 
+sub CalculateFlesch
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+
+	my $syllables = $_[0];
+	my $words = $_[1];
+	my $sentences = $_[2];
+
+	# Calculate the alpha and beta values to prepare to use alpha and beta in the flesch calculation
+	my $alpha = $syllables / $words;
+	my $beta = $words / $sentences;
+
+	my $fleschindex = 206.835 - ($alpha * 84.6) - ($beta * 1.015);
+
+	return $fleschindex;
+}
+
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
 =begin comment
 Code from Perl.com,
@@ -339,4 +359,10 @@ print "Syllables: $syllables\n";
 print "Sentences: $sentences\n";
 print "Difficult Words: $difficultwords\n";
 
+$fleschindex = CalculateFlesch($syllables, $words, $sentences);
+$fleschkincaidindex = CalculateFleschKincaid();
+$dalechallscore = CalculateDaleChallScore();
 
+print "Flesch Readability Index: $fleschReadabilityIndex\n";
+print "Flesch-Kincaid Grade Level Index: $fleschkincaidindex\n";
+print "Dale-Chall Readability Score: $dalechallscore\n";
