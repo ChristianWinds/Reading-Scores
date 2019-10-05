@@ -90,7 +90,7 @@ Accessed Monday, September 30, 2019
 	my $sentences = 0;
 
 	# Check each word character to tally the number of sentence-end punctuation characters in the word
-	for my $charinword (@wordcharacters)
+	for my $charinword (@stringcharacters)
 	{
 		if (DetectSentenceEndChar($charinword))
 		{
