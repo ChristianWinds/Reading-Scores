@@ -45,6 +45,7 @@ Postcondition:
 	}
 
 	print "TrimWord: Right character check\n";
+	print "TrimWord: word == $word\n";
 	print "TrimWord: wordlength == $wordlength\n";
 	print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
 
