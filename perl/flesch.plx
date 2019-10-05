@@ -134,6 +134,54 @@ Postcondition:
 	return $isvowel;
 }
 
+sub DetectNumericChar
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+
+	my $character = $_[0];
+	my $isnumeric = 0;
+
+	# Check the character to determine if the character is alphabetic
+	if (($character ge '0') or
+	    ($character le '9'))
+	{
+		$isnumeric = 1;
+	}
+	else
+	{
+		$isnumeric = 0;
+	}
+
+	return $isnumeric;
+}
+
+sub DetectAlphabetChar
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+
+	my $character = $_[0];
+	my $isalphabetic = 0;
+
+	# Check the character to determine if the character is alphabetic
+	if (($character ge 'A') or
+	    ($character le 'Z'))
+	{
+		$isalphabetic = 1;
+	}
+	else
+	{
+		$isalphabetic = 0;
+	}
+
+	return $isalphabetic;
+}
+
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
 =begin comment
 Code from Perl.com,
