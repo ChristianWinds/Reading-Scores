@@ -711,7 +711,7 @@ public class Flesch
 		// Check if the word holds an alphabetic character to determine
 		// if the word is valid
 		while ((!wordIsValid) &&
-		       (currentIndex < wordLength)
+		       (currentIndex < wordLength))
 		{
 			char currentCharacter = word.charAt(currentIndex);
 
