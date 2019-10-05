@@ -653,7 +653,7 @@ public class Flesch
 		}
 	}
 
-	string trimWord(string word)
+	public static String trimWord(String word)
 	{
 	        // Precondition: The received word holds at least one alphanumeric
 	        // character
@@ -666,7 +666,7 @@ public class Flesch
 
 	        if (wordLength > 0)
 	        {
-	                char lastWordCharacter = word.at(wordLength - 1);
+	                char lastWordCharacter = word.charAt(wordLength - 1);
 
 	                // Check if the word's last character is not alphanumeric to
 	                // decide whether to trim the word
@@ -676,14 +676,14 @@ public class Flesch
 	                {
 	                        // Trim the word to remove the non-alphanumeric
 	                        // character from the word end
-	                        word = word.substr(0, wordLength - 1);
+	                        word = word.substring(0, wordLength - 2);
 
 	                        // Update the word length and stored last word character
 	                        // to check the new last word character
 	                        wordLength = word.length();
 	                        if (wordLength > 0)
 	                        {
-	                                lastWordCharacter = word.at(wordLength - 1);
+	                                lastWordCharacter = word.charAt(wordLength - 1);
 	                        }
 	                }
 	        }
