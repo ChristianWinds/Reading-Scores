@@ -144,7 +144,7 @@ Postcondition:
 	my $character = $_[0];
 	my $isnumeric = 0;
 
-	# Check the character to determine if the character is alphabetic
+	# Check the character to determine if the character is numeric
 	if (($character ge '0') or
 	    ($character le '9'))
 	{
@@ -158,7 +158,7 @@ Postcondition:
 	return $isnumeric;
 }
 
-sub DetectAlphabetChar
+sub DetectAlphanumericChar
 {
 =begin comment
 Precondition:
@@ -166,20 +166,20 @@ Postcondition:
 =cut
 
 	my $character = $_[0];
-	my $isalphabetic = 0;
+	my $isalphanumeric = 0;
 
-	# Check the character to determine if the character is alphabetic
-	if (($character ge 'A') or
-	    ($character le 'Z'))
+	# Check the character to determine if the character is alphanumeric
+	if ((DetectAlphabetChar($character) or
+	    (DetectNumericChar($character)))
 	{
-		$isalphabetic = 1;
+		$isalphanumeric = 1;
 	}
 	else
 	{
-		$isalphabetic = 0;
+		$isalphanumeric = 0;
 	}
 
-	return $isalphabetic;
+	return $isalphanumeric;
 }
 
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
