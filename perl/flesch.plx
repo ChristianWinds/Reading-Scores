@@ -41,7 +41,7 @@ Postcondition:
 	# Retrieve the word's last character only if the word has a length more than zero to avoid an error
 	if ($wordlength > 0)
 	{
-		$lastwordcharacter = substr($word, 0, 1);
+		$lastwordcharacter = substr($word, -1);
 	}
 
 	print "TrimWord: Right character check\n";
@@ -59,7 +59,7 @@ Postcondition:
 		# Retrieve the word's last character only if the word has a length more than zero to avoid an error
 		if ($wordlength > 0)
 		{
-			$lastwordcharacter = substr($word, 0, 1);
+			$lastwordcharacter = substr($word, -1);
 		}
 
 		print "TrimWord: Right character updated\n";
