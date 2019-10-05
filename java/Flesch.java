@@ -627,7 +627,7 @@ public class Flesch
 					}
 				}
 
-				word = line.substring(wordStartIndex, wordEndIndex - 1);
+				word = line.substring(wordStartIndex, wordEndIndex);
 				readValueCalcVariables.totalWords++;
 				System.out.println("getWords: word == \"" + word + "\"");
 				readValueCalcVariables.syllables += countSyllables(word);
