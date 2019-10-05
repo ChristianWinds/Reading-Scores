@@ -341,6 +341,7 @@ public class Flesch
 				    (currentIndex == wordLength - 1)))
 				{
 					System.out.println("TEST: countSyllables: Passed <if (!(((readCharacter == 'e') || (readCharacter == 'E')) && (currentIndex == wordLength - 1)))>");
+					syllables++;
 
 					// Read the successive vowels in the
 					// word to find the end of the current
@@ -429,7 +430,7 @@ public class Flesch
 		return isVowel;
 	}
 
-/*	public boolean detectAlphabetChar(char character)
+	public static boolean detectAlphabetChar(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -449,8 +450,8 @@ public class Flesch
 
 		return isAlphabetic;
 	}
-*/
-/*	public boolean detectNumericChar(char character)
+
+	public static boolean detectNumericChar(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -465,7 +466,7 @@ public class Flesch
 
 		return isNumeric;
 	}
-*/
+
 /*	public boolean detectWordCharacter(char character)
 	{
 		// Precondition:
@@ -574,9 +575,14 @@ public class Flesch
 
 		while (currentIndex < lineLength)
 		{
-			// Scan the line for a non-whitespace character to begin
+			// Store the current word character to check that
+			// character
+			char currentCharacter = line.charAt(currentIndex);
+
+			// Scan the line for an alphanumeric character to begin
 			// retrieving a word
-			if (line.charAt(currentIndex) != ' ')
+			if (detectAlphabetChar(currentCharacter) ||
+			    detectNumericChar(currentCharacter))
 			{
 				wordStartIndex = currentIndex;
 				retrievingWord = true;
@@ -590,16 +596,21 @@ public class Flesch
 					currentIndex++;
 					if (currentIndex < lineLength)
 					{
-						if (line.charAt(currentIndex) == ' ')
+						// Update the currentCharacter
+						// variable to check the new
+						// current character
+						currentCharacter = line.charAt(currentIndex);
+
+						if (currentCharacter == ' ')
 						{
 							wordEndIndex = currentIndex;
 							retrievingWord = false;
 						}
-						else if ((line.charAt(currentIndex) == '.') ||
-							 (line.charAt(currentIndex) == ':') ||
-							 (line.charAt(currentIndex) == ';') ||
-							 (line.charAt(currentIndex) == '?') ||
-							 (line.charAt(currentIndex) == '!'))
+						else if ((currentCharacter == '.') ||
+							 (currentCharacter == ':') ||
+							 (currentCharacter == ';') ||
+							 (currentCharacter == '?') ||
+							 (currentCharacter == '!'))
 						{
 							wordEndIndex = currentIndex;
 							retrievingWord = false;
