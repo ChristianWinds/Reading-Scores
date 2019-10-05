@@ -278,6 +278,22 @@ Postcondition:
 	my $totalwords = $_[1]
 	my $sentences = $_[2];
 
+	# Calculate the alpha and beta values to prepare to use alpha and beta in the Dale-Chall calculation
+	my $alpha = $difficultwords / $totalwords;
+	my $beta = $totalwords / $sentences;
+
+	my $difficultwordpercentage = $alpha * 100;
+
+	my $dalechallscore = ($difficultwordpercentage * 0.1579) +
+			     ($beta * 0.0496);
+
+	# If the difficult word percentage is more than 5, increase the Dale-Chall Score by 3.6365 to fulfill the associated Dale-Chall calculation step
+	if ($difficultwordpercentage > 5)
+	{
+		$dalechallscore += 3.6365;
+	}
+
+	return $dalechallscore;
 }
 
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
