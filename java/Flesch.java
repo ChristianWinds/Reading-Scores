@@ -378,7 +378,7 @@ public class Flesch
 		return syllables;
 	}
 
-/*	public boolean detectSentenceEnd()
+	public static boolean detectSentenceEnd(char character)
 	{
 		// Precondition:
 		// Postcondition: The state of whether the received character
@@ -401,7 +401,7 @@ public class Flesch
 
 		return endOfSentence;
 	}
-*/
+
 	public static boolean detectVowel(char character)
 	{
 		// Precondition:
@@ -467,7 +467,7 @@ public class Flesch
 		return isNumeric;
 	}
 
-/*	public boolean detectWordCharacter(char character)
+	public static boolean detectWordCharacter(char character)
 	{
 		// Precondition:
 		// Postcondition:
@@ -488,8 +488,10 @@ public class Flesch
 		{
 			isWordCharacter = false;
 		}
+
+		return isWordCharacter;
 	}
-*/
+
 	public static double calculateFlesch(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition:
@@ -507,7 +509,6 @@ public class Flesch
 
 		return fleschIndex;
 	}
-
 
 	public static double calculateFleschKincaid(ReadValueCalcVariables readValueCalcVariables)
 	{
@@ -590,8 +591,9 @@ public class Flesch
 				while ((retrievingWord) &&
 				       (currentIndex < lineLength))
 				{
-					// Scan the line for a whitespace
-					// character or the line end to stop
+					// Scan the line for sentence-ending
+					// punctuation, another non-word
+					// character, or the line end to stop
 					// retrieving the word
 					currentIndex++;
 					if (currentIndex < lineLength)
@@ -601,16 +603,13 @@ public class Flesch
 						// current character
 						currentCharacter = line.charAt(currentIndex);
 
-						if (currentCharacter == ' ')
+						if (!detectWordCharacter(currentCharacter))
 						{
 							wordEndIndex = currentIndex;
 							retrievingWord = false;
 						}
-						else if ((currentCharacter == '.') ||
-							 (currentCharacter == ':') ||
-							 (currentCharacter == ';') ||
-							 (currentCharacter == '?') ||
-							 (currentCharacter == '!'))
+
+						if (detectSentenceEnd(currentCharacter))
 						{
 							wordEndIndex = currentIndex;
 							retrievingWord = false;
@@ -642,6 +641,10 @@ public class Flesch
 				}
 
 				System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
+			}
+			else if (detectSentenceEnd(currentCharacter))
+			{
+				readValueCalcVariables.sentences++;
 			}
 
 			// Increment the current index to look for another word
