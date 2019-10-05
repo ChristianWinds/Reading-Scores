@@ -407,9 +407,15 @@ print "Syllables: $syllables\n";
 print "Sentences: $sentences\n";
 print "Difficult Words: $difficultwords\n";
 
-$fleschindex = CalculateFlesch($syllables, $words, $sentences);
-$fleschkincaidindex = CalculateFleschKincaid();
-$dalechallscore = CalculateDaleChallScore();
+$fleschindex = CalculateFlesch($syllables,
+			       $totalwords,
+			       $sentences);
+$fleschkincaidindex = CalculateFleschKincaid($syllables,
+					     $totalwords,
+					     $sentences;
+$dalechallscore = CalculateDaleChallScore($difficultwords,
+					  $totalwords,
+					  $sentences);
 
 print "Flesch Readability Index: $fleschReadabilityIndex\n";
 print "Flesch-Kincaid Grade Level Index: $fleschkincaidindex\n";
