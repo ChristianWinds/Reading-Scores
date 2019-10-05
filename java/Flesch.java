@@ -653,6 +653,44 @@ public class Flesch
 		}
 	}
 
+	string trimWord(string word)
+	{
+	        // Precondition: The received word holds at least one alphanumeric
+	        // character
+	        // Postcondition: The received word was shortened up to the word's last
+	        // alphanumeric character, and the word was returned to this function's
+	        // caller
+
+	        // Store the word's length for use in locating the word's last character
+	        int wordLength = word.length();
+
+	        if (wordLength > 0)
+	        {
+	                char lastWordCharacter = word.at(wordLength - 1);
+
+	                // Check if the word's last character is not alphanumeric to
+	                // decide whether to trim the word
+	                while (((!(detectAlphabetChar(lastWordCharacter))) &&
+	                       (!(detectNumericChar(lastWordCharacter)))) &&
+	                       (wordLength > 0))
+	                {
+	                        // Trim the word to remove the non-alphanumeric
+	                        // character from the word end
+	                        word = word.substr(0, wordLength - 1);
+
+	                        // Update the word length and stored last word character
+	                        // to check the new last word character
+	                        wordLength = word.length();
+	                        if (wordLength > 0)
+	                        {
+	                                lastWordCharacter = word.at(wordLength - 1);
+	                        }
+	                }
+	        }
+
+	        return word;
+	}
+
 	// Code from GeeksforGeeks,
 	// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 	// Accessed September 24, 2019
