@@ -629,19 +629,25 @@ public class Flesch
 
 				word = line.substring(wordStartIndex, wordEndIndex);
 				word = trimWord(word);
-				readValueCalcVariables.totalWords++;
-				System.out.println("getWords: word == \"" + word + "\"");
-				readValueCalcVariables.syllables += countSyllables(word);
 
-				/* Locate the word in the Dale-Chall Vector */
-				boolean wordInVector = daleChallVector.wordVector.contains(word.toUpperCase());
-
-				if (!(wordInVector))
+				// Check if the retrieved word is a valid word
+				// to prevent incorrect word and syllable counts
+				if (detectValidWord(word))
 				{
-					readValueCalcVariables.difficultWords++;
-				}
+					readValueCalcVariables.totalWords++;
+					System.out.println("getWords: word == \"" + word + "\"");
+					readValueCalcVariables.syllables += countSyllables(word);
 
-				System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
+					/* Locate the word in the Dale-Chall Vector */
+					boolean wordInVector = daleChallVector.wordVector.contains(word.toUpperCase());
+
+					if (!(wordInVector))
+					{
+						readValueCalcVariables.difficultWords++;
+					}
+
+					System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
+				}
 			}
 			else if (detectSentenceEnd(currentCharacter))
 			{
@@ -689,6 +695,37 @@ public class Flesch
 	        }
 
 	        return word;
+	}
+
+	public static boolean detectValidWord (String word)
+	{
+		// Precondition:
+		// Postcondition:
+
+		// Create variables to track word character indexes
+		int currentIndex = 0;
+		int wordLength = word.length();
+
+		boolean wordIsValid = false;
+
+		// Check if the word holds an alphabetic character to determine
+		// if the word is valid
+		while ((!wordIsValid) &&
+		       (currentIndex < wordLength)
+		{
+			char currentCharacter = word.charAt(currentIndex);
+
+			if (detectAlphabetChar(currentCharacter))
+			{
+				wordIsValid = true;
+			}
+			else
+			{
+				wordIsValid = false;
+			}
+		}
+
+		return wordIsValid;
 	}
 
 	// Code from GeeksforGeeks,
