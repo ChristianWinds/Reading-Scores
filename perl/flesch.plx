@@ -18,6 +18,10 @@ Postcondition:
 		$firstwordcharacter = substr($word, 0, 1);
 	}
 
+	print "TrimWord: Left character check\n";
+	print "TrimWord: wordlength == $wordlength\n";
+	print "TrimWord: firstwordcharacter == $firstwordcharacter\n";
+
 	# Check the word's left to remove non-word characters
 	while (($wordlength > 0) and
 	       (not (DetectAlphabetChar($firstwordcharacter))))
@@ -103,6 +107,8 @@ Postcondition:
 	{
 		$isalphabetic = 0;
 	}
+
+	print "DetectAlphabetChar: Result for \"$character\": $isalphabetic\n"
 
 	return $isalphabetic;
 }
