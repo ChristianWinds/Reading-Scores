@@ -110,11 +110,7 @@ Accessed Monday, September 30, 2019
 		}
 
 		# Detect sentence-ending punctuation to count the number of sentences
-		if (($charinword eq '.') or
-		    ($charinword eq ':') or
-		    ($charinword eq ';') or
-		    ($charinword eq '?') or
-		    ($charinword eq '!'))
+		if (DetectSentenceEnd($charinword))
 		{
 			$sentences++;
 		}
