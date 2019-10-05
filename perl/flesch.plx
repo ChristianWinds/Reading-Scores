@@ -108,7 +108,7 @@ Postcondition:
 		$isalphabetic = 0;
 	}
 
-	print "DetectAlphabetChar: Result for \"$character\": $isalphabetic\n"
+	print "DetectAlphabetChar: Result for \"$character\": $isalphabetic\n";
 
 	return $isalphabetic;
 }
