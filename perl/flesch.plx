@@ -2,6 +2,7 @@
 use warnings;
 use strict;
 
+# Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
 =begin comment
 Code from Perl.com,
 https://www.perl.com/article/21/2013/4/21/Read-an-entire-file-into-a-string/
@@ -63,6 +64,7 @@ Accessed Monday, September 30, 2019
 
 	for my $charinword (@wordcharacters)
 	{
+		# Detect individual and successive vowels to count syllables in the word
 		if (($charinword eq 'a') or
 		    ($charinword eq 'e') or
 		    ($charinword eq 'i') or
@@ -81,6 +83,7 @@ Accessed Monday, September 30, 2019
 			$readingsyllable = 0;
 		}
 
+		# Detect sentence-ending punctuation to count the number of sentences
 		if (($charinword eq '.') or
 		    ($charinword eq ':') or
 		    ($charinword eq ';') or
@@ -90,6 +93,8 @@ Accessed Monday, September 30, 2019
 			$sentences++;
 		}
 	}
+
+	# Check the Dale-Chall array to determine if the word is a difficult word
 =begin comment
 Code from alvin alexander,
 https://alvinalexander.com/perl/perl-array-contains-grep-search-how-test
