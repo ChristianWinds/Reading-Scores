@@ -38,12 +38,12 @@ Postcondition:
 	my $isvowel = 0;
 
 	# Compare the character to each vowel to check if the character is a vowel
-	if (($charinword eq 'a') or
-	    ($charinword eq 'e') or
-	    ($charinword eq 'i') or
-	    ($charinword eq 'o') or
-	    ($charinword eq 'u') or
-	    ($charinword eq 'y'))
+	if (($character eq 'a') or
+	    ($character eq 'e') or
+	    ($character eq 'i') or
+	    ($character eq 'o') or
+	    ($character eq 'u') or
+	    ($character eq 'y'))
 	{
 		$isvowel = 1;
 	}
@@ -51,6 +51,8 @@ Postcondition:
 	{
 		$isvowel = 0;
 	}
+
+	return $isvowel;
 }
 
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
