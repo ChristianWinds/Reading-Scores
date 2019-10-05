@@ -64,6 +64,9 @@ Accessed Monday, September 30, 2019
 open my $dalechallfile, "/pub/pounds/CSC330/dalechall/wordlist1995.txt" or die "Can't open file $!";
 my $dale_chall_file_content = do {local $/; <$dalechallfile> };
 
+# Convert the Dale-Chall file words to uppercase to permit non-case sensitive word comparisons
+$dale_chall_file_content = uc $dale_chall_file_content;
+
 print($dale_chall_file_content ,"\n");
 
 my @dalechallwordsarray = split(' ', $dale_chall_file_content);
