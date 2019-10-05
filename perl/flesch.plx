@@ -287,7 +287,7 @@ my $difficultwords = 0;
 foreach my $potentialword (@analyzedfilewords)
 {
 	# Scan the potential word to add the word's number of sentence ending punctuation characters to the total sentence count
-	$sentences += ;	
+	$sentences += CountSentenceEndsInString($potentialword);	
 
 =begin comment
 Code from Perl.com,
@@ -302,7 +302,7 @@ Accessed Monday, September 30, 2019
 	my @wordcharacters = split(//, $trimmedword);
 	my $readingsyllable = 0;
 
-	# Search the current word to find syllables and sentence end punctuation
+	# Search the current word to find syllables
 	for my $charinword (@wordcharacters)
 	{
 		# Detect individual and successive vowels to count syllables in the word
@@ -317,12 +317,6 @@ Accessed Monday, September 30, 2019
 		else
 		{
 			$readingsyllable = 0;
-		}
-
-		# Detect sentence-ending punctuation to count the number of sentences
-		if (DetectSentenceEndChar($charinword))
-		{
-			$sentences++;
 		}
 	}
 
