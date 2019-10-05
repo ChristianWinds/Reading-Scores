@@ -628,6 +628,7 @@ public class Flesch
 				}
 
 				word = line.substring(wordStartIndex, wordEndIndex);
+				word = trimWord(word);
 				readValueCalcVariables.totalWords++;
 				System.out.println("getWords: word == \"" + word + "\"");
 				readValueCalcVariables.syllables += countSyllables(word);
@@ -651,7 +652,7 @@ public class Flesch
 			currentIndex++;
 		}
 	}
-	
+
 	// Code from GeeksforGeeks,
 	// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 	// Accessed September 24, 2019
