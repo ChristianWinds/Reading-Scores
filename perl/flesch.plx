@@ -83,6 +83,30 @@ Postcondition:
 	return $issentenceend;
 }
 
+sub DetectAlphabetChar
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+
+	my $character = $_[0];
+	my $isalphabetic = 0;
+
+	# Check the character to determine if the character is alphabetic
+	if (($character ge 'A') or
+	    ($character le 'Z'))
+	{
+		$isalphabetic = 1;
+	}
+	else
+	{
+		$isalphabetic = 0;
+	}
+
+	return $isalphabetic;
+}
+
 sub DetectVowelChar
 {
 =begin comment
@@ -93,12 +117,12 @@ Postcondition:
 	my $isvowel = 0;
 
 	# Compare the character to each vowel to check if the character is a vowel
-	if (($character eq 'a') or
-	    ($character eq 'e') or
-	    ($character eq 'i') or
-	    ($character eq 'o') or
-	    ($character eq 'u') or
-	    ($character eq 'y'))
+	if (($character eq 'A') or
+	    ($character eq 'E') or
+	    ($character eq 'I') or
+	    ($character eq 'O') or
+	    ($character eq 'U') or
+	    ($character eq 'Y'))
 	{
 		$isvowel = 1;
 	}
