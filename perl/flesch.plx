@@ -239,13 +239,32 @@ Postcondition:
 	my $words = $_[1];
 	my $sentences = $_[2];
 
-	# Calculate the alpha and beta values to prepare to use alpha and beta in the flesch calculation
+	# Calculate the alpha and beta values to prepare to use alpha and beta in the Flesch calculation
 	my $alpha = $syllables / $words;
 	my $beta = $words / $sentences;
 
 	my $fleschindex = 206.835 - ($alpha * 84.6) - ($beta * 1.015);
 
 	return $fleschindex;
+}
+
+sub CalculateFleschKincaid
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+	$syllables = $_[0];
+	$words = $_[1];
+	$sentences = $_[2];
+
+	# Calculate the alpha and beta values to prepare to use alpha and beta in the Flesch-Kincaid calculation
+	my $alpha = $syllables / $words;
+	my $beta = $words / $sentences;
+
+	my $fleschkincaidindex = ($alpha * 11.8) + ($beta * 0.39) - 15.59;
+
+	return $fleschkincaidindex;
 }
 
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
