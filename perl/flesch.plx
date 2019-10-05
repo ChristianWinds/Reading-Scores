@@ -417,6 +417,6 @@ my $dalechallscore = CalculateDaleChallScore($difficultwords,
 					     $totalwords,
 					     $sentences);
 
-print "Flesch Readability Index: $fleschReadabilityIndex\n";
+print "Flesch Readability Index: $fleschindex\n";
 print "Flesch-Kincaid Grade Level Index: $fleschkincaidindex\n";
 print "Dale-Chall Readability Score: $dalechallscore\n";
