@@ -2,6 +2,31 @@
 use warnings;
 use strict;
 
+sub DetectSentenceEnd
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+	my $character = $_[0];
+	my $issentenceend = 0;
+	
+	if (($character eq '.') or
+	    ($character eq ':') or
+	    ($character eq ';') or
+	    ($character eq '?') or
+	    ($character eq '!'))
+	{
+		issentenceend = 1;
+	}
+	else
+	{
+		issentenceend = 0;
+	}
+
+	return $issentenceend;
+}
+
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
 =begin comment
 Code from Perl.com,
