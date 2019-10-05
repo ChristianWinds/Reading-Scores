@@ -98,7 +98,7 @@ Postcondition:
 	my $isalphabetic = 0;
 
 	# Check the character to determine if the character is alphabetic
-	if (($character ge 'A') or
+	if (($character ge 'A') and
 	    ($character le 'Z'))
 	{
 		$isalphabetic = 1;
@@ -151,7 +151,7 @@ Postcondition:
 	my $isnumeric = 0;
 
 	# Check the character to determine if the character is numeric
-	if (($character ge '0') or
+	if (($character ge '0') and
 	    ($character le '9'))
 	{
 		$isnumeric = 1;
