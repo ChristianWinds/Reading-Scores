@@ -44,6 +44,10 @@ Postcondition:
 		$lastwordcharacter = substr($word, 0, 1);
 	}
 
+	print "TrimWord: Right character check\n";
+	print "TrimWord: wordlength == $wordlength\n";
+	print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
+
 	# Check the word's right to remove non-word characters
 	while (($wordlength > 0) and
 	       (not (DetectAlphanumericChar($lastwordcharacter))))
@@ -56,6 +60,10 @@ Postcondition:
 		{
 			$lastwordcharacter = substr($word, 0, 1);
 		}
+
+		print "TrimWord: Right character updated\n";
+		print "TrimWord: wordlength == $wordlength\n";
+		print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
 	}
 
 	return $word
