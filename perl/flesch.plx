@@ -267,7 +267,7 @@ Postcondition:
 	return $fleschkincaidindex;
 }
 
-sub CalculateDaleChall
+sub CalculateDaleChallScore
 {
 =begin comment
 Precondition:
