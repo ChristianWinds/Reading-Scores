@@ -115,15 +115,11 @@ Accessed Monday, September 30, 2019
 	my @wordcharacters = split(//, $potentialword);
 	my $readingsyllable = 0;
 
+	# Search the current word to find syllables and seentence end punctuation
 	for my $charinword (@wordcharacters)
 	{
 		# Detect individual and successive vowels to count syllables in the word
-		if (($charinword eq 'a') or
-		    ($charinword eq 'e') or
-		    ($charinword eq 'i') or
-		    ($charinword eq 'o') or
-		    ($charinword eq 'u') or
-		    ($charinword eq 'y'))
+		if (DetectVowelChar($charinword)
 		{
 			if (not($readingsyllable))
 			{
