@@ -71,7 +71,37 @@ Postcondition:
 	return $word
 }
 
-sub DetectSentenceEnd
+sub CountSentenceEndsInString
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+
+	my $string = $_[0];
+
+=begin comment
+Code from Perl.com,
+https://www.perl.com/article/42/2013/10/3/How-to-read-a-string-into-an-array-of-characters-using-split/
+Accessed Monday, September 30, 2019
+=cut
+
+	my @stringcharacters = split(//, $string);
+	my $sentences = 0;
+
+	# Check each word character to tally the number of sentence-end punctuation characters in the word
+	for my $charinword (@wordcharacters)
+	{
+		if (DetectSentenceEndChar($charinword))
+		{
+			$sentences++;
+		}
+	}
+
+	return $sentences;
+}
+
+sub DetectSentenceEndChar
 {
 =begin comment
 Precondition:
@@ -256,6 +286,9 @@ my $difficultwords = 0;
 # Analyze each word to obtain the values for the reading value calculations
 foreach my $potentialword (@analyzedfilewords)
 {
+	# Scan the potential word to add the word's number of sentence ending punctuation characters to the total sentence count
+	$sentences += ;	
+
 =begin comment
 Code from Perl.com,
 https://www.perl.com/article/42/2013/10/3/How-to-read-a-string-into-an-array-of-characters-using-split/
@@ -287,7 +320,7 @@ Accessed Monday, September 30, 2019
 		}
 
 		# Detect sentence-ending punctuation to count the number of sentences
-		if (DetectSentenceEnd($charinword))
+		if (DetectSentenceEndChar($charinword))
 		{
 			$sentences++;
 		}
