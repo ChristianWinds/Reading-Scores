@@ -275,7 +275,7 @@ Postcondition:
 =cut
 
 	my $difficultwords = $_[0];
-	my $totalwords = $_[1]
+	my $totalwords = $_[1];
 	my $sentences = $_[2];
 
 	# Calculate the alpha and beta values to prepare to use alpha and beta in the Dale-Chall calculation
