@@ -10,7 +10,8 @@ Postcondition:
 =cut
 	my $character = $_[0];
 	my $issentenceend = 0;
-	
+
+	# Check if the character is sentence-ending punctuation to flag a sentence end	
 	if (($character eq '.') or
 	    ($character eq ':') or
 	    ($character eq ';') or
