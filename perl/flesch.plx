@@ -64,7 +64,7 @@ Accessed Monday, September 30, 2019
 open my $dalechallfile, "/pub/pounds/CSC330/dalechall/wordlist1995.txt" or die "Can't open file $!";
 my $dale_chall_file_content = do {local $/; <$dalechallfile> };
 
-# Convert the Dale-Chall file words to uppercase to permit non-case sensitive word comparisons
+# Convert the Dale-Chall file words to uppercase to permit non-case sensitive word comparisons to the analyzed file words
 $dale_chall_file_content = uc $dale_chall_file_content;
 
 print($dale_chall_file_content ,"\n");
@@ -87,6 +87,9 @@ my $analyzedfilename = <STDIN>;
 chomp $analyzedfilename;
 open my $fh, '<', $analyzedfilename or die "Can't open file $!";
 my $analyzed_file_content = do {local $/; <$fh> };
+
+# Convert the analyzed file words to uppercase to allow non-case sensitive word comparisons to the Dale-Chall file words
+$analyzed_file_content = uc $analyzed_file_content;
 
 print($analyzed_file_content ,"\n");
 
