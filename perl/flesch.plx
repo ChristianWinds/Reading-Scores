@@ -28,6 +28,31 @@ Postcondition:
 	return $issentenceend;
 }
 
+sub DetectVowelChar
+{
+=begin comment
+Precondition:
+Postcondition:
+=cut
+	my $character = $_[0];
+	my $isvowel = 0;
+
+	# Compare the character to each vowel to check if the character is a vowel
+	if (($charinword eq 'a') or
+	    ($charinword eq 'e') or
+	    ($charinword eq 'i') or
+	    ($charinword eq 'o') or
+	    ($charinword eq 'u') or
+	    ($charinword eq 'y'))
+	{
+		$isvowel = 1;
+	}
+	else
+	{
+		$isvowel = 0;
+	}
+}
+
 # Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
 =begin comment
 Code from Perl.com,
