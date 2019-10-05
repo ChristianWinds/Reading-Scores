@@ -26,7 +26,7 @@ Postcondition:
 		$wordlength = length $word;
 
 		# Retrieve the word's first character only if the word has a length more than zero to avoid an error
-		if ($wordLength > 0)
+		if ($wordlength > 0)
 		{
 			$firstwordcharacter = substr($word, 0, 1);
 		}
