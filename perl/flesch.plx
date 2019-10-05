@@ -119,7 +119,7 @@ Accessed Monday, September 30, 2019
 	for my $charinword (@wordcharacters)
 	{
 		# Detect individual and successive vowels to count syllables in the word
-		if (DetectVowelChar($charinword)
+		if (DetectVowelChar($charinword))
 		{
 			if (not($readingsyllable))
 			{
