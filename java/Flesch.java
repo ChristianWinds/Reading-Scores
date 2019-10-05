@@ -723,6 +723,10 @@ public class Flesch
 			{
 				wordIsValid = false;
 			}
+
+			// Increment the current index to check the next
+			// character
+			currentIndex++;
 		}
 
 		return wordIsValid;
