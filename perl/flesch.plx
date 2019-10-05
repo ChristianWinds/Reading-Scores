@@ -20,7 +20,7 @@ Postcondition:
 
 	# Check the word's left to remove non-word characters
 	while (($wordlength > 0) and
-	       DetectAlphabetChar($firstwordcharacter))
+	       (not (DetectAlphabetChar($firstwordcharacter))))
 	{
 		$word = substr($word, 1);
 		$wordlength = length $word;
@@ -32,6 +32,8 @@ Postcondition:
 		}
 	}
 
+	my $lastwordcharacter = '';
+
 	# Retrieve the word's last character only if the word has a length more than zero to avoid an error
 	if ($wordlength > 0)
 	{
@@ -40,9 +42,16 @@ Postcondition:
 
 	# Check the word's right to remove non-word characters
 	while (($wordlength > 0) and
-	       (DetectAlphanumericChar($firstwordcharacter))
+	       (not (DetectAlphanumericChar($lastwordcharacter))))
 	{
-		$word = substr($word, );
+		$word = substr($word, 0, $wordlength - 1);
+		$wordlength = length $word;
+
+		# Retrieve the word's last character only if the word has a length more than zero to avoid an error
+		if ($wordlength > 0)
+		{
+			$lastwordcharacter = substr($word, 0, 1);
+		}
 	}
 
 	return $word
