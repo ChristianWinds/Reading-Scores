@@ -269,14 +269,16 @@ public class Flesch
 
 	public static boolean detectVowel(char character)
 	{
-		// Precondition:
-		// Postcondition:
+		// Precondition: A non-blank character was sent to this function
+		// Postcondition: A Boolean value representing whether this
+		// function's received character was a vowel was returned to
+		// this function's caller
 
 		Boolean isVowel = false;
 
-		// Compare the received character to each vowel to deermine
+		// Compare the received character to each vowel to determine
 		// whether the received character is a vowel
-		if ((character == 'a')||
+		if ((character == 'a') ||
 		    (character == 'A') ||
 		    (character == 'e') ||
 		    (character == 'E') ||
@@ -297,8 +299,10 @@ public class Flesch
 
 	public static boolean detectAlphabetChar(char character)
 	{
-		// Precondition:
-		// Postcondition:
+		// Precondition: A non-blank character was sent to this function
+		// Postcondition: A Boolean value representing whether this
+		// function's received character was an alphabetic character was
+		// returned to this function's caller
 
 		boolean isAlphabetic = false;
 
@@ -318,8 +322,10 @@ public class Flesch
 
 	public static boolean detectNumericChar(char character)
 	{
-		// Precondition:
-		// Postcondition:
+		// Precondition: A non-blank character was sent to this function
+		// Postcondition: A Boolean value representing whether this
+		// function's received character was a numeric character was
+		// returned to this function's caller
 
 		boolean isNumeric = false;
 
@@ -334,8 +340,11 @@ public class Flesch
 
 	public static boolean detectWordCharacter(char character)
 	{
-		// Precondition:
-		// Postcondition:
+		// Precondition: A non-blank character was sent to this function
+		// Postcondition: A Boolean value representing whether this
+		// function's received character was a valid word character by
+		// Flesch Score calculation requirements was returned to this
+		// function's caller
 
 		boolean isWordCharacter = false;
 
@@ -359,7 +368,9 @@ public class Flesch
 
 	public static double calculateFlesch(ReadValueCalcVariables readValueCalcVariables)
 	{
-		// Precondition:
+		// Precondition: The total numbers of syllables, words, and
+		// sentences were counted from a text file, and each of those
+		// numbers are not zero
 		// Postcondition:
 
 		// Calculate the alpha value to prepare to calculate the Flesch
@@ -370,7 +381,7 @@ public class Flesch
 		// Index
 		double beta = (double) readValueCalcVariables.totalWords / (double) readValueCalcVariables.sentences;
 
-		double fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
+		double fleschIndex = 206.835 - (alpha * 84.6) - (beta * 1.015);
 
 		return fleschIndex;
 	}
