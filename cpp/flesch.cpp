@@ -899,7 +899,7 @@ int countSyllables(string word)
 
 bool detectSentenceEnd(char character)
 {
-	// Precondition:
+	// Precondition: A non-blank character was sent to this function
 	// Postcondition: The state of whether the received character was a
 	// sentence-ending character was returned to this function's caller
 
@@ -914,7 +914,7 @@ bool detectSentenceEnd(char character)
 
 	bool endOfSentence = false;
 
-	// Flag the endOfSentence Boolean if the received character marks the
+	// Check the received character to determine if the character marks the
 	// end of a sentence
 	if ((character == '.') ||
 	    (character == ':') ||
@@ -930,7 +930,7 @@ bool detectSentenceEnd(char character)
 
 bool detectVowel(char character)
 {
-	// Precondition:
+	// Precondition: A non-blank character was sent to this function
 	// Postcondition:
 
 	// Create a Boolean to flag whether the recceived character is a vowel
@@ -959,7 +959,7 @@ bool detectVowel(char character)
 
 bool detectAlphabetChar(char character)
 {
-	// Precondition:
+	// Precondition: A non-blank character was sent to this function
 	// Postcondition:
 
 	// Create a Boolean to hold whether the received character is an
@@ -980,7 +980,7 @@ bool detectAlphabetChar(char character)
 
 bool detectNumericChar(char character)
 {
-	// Precondition:
+	// Precondition: A non-blank character was sent to this function
 	// Postcondition:
 
 	bool isNumeric = false;
@@ -998,7 +998,7 @@ bool detectNumericChar(char character)
 
 bool detectWordCharacter(char character)
 {
-	// Precondition:
+	// Precondition: A non-blank character was sent to this function
 	// Postcondition:
 
 	bool isWordCharacter = false;
@@ -1020,7 +1020,8 @@ float calculateFlesch(int totalSyllables,
 		      int totalWords,
 		      int totalSentences)
 {
-	// Precondition:
+	// Precondition: The numbers of words, sentences, and syllables counted
+	// are each greater than zero
 	// Postcondition: The Flesch Readability Index was calculated and
 	// returned to this function's caller
 
@@ -1031,10 +1032,6 @@ float calculateFlesch(int totalSyllables,
 		cout << "\ttotalWords == " << totalWords << endl;
 		cout << "\ttotalSentences == " << totalSentences << endl;
 	}
-
-	// * PROGRAMMER'S NOTE: The values of alpha and beta likely require
-	// * decimal format; thus, either a float or a double data type may be
-	// * necessary for each of the two variables.
 
 	// Calculate the alpha value to prepare to calculate the Flesch Index
 	if ((testMode) &&
@@ -1049,7 +1046,7 @@ float calculateFlesch(int totalSyllables,
 	float beta = (float) totalWords / (float) totalSentences;
 	if (testMode)
 		cout << "calculateFlesch: beta == " << beta << endl;
-	// Calculate the Flesch index
+
 	float fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
 
 	return fleschIndex;
@@ -1060,8 +1057,7 @@ float calculateFleschKincaid(int totalSyllables,
 			     int totalSentences)
 {
 	// Precondition: The total numbers of syllables, words, and sentences
-	// were obtained, and the total numbers of words and sentences are not
-	// zero
+	// were obtained and are each not zero
 	// Postcondition: The Flesch-Kincaid Readability Index was calculated
 	// and returned to this function's caller
 
@@ -1089,8 +1085,8 @@ float calculateDaleChall(int difficultWords,
 			 int totalSentences)
 {
 	// Precondition: The numbers of difficult words, total words, and
-	// sentences were recorded, and the total numbers of words and sentences
-	// are not zero
+	// sentences were recorded, and the total number words and the number of
+	// sentences are not zero
 	// Postcondition: The Dale-Chall Readability Score was calculated and
 	// returned to this function's caller
 
