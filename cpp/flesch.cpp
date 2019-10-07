@@ -95,9 +95,10 @@ int main(int argc, char* argv[])
 		    (printFinalObtainedValues))
 		{
 			cout << "main:" << endl;
-			cout << "\tTotal counted syllables: " << syllables << endl;
 			cout << "\tTotal counted words: " << totalWords << endl;
+			cout << "\tTotal counted syllables: " << syllables << endl;
 			cout << "\tTotal counted sentences: " << sentences << endl;
+			cout << "\tTotal difficult words: " << difficultWords << endl;
 		}
 
 		if ((totalWords > 0) &&
@@ -498,7 +499,7 @@ void obtainValues(int &totalSyllables,
 								   word)))
 						{
 							if ((testMode) ||
-							    (true))
+							    (false))
 							{
 								cout << "obtainValues: Difficult word found: \"" << word << "\"" << endl;
 							}
@@ -572,7 +573,7 @@ string getWord(int &currentIndex,
 		}
 
 		if ((testMode) ||
-		    (true))
+		    (false))
 		{
 			cout << "getWord: Checking for alphanumeric word start" << endl;
 		}
@@ -583,7 +584,7 @@ string getWord(int &currentIndex,
 		    (detectNumericChar(readCharacter)))
 		{
 			if ((testMode) ||
-			    (true))
+			    (false))
 			{
 				cout << "getWord: Alphanumeric word start found" << endl;
 			}
