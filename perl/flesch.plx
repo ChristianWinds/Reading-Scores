@@ -360,16 +360,16 @@ foreach my $potentialword (@analyzedfilewords)
 	# Scan the potential word to add the word's number of sentence ending punctuation characters to the total sentence count
 	$sentences += CountSentenceEndsInString($potentialword);	
 
-=begin comment
-Code from Perl.com,
-https://www.perl.com/article/42/2013/10/3/How-to-read-a-string-into-an-array-of-characters-using-split/
-Accessed Monday, September 30, 2019
-=cut
 
 	# Trim the potential word to evaluate a valid word that may be in the potential word
 	my $trimmedword = TrimWord($potentialword);
 # 	print "Trimmed word: $trimmedword\n";
 
+=begin comment
+Code from Perl.com,
+https://www.perl.com/article/42/2013/10/3/How-to-read-a-string-into-an-array-of-characters-using-split/
+Accessed Monday, September 30, 2019
+=cut
 	my @wordcharacters = split(//, $trimmedword);
 	my $readingsyllable = 0;
 
