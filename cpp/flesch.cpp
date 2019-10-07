@@ -151,8 +151,11 @@ int main(int argc, char* argv[])
 
 void storeDaleChallList(vector<string> &daleChallVector)
 {
-	// Precondition:
-	// Postcondition:
+	// Precondition: A Dale-Chall List file should exist in this function's
+	// hard-coded Dale-Chall List file location, and the Dale-Chall vector
+	// should be empty
+	// Postcondition: The Dale-Chall vector was filled with the Dale-Chall
+	// List file's contents
 
 	if ((testMode) ||
 	    (printActivatingFunctions))
@@ -216,9 +219,10 @@ void insertAlphabetically(vector<string> &wordVector,
 			  string insertionWord)
 {
 	// Precondition: The word to attempt to insert into the vector is not a
-	// blank word, and the vector to receive the word is already
+	// blank string, and the vector to receive the word is already
 	// alphabetically sorted
-	// Postcondition:
+	// Postcondition: The word received by this function was stored
+	// alphabetically into the word vector
 
 	if (testMode)
 	{
@@ -310,8 +314,9 @@ void insertAlphabetically(vector<string> &wordVector,
 bool findInVector(vector<string> wordVector,
 		  string searchTerm)
 {
-	// Precondition:
-	// Postcondition:
+	// Precondition: The word vector is sorted alphabetically
+	// Postcondition: A Boolean value representing whether the search term
+	// was present in the word vector was returned
 
 	if ((testMode) ||
 	    (printActivatingFunctions))
@@ -406,12 +411,11 @@ void obtainValues(int &totalSyllables,
 	if (testMode)
 		cout << "obtainValues: Starting" << endl;
 	// Precondition: The Dale-Chall vector holds all words of a Dale-Chall
-	// Word List
-	// Postcondition:
-
-	// Initialize a Boolean for presence of a partial word segment at the
-	// end of an input file line
-	/*bool wordPart = false;*/
+	// Word List, the numbers of syllables, total words, sentences, and
+	// difficult words are zero, and a valid filename for a file to analyze
+	// is stored
+	// Postcondition: The numbers of syllables, total words, sentences, and
+	// difficult words in the file were stored
 
 	string currentInputFileLine = "";
 
@@ -535,7 +539,8 @@ string getWord(int &currentIndex,
 {
 	if (testMode)
 		cout << "getWord: Starting" << endl;
-	// Precondition:
+	// Precondition: The currentIndex value is within the line string's
+	// index range
 	// Postcondition: The retrieved word is returned to the function caller,
 	// and the currentIndex value is set one beyond the last read index
 
