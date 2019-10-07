@@ -10,17 +10,25 @@ public class Flesch
 	// Accessed September 24, 2019
 	public static void storeDaleChallList(WordVector daleChallVector) throws Exception
 	{
+		// Precondition: A Dale-Chall List file existed in the location
+		// hard-coded into this function, the Dale-Chall List file holds
+		// only one word in each file line, and the Dale-Chall vector
+		// was empty
+		// Postcondition: All Dale-Chall List contents were placed into
+		// the Dale-Chall vector as uppercase words and in alphabetical
+		// order
+
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 		// Accessed September 24, 2019
-		File analyzedFile = new File("/pub/pounds/CSC330/dalechall/wordlist1995.txt");
-		Scanner analyzedFileScanner = new Scanner(analyzedFile);
+		File daleChallFile = new File("/pub/pounds/CSC330/dalechall/wordlist1995.txt");
+		Scanner daleChallFileScanner = new Scanner(daleChallFile);
 
 		String word = "";
 
-		while (analyzedFileScanner.hasNextLine())
+		while (daleChallFileScanner.hasNextLine())
 		{
-			word = analyzedFileScanner.nextLine();
+			word = daleChallFileScanner.nextLine();
 
 			// Convert the word to an uppercase word to allow
 			// non-case sensitive vector search
@@ -29,6 +37,7 @@ public class Flesch
 			daleChallVector.wordVector.add(word);
 		}
 
+		/* Testing code */
 		System.out.println(daleChallVector.wordVector);
 	}
 /*
