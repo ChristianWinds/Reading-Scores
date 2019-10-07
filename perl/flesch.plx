@@ -405,10 +405,10 @@ Accessed Monday, September 30, 2019
 	$totalwords++;
 }
 
-# print "Total words: $totalwords\n";
-# print "Syllables: $syllables\n";
-# print "Sentences: $sentences\n";
-# print "Difficult Words: $difficultwords\n";
+print "Total words: $totalwords\n";
+print "Syllables: $syllables\n";
+print "Sentences: $sentences\n";
+print "Difficult Words: $difficultwords\n";
 
 my $fleschindex = CalculateFlesch($syllables,
 				  $totalwords,
