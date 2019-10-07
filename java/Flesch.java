@@ -173,150 +173,6 @@ public class Flesch
 		}
 	}
 */
-/*	public String getWord(String line)
-	{
-		// Precondition:
-		// Postcondition: The retrieved word is returned to the function
-		// caller, and the currentIndex value is set one beyond the last
-		// read index
-
-		int lineLength = line.length();
-
-		// Create a char variable to hold the characters read from the
-		// word
-		char readCharacter = 'a';
-
-		do
-		{
-			if ((curentIndex < lineLength) &&
-			    (!endOfSentence))
-				readCharacter = line.at(currentIndex);
-
-			if (detectSentenceEnd(readCharacter))
-			{
-				endOfSentence = true;
-			}
-			else if (detectAlphabetChar(readCharacter))
-			{
-				wordRead = true;
-			}
-
-			if ((readCharacter == ' ') &&
-			    (currentIndex < lineLength))
-			{
-				currentIndex++;
-			}
-		} while((readCharacter == ' ') &&
-			(currentIndex < lineLength) &&
-			(!endOfSentence));
-
-		// Create a String variable for the word to return to this
-		// function's caller
-		String word = "";
-
-		if (endOfSentence)
-		{
-			// Set the wordRead Boolean and word string to indicate
-			// no valid word was read
-			wordRead = false;
-			word = "";
-
-			// Increment the currentIndex value to allow the program
-			// to continue reading after the sentence end
-			currentIndex++;
-		}
-		else if (!(currentIndex < lineLength))
-		{
-
-			// Set the wordRead Boolean and word string to indicate
-			// no valid word was read
-			wordRead = false;
-			word = "";
-
-			endOfLine = true;
-
-			// Place the current index value at the line's final
-			// character to prevent a line reading error
-			currentIndex = lineLength - 1;
-		}
-		else
-		{
-			int wordStartIndex = currentIndex;
-			int wordEndIndex = 0;
-
-			// Read the remaining line characters to locate the
-			// character index after the end of the current word
-			while ((readCharacter != ' ') &&
-			       (currentIndex < llineLength) &&
-			       (!endOfSentence) &&
-			       (!endOfLine))
-			{
-				// Increment the current index to read the next
-				// unread character
-				currentIndex++;
-
-				if (!(currentIndex < lineLength))
-				{
-					endOfLine = true;
-				}
-				else
-				{
-					readCharacter = line.at(currentIndex);
-
-					if (detectSentenceEnd(readCharacter))
-					{
-						endOfSentence = true;
-					}
-
-					if ((!wordRead) &&
-					    (!endOfSentence))
-					{
-						if (detectAlphabetChar(readCharacter))
-						{
-							wordRead = true;
-						}
-					}
-
-					if (!(detectWordCharacter(readCharacter)))
-					{
-						break;
-					}
-				}
-			}
-
-			wordEndIndex = currentIndex - 1;
-
-			// Increment the current index to avoid counting the
-			// same sentence twice
-			currentIndex++;
-
-			// If the current index exceeded the line length, place
-			// the index at the line's final character to avoid a
-			// line read error
-			if (endOfLine)
-			{
-				currentIndex = lineLength - 1;
-			}
-
-			if (currentIndex >= lineLength)
-			{
-				endOfLine = true;
-			}
-
-			word = line.substring(wordStartIndex, wordEndIndex + 1);
-		}
-
-		//  If the current index is beyond the line end, flag the
-		//  end-of-line flag and set the current index to the line's
-		//  final character to avoid a line read error
-		if (currentIndex >= lineLength)
-		{
-			endOfLine = true;
-			currentIndex = lineLength - 1;
-		}
-
-		return word;
-	}*/
 
 	public static int countSyllables(String word)
 	{
@@ -672,29 +528,31 @@ public class Flesch
 	{
 	        // Precondition: The received word holds at least one alphanumeric
 	        // character
-	        // Postcondition: The received word was shortened up to the word's last
-	        // alphanumeric character, and the word was returned to this function's
-	        // caller
+	        // Postcondition: The received word was trimmed up to the word's
+	        // last alphanumeric character, and the trimmed word was
+	        // returned to this function's caller
 
-	        // Store the word's length for use in locating the word's last character
+	        // Store the word's length for use in locating the word's last
+	        // character
 	        int wordLength = word.length();
 
 	        if (wordLength > 0)
 	        {
 	                char lastWordCharacter = word.charAt(wordLength - 1);
 
-	                // Check if the word's last character is not alphanumeric to
-	                // decide whether to trim the word
+	                // Check if the word's last character is not
+	                // alphanumeric to decide whether to trim the word
 	                while (((!(detectAlphabetChar(lastWordCharacter))) &&
 	                       (!(detectNumericChar(lastWordCharacter)))) &&
 	                       (wordLength > 0))
 	                {
 	                        // Trim the word to remove the non-alphanumeric
 	                        // character from the word end
-	                        word = word.substring(0, wordLength - 2);
+	                        word = word.substring(0,
+						      wordLength - 2);
 
-	                        // Update the word length and stored last word character
-	                        // to check the new last word character
+	                        // Update the word length and stored last word
+	                        // character to check the new last word character
 	                        wordLength = word.length();
 	                        if (wordLength > 0)
 	                        {
@@ -783,19 +641,6 @@ public class Flesch
 
 			getWords(line, daleChallVector, readValueCalcVariables);
 		}
-
-		/* Create the empty Dale-Chall vector */
-
-//		storeDaleChallList(/* Dale-Chall Vector */);
-
-		// To prepare for the readability index and score
-		// calculations, obtain the analyzed file values
-/*		obtainFileValues(syllables,
-				 totalWords,
-				 sentences,
-				 difficultWords,
-				 filename);
-*/
 
 		/* Test printing*/
 		System.out.println("Total words: " + readValueCalcVariables.totalWords);
