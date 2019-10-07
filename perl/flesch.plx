@@ -294,7 +294,7 @@ Postcondition:
 	}
 
 	# Round the Dale-Chall Score to one decimal place to fulfill the required score rounding
-	my $dalechallscore = sprintf("%.1f", $dalechallscore);
+	$dalechallscore = sprintf("%.1f", $dalechallscore);
 
 	return $dalechallscore;
 }
