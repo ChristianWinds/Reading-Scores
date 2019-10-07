@@ -18,9 +18,9 @@ Postcondition:
 		$firstwordcharacter = substr($word, 0, 1);
 	}
 
-	print "TrimWord: Left character check\n";
-	print "TrimWord: wordlength == $wordlength\n";
-	print "TrimWord: firstwordcharacter == $firstwordcharacter\n";
+# 	print "TrimWord: Left character check\n";
+# 	print "TrimWord: wordlength == $wordlength\n";
+# 	print "TrimWord: firstwordcharacter == $firstwordcharacter\n";
 
 	# Check the word's left to remove non-word characters
 	while (($wordlength > 0) and
@@ -44,10 +44,10 @@ Postcondition:
 		$lastwordcharacter = substr($word, -1);
 	}
 
-	print "TrimWord: Right character check\n";
-	print "TrimWord: word == $word\n";
-	print "TrimWord: wordlength == $wordlength\n";
-	print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
+# 	print "TrimWord: Right character check\n";
+# 	print "TrimWord: word == $word\n";
+# 	print "TrimWord: wordlength == $wordlength\n";
+# 	print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
 
 	# Check the word's right to remove non-word characters
 	while (($wordlength > 0) and
@@ -62,10 +62,10 @@ Postcondition:
 			$lastwordcharacter = substr($word, -1);
 		}
 
-		print "TrimWord: Right character updated\n";
-		print "TrimWord: word == $word\n";
-		print "TrimWord: wordlength == $wordlength\n";
-		print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
+# 		print "TrimWord: Right character updated\n";
+# 		print "TrimWord: word == $word\n";
+# 		print "TrimWord: wordlength == $wordlength\n";
+# 		print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
 	}
 
 	return $word
@@ -148,7 +148,7 @@ Postcondition:
 		$isalphabetic = 0;
 	}
 
-	print "DetectAlphabetChar: Result for \"$character\": $isalphabetic\n";
+# 	print "DetectAlphabetChar: Result for \"$character\": $isalphabetic\n";
 
 	return $isalphabetic;
 }
@@ -311,7 +311,7 @@ my $dale_chall_file_content = do {local $/; <$dalechallfile> };
 # Convert the Dale-Chall file words to uppercase to permit non-case sensitive word comparisons to the analyzed file words
 $dale_chall_file_content = uc $dale_chall_file_content;
 
-print($dale_chall_file_content ,"\n");
+# print($dale_chall_file_content ,"\n");
 
 my @dalechallwordsarray = split(' ', $dale_chall_file_content);
 
@@ -335,7 +335,7 @@ my $analyzed_file_content = do {local $/; <$fh> };
 # Convert the analyzed file words to uppercase to allow non-case sensitive word comparisons to the Dale-Chall file words
 $analyzed_file_content = uc $analyzed_file_content;
 
-print($analyzed_file_content ,"\n");
+# print($analyzed_file_content ,"\n");
 
 =begin comment
 Code from GeeksforGeeks,
@@ -344,10 +344,10 @@ Accessed Monday, September 30, 2019
 =cut
 
 my @analyzedfilewords = split(' ', $analyzed_file_content);
-foreach my $i (@analyzedfilewords)
-{
-	print "$i\n";
-}
+# foreach my $i (@analyzedfilewords)
+# {
+# 	print "$i\n";
+# }
 
 my $totalwords = 0;
 my $syllables = 0;
@@ -368,7 +368,7 @@ Accessed Monday, September 30, 2019
 
 	# Trim the potential word to evaluate a valid word that may be in the potential word
 	my $trimmedword = TrimWord($potentialword);
-	print "Trimmed word: $trimmedword\n";
+# 	print "Trimmed word: $trimmedword\n";
 
 	my @wordcharacters = split(//, $trimmedword);
 	my $readingsyllable = 0;
@@ -405,10 +405,10 @@ Accessed Monday, September 30, 2019
 	$totalwords++;
 }
 
-print "Total words: $totalwords\n";
-print "Syllables: $syllables\n";
-print "Sentences: $sentences\n";
-print "Difficult Words: $difficultwords\n";
+# print "Total words: $totalwords\n";
+# print "Syllables: $syllables\n";
+# print "Sentences: $sentences\n";
+# print "Difficult Words: $difficultwords\n";
 
 my $fleschindex = CalculateFlesch($syllables,
 				  $totalwords,
