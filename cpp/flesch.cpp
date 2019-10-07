@@ -604,8 +604,6 @@ string getWord(int &currentIndex,
 		if (testMode)
 			cout << "getWord: endOfSentence == " << endOfSentence << endl;
 
-		// * ERROR: detectSentenceEnd not called for first read character; called late [BUGFIX ADDED]
-		// *	ERROR: detectSentenceEnd check not performed if first read character is not a space; conversion of while loop to do while loop possible
 		// If an alphanumeric word start was not yet found, advance the
 		// current index to the next character in the line to locate an
 		// alphnumeric word start
@@ -632,7 +630,7 @@ string getWord(int &currentIndex,
 		wordRead = false;
 		word = "";
 
-		// Advance the currentIndex value to the index after the
+		// Advance the currentIndex value to place the index after the
 		// sentence end
 		currentIndex++;
 	}
@@ -648,9 +646,6 @@ string getWord(int &currentIndex,
 		// Place the current index at the line's final character to
 		// prevent a line reading error
 		currentIndex = lineLength - 1;
-
-		// Set the word string variable to a blank string to indicate
-		// no string was retrieved
 	}
 	else
 	{
@@ -671,7 +666,8 @@ string getWord(int &currentIndex,
 		       (!endOfSentence) &&
 		       (!endOfLine))
 		{
-			// Move the current index to the next unread character
+			// Increment the current index to read the next unread
+			// character
 			currentIndex++;
 
 			// Stop the word end search if the line end is exceeded
@@ -681,8 +677,6 @@ string getWord(int &currentIndex,
 			{
 				readCharacter = line.at(currentIndex);
 
-				// Flag the end of sentence flag if
-				// sentence-ending punctuation was read
 				if (detectSentenceEnd(readCharacter))
 				{
 					endOfSentence = true;
@@ -690,8 +684,9 @@ string getWord(int &currentIndex,
 						cout << "getWord: endOfSentence set to true (final word character)" << endl;
 				}
 
-				// Ensure that the current set of characters is
-				// a word
+				// If the current string was not yet validated
+				// as a word, check the string to determine
+				// whether to count the string as a word
 				if ((!wordRead) &&
 				    (!endOfSentence))
 				{
@@ -699,39 +694,40 @@ string getWord(int &currentIndex,
 						wordRead = true;
 				}
 
-				// End word index search if the current
-				// character is not a word character
+				// If the current character is not a word
+				// character, stop attempting to read other
+				// characters to retrieve the current word
 				if (!(detectWordCharacter(readCharacter)))
 					break;
 			}
 
 		}
 
-		// Record the index of the word end
 		wordEndIndex = currentIndex - 1;
 
 		// Increment the currentIndex to avoid counting the same
 		// sentence twice
 		currentIndex++;
 
-		// If the current index exceeded the line length, place the
-		// index at the final line index
-		if (endOfLine)
-			currentIndex = lineLength - 1;
-
-		// Update the end of line flag if the end of the received line
-		// was reached
 		if (currentIndex >= lineLength)
 			endOfLine = true;
 
-		// Retrieve the found word
+		// If the current index exceeded the line length, place the
+		// index at the end of the line index range to avoid a string
+		// index access error
+		if (endOfLine)
+			currentIndex = lineLength - 1;
+
 		if ((testMode) &&
 		    (false))
 		{
 			cout << "getWord: Retrieving word" << endl;
 			cout << "\twordLength = " << wordEndIndex << " - " << wordStartIndex << " + 1" << endl;
 		}
+		// Calculate the word's length to determine the number of
+		// characters to copy from the line string to retrieve the word
 		int wordLength = wordEndIndex - wordStartIndex + 1;
+
 		word = line.substr(wordStartIndex, wordLength);
 
 		// Send the word to the trimWord function to remove
@@ -753,7 +749,6 @@ string getWord(int &currentIndex,
 
 	if (testMode)
 		cout << "getWord: After this iteration's endOfSentence flag, the line index's character is '" << line.at(currentIndex) << "'" << endl;
-	// Return the retrieved word to the function caller
 	if (testMode)
 		cout << "getWord: Returning " << word << " to function caller" << endl;
 	return word;
