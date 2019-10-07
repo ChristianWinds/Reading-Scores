@@ -8,7 +8,7 @@
 using namespace std;
 
 bool testMode = false;
-bool printFinalObtainedValues = false;
+bool printFinalObtainedValues = true;
 bool showCalculationValues = false;
 bool printActivatingFunctions = false;
 bool printFunctionSteps = false;
