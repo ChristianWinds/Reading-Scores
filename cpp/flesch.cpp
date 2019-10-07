@@ -792,7 +792,7 @@ string trimWord(string word)
 		char lastWordCharacter = word.at(wordLength - 1);
 
 		// Check if the word's last character is not alphanumeric to
-		// decide whether to trim the word
+		// decide whether to continue trimming the word
 		while (((!(detectAlphabetChar(lastWordCharacter))) &&
 		       (!(detectNumericChar(lastWordCharacter)))) &&
 		       (wordLength > 0))
@@ -822,7 +822,8 @@ int countSyllables(string word)
 		cout << "countSyllables: Parameter: word == " << word << endl;
 	// Precondition: The word received holds only non-whitespace characters,
 	// and holds at least one alphabetic character
-	// Postcondition:
+	// Postcondition: The number of syllables in the word was counted and
+	// returned to this function's caller
 
 	int wordLength = word.length();
 
@@ -835,49 +836,55 @@ int countSyllables(string word)
 
 	int syllables = 0;
 
-	// Count each syllable in the word
 	while (currentIndex < wordLength)
 	{
-		// Read the current word character
 		readCharacter = word.at(currentIndex);
 
 		if (detectVowel(readCharacter))
 		{
-			// If the current read character is an "e" at the
-			// word's end, do not tally the vowel as a syllable
+			// To follow syllable-tallying rules, if the current
+			// read character is an "e" at the word's end, do not
+			// tally the vowel as a syllable
 			if (((readCharacter == 'e') ||
 			    (readCharacter == 'E')) &&
 			    (currentIndex == wordLength - 1))
 			{
-				// Update the current read index and do not
-				// count the vowel as a syllable
+				// Update currentIndex to skip the word-ending
+				// "e"
 				currentIndex++;
 			}
 			else
 			{
-				// Find the successive syllables in the word
+				// Read the current group of one or more
+				// successive vowels to count the entire group
+				// as one syllable
 				while ((detectVowel(readCharacter)) &&
 				       (currentIndex < wordLength))
 				{
-					// Read the next unread character of the
-					// word if unread characters remain
+					// Increment currentIndex to prepare to
+					// check if the next unread word
+					// character is a vowel
 					currentIndex++;
+
 					if (currentIndex < wordLength)
+					{
 						readCharacter = word.at(currentIndex);
+					}
 				}
 
-				// Increment the number of found syllables
 				syllables++;
 			}
 		}
 		else
 		{
-			// Prepare to read the word's next character
+			// Increment currentIndex to prepare to read the word's
+			// next character
 			currentIndex++;
 		}
 	}
 	
-	// Add one to the syllable count if no syllables were detected
+	// To follow syllable-tallying rules, add one to the syllable count if
+	// no syllables were detected
 	if (syllables == 0)
 		syllables++;
 
@@ -887,7 +894,6 @@ int countSyllables(string word)
 		     << word << "\" == " << syllables << endl;
 	}
 
-	// Return the number of detected syllables to the function's caller
 	return syllables;
 }
 
