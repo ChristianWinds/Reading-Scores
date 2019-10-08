@@ -5,5 +5,5 @@ use pounds_tokenize_pack;
 procedure flesch is
    words	: Integer := 0;
 begin
-   toarray (words : out Integer);
+   toarray(words : out Integer);
 end flesch;
