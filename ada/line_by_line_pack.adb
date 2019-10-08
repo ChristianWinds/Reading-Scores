@@ -15,4 +15,5 @@ package body Line_By_Line_Pack is
 	   end loop;
  
 	   Close (File);
+	 end Line_By_Line;
 end Line_By_Line_Pack;
