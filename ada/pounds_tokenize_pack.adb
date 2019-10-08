@@ -24,7 +24,7 @@ procedure toarray is
 begin
 
    Ada.Text_IO.Put (Item => "Done initilizing variables");
-   Ada.Text_IO.Open (File => In_File, Mode => Ada.Text_IO.In_File, Name => "KJV.txt");
+   Ada.Text_IO.Open (File => In_File, Mode => Ada.Text_IO.In_File, Name => "/pub/pounds/CSC330/translations/KJV.txt");
 
    pos := 0;
    while not Ada.Text_IO.End_Of_File(In_File) loop
