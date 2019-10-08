@@ -9,12 +9,13 @@ with Ada.Containers.Indefinite_Vectors;
 use  Ada.Containers;
 
 package body pounds_tokenize_pack is
-procedure toarray is
+procedure toarray (words: out Integer) is
 
    In_File      : Ada.Text_IO.File_Type;
    value        : Character;
    string_array         : array (1..5000000) of Character;
    pos          : Integer;
+   words	: Integer := 0;
    package String_Vector is new Indefinite_Vectors (Natural,String); use String_Vector;
    s       : String(1..5000000) := (others => Character'Val(0));
    current : Positive := s'First;
