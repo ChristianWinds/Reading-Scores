@@ -495,11 +495,17 @@ public class Flesch
 							retrievingWord = false;
 						}
 
-						// 
+						// If the current character is a
+						// sentence-ending character,
+						// set the word retrieval flag
+						// to "false" to prepare to stop
+						// reading new characters into
+						// the current word
 						if (detectSentenceEnd(currentCharacter))
 						{
 							wordEndIndex = currentIndex;
 							retrievingWord = false;
+
 							readValueCalcVariables.sentences++;
 						}
 					}
@@ -525,7 +531,9 @@ public class Flesch
 					System.out.println("getWords: word == \"" + word + "\"");
 					readValueCalcVariables.syllables += countSyllables(word);
 
-					/* Locate the word in the Dale-Chall Vector */
+					// Search for the word in the Dale-Chall
+					// vector to determine whether the word
+					// is a difficult word
 					boolean wordInVector = daleChallVector.wordVector.contains(word.toUpperCase());
 
 					if (!(wordInVector))
@@ -533,6 +541,7 @@ public class Flesch
 						readValueCalcVariables.difficultWords++;
 					}
 
+					/* Testing code */
 					System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
 				}
 			}
@@ -588,8 +597,10 @@ public class Flesch
 
 	public static boolean detectValidWord (String word)
 	{
-		// Precondition:
-		// Postcondition:
+		// Precondition: The string this function received was a
+		// non-empty string
+		// Postcondition: Whether this function's received string was a
+		// valid word was returned to this function's caller
 
 		// Create variables to track word character indexes
 		int currentIndex = 0;
@@ -626,10 +637,9 @@ public class Flesch
 	// Accessed September 24, 2019
 	public static void main(String[] args) throws Exception
 	{
-		/* Create a Dale-Chall vector object */
+		// Create a Dale-Chall vector to hold the Dale-Chall Word List
 		WordVector daleChallVector = new WordVector();
 
-		/* Store the Dale-Chall wordlist */
 		storeDaleChallList(daleChallVector);
 
 		// Create a Scanner to read the keyboard entered filename of
