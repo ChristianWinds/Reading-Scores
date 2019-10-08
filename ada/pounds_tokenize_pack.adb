@@ -56,6 +56,7 @@ begin
 -- * Prints word "s" of vector "v"
   for s of v loop
    put(s);
+   words := words + 1;
    new_line;
   end loop;
 
