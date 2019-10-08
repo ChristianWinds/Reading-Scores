@@ -10,6 +10,6 @@ use pounds_tokenize_pack;
 procedure flesch is
 
 begin
-   Line_By_Line;
+--   Line_By_Line;
    toarray;
 end flesch;
