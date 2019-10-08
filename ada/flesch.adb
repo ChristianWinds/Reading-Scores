@@ -3,7 +3,7 @@ with pounds_tokenize_pack;
 use pounds_tokenize_pack;
  
 procedure flesch is
-
+   words	: Integer := 0;
 begin
-   toarray;
+   toarray (words : Integer);
 end flesch;
