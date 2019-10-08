@@ -8,7 +8,7 @@ procedure Line_By_Line is
 begin
    Open (File => File,
          Mode => In_File,
-         Name => "line_by_line.adb");
+         Name => "twoSentences.txt");
    While not  End_Of_File (File) Loop
       Put_Line (Get_Line (File));
    end loop;
