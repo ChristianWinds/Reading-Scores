@@ -2,6 +2,7 @@
 -- "CSC 330 Request for Ada Tokenizer"
 -- Accessed October 8, 2019
 with Ada;
+with Ada.Text_IO;
 use Ada.Text_IO;
 use Ada.IO_Exceptions;
 with Ada.Containers.Indefinite_Vectors;
