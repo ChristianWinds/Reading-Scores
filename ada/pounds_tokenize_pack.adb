@@ -1,5 +1,4 @@
 -- Code from Dr. Pounds,
--- "CSC 330 Request for Ada Tokenizer"
 -- Accessed October 8, 2019
 with Ada;
 with Ada.Text_IO;
@@ -53,6 +52,7 @@ begin
     end if;
    end loop;
 
+-- * Prints word "s" of vector "v"
   for s of v loop
    put(s);
    new_line;
