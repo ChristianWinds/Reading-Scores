@@ -130,7 +130,7 @@ Postcondition:
 sub DetectAlphabetChar
 {
 =begin comment
-Precondition:
+Precondition: A non-empty character was sent to this subroutine
 Postcondition:
 =cut
 
@@ -156,19 +156,27 @@ Postcondition:
 sub DetectVowelChar
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: A non-empty character was sent to this subroutine
+Postcondition: A 1 was sent to this subroutine's caller if the character this
+subroutine received was a vowel; otherwise, a 0 was sent to this subroutine's
+caller
 =cut
 	my $character = $_[0];
 	my $isvowel = 0;
 
 	# Compare the character to each vowel to check if the character is a vowel
 	if (($character eq 'A') or
+	    ($character eq 'a') or
+	    ($character eq 'E') or
 	    ($character eq 'E') or
 	    ($character eq 'I') or
+	    ($character eq 'i') or
 	    ($character eq 'O') or
+	    ($character eq 'o') or
 	    ($character eq 'U') or
-	    ($character eq 'Y'))
+	    ($character eq 'u') or
+	    ($character eq 'Y') or
+	    ($character eq 'y'))
 	{
 		$isvowel = 1;
 	}
@@ -231,8 +239,10 @@ Postcondition:
 sub CalculateFlesch
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: An analyzed text file's numbers of syllables, words, and sentences
+were obtained, and each of the numbers were greater than zero
+Postcondition: The Flesch Score of the analyzed file was returned to this
+subroutine's caller
 =cut
 
 	my $syllables = $_[0];
@@ -251,8 +261,10 @@ Postcondition:
 sub CalculateFleschKincaid
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: An analyzed text file's numbers of syllables, words, and sentences
+were obtained, and each of the numbers were greater than zero
+Postcondition: The Flesch-Kincaid Score of the analyzed file was returned to
+this subroutine's caller
 =cut
 	my $syllables = $_[0];
 	my $words = $_[1];
@@ -270,8 +282,11 @@ Postcondition:
 sub CalculateDaleChallScore
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: An analyzed text file's numbers of difficult words, total words,
+and sentences were tallied, and the numbers of total words and sentences were
+greater than zero
+Postcondition: The Dale-Chall Index of the analyzed file was returned to this
+subroutine's caller
 =cut
 
 	my $difficultwords = $_[0];
