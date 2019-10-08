@@ -6,6 +6,7 @@ with Ada.Text_IO;
 use Ada.Text_IO;
 use Ada.IO_Exceptions;
 with Ada.Containers.Indefinite_Vectors;
+with Ada.IO_Exceptions;
 use  Ada.Containers;
 
 package body pounds_tokenize_pack is
