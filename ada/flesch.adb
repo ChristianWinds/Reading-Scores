@@ -1,32 +1,17 @@
 -- Code from Rosetta Code,
--- https://www.rosettacode.org/wiki/File_input/output#Ada
--- Accessed Monday, September 30th, 2019
-with Ada.Command_Line, Ada.Text_IO; use Ada.Command_Line, Ada.Text_IO;
-procedure flesch is
--- Code from The Craft of Coding,
--- https://craftofcoding.wordpress.com/2018/04/04/coding-ada-reading-lines-from-files/
--- Accessed Tuesday, October 1st, 2019
-   infp : file_type;
-   sline : unbounded_string;
-   fname : unbounded_string;
-   nameOK : boolean := false;
+-- https://www.rosettacode.org/wiki/Read_a_file_line_by_line#Ada
+-- Accessed October 7, 2019
+with Ada.Text_IO;  use Ada.Text_IO;
+ 
+procedure Line_By_Line is
+   File : File_Type;
 begin
--- Code from The Craft of Coding,
--- https://craftofcoding.wordpress.com/2018/04/04/coding-ada-reading-lines-from-files/
--- Accessed Tuesday, October 1st, 2019
-put_line ("Enter the filename: ");
-loop
-   exit when nameOK;
-   get_line(fname);
-   nameOK := exists(to_string(fname));
-end loop;
-
-open(infp, in_file, to_string(fname));
-
-loop
-   exit when end_of_file(infp);
-   -- Process each line from the file
-   get_line(infp,sline);
-   -- do something with the line of text
+   Open (File => File,
+         Mode => In_File,
+         Name => "line_by_line.adb");
+   While not  End_Of_File (File) Loop
+      Put_Line (Get_Line (File));
    end loop;
-end flesch;
+ 
+   Close (File);
+end Line_By_Line;
