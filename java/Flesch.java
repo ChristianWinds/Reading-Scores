@@ -402,7 +402,8 @@ public class Flesch
 		// Flesch-Kincaid Index
 		double beta = (double) readValueCalcVariables.totalWords / (double) readValueCalcVariables.sentences;
 
-		double fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
+		double fleschKincaidIndex = (alpha * 11.8) +
+					    (beta * 0.39) - 15.59;
 
 		return fleschKincaidIndex;
 	}
@@ -427,8 +428,8 @@ public class Flesch
 		// calculate the Dale-Chall Score
 		double difficultWordPercent = alpha * 100;
 
-		double daleChallScore = difficultWordPercent * 0.1579 + beta *
-				       0.0496;
+		double daleChallScore = (difficultWordPercent * 0.1579) +
+					(beta * 0.0496);
 
 		// Add 3.6365 to the Dale-Chall Score if the difficult word
 		// percentage exceeds 5 to complete the required Dale-Chall
@@ -443,6 +444,9 @@ public class Flesch
 				    WordVector daleChallVector,
 				    ReadValueCalcVariables readValueCalcVariables)
 	{
+		// Precondition:
+		// Postcondition:
+
 		int currentIndex = 0;
 		int wordStartIndex = 0;
 		int wordEndIndex = 0;
@@ -479,12 +483,19 @@ public class Flesch
 						// current character
 						currentCharacter = line.charAt(currentIndex);
 
+						// If the current character is
+						// not a valid word character,
+						// set the word retrieval flag
+						// to "false" to prepare to stop
+						// reading new characters into
+						// the current word
 						if (!detectWordCharacter(currentCharacter))
 						{
 							wordEndIndex = currentIndex;
 							retrievingWord = false;
 						}
 
+						// 
 						if (detectSentenceEnd(currentCharacter))
 						{
 							wordEndIndex = currentIndex;
