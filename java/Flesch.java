@@ -654,6 +654,7 @@ public class Flesch
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 		// Accessed September 11, 2019
+		System.out.print("Enter the name of a file to analyze: ");
 		String filename = keyboardInput.nextLine();
 
 		// Code from GeeksforGeeks,
@@ -662,19 +663,25 @@ public class Flesch
 		File analyzedFile = new File(filename);
 		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
-		/* Create an object to store reading score variables */
+		// Create an object to store the values needed for the reading
+		// score and index calculations
 		ReadValueCalcVariables readValueCalcVariables = new ReadValueCalcVariables();
 
 		String line = "";
 
+		// Analyze each file line of the file selected for analysis to
+		// obtain the values needed for the reading score and index
+		// calculations
 		while (analyzedFileScanner.hasNextLine())
 		{
 			line = analyzedFileScanner.nextLine();
 
-			getWords(line, daleChallVector, readValueCalcVariables);
+			getWords(line,
+				 daleChallVector,
+				 readValueCalcVariables);
 		}
 
-		/* Test printing*/
+		/* Test printing */
 		System.out.println("Total words: " + readValueCalcVariables.totalWords);
 		System.out.println("Syllables: " + readValueCalcVariables.syllables);
 		System.out.println("Sentences: " + readValueCalcVariables.sentences);
