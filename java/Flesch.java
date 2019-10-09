@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.*;
 import java.io.File;
+import java.lang.Math;
 import java.lang.*;
 
 public class Flesch
@@ -383,6 +384,11 @@ public class Flesch
 
 		double fleschIndex = 206.835 - (alpha * 84.6) - (beta * 1.015);
 
+		// Round the Flesch Index to an integer to complete the Flesch
+		// Index's required rounding
+		fleschIndex = roundToDecimalPlaces(fleschIndex,
+						   0);
+
 		return fleschIndex;
 	}
 
@@ -404,6 +410,11 @@ public class Flesch
 
 		double fleschKincaidIndex = (alpha * 11.8) +
 					    (beta * 0.39) - 15.59;
+
+		// Round the Flesch-Kincaid Index to one decimal place to
+		// complete the Flesch-Kincaid Index's required rounding
+		fleschKincaidIndex = roundToDecimalPlaces(fleschKincaidIndex,
+							  1);
 
 		return fleschKincaidIndex;
 	}
@@ -437,7 +448,41 @@ public class Flesch
 		if (difficultWordPercent > 5)
 			daleChallScore += 3.6365;
 
+		// Round the Dale-Chall Score to one decimal place to complete
+		// the score's needed rounding
+		daleChallScore = roundToDecimalPlaces(daleChallScore, 1);
+
 		return daleChallScore;
+	}
+
+	// Code from GeeksforGeeks,
+	// https://www.geeksforgeeks.org/rounding-floating-point-number-two-decimal-places-c-c/
+	// Accessed Wednesday, October 9th, 2019
+	public static double roundToDecimalPlaces(double originalNumber,
+						  int decimalPlaces)
+	{
+		// Precondition: The original number sent to this function to be
+		// rounded was a valid double value, and the number of decimal
+		// places for rounding was zero or greater
+		// Postcondition: The original number was rounded to the number
+		// of decimal places specified to this function, and the
+		// rounding result was returned to this function's caller
+
+		// Multiply the original number by ten to the number of desired
+		// decimal places, then add 0.5 to the result to apply the digit
+		// changes caused by rounding
+		double roundedValue = originalNumber * (Math.pow(10, decimalPlaces) + 0.5;
+
+		// Typecast the value being rounded into an integer to remove
+		// the excess decimal places
+		roundedValue = (int)roundedValue;
+
+		// Divide the value being rounded by 10 to the desired number of
+		// decimal places to place the correct number of decimal places
+		// in the rounded value
+		roundedValue = (double)roundedValue / (Math.pow(10, decimalPlaces);
+
+		return roundedValue;
 	}
 
 	public static void getWords(String line,
