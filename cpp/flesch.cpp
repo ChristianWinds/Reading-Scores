@@ -38,6 +38,8 @@ float calculateFleschKincaid(int totalSyllables,
 float calculateDaleChall(int difficultWords,
 			 int totalWords,
 			 int totalSentences);
+float roundToDecimalPlaces(float originalNumber,
+			   int decimalPlaces)
 
 int main(int argc, char* argv[])
 {
@@ -815,6 +817,11 @@ float calculateFlesch(int totalSyllables,
 
 	float fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
 
+	// Round the Flesch Index to an integer to complete the Flesch Index's
+	// required rounding
+	fleschIndex = roundToDecimalPlaces(fleschIndex,
+					   0);
+
 	return fleschIndex;
 }
 
@@ -836,6 +843,11 @@ float calculateFleschKincaid(int totalSyllables,
 	float beta = (float) totalWords / (float) totalSentences;
 
 	float fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
+
+	// Round the Flesch-Kincaid Index to one decimal place to complete the
+	// Flesch-Kincaid Index's required rounding
+	fleschKincaidIndex = roundToDecimalPlaces(fleschKincaidIndex,
+						  1);
 
 	return fleschKincaidIndex;
 }
@@ -869,5 +881,36 @@ float calculateDaleChall(int difficultWords,
 	if (difficultWordPercent > 5)
 		daleChallScore += 3.6365;
 
+	// Round the Dale-Chall Score to one decimal place to complete the
+	// score's needed rounding
+	daleChallScore = roundToDecimalPlaces(daleChallScore,
+					      1);
+
 	return daleChallScore;
+}
+
+// Code from GeeksforGeeks,
+// https://www.geeksforgeeks.org/rounding-floating-point-number-two-decimal-places-c-c/
+// Accessed Wednesday, October 9th, 2019
+float roundToDecimalPlaces(float originalNumber,
+			   int decimalPlaces)
+{
+	// Precondition: The original number sent to this function to be rounded
+	// was a valid float value, and the number of decimal places for
+	// rounding was zero or greater
+	// Postcondition: The original number was rounded to the number of
+	// decimal places specified to this function, and the rounding result
+	// was returned to this function's caller
+
+	// Multiply the original number by ten times the desired number of
+	// decimal places, add 0.5 to the product, and typecast the result into
+	// an integer to apply rounding's change to the original number's
+	// digits
+	float roundedValue = (int)(originalNumber * (10 * decimalPlaces) + 0.5); 
+	// Divide the value being rounded by 10 times the desired number of
+	// decimal places to place the correct number of rounded value places as
+	// decimal places
+	roundedValue = (float)roundedValue / (10 * decimalPlaces);
+
+	return roundedValue; 
 }
