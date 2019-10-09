@@ -240,11 +240,16 @@ subroutine's caller
 	my $words = $_[1];
 	my $sentences = $_[2];
 
-	# Calculate the alpha and beta values to prepare to use alpha and beta in the Flesch calculation
+	# Calculate the alpha and beta values to prepare to use alpha and beta
+	# in the Flesch calculation
 	my $alpha = $syllables / $words;
 	my $beta = $words / $sentences;
 
 	my $fleschindex = 206.835 - ($alpha * 84.6) - ($beta * 1.015);
+
+	# Round the Flesch Index to an integer to fulfill the required score
+	# rounding
+	$fleschkincaidindex = sprintf("%.0f", $fleschkincaidindex);
 
 	return $fleschindex;
 }
@@ -266,6 +271,10 @@ this subroutine's caller
 	my $beta = $words / $sentences;
 
 	my $fleschkincaidindex = ($alpha * 11.8) + ($beta * 0.39) - 15.59;
+
+	# Round the Flesch-Kincaid Index to one decimal place to fulfill the
+	# required score rounding
+	$fleschkincaidindex = sprintf("%.1f", $fleschkincaidindex);
 
 	return $fleschkincaidindex;
 }
