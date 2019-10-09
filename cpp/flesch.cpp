@@ -39,7 +39,7 @@ float calculateDaleChall(int difficultWords,
 			 int totalWords,
 			 int totalSentences);
 float roundToDecimalPlaces(float originalNumber,
-			   int decimalPlaces)
+			   int decimalPlaces);
 
 int main(int argc, char* argv[])
 {
