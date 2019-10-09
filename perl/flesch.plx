@@ -433,7 +433,7 @@ Code from alvin alexander,
 https://alvinalexander.com/perl/perl-array-contains-grep-search-how-test
 Accessed Monday, September 30, 2019
 =cut
-	if (not (grep { $_ eq $potentialword } @dalechallwordsarray ))
+	if (not (grep { $_ eq $trimmedword } @dalechallwordsarray ))
 	{
 		$difficultwords++;
 	}
