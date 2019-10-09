@@ -7,12 +7,12 @@
 #include <locale>
 using namespace std;
 
-bool testMode = false;
+bool testMode = true;
 bool printFinalObtainedValues = true;
-bool showCalculationValues = false;
-bool printActivatingFunctions = false;
-bool printFunctionSteps = false;
-bool printVariables = false;
+bool showCalculationValues = true;
+bool printActivatingFunctions = true;
+bool printFunctionSteps = true;
+bool printVariables = true;
 void storeDaleChallList(vector<string> &daleChallVector);
 void insertAlphabetically(vector<string> &wordVector,
                           string insertionWord);
@@ -619,10 +619,6 @@ string trimWord(string word)
 
 int countSyllables(string word)
 {
-	if (testMode)
-		cout << "countSyllables: Starting" << endl;
-	if (testMode)
-		cout << "countSyllables: Parameter: word == " << word << endl;
 	// Precondition: The word received holds only non-whitespace characters,
 	// and holds at least one alphabetic character
 	// Postcondition: The number of syllables in the word was counted and
@@ -691,12 +687,6 @@ int countSyllables(string word)
 	if (syllables == 0)
 		syllables++;
 
-	if (testMode)
-	{
-		cout << "countSyllables: Syllables counted in word \""
-		     << word << "\" == " << syllables << endl;
-	}
-
 	return syllables;
 }
 
@@ -705,15 +695,6 @@ bool detectSentenceEnd(char character)
 	// Precondition: A non-blank character was sent to this function
 	// Postcondition: The state of whether the received character was a
 	// sentence-ending character was returned to this function's caller
-
-	if (testMode)
-		cout << "detectSentenceEnd: Starting" << endl;
-
-	if (testMode)
-	{
-		cout << "detectSentenceEnd: Parameter:" << endl;
-		cout << "\tcharacter == '" << character << "'" << endl;
-	}
 
 	bool endOfSentence = false;
 
@@ -828,27 +809,11 @@ float calculateFlesch(int totalSyllables,
 	// Postcondition: The Flesch Readability Index was calculated and
 	// returned to this function's caller
 
-	if (testMode)
-	{
-		cout << "calculateFlesch: Starting. Parameters: " << endl;
-		cout << "\ttotalSyllables == " << totalSyllables << endl;
-		cout << "\ttotalWords == " << totalWords << endl;
-		cout << "\ttotalSentences == " << totalSentences << endl;
-	}
-
 	// Calculate the alpha value to prepare to calculate the Flesch Index
-	if ((testMode) &&
-	    (false))
-	{
-		cout << "calculateFlesch: Calculating alpha" << endl;
-	}
 	float alpha = (float) totalSyllables / (float) totalWords;
-	if (testMode)
-		cout << "calculateFlesch: alpha == " << alpha << endl;
+
 	// Calculate the beta value to prepare to calculate the Flesch Index
 	float beta = (float) totalWords / (float) totalSentences;
-	if (testMode)
-		cout << "calculateFlesch: beta == " << beta << endl;
 
 	float fleschIndex = 206.835 - alpha * 84.6 - beta * 1.015;
 
