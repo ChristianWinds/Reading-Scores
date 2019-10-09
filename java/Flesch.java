@@ -15,13 +15,13 @@ public class Flesch
 	// Accessed September 24, 2019
 	public static void storeDaleChallList(WordVector daleChallVector) throws Exception
 	{
-		// Precondition: A Dale-Chall List file existed in the location
-		// hard-coded into this function, the Dale-Chall List file holds
-		// only one word in each file line, and the Dale-Chall vector
-		// was empty
-		// Postcondition: All Dale-Chall List contents were placed into
-		// the Dale-Chall vector as uppercase words and in alphabetical
-		// order
+		// Precondition: A Dale-Chall word list file existed in the
+		// location hard-coded into this function, the Dale-Chall word
+		// list file holds only one word in each file line, and the
+		// Dale-Chall vector was empty
+		// Postcondition: All Dale-Chall word list contents were placed
+		// into the Dale-Chall vector as uppercase words and in
+		// alphabetical order
 
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
@@ -45,8 +45,12 @@ public class Flesch
 
 	public static int countSyllables(String word)
 	{
-		// Precondition:
-		// Postcondition:
+		// Precondition: A non-blank string with alphanumeric characters
+		// and at least one alphabetic character was sent to this method
+		// Postcondition: The number of collections of successive
+		// vowels in the word this method received, with the number not
+		// counting an "e" at the end of the word if that "e" exists,
+		// was tallied and returned to this method's caller
 
 		int currentIndex = 0;
 
@@ -105,10 +109,10 @@ public class Flesch
 
 	public static boolean detectSentenceEnd(char character)
 	{
-		// Precondition:
-		// Postcondition: The state of whether the received character
-		// was a sentence-ending character was returned to this
-		// function's caller
+		// Precondition: A non-blank chracter was sent to this method
+		// Postcondition: A Boolean value representing whether the
+		// received character was a sentence-ending character was
+		// returned to this method's caller
 
 		// Prepare a Boolean variable to flag a sentence end
 		boolean endOfSentence = false;
@@ -129,10 +133,10 @@ public class Flesch
 
 	public static boolean detectVowel(char character)
 	{
-		// Precondition: A non-blank character was sent to this function
+		// Precondition: A non-blank character was sent to this method
 		// Postcondition: A Boolean value representing whether this
-		// function's received character was a vowel was returned to
-		// this function's caller
+		// method's received character was a vowel was returned to
+		// this method's caller
 
 		Boolean isVowel = false;
 
@@ -159,10 +163,10 @@ public class Flesch
 
 	public static boolean detectAlphabetChar(char character)
 	{
-		// Precondition: A non-blank character was sent to this function
+		// Precondition: A non-blank character was sent to this method
 		// Postcondition: A Boolean value representing whether this
-		// function's received character was an alphabetic character was
-		// returned to this function's caller
+		// method's received character was an alphabetic character was
+		// returned to this method's caller
 
 		boolean isAlphabetic = false;
 
@@ -182,13 +186,15 @@ public class Flesch
 
 	public static boolean detectNumericChar(char character)
 	{
-		// Precondition: A non-blank character was sent to this function
+		// Precondition: A non-blank character was sent to this method
 		// Postcondition: A Boolean value representing whether this
-		// function's received character was a numeric character was
-		// returned to this function's caller
+		// method's received character was a numeric character was
+		// returned to this method's caller
 
 		boolean isNumeric = false;
 
+		// Compare the received character to numeric characters to
+		// determine if the received character is a numeric character
 		if ((character >= '0') &&
 		    (character <= '9'))
 			isNumeric = true;
@@ -200,11 +206,11 @@ public class Flesch
 
 	public static boolean detectWordCharacter(char character)
 	{
-		// Precondition: A non-blank character was sent to this function
+		// Precondition: A non-blank character was sent to this method
 		// Postcondition: A Boolean value representing whether this
-		// function's received character was a valid word character by
+		// method's received character was a valid word character by
 		// Flesch Score calculation requirements was returned to this
-		// function's caller
+		// method's caller
 
 		boolean isWordCharacter = false;
 
@@ -230,8 +236,9 @@ public class Flesch
 	{
 		// Precondition: The total numbers of syllables, words, and
 		// sentences were counted from a text file, and each of those
-		// numbers are not zero
-		// Postcondition:
+		// numbers was not zero
+		// Postcondition: A Flesch Index value was calculated and
+		// returned to this method's caller
 
 		// Calculate the alpha value to prepare to calculate the Flesch
 		// Index
@@ -254,10 +261,10 @@ public class Flesch
 	public static double calculateFleschKincaid(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The total numbers of syllables, words, and
-		// sentences were obtained, and the total numbers of words and
-		// sentences are not zero
+		// sentences were tallied from a text file, and the total
+		// numbers of words and sentences were not zero
 		// Postcondition: The Flesch-Kincaid Readability Index was
-		// calculated and returned to this function's caller
+		// calculated and returned to this method's caller
 
 		// Calculate the alpha value to prepare to calculate the
 		// Flesch-Kincaid Index
@@ -281,10 +288,10 @@ public class Flesch
 	public static double calculateDaleChallScore(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The numbers of difficult words, total words,
-		// and sentences were recorded, and the total numbers of words
-		// and sentences are not zero
+		// and sentences were tallied from a text file, and the total
+		// numbers of words and sentences were not zero
 		// Postcondition: The Dale-Chall Readability Score was
-		// calculated and returned to this function's caller
+		// calculated and returned to this method's caller
 
 		// Calculate the alpha value to prepare to calculate the
 		// Dale-Chall score
@@ -320,12 +327,13 @@ public class Flesch
 	public static double roundToDecimalPlaces(double originalNumber,
 						  int decimalPlaces)
 	{
-		// Precondition: The original number sent to this function to be
+		// Precondition: The original number sent to this method to be
 		// rounded was a valid double value, and the number of decimal
-		// places for rounding was zero or greater
+		// places specified for that original number's rounding was zero
+		// or greater
 		// Postcondition: The original number was rounded to the number
-		// of decimal places specified to this function, and the
-		// rounding result was returned to this function's caller
+		// of decimal places specified to this method, and the
+		// rounding result was returned to this method's caller
 
 		// Multiply the original number by ten to the number of desired
 		// decimal places, then add 0.5 to the result to apply the digit
