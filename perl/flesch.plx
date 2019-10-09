@@ -5,8 +5,8 @@ use strict;
 sub TrimWord
 {
 =begin comment
-Precondition: A non-blank word was sent to this subfunction
-Postcondition: The characters at this subfunction's received word's left were
+Precondition: A non-blank word was sent to this subroutine
+Postcondition: The characters at this subroutine's received word's left were
 removed up to the final character before the leftmost alphabetic character in
 the word, and the characters at that word's right were removed up to the
 character at the right of the rightmost alphanumeric character of the word; the
@@ -132,7 +132,7 @@ sub DetectAlphabetChar
 {
 =begin comment
 Precondition: A non-empty character was sent to this subroutine
-Postcondition: 
+Postcondition: If the cha
 =cut
 
 	my $character = $_[0];
