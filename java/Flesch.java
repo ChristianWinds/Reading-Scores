@@ -386,8 +386,8 @@ public class Flesch
 
 		// Round the Flesch Index to an integer to complete the Flesch
 		// Index's required rounding
-		int fleschIndexInt = roundToDecimalPlaces(fleschIndexDouble,
-							  0);
+		int fleschIndexInt = (int)roundToDecimalPlaces(fleschIndexDouble,
+							       0);
 
 		return fleschIndexInt;
 	}
