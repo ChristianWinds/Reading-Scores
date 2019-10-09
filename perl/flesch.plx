@@ -1,3 +1,9 @@
+=begin comment
+Programmer Name: Christian Winds
+Course: CSC330 Organization of Programming Languages
+School Year: 2019-2020 School Year
+=cut
+
 #!/usr/bin/perl -w
 use warnings;
 use strict;
