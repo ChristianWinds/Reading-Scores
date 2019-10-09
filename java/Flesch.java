@@ -41,9 +41,6 @@ public class Flesch
 
 			daleChallVector.wordVector.add(word);
 		}
-
-		/* Testing code */
-		System.out.println(daleChallVector.wordVector);
 	}
 /*
 	public void insertAlphabetically(DaleChallVector wordVector,
