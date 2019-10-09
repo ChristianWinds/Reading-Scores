@@ -1,3 +1,7 @@
+/* Programmer Name: Christian Winds
+ * Course: CSC330 Organization of Programming Languages
+ * School Year: 2019-2020 School Year */
+
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
