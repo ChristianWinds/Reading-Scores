@@ -251,7 +251,7 @@ sub CalculateFlesch
 {
 =begin comment
 Precondition: An analyzed text file's numbers of syllables, words, and sentences
-were obtained, and each of the numbers were greater than zero
+were obtained, and each of the numbers was greater than zero
 Postcondition: The Flesch Score of the analyzed file was returned to this
 subroutine's caller
 =cut
@@ -278,7 +278,7 @@ sub CalculateFleschKincaid
 {
 =begin comment
 Precondition: An analyzed text file's numbers of syllables, words, and sentences
-were obtained, and each of the numbers were greater than zero
+were obtained, and each of the numbers was greater than zero
 Postcondition: The Flesch-Kincaid Score of the analyzed file was returned to
 this subroutine's caller
 =cut
@@ -384,6 +384,7 @@ Accessed Monday, September 30, 2019
 
 my @analyzedfilewords = split(' ', $analyzed_file_content);
 
+# Create vaiables to store values needed for the readability calculations
 my $totalwords = 0;
 my $syllables = 0;
 my $sentences = 0;
@@ -403,7 +404,7 @@ foreach my $potentialword (@analyzedfilewords)
 =begin comment
 Code from Perl.com,
 https://www.perl.com/article/42/2013/10/3/How-to-read-a-string-into-an-array-of-characters-using-split/
-Accessed Monday, September 30, 2019
+Accessed Monday, September 30th, 2019
 =cut
 	my @wordcharacters = split(//, $trimmedword);
 	my $readingsyllable = 0;
@@ -416,8 +417,9 @@ Accessed Monday, September 30, 2019
 	for my $charinword (@wordcharacters)
 	{
 		# If a letter "e" was read in the previous for loop iteration,
-		# increment the number of syllables, as the previous "e" was not
-		# at the word end
+		# increment the number of syllables and flag the "reading 
+		# syllable" flag to count thatnon-word-ending "e" as part of a
+		# syllable
 		if (($possibleendingeread) and
 		    (not ($readingsyllable)))
 		{
