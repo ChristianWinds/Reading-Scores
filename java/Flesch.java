@@ -352,9 +352,9 @@ public class Flesch
 		return roundedValue;
 	}
 
-	public static void getWords(String line,
-				    WordVector daleChallVector,
-				    ReadValueCalcVariables readValueCalcVariables)
+	public static void getCalcValuesFromLine(String line,
+						 WordVector daleChallVector,
+						 ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The Dale-Chall Vector was filled with all words
 		// from a Dale-Chall word list
@@ -473,11 +473,11 @@ public class Flesch
 
 	public static String trimWord(String word)
 	{
-	        // Precondition: The received word holds at least one alphanumeric
-	        // character
-	        // Postcondition: The received word was trimmed up to the word's
-	        // last alphanumeric character, and the trimmed word was
-	        // returned to this function's caller
+	        // Precondition: The received word holds at least one
+	        // alphanumeric character
+	        // Postcondition: The received word's right side was trimmed up
+	        // to the word's last alphanumeric character, and the trimmed
+	        // word was returned to this function's caller
 
 	        // Store the word's length for use in locating the word's last
 	        // character
@@ -515,8 +515,9 @@ public class Flesch
 	{
 		// Precondition: The string this function received was a
 		// non-empty string
-		// Postcondition: Whether this function's received string was a
-		// valid word was returned to this function's caller
+		// Postcondition: A Boolean value for whether this function's
+		// received string was a valid word was returned to this
+		// function's caller
 
 		// Create variables to track word character indexes
 		int currentIndex = 0;
@@ -562,7 +563,7 @@ public class Flesch
 		// the file to analyze
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
-		// Accessed September 11, 2019
+		// Accessed September 11th, 2019
 		Scanner keyboardInput = new Scanner (System.in);
 
 		// Receive keyboard input to receive the filename of the file
@@ -592,9 +593,9 @@ public class Flesch
 		{
 			line = analyzedFileScanner.nextLine();
 
-			getWords(line,
-				 daleChallVector,
-				 readValueCalcVariables);
+			getCalcValuesFromLine(line,
+					      daleChallVector,
+					      readValueCalcVariables);
 		}
 
 		// Calculate the reading indexes and score only if words
@@ -609,9 +610,12 @@ public class Flesch
 
 			double daleChallScore = calculateDaleChallScore(readValueCalcVariables);
 
-			System.out.println("Flesch Readability Index: " + fleschIndex);
-			System.out.println("Flesch-Kincaid Grade Level Index: " + fleschKincaidIndex);
-			System.out.println("Dale-Chall Readability Score: " + daleChallScore);
+			System.out.println("Flesch Readability Index: " +
+					   fleschIndex);
+			System.out.println("Flesch-Kincaid Grade Level Index: " +
+					   fleschKincaidIndex);
+			System.out.println("Dale-Chall Readability Score: " +
+					   daleChallScore);
 		}
 		else
 		{
