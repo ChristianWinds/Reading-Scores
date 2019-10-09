@@ -367,7 +367,7 @@ public class Flesch
 		return isWordCharacter;
 	}
 
-	public static double calculateFlesch(ReadValueCalcVariables readValueCalcVariables)
+	public static int calculateFlesch(ReadValueCalcVariables readValueCalcVariables)
 	{
 		// Precondition: The total numbers of syllables, words, and
 		// sentences were counted from a text file, and each of those
@@ -382,14 +382,14 @@ public class Flesch
 		// Index
 		double beta = (double) readValueCalcVariables.totalWords / (double) readValueCalcVariables.sentences;
 
-		double fleschIndex = 206.835 - (alpha * 84.6) - (beta * 1.015);
+		double fleschIndexDouble = 206.835 - (alpha * 84.6) - (beta * 1.015);
 
 		// Round the Flesch Index to an integer to complete the Flesch
 		// Index's required rounding
-		fleschIndex = roundToDecimalPlaces(fleschIndex,
-						   0);
+		int fleschIndexInt = roundToDecimalPlaces(fleschIndexDouble,
+							  0);
 
-		return fleschIndex;
+		return fleschIndexInt;
 	}
 
 	public static double calculateFleschKincaid(ReadValueCalcVariables readValueCalcVariables)
@@ -738,7 +738,7 @@ public class Flesch
 		if ((readValueCalcVariables.totalWords > 0) &&
 		    (readValueCalcVariables.syllables > 0))
 		{
-			double fleschIndex = calculateFlesch(readValueCalcVariables);
+			int fleschIndex = calculateFlesch(readValueCalcVariables);
 
 			double fleschKincaidIndex = calculateFleschKincaid(readValueCalcVariables);
 
