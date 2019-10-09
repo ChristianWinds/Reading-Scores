@@ -263,50 +263,20 @@ bool findInVector(vector<string> wordVector,
 	       (currentMaxIndex - currentMinIndex >= 0))
 	{
 		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
-		if (testMode)
-		{
-			cout << "findInVector: Current vector middle == \"" << wordVector.at(currentMidIndex) << "\"" << endl;
-			cout << "              searchTerm == \"" << searchTerm << "\"" << endl;
-		}
 		if (searchTerm < wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint before the current vector word */
 			currentMaxIndex = currentMidIndex - 1;
-			if ((testMode) ||
-			    (printVariables))
-			{
-				cout << "findInVector: currentMaxIndex == " << currentMaxIndex << endl;
-			}
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
-			if ((testMode) ||
-			    (printVariables))
-			{
-				cout << "findInVector: currentMidIndex == " << currentMidIndex << endl;
-			}
 		}
 		else if (searchTerm > wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint after the current vector word */
 			currentMinIndex = currentMidIndex + 1;	
-			if ((testMode) ||
-			    (printVariables))
-			{
-				cout << "findInVector: currentMinIndex == " << currentMinIndex << endl;
-			}
 			currentMidIndex = currentMinIndex + (currentMaxIndex - currentMinIndex) / 2;
-			if ((testMode) ||
-			    (printVariables))
-			{
-				cout << "findInVector: currentMidIndex == " << currentMidIndex << endl;
-			}
 		}
 		else if (searchTerm == wordVector.at(currentMidIndex))
 		{
-			if ((testMode) ||
-			    (printFunctionSteps))
-			{
-				cout << "findInVector: Word found; setting foundWord to true" << endl;
-			}
 			foundWord = true;
 		}
 	}
