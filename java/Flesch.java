@@ -43,49 +43,6 @@ public class Flesch
 		}
 	}
 
-		/*analyzedFileScanner.hasNextLine())*/
-//		{
-			// Retrieve the text file's values to prepare for the
-			// reading score and index calculations
-//			while /*(*/(analyzedFileScanner.hasNextLine())/* &&
-//			       (*//*Analyzedfile is open*//*))*/
-/*			{
-				currentLine = analyzedFileScanner.nextLine();
-
-*///				if (/*Analyzed file is not at end of file*/analyzedFileScanner.hasNextLine())
-/*				{
-					int currentLineIndex = 0;
-
-					boolean endOfLine = false;
-
-					while (!(endOfLine))
-					{
-						boolean endOfSentence = false;
-						boolean wordRetrieved = false;	
-
-						// Retrieve the next unread word
-						// from the analyzed file to
-						// analyze the new word
-						String word = getWord();
-
-						// Prevent word and syllable
-						// count updates if no word was
-						// retrieved to avoid word and
-						// syllable miscount
-						if ((wordRetrieved) &&
-						    (word != ""))
-						{
-							totalWords++;
-
-							totalSyllables += countSyllables(word);
-						}
-					}
-				}
-			}
-		}
-	}
-*/
-
 	public static int countSyllables(String word)
 	{
 		// Precondition:
