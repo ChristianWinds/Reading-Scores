@@ -480,7 +480,7 @@ public class Flesch
 		// Divide the value being rounded by 10 to the desired number of
 		// decimal places to place the correct number of decimal places
 		// in the rounded value
-		roundedValue = (double)roundedValue / (Math.pow(10, decimalPlaces));
+		roundedValue = roundedValue / (Math.pow(10, decimalPlaces));
 
 		return roundedValue;
 	}
