@@ -471,7 +471,7 @@ public class Flesch
 		// Multiply the original number by ten to the number of desired
 		// decimal places, then add 0.5 to the result to apply the digit
 		// changes caused by rounding
-		double roundedValue = originalNumber * (Math.pow(10, decimalPlaces) + 0.5;
+		double roundedValue = originalNumber * (Math.pow(10, decimalPlaces)) + 0.5;
 
 		// Typecast the value being rounded into an integer to remove
 		// the excess decimal places
