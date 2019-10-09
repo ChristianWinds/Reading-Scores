@@ -10,7 +10,7 @@ Postcondition: The characters at this subroutine's received word's left were
 removed up to the final character before the leftmost alphabetic character in
 the word, and the characters at that word's right were removed up to the
 character at the right of the rightmost alphanumeric character of the word; the
-trimmed word was then returned to this subfunction's caller
+trimmed word was then returned to this subroutine's caller
 =cut
 	my $word = $_[0];
 	my $wordlength = length $word;
@@ -68,10 +68,10 @@ trimmed word was then returned to this subfunction's caller
 sub CountSentenceEndsInString
 {
 =begin comment
-Precondition: A non-empty string was sent as a parameter to this subfunction
+Precondition: A non-empty string was sent as a parameter to this subroutine
 Postcondition: The number of sentence-ending punctuation characters in this
-subfunction's received parameter string was counted and returned to this
-subfunction's caller
+subroutine's received parameter string was counted and returned to this
+subroutine's caller
 =cut
 
 	my $string = $_[0];
@@ -101,11 +101,11 @@ Accessed Monday, September 30, 2019
 sub DetectSentenceEndChar
 {
 =begin comment
-Precondition: A non-blank character was sent as a parameter to this subfunction
-Postcondition: A one value was returned to this subfunction's caller if the
-character this subfunction received was a sentence-ending character; if the
-character received by this subfunction was not a sentence-ending character, a
-zero value was sent to the subfunction's caller instead
+Precondition: A non-blank character was sent as a parameter to this subroutine
+Postcondition: A one value was returned to this subroutine's caller if the
+character this subroutine received was a sentence-ending character; if the
+character received by this subroutine was not a sentence-ending character, a
+zero value was sent to the subroutine's caller instead
 =cut
 	my $character = $_[0];
 	my $issentenceend = 0;
@@ -167,7 +167,8 @@ caller
 	my $character = $_[0];
 	my $isvowel = 0;
 
-	# Compare the character to each vowel to check if the character is a vowel
+	# Compare the character to each vowel to check if the character is a
+	# vowel
 	if (($character eq 'A') or
 	    ($character eq 'a') or
 	    ($character eq 'E') or
@@ -194,8 +195,11 @@ caller
 sub DetectNumericChar
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: A non-blank character was sent as a parameter to this subroutine
+Postcondition: A one value was returned to this subroutine's caller if the
+character this subroutine received was a numeric character; a zero value was
+instead sent to this subroutine's caller if the character this subroutine
+received was not a numeric character
 =cut
 
 	my $character = $_[0];
@@ -218,8 +222,11 @@ Postcondition:
 sub DetectAlphanumericChar
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: A non-blank character was sent as a parameter to this subroutine
+Postcondition: A one value was returned to this subroutine's caller if the
+character this subroutine received was an alphanumeric character; a zero value
+was instead sent to this subroutine's caller if the character this subroutine
+received was not an alphanumeric character
 =cut
 
 	my $character = $_[0];
@@ -278,7 +285,8 @@ this subroutine's caller
 	my $words = $_[1];
 	my $sentences = $_[2];
 
-	# Calculate the alpha and beta values to prepare to use alpha and beta in the Flesch-Kincaid calculation
+	# Calculate the alpha and beta values to prepare to use alpha and beta
+	# in the Flesch-Kincaid calculation
 	my $alpha = $syllables / $words;
 	my $beta = $words / $sentences;
 
@@ -305,7 +313,8 @@ subroutine's caller
 	my $totalwords = $_[1];
 	my $sentences = $_[2];
 
-	# Calculate the alpha and beta values to prepare to use alpha and beta in the Dale-Chall calculation
+	# Calculate the alpha and beta values to prepare to use alpha and beta
+	# in the Dale-Chall calculation
 	my $alpha = $difficultwords / $totalwords;
 	my $beta = $totalwords / $sentences;
 
