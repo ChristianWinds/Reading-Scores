@@ -5,14 +5,19 @@ use strict;
 sub TrimWord
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: A non-blank word was sent to this subfunction
+Postcondition: The characters at this subfunction's received word's left were
+removed up to the final character before the leftmost alphabetic character in
+the word, and the characters at that word's right were removed up to the
+character at the right of the rightmost alphanumeric character of the word; the
+trimmed word was then returned to this subfunction's caller
 =cut
 	my $word = $_[0];
 	my $wordlength = length $word;
 	my $firstwordcharacter = '';
 
-	# Retrieve the word's first character only if the word has a length more than zero to avoid an error
+	# Retrieve the word's first character only if the word has a length more
+	# than zero to avoid an error
 	if ($wordlength > 0)
 	{
 		$firstwordcharacter = substr($word, 0, 1);
@@ -25,7 +30,8 @@ Postcondition:
 		$word = substr($word, 1);
 		$wordlength = length $word;
 
-		# Retrieve the word's first character only if the word has a length more than zero to avoid an error
+		# Retrieve the word's first character only if the word has a
+		# length more than zero to avoid an error
 		if ($wordlength > 0)
 		{
 			$firstwordcharacter = substr($word, 0, 1);
@@ -62,8 +68,10 @@ Postcondition:
 sub CountSentenceEndsInString
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: A non-empty string was sent as a parameter to this subfunction
+Postcondition: The number of sentence-ending punctuation characters in this
+subfunction's received parameter string was counted and returned to this
+subfunction's caller
 =cut
 
 	my $string = $_[0];
@@ -93,8 +101,9 @@ Accessed Monday, September 30, 2019
 sub DetectSentenceEndChar
 {
 =begin comment
-Precondition:
-Postcondition:
+Precondition: A non-blank character was sent as a parameter to this subfunction
+Postcondition: A one value was returned to this subfunction's caller if the
+h
 =cut
 	my $character = $_[0];
 	my $issentenceend = 0;
