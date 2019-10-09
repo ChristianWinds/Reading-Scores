@@ -432,7 +432,6 @@ public class Flesch
 				if (detectValidWord(word))
 				{
 					readValueCalcVariables.totalWords++;
-					System.out.println("getWords: word == \"" + word + "\"");
 					readValueCalcVariables.syllables += countSyllables(word);
 
 					// Search for the word in the Dale-Chall
@@ -581,12 +580,6 @@ public class Flesch
 				 daleChallVector,
 				 readValueCalcVariables);
 		}
-
-		/* Test printing */
-		System.out.println("Total words: " + readValueCalcVariables.totalWords);
-		System.out.println("Syllables: " + readValueCalcVariables.syllables);
-		System.out.println("Sentences: " + readValueCalcVariables.sentences);
-		System.out.println("Difficult words: " + readValueCalcVariables.difficultWords);
 
 		// Calculate the reading indexes and score only if words
 		// and syllables were found in the analyzed file to
