@@ -48,26 +48,18 @@ float calculateDaleChall(int difficultWords,
 int main(int argc, char* argv[])
 {
 	// Run the program only if one filename was entered on the command line
+	// to avoid a file read error
 	if (argc != 2)
 	{
-		// Ask the user to enter a filename
 		cout << "Please enter one filename." << endl;
 	}
 	else
 	{
 		vector<string> daleChallVector;
-		if ((testMode) ||
-		    (printActivatingFunctions))
-		{
-			cout << "main: Calling storeDaleChallList(daleChallVector)" << endl;
-		}
 		storeDaleChallList(daleChallVector);
-		if (testMode)
-		{
-			cout << "main: Dale-Chall vector size after storeDaleChallList call == " << daleChallVector.size() << endl;
-		}
 		
-		// Retrieve the filename needed for file analysis
+		// Access the command line to retrieve the filename needed for
+		// file analysis
 		string filename = argv[1];
 
 		// Preapare variables for the four values to be recorded while
@@ -79,11 +71,6 @@ int main(int argc, char* argv[])
 
 		// Obtain the values needed for the readability index and score
 		// calculations
-		if ((testMode) ||
-		    (printActivatingFunctions))
-		{
-			cout << "main: Calling obtainValues(syllables, totalWords, sentences, difficultWords, daleChallVector, filename)" << endl;
-		}
 		obtainValues(syllables,
 			     totalWords,
 			     sentences,
@@ -91,56 +78,40 @@ int main(int argc, char* argv[])
 			     daleChallVector,
 			     filename);
 
-		if ((testMode) ||
-		    (printFinalObtainedValues))
-		{
-			cout << "main:" << endl;
-			cout << "\tTotal counted words: " << totalWords << endl;
-			cout << "\tTotal counted syllables: " << syllables << endl;
-			cout << "\tTotal counted sentences: " << sentences << endl;
-			cout << "\tTotal difficult words: " << difficultWords << endl;
-		}
-
 		if ((totalWords > 0) &&
 		    (syllables > 0))
 		{
-		if (testMode)
-			cout << "main: Calling calculateFlesch" << endl;
-		float fleschIndex = calculateFlesch(syllables,
-						    totalWords,
-						    sentences);
+			float fleschIndex = calculateFlesch(syllables,
+							    totalWords,
+							    sentences);
 
-		if (testMode)
-			cout << "main: Calling calculateFleschKincaid" << endl;
-		float fleschKincaidIndex = calculateFleschKincaid(syllables,
+			float fleschKincaidIndex = calculateFleschKincaid(syllables,
+									  totalWords,
+									  sentences);
+
+			float daleChallScore = calculateDaleChall(difficultWords,
 								  totalWords,
 								  sentences);
 
-		float daleChallScore = calculateDaleChall(difficultWords,
-							  totalWords,
-							  sentences);
-
-		// Print the readability scores
-		if (testMode)
-			cout << "main: Printing Readability Scores" << endl;
-		cout << "Flesch Readability Index: " << fleschIndex << endl;
-		cout << "Flesch-Kincaid Grade Level Index: " <<
-			fleschKincaidIndex << endl;
-		cout << "Dale-Chall Readability Score: " <<
-			daleChallScore <<
-			endl;
+			cout << "Flesch Readability Index: " <<
+				fleschIndex <<
+				endl;
+			cout << "Flesch-Kincaid Grade Level Index: " <<
+				fleschKincaidIndex <<
+				endl;
+			cout << "Dale-Chall Readability Score: " <<
+				daleChallScore <<
+				endl;
 		}
 		else
 		{
-			// If no words or no syllables were found in the file,
-			// report the absences of words and syllables
+			// Print an error message to explain why the reading
+			// score calculations could not be performed
 			if (!(totalWords > 0))
 				cout << "No words found in file." << endl;
 			if (!(sentences > 0))
 				cout << "No sentences found in file." << endl;
 
-			// State that the readability calculations could not be
-			// performed
 			cout << "As a result, the readability calculations " <<
 				"could not be performed." << endl;
 		}
@@ -156,12 +127,6 @@ void storeDaleChallList(vector<string> &daleChallVector)
 	// should be empty
 	// Postcondition: The Dale-Chall vector was filled with the Dale-Chall
 	// List file's contents
-
-	if ((testMode) ||
-	    (printActivatingFunctions))
-	{
-		cout << "storeDaleChallList: Starting" << endl;
-	}
 
 	// Open the Dale-Chall List file to begin storing the list's words in a
 	// vector
@@ -190,12 +155,6 @@ void storeDaleChallList(vector<string> &daleChallVector)
 				// non-case sensitive vector searches
 				currentWord = capitalizeWord(currentWord);
 
-				if ((testMode) ||
-				    (printActivatingFunctions))
-				{
-					cout << "storeDaleChallList: Calling insertAlphabetically(daleChallVector, currentWord)" << endl;
-				}
-
 				insertAlphabetically(daleChallVector,
 						     currentWord);
 			}
@@ -208,11 +167,6 @@ void storeDaleChallList(vector<string> &daleChallVector)
 		cout << "The Dale-Chall wordlist file could not be opened." <<
 			endl;
 	}
-
-	if (testMode)
-	{
-		cout << "storeDaleChallList: Dale-Chall List size at function end == " << daleChallVector.size() << endl;
-	}
 }
 
 void insertAlphabetically(vector<string> &wordVector,
@@ -224,13 +178,10 @@ void insertAlphabetically(vector<string> &wordVector,
 	// Postcondition: The word received by this function was stored
 	// alphabetically into the word vector
 
-	if (testMode)
-	{
-		cout << "insertAlphabetically: Dale-Chall vector size at function start == " << wordVector.size() << endl;
-	}
-
 	if (wordVector.size() == 0)
 	{
+		// Place the word at the back of the vector to begin filling
+		// the empty vector
 		wordVector.push_back(insertionWord);
 	}
 	else
@@ -246,17 +197,10 @@ void insertAlphabetically(vector<string> &wordVector,
 		while ((currentMaxIndex - currentMinIndex >= 0) &&
 		       (!(duplicateWord)))
 		{
-			if (testMode)
-			{
-				cout << "insertAlphabetically: while loop: currentMaxIndex{" << currentMaxIndex << "} - currentMinIndex{" << currentMinIndex << "} == " << currentMaxIndex - currentMinIndex << endl;
-			}
-
-			if (testMode)
-			{
-				cout << "insertAlphabetically: while loop: insertionWord == \"" << insertionWord << "\"; wordVector.at(currentMidIndex{" << currentMidIndex << "}) == \"" << wordVector.at(currentMidIndex) << "\"" << endl;
-			}
-
-			/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
+			// Compare the alphabet order of the word to insert to
+			// the current vector word to determine where to place
+			// the word to insert, or to decide to not insert the
+			// word if the word already exists in the vector
 			if (insertionWord < wordVector.at(currentMidIndex))
 			{
 				// Update the maximum and middle index values to
@@ -275,20 +219,10 @@ void insertAlphabetically(vector<string> &wordVector,
 			}
 			else if (insertionWord == wordVector.at(currentMidIndex))
 			{
-				if (testMode)
-				{
-					cout << "insertAlphabetically: while loop: else if branch: Duplicate word detected" << endl;
-				}
-
 				// Flag the word duplicate to avoid adding a
 				// duplicate word to the vector
 				duplicateWord = true;
 			}
-		}
-
-		if (testMode)
-		{
-			cout << "insertAlphabetically: Progressed beyond while loop" << endl;
 		}
 
 		if (!(duplicateWord))
@@ -305,24 +239,14 @@ void insertAlphabetically(vector<string> &wordVector,
 		}
 	}
 
-	if (testMode)
-	{
-		cout << "insertAlphabetically: Dale-Chall vector size at function end == " << wordVector.size() << endl;
-	}
 }
 
 bool findInVector(vector<string> wordVector,
 		  string searchTerm)
 {
-	// Precondition: The word vector is sorted alphabetically
+	// Precondition: The word vector was sorted alphabetically
 	// Postcondition: A Boolean value representing whether the search term
 	// was present in the word vector was returned
-
-	if ((testMode) ||
-	    (printActivatingFunctions))
-	{
-		cout << "findInVector: Starting" << endl;
-	}
 
 	bool foundWord = false;
 
@@ -333,18 +257,7 @@ bool findInVector(vector<string> wordVector,
 	/* Locate the midpoint of the vector */
 	int currentMinIndex = 0;
 	int currentMaxIndex = wordVector.size() - 1;
-	if ((testMode) ||
-	    (printVariables))
-	{
-		cout << "findInVector: currentMaxIndex == " << currentMaxIndex << endl;
-	}
 	int currentMidIndex = currentMaxIndex / 2;
-
-	if ((testMode) ||
-	    (printFunctionSteps))
-	{
-		cout << "findInVector: Attempting to begin while loop" << endl;
-	}
 
 	while ((!(foundWord)) &&
 	       (currentMaxIndex - currentMinIndex >= 0))
@@ -562,9 +475,6 @@ string getWord(int &currentIndex,
 
 	if (endOfSentence)
 	{
-		if (testMode)
-			cout << "getWord: endOfSentence == " << endOfSentence << "; setting word to \"\"." << endl;
-
 		// Set the wordRead Boolean and word string variable to
 		// indicate no string was retrieved
 		wordRead = false;
@@ -589,11 +499,6 @@ string getWord(int &currentIndex,
 	}
 	else
 	{
-		if ((testMode) &
-		    (false))
-		{
-			cout << "getWord: Assigning currentIndex " << currentIndex << "to wordStartIndex" << endl;
-		}
 		int wordStartIndex = currentIndex;
 
 		// Create a word end index variable to store the ending index of
@@ -620,8 +525,6 @@ string getWord(int &currentIndex,
 				if (detectSentenceEnd(readCharacter))
 				{
 					endOfSentence = true;
-					if (testMode)
-						cout << "getWord: endOfSentence set to true (final word character)" << endl;
 				}
 
 				// If the current string was not yet validated
@@ -658,12 +561,6 @@ string getWord(int &currentIndex,
 		if (endOfLine)
 			currentIndex = lineLength - 1;
 
-		if ((testMode) &&
-		    (false))
-		{
-			cout << "getWord: Retrieving word" << endl;
-			cout << "\twordLength = " << wordEndIndex << " - " << wordStartIndex << " + 1" << endl;
-		}
 		// Calculate the word's length to determine the number of
 		// characters to copy from the line string to retrieve the word
 		int wordLength = wordEndIndex - wordStartIndex + 1;
@@ -673,9 +570,6 @@ string getWord(int &currentIndex,
 		// Send the word to the trimWord function to remove
 		// non-alphanumeric characters from the end of the word
 		word = trimWord(word);
-
-		if (testMode)
-			cout << "getWord: Retrieved word: \"" << word << "\"" << endl;
 	}
 
 	// If the current index is beyond the line end, flag the end-of-line
@@ -687,17 +581,16 @@ string getWord(int &currentIndex,
 		currentIndex = lineLength - 1;
 	}
 
-	if (testMode)
-		cout << "getWord: After this iteration's endOfSentence flag, the line index's character is '" << line.at(currentIndex) << "'" << endl;
-	if (testMode)
-		cout << "getWord: Returning " << word << " to function caller" << endl;
 	return word;
 }
 
 string capitalizeWord(string originalWord)
 {
-	// Precondition:
-	// Postcondition:
+	// Precondition: The word sent to this function was not a blank string,
+	// and the sent word holds alphabetic characters
+	// Postcondition: This function made a string that cpoied the original
+	// received word, but with all alphabetic letters capitalized, and
+	// returned that string to this function's caller
 
 	// Code from Cplusplus.com,
 	// http://www.cplusplus.com/reference/locale/toupper/
@@ -1004,16 +897,10 @@ float calculateFleschKincaid(int totalSyllables,
 	// Calculate the alpha value to prepare to calculate the Flesch-Kincaid
 	// Index
 	float alpha = (float) totalSyllables / (float) totalWords;
-	if ((testMode) ||
-	    (showCalculationValues))
-		cout << "calculateFleschKincaid: alpha == " << alpha << endl;
 
 	// Calculate the beta value to prepare to calculate the Flesch-Kincaid
 	// Index
 	float beta = (float) totalWords / (float) totalSentences;
-	if ((testMode) ||
-	    (showCalculationValues))
-		cout << "calculateFleschKincaid: beta == " << beta << endl;
 
 	float fleschKincaidIndex = alpha * 11.8 + beta * 0.39 - 15.59;
 
