@@ -159,7 +159,7 @@ caller
 	if (($character eq 'A') or
 	    ($character eq 'a') or
 	    ($character eq 'E') or
-	    ($character eq 'E') or
+	    ($character eq 'e') or
 	    ($character eq 'I') or
 	    ($character eq 'i') or
 	    ($character eq 'O') or
@@ -293,19 +293,23 @@ subroutine's caller
 	my $dalechallscore = ($difficultwordpercentage * 0.1579) +
 			     ($beta * 0.0496);
 
-	# If the difficult word percentage is more than 5, increase the Dale-Chall Score by 3.6365 to fulfill the associated Dale-Chall calculation step
+	# If the difficult word percentage is more than 5, increase the
+	# Dale-Chall Score by 3.6365 to fulfill the associated Dale-Chall
+	# calculation step
 	if ($difficultwordpercentage > 5)
 	{
 		$dalechallscore += 3.6365;
 	}
 
-	# Round the Dale-Chall Score to one decimal place to fulfill the required score rounding
+	# Round the Dale-Chall Score to one decimal place to fulfill the
+	# required score rounding
 	$dalechallscore = sprintf("%.1f", $dalechallscore);
 
 	return $dalechallscore;
 }
 
-# Store the Dale-Chall file words to compare the Dale-Chall file words to the analyzed file's words
+# Store the Dale-Chall file words to compare the Dale-Chall file words to the
+# analyzed file's words
 =begin comment
 Code from Perl.com,
 https://www.perl.com/article/21/2013/4/21/Read-an-entire-file-into-a-string/
@@ -314,10 +318,9 @@ Accessed Monday, September 30, 2019
 open my $dalechallfile, "/pub/pounds/CSC330/dalechall/wordlist1995.txt" or die "Can't open file $!";
 my $dale_chall_file_content = do {local $/; <$dalechallfile> };
 
-# Convert the Dale-Chall file words to uppercase to permit non-case sensitive word comparisons to the analyzed file words
+# Convert the Dale-Chall file words to uppercase to permit non-case sensitive
+# word comparisons to the analyzed file words
 $dale_chall_file_content = uc $dale_chall_file_content;
-
-# print($dale_chall_file_content ,"\n");
 
 my @dalechallwordsarray = split(' ', $dale_chall_file_content);
 
@@ -338,10 +341,9 @@ chomp $analyzedfilename;
 open my $fh, '<', $analyzedfilename or die "Can't open file $!";
 my $analyzed_file_content = do {local $/; <$fh> };
 
-# Convert the analyzed file words to uppercase to allow non-case sensitive word comparisons to the Dale-Chall file words
+# Convert the analyzed file words to uppercase to allow non-case sensitive word
+# comparisons to the Dale-Chall file words
 $analyzed_file_content = uc $analyzed_file_content;
-
-# print($analyzed_file_content ,"\n");
 
 =begin comment
 Code from GeeksforGeeks,
@@ -350,10 +352,6 @@ Accessed Monday, September 30, 2019
 =cut
 
 my @analyzedfilewords = split(' ', $analyzed_file_content);
-# foreach my $i (@analyzedfilewords)
-# {
-# 	print "$i\n";
-# }
 
 my $totalwords = 0;
 my $syllables = 0;
@@ -363,13 +361,13 @@ my $difficultwords = 0;
 # Analyze each word to obtain the values for the reading value calculations
 foreach my $potentialword (@analyzedfilewords)
 {
-	# Scan the potential word to add the word's number of sentence ending punctuation characters to the total sentence count
+	# Scan the potential word to add the word's number of sentence ending
+	# punctuation characters to the total sentence count
 	$sentences += CountSentenceEndsInString($potentialword);	
 
-
-	# Trim the potential word to evaluate a valid word that may be in the potential word
+	# Trim the potential word to evaluate a valid word that may be in the
+	# potential word
 	my $trimmedword = TrimWord($potentialword);
-# 	print "Trimmed word: $trimmedword\n";
 
 =begin comment
 Code from Perl.com,
@@ -379,16 +377,47 @@ Accessed Monday, September 30, 2019
 	my @wordcharacters = split(//, $trimmedword);
 	my $readingsyllable = 0;
 
+	# Create a variable for tracking if an "e" was read to avoid counting a
+	# word-ending "e" as a syllable
+	my $possibleendingeread = 0;
+
 	# Search the current word to find syllables
 	for my $charinword (@wordcharacters)
 	{
-		# Detect individual and successive vowels to count syllables in the word
+		# If a letter "e" was read in the previous for loop iteration,
+		# increment the number of syllables, as the previous "e" was not
+		# at the word end
+		if (($possibleendingeread) and
+		    (not ($readingsyllable)))
+		{
+			$readingsyllable = 1;
+			$syllables++;
+			$possibleendingeread = 0;
+		}
+
+		# Detect individual and successive vowels to count syllables in
+		# the word
 		if (DetectVowelChar($charinword))
 		{
-			if (not($readingsyllable))
+			# If a syllable is not currently flagged as being read,
+			# check whether this vowel is an "e" to avoid counting a
+			# word-ending "e" as a syllable
+			if ((not($readingsyllable)) and
+			    (not (($charinword eq 'e') or
+			    ($character eq 'E'))))
 			{
 				$readingsyllable = 1;
 				$syllables++;
+			}
+			elsif ((not($readingsyllable)) and
+			       (($charinword eq 'e') or
+			       ($character eq 'E')))
+			{
+				# Flag that a word-ending "e" may have been read
+				# to prepare to determine whether the "e" is a
+				# word-ending "e" that should not be tallied as
+				# a syllable
+				$possibleendingeread = 1;
 			}
 		}
 		else
@@ -397,7 +426,8 @@ Accessed Monday, September 30, 2019
 		}
 	}
 
-	# Check the Dale-Chall array to determine if the word is a difficult word
+	# Check the Dale-Chall array to determine if the word is a difficult
+	# word
 =begin comment
 Code from alvin alexander,
 https://alvinalexander.com/perl/perl-array-contains-grep-search-how-test
