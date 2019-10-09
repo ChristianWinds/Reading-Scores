@@ -48,7 +48,7 @@ public class Flesch
 		// Precondition: A non-blank string with alphanumeric characters
 		// and at least one alphabetic character was sent to this method
 		// Postcondition: The number of collections of successive
-		// vowels in the word this method received, with the number not
+		// vowels in the word this method received, with this number not
 		// counting an "e" at the end of the word if that "e" exists,
 		// was tallied and returned to this method's caller
 
@@ -117,8 +117,6 @@ public class Flesch
 		// Prepare a Boolean variable to flag a sentence end
 		boolean endOfSentence = false;
 
-		// Flag the endOfSentence Boolean if the received character
-		// marks the end of a sentence
 		if ((character == '.') ||
 		    (character == ':') ||
 		    (character == ';') ||
@@ -474,7 +472,8 @@ public class Flesch
 	public static String trimWord(String word)
 	{
 	        // Precondition: The received word holds at least one
-	        // alphanumeric character
+	        // alphanumeric character and begins with an alphabetic
+	        // character
 	        // Postcondition: The received word's right side was trimmed up
 	        // to the word's last alphanumeric character, and the trimmed
 	        // word was returned to this function's caller
@@ -551,7 +550,7 @@ public class Flesch
 
 	// Code from GeeksforGeeks,
 	// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
-	// Accessed September 24, 2019
+	// Accessed September 24th, 2019
 	public static void main(String[] args) throws Exception
 	{
 		// Create a Dale-Chall vector to hold the Dale-Chall Word List
@@ -559,24 +558,21 @@ public class Flesch
 
 		storeDaleChallList(daleChallVector);
 
-		// Create a Scanner to read the keyboard entered filename of
-		// the file to analyze
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
 		// Accessed September 11th, 2019
+		// Create a Scanner to read the keyboard entered filename of
+		// the file to analyze
 		Scanner keyboardInput = new Scanner (System.in);
 
 		// Receive keyboard input to receive the filename of the file
 		// to analyze
-		// Code from GeeksforGeeks,
-		// https://www.geeksforgeeks.org/ways-to-read-input-from-console-in-java/
-		// Accessed September 11, 2019
 		System.out.print("Enter the name of a file to analyze: ");
 		String filename = keyboardInput.nextLine();
 
 		// Code from GeeksforGeeks,
 		// https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
-		// Accessed September 24, 2019
+		// Accessed September 24th, 2019
 		File analyzedFile = new File(filename);
 		Scanner analyzedFileScanner = new Scanner(analyzedFile);
 
