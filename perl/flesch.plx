@@ -103,12 +103,15 @@ sub DetectSentenceEndChar
 =begin comment
 Precondition: A non-blank character was sent as a parameter to this subfunction
 Postcondition: A one value was returned to this subfunction's caller if the
-h
+character this subfunction received was a sentence-ending character; if the
+character received by this subfunction was not a sentence-ending character, a
+zero value was sent to the subfunction's caller instead
 =cut
 	my $character = $_[0];
 	my $issentenceend = 0;
 
-	# Check if the character is sentence-ending punctuation to flag a sentence end	
+	# Check if the character is sentence-ending punctuation to flag a
+	# sentence end	
 	if (($character eq '.') or
 	    ($character eq ':') or
 	    ($character eq ';') or
