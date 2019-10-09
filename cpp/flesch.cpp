@@ -408,8 +408,6 @@ void obtainValues(int &totalSyllables,
 		  vector<string> daleChallVector,
 		  string filename)
 {
-	if (testMode)
-		cout << "obtainValues: Starting" << endl;
 	// Precondition: The Dale-Chall vector holds all words of a Dale-Chall
 	// Word List, the numbers of syllables, total words, sentences, and
 	// difficult words are zero, and a valid filename for a file to analyze
@@ -428,23 +426,16 @@ void obtainValues(int &totalSyllables,
 	// Open the file to analyze
 	analyzedFile.open(filename.c_str());
 
-	if (testMode)
-		cout << "obtainValues: Opened file: " << filename.c_str() << endl;
-
 	if (analyzedFile.is_open())
 	{
 		// Retrieve the values for the file to analyze
 		while ((!(analyzedFile.eof())) &&
 		       (analyzedFile.is_open()))
 		{
-			if (testMode)
-				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
 			// Store the earliest unread file line
 			getline(analyzedFile,
 				currentInputFileLine);
 
-			if (testMode)
-				cout << "obtainValues: analyzedFile.eof == " << analyzedFile.eof() << endl;
 			if (!(analyzedFile.eof()))
 			{
 				// Create an integer variable to hold the
@@ -465,17 +456,6 @@ void obtainValues(int &totalSyllables,
 					// Create a Boolean to detect whether a word was retrieved
 					bool wordRetrieved = false;
 
-					// Retrieve the next unread word from
-					// the line
-					if (testMode)
-					{
-						cout << "obtainValues: getWord call upcoming. Parameters:" << endl;
-						cout << "\t currentLineIndex == " << currentLineIndex << endl;
-						cout << "\t currentInputFileLine == " << currentInputFileLine << endl;
-						cout << "\t endOfLine == " << endOfLine << endl;
-					}
-					if (testMode)
-						cout << "obtainValues: Calling getWord" << endl;
 					string word = getWord(currentLineIndex,
 							      currentInputFileLine,
 							      endOfLine,
@@ -487,38 +467,21 @@ void obtainValues(int &totalSyllables,
 					{
 						totalWords++;
 
-						// Add the number of syllables
-						// in the retrieved word to the
-						// syllable total
 						totalSyllables += countSyllables(word);
 
-						/* Check the word to determine if the word is a difficult word.*/
-						if ((testMode) ||
-						    (printActivatingFunctions))
-						{
-							cout << "obtainValues: Calling findInVector(daleChallVector, word)" << endl;
-						}
-
+						// Check the word to determine
+						// if the word is a difficult
+						// word.
 						if (!(findInVector(daleChallVector,
 								   word)))
 						{
-							if ((testMode) ||
-							    (false))
-							{
-								cout << "obtainValues: Difficult word found: \"" << word << "\"" << endl;
-							}
 							difficultWords++;
 						}
 					}
 
-					// Update the number of counted sentences
 					if (endOfSentence)
 					{
 						totalSentences++;
-						if (testMode)
-						{
-							cout << "obtainValues: Incremented totalSentences; totalSentences == " << totalSentences << endl;
-						}
 					}
 				}
 			}
@@ -526,7 +489,6 @@ void obtainValues(int &totalSyllables,
 	}
 	else
 	{
-		// Report that the file opening attempt failed
 		cout << "File opening failed." << endl;
 	}
 }
@@ -537,8 +499,6 @@ string getWord(int &currentIndex,
 	       bool &endOfSentence,
 	       bool &wordRead)
 {
-	if (testMode)
-		cout << "getWord: Starting" << endl;
 	// Precondition: The currentIndex value is within the line string's
 	// index range
 	// Postcondition: The retrieved word is returned to the function caller,
@@ -563,24 +523,13 @@ string getWord(int &currentIndex,
 
 		// If the read character is a sentence-ending punctuation, flag
 		// the end of sentence Boolean
-		if (testMode)
-			cout << "getWord: endOfSentence = detectSentenceEnd(" << readCharacter << ");" << endl;
-
 		if (detectSentenceEnd(readCharacter))
 		{
 			endOfSentence = true;
-			if (testMode)
-				cout << "getWord: endOfSentence set to true (first word character)" << endl;
 		}
 		else if (detectAlphabetChar(readCharacter))
 		{
 			wordRead = true;
-		}
-
-		if ((testMode) ||
-		    (false))
-		{
-			cout << "getWord: Checking for alphanumeric word start" << endl;
 		}
 
 		// Flag whether the current character is alphanumeric to ensure
@@ -588,21 +537,12 @@ string getWord(int &currentIndex,
 		if ((detectAlphabetChar(readCharacter)) ||
 		    (detectNumericChar(readCharacter)))
 		{
-			if ((testMode) ||
-			    (false))
-			{
-				cout << "getWord: Alphanumeric word start found" << endl;
-			}
-
 			alphanumericCharRead = true;
 		}
 		else
 		{
 			alphanumericCharRead = false;
 		}
-
-		if (testMode)
-			cout << "getWord: endOfSentence == " << endOfSentence << endl;
 
 		// If an alphanumeric word start was not yet found, advance the
 		// current index to the next character in the line to locate an
