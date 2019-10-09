@@ -132,7 +132,10 @@ sub DetectAlphabetChar
 {
 =begin comment
 Precondition: A non-empty character was sent to this subroutine
-Postcondition: If the cha
+Postcondition: A one value was returned to this subroutine's caller if the
+character this subroutine received was an alphabetic character; a zero value was
+instead sent to this subroutine's caller if the character this subroutine
+received was not an alphabetic character
 =cut
 
 	my $character = $_[0];
@@ -150,8 +153,6 @@ Postcondition: If the cha
 	{
 		$isalphabetic = 0;
 	}
-
-# 	print "DetectAlphabetChar: Result for \"$character\": $isalphabetic\n";
 
 	return $isalphabetic;
 }
