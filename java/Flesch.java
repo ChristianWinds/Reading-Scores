@@ -48,8 +48,6 @@ public class Flesch
 		// Precondition:
 		// Postcondition:
 
-		System.out.println("TEST: countSyllables: Starting");
-
 		int currentIndex = 0;
 
 		char readCharacter = '0';
@@ -60,13 +58,9 @@ public class Flesch
 
 		while (currentIndex < wordLength)
 		{
-			System.out.println("TEST: countSyllables: Passed <while (currentIndex < wordLength)>");
-
 			readCharacter = word.charAt(currentIndex);
 			if (detectVowel(readCharacter))
 			{
-				System.out.println("TEST: countSyllables: Passed <if (detectVowel(readCharacter))>");
-
 				// Determine if the current vowel is a
 				// word-ending 'e' to avoid counting a
 				// word-ending 'e' as a syllable
@@ -74,7 +68,6 @@ public class Flesch
 				    (readCharacter == 'E')) &&
 				    (currentIndex == wordLength - 1)))
 				{
-					System.out.println("TEST: countSyllables: Passed <if (!(((readCharacter == 'e') || (readCharacter == 'E')) && (currentIndex == wordLength - 1)))>");
 					syllables++;
 
 					// Read the successive vowels in the
@@ -106,8 +99,6 @@ public class Flesch
 		// syllable requirements for words
 		if (syllables == 0)
 			syllables++;
-
-		System.out.println("TEST: countSyllables: word \"" + word + "\" has " + syllables + "syllables");
 
 		return syllables;
 	}
@@ -453,9 +444,6 @@ public class Flesch
 					{
 						readValueCalcVariables.difficultWords++;
 					}
-
-					/* Testing code */
-					System.out.println("TEST: getWords: Word \"" + word + "\" in vector: " + wordInVector);
 				}
 			}
 			else if (detectSentenceEnd(currentCharacter))
