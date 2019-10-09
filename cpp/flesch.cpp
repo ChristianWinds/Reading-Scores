@@ -7,12 +7,6 @@
 #include <locale>
 using namespace std;
 
-bool testMode = true;
-bool printFinalObtainedValues = true;
-bool showCalculationValues = true;
-bool printActivatingFunctions = true;
-bool printFunctionSteps = true;
-bool printVariables = true;
 void storeDaleChallList(vector<string> &daleChallVector);
 void insertAlphabetically(vector<string> &wordVector,
                           string insertionWord);
@@ -254,7 +248,8 @@ bool findInVector(vector<string> wordVector,
 	// non-case-sensitive search
 	searchTerm = capitalizeWord(searchTerm);
 
-	/* Locate the midpoint of the vector */
+	// Locate the midpoint of the vector to set a beginning point for the
+	// vector search
 	int currentMinIndex = 0;
 	int currentMaxIndex = wordVector.size() - 1;
 	int currentMidIndex = currentMaxIndex / 2;
@@ -262,7 +257,10 @@ bool findInVector(vector<string> wordVector,
 	while ((!(foundWord)) &&
 	       (currentMaxIndex - currentMinIndex >= 0))
 	{
-		/* Determine if the current word is alphabetically further or earlier than the current vector word, or else matches the vector word */
+		// Compare the alphabet order of the search term to the current
+		// vector word to determine where the search term's match may
+		// exist in the vector, or if the current vector word matches
+		// the search term
 		if (searchTerm < wordVector.at(currentMidIndex))
 		{
 			/* Locate the new search midpoint before the current vector word */
