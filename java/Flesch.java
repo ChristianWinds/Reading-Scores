@@ -43,13 +43,7 @@ public class Flesch
 		}
 	}
 
-		/* Create an input file stream for the file to analyze *//* DISABLE
-		File analyzedFile = new File(analyzedFileName);
-
-		*//* Open the file to analyze *//* DISABLE
-		Scanner analyzedFileScanner = new Scanner(analyzedFile);
-
-		if (*//*Analyzed file is open*//*analyzedFileScanner.hasNextLine())*/
+		/*analyzedFileScanner.hasNextLine())*/
 //		{
 			// Retrieve the text file's values to prepare for the
 			// reading score and index calculations
