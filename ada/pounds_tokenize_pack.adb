@@ -1,5 +1,9 @@
+-- Programmer Name: Christian Winds
+-- Course: CSC330 Organization of Programming Languages
+-- School Year: 2019-2020 School Year
+
 -- Code from Dr. Pounds,
--- Accessed October 8, 2019
+-- Accessed October 8th, 2019
 with Ada;
 with Ada.Text_IO;
 use Ada.Text_IO;
