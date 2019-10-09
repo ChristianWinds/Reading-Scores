@@ -404,14 +404,14 @@ Accessed Monday, September 30, 2019
 			# word-ending "e" as a syllable
 			if ((not($readingsyllable)) and
 			    (not (($charinword eq 'e') or
-			    ($character eq 'E'))))
+			    ($charinword eq 'E'))))
 			{
 				$readingsyllable = 1;
 				$syllables++;
 			}
 			elsif ((not($readingsyllable)) and
 			       (($charinword eq 'e') or
-			       ($character eq 'E')))
+			       ($charinword eq 'E')))
 			{
 				# Flag that a word-ending "e" may have been read
 				# to prepare to determine whether the "e" is a
