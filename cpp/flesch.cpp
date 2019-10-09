@@ -5,6 +5,7 @@
 #include <cstring>
 #include <string>
 #include <locale>
+#include <math.h>
 using namespace std;
 
 void storeDaleChallList(vector<string> &daleChallVector);
@@ -902,15 +903,15 @@ float roundToDecimalPlaces(float originalNumber,
 	// decimal places specified to this function, and the rounding result
 	// was returned to this function's caller
 
-	// Multiply the original number by ten times the desired number of
+	// Multiply the original number by ten to the desired number of
 	// decimal places, add 0.5 to the product, and typecast the result into
 	// an integer to apply rounding's change to the original number's
 	// digits
-	float roundedValue = (int)(originalNumber * (10 * decimalPlaces) + 0.5); 
-	// Divide the value being rounded by 10 times the desired number of
-	// decimal places to place the correct number of rounded value places as
-	// decimal places
-	roundedValue = (float)roundedValue / (10 * decimalPlaces);
+	float roundedValue = (int)(originalNumber * (pow (10, decimalPlaces)) + 0.5); 
+	// Divide the value being rounded by 10 to the desired number of decimal
+	// places to place the correct number of decimal places in the rounded
+	// value
+	roundedValue = (float)roundedValue / (pow (10, decimalPlaces));
 
 	return roundedValue; 
 }
