@@ -358,14 +358,20 @@ public class Flesch
 	{
 		// Precondition: The Dale-Chall Vector was filled with all words
 		// from a Dale-Chall word list
-		// Postcondition: The line's number of syllables was added to
-		// the total tallied syllable count
+		// Postcondition: The line's numbers of sentences, syllables,
+		// total words, and difficult words were added to the respective
+		// sentence, syllable, total word, and difficult word tallies of
+		// the readValueCalcVariables object
 
 		int currentIndex = 0;
 		int wordStartIndex = 0;
 		int wordEndIndex = 0;
 		int lineLength = line.length();
+
+		// Create a Boolean to flag when to begin and stop retrieving a
+		// word
 		boolean retrievingWord = false;
+
 		String word = "";
 
 		while (currentIndex < lineLength)
