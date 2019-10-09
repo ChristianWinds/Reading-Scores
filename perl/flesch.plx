@@ -249,7 +249,7 @@ subroutine's caller
 
 	# Round the Flesch Index to an integer to fulfill the required score
 	# rounding
-	$fleschkincaidindex = sprintf("%.0f", $fleschkincaidindex);
+	$fleschindex = sprintf("%.0f", $fleschindex);
 
 	return $fleschindex;
 }
