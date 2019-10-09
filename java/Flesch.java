@@ -356,8 +356,10 @@ public class Flesch
 				    WordVector daleChallVector,
 				    ReadValueCalcVariables readValueCalcVariables)
 	{
-		// Precondition:
-		// Postcondition:
+		// Precondition: The Dale-Chall Vector was filled with all words
+		// from a Dale-Chall word list
+		// Postcondition: The line's number of syllables was added to
+		// the total tallied syllable count
 
 		int currentIndex = 0;
 		int wordStartIndex = 0;
@@ -368,7 +370,7 @@ public class Flesch
 
 		while (currentIndex < lineLength)
 		{
-			// Store the current word character to check that
+			// Store the current line character to check that
 			// character
 			char currentCharacter = line.charAt(currentIndex);
 
