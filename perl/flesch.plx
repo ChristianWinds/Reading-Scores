@@ -18,10 +18,6 @@ Postcondition:
 		$firstwordcharacter = substr($word, 0, 1);
 	}
 
-# 	print "TrimWord: Left character check\n";
-# 	print "TrimWord: wordlength == $wordlength\n";
-# 	print "TrimWord: firstwordcharacter == $firstwordcharacter\n";
-
 	# Check the word's left to remove non-word characters
 	while (($wordlength > 0) and
 	       (not (DetectAlphabetChar($firstwordcharacter))))
@@ -38,16 +34,12 @@ Postcondition:
 
 	my $lastwordcharacter = '';
 
-	# Retrieve the word's last character only if the word has a length more than zero to avoid an error
+	# Retrieve the word's last character only if the word has a length more
+	# than zero to avoid an error
 	if ($wordlength > 0)
 	{
 		$lastwordcharacter = substr($word, -1);
 	}
-
-# 	print "TrimWord: Right character check\n";
-# 	print "TrimWord: word == $word\n";
-# 	print "TrimWord: wordlength == $wordlength\n";
-# 	print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
 
 	# Check the word's right to remove non-word characters
 	while (($wordlength > 0) and
@@ -56,16 +48,12 @@ Postcondition:
 		$word = substr($word, 0, $wordlength - 1);
 		$wordlength = length $word;
 
-		# Retrieve the word's last character only if the word has a length more than zero to avoid an error
+		# Retrieve the word's last character only if the word has a
+		# length more than zero to avoid an error
 		if ($wordlength > 0)
 		{
 			$lastwordcharacter = substr($word, -1);
 		}
-
-# 		print "TrimWord: Right character updated\n";
-# 		print "TrimWord: word == $word\n";
-# 		print "TrimWord: wordlength == $wordlength\n";
-# 		print "TrimWord: lastwordcharacter == $lastwordcharacter\n";
 	}
 
 	return $word
@@ -89,7 +77,8 @@ Accessed Monday, September 30, 2019
 	my @stringcharacters = split(//, $string);
 	my $sentences = 0;
 
-	# Check each word character to tally the number of sentence-end punctuation characters in the word
+	# Check each word character to tally the number of sentence-end
+	# punctuation characters in the word
 	for my $charinword (@stringcharacters)
 	{
 		if (DetectSentenceEndChar($charinword))
@@ -131,15 +120,17 @@ sub DetectAlphabetChar
 {
 =begin comment
 Precondition: A non-empty character was sent to this subroutine
-Postcondition:
+Postcondition: 
 =cut
 
 	my $character = $_[0];
 	my $isalphabetic = 0;
 
 	# Check the character to determine if the character is alphabetic
-	if (($character ge 'A') and
-	    ($character le 'Z'))
+	if ((($character ge 'A') and
+	    ($character le 'Z')) or
+	    (($character ge 'a') and
+	    ($character le 'z')))
 	{
 		$isalphabetic = 1;
 	}
