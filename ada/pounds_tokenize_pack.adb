@@ -60,6 +60,8 @@ begin
     end if;
    end loop;
 
+  words := 0;
+
   for s of v loop
    put(s);
    words := words + 1;
