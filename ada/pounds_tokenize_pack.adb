@@ -22,7 +22,6 @@ procedure toarray (total_words: out Integer; syllables: out Integer; sentences: 
    value        : Character;
    string_array         : array (1..5000000) of Character;
    pos          : Integer;
---   words	: Integer := 0;
    package String_Vector is new Indefinite_Vectors (Natural,String); use String_Vector;
    s       : String(1..5000000) := (others => Character'Val(0));
    current : Positive := s'First;
@@ -60,11 +59,11 @@ begin
     end if;
    end loop;
 
-  words := 0;
+  total_words := 0;
 
   for s of v loop
    put(s);
-   words := words + 1;
+   total_words := total_words + 1;
    new_line;
   end loop;
 
