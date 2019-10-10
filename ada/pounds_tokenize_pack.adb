@@ -60,7 +60,6 @@ begin
     end if;
    end loop;
 
--- * Prints word "s" of vector "v"
   for s of v loop
    put(s);
    words := words + 1;
