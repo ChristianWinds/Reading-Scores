@@ -85,7 +85,7 @@ subroutine's caller
 =begin comment
 Code from Perl.com,
 https://www.perl.com/article/42/2013/10/3/How-to-read-a-string-into-an-array-of-characters-using-split/
-Accessed Monday, September 30, 2019
+Accessed Monday, September 30th, 2019
 =cut
 
 	my @stringcharacters = split(//, $string);
@@ -167,9 +167,9 @@ sub DetectVowelChar
 {
 =begin comment
 Precondition: A non-empty character was sent to this subroutine
-Postcondition: A 1 was sent to this subroutine's caller if the character this
-subroutine received was a vowel; otherwise, a 0 was sent to this subroutine's
-caller
+Postcondition: A one value was sent to this subroutine's caller if the character
+this subroutine received was a vowel; otherwise, a zero was sent to this
+subroutine's caller
 =cut
 	my $character = $_[0];
 	my $isvowel = 0;
