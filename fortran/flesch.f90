@@ -1,3 +1,7 @@
+! Programmer: Christian Winds
+! Course: CSC330 Organization of Programming Languages
+! School Year: 2019-2020 School Year
+
 program flesch
 ! Create an item to hold the Dale-Chall wordlist
 
