@@ -20,4 +20,8 @@ program run begins, enter the name of the text file to analyze.
 Ada program compilation instructions: Use the gnatmake compiler upon flesch.adb
 with pounds_tokenize_pack.adb and pounds_tokenize_pack.ads in the current
 working directory.
-Ada program execution instructions:
+Ada program execution instructions: Before running the flesch Ada executable,
+enter the command "ulimit -s unlimited" into Cobra's command line if that
+command had not already been entered into Cobra during the current Cobra
+session. Then, run the flesch Ada executable by entering the executable's name
+on the command line.
