@@ -3,5 +3,5 @@
 -- School Year: 2019-2020 School Year
 
 package pounds_tokenize_pack is
-	procedure toarray (words: out Integer);
+	procedure toarray (total_words: out Integer, syllables: out Integer, sentences: out Integer);
 end pounds_tokenize_pack;
