@@ -13,7 +13,7 @@ with Ada.Containers.Indefinite_Vectors;
 use  Ada.Containers;
 
 package body pounds_tokenize_pack is
-procedure toarray (words: out Integer) is
+procedure toarray (total_words: out Integer, syllables: out Integer, sentences: out Integer) is
 -- Precondition: No vectors were created
 -- Postcondition: The analyzed file's Flesch, Flesch-Kincaid, and Dale-Chall
 -- readability values were printed to the screen
