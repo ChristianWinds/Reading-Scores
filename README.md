@@ -23,5 +23,5 @@ working directory.
 Ada program execution instructions: Before running the flesch Ada executable,
 enter the command "ulimit -s unlimited" into Cobra's command line if that
 command had not already been entered into Cobra during the current Cobra
-session. Then, run the flesch Ada executable by entering the executable's name
-on the command line.
+session. Then, run the flesch Ada executable by entering the executable's name,
+followed by the name of the file to analyze, on the command line.
