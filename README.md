@@ -25,3 +25,6 @@ enter the command "ulimit -s unlimited" into Cobra's command line if that
 command had not already been entered into Cobra during the current Cobra
 session. Then, run the flesch Ada executable by entering the executable's name,
 followed by the name of the file to analyze, on the command line.
+Fortran compilation instructions: Compile flesch.f90 with the gfortran
+compilation command.
+Fortran execution instructions: Enter the name of the executable file compiled from flesch.f90 on the command line.
