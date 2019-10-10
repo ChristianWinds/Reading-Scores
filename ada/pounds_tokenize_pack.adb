@@ -14,12 +14,15 @@ use  Ada.Containers;
 
 package body pounds_tokenize_pack is
 procedure toarray (words: out Integer) is
+-- Precondition: No vectors were created
+-- Postcondition: The analyzed file's Flesch, Flesch-Kincaid, and Dale-Chall
+-- readability values were printed to the screen
 
    In_File      : Ada.Text_IO.File_Type;
    value        : Character;
    string_array         : array (1..5000000) of Character;
    pos          : Integer;
-   words	: Integer := 0;
+--   words	: Integer := 0;
    package String_Vector is new Indefinite_Vectors (Natural,String); use String_Vector;
    s       : String(1..5000000) := (others => Character'Val(0));
    current : Positive := s'First;
