@@ -7,7 +7,9 @@ with pounds_tokenize_pack;
 use pounds_tokenize_pack;
  
 procedure flesch is
-   words	: Integer := 0;
+   total_words	: Integer := 0;
+   syllables	: Integer := 0;
+   sentences	: Integer := 0; 
 begin
-   toarray(words);
+   toarray(total_words, syllables, sentences);
 end flesch;
